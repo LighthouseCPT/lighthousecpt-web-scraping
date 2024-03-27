@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'this is just a demo lambda
+
+  '
+Globals:
+  Function:
+    Timeout: 30
+Resources:
+  SamDemoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: SamDemoFunction
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      Architectures:
+      - x86_64
+    Metadata:
+      SamResourceId: SamDemoFunction
