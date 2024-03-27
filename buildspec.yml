@@ -9,7 +9,7 @@ phases:
       - echo "******** Running SAM Build ********"
       - sam build
       - echo "******** Running SAM Package ********"
-      - sam package --output-template-file packaged.yaml --s3-bucket imbilalx
+      - sam package --output-template-file packaged.yaml --s3-bucket imbilalx-demo
 
 artifacts:
   files:
