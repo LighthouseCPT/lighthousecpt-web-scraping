@@ -8,9 +8,7 @@ def lambda_handler(event, context):
     for i in range(count):
         data.append(i * 10)
         df = pd.DataFrame(data, columns=['Numbers'])
-        print('Data:')
-        print(df)
-        print(df)
+        print('Data BRO:')
 
     return {
         "statusCode": 200,
