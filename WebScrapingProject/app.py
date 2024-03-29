@@ -28,10 +28,12 @@ def lambda_handler(event, context):
     scraper.scrape_and_save(event)
 
 
+# The following is solely for local testing; AWS Lambda will NOT execute it. 
+# AWS Lambda will execute the "lambda_handler" function above.
 if __name__ == "__main__":
     parent_directory = os.path.dirname(os.getcwd())
     event_path = os.path.join(parent_directory, 'events', 'event.json')
     with open(event_path, 'r') as file:
         event_data = json.load(file)
     scraper_ = SchoolScraper()
-    print(scraper_.scrape_and_save(event_data))
+    scraper_.scrape_and_save(event_data)

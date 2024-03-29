@@ -15,7 +15,6 @@ class TrineUniversityScraper:
         if tuition_url:
             data['tuition'] = TUITION_run(tuition_url)
 
-
         return data
 
     #

@@ -8,7 +8,7 @@ Globals:
     Timeout: 30
 
 Resources:
-  SamDemoFunction:
+  WebScrapingFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: WebScrapingProject/
