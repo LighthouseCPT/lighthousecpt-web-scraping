@@ -1,5 +1,3 @@
-Given your updated directory structure, you may consider updating the README as follows:
-
 # Private College Web Scraping for Lighthouse CPT
 
 This private repository houses the code for a serverless web scraping system, developed specifically for gathering information about various colleges. This project is dedicated for use by the Lighthouse College Planning and Tracking (Lighthouse CPT) Team.
