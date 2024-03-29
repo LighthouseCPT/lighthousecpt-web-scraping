@@ -1,3 +1,8 @@
 {
-  "count": 9
+  "schools": [
+    {
+      "name": "TrineUniversity",
+      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx"
+    }
+  ]
 }
