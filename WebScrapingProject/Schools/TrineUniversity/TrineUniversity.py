@@ -1,4 +1,7 @@
 from .Tuition.Tuition import TUITION_run
+from log_config import configure_logger
+
+logger = configure_logger(__name__)
 
 
 class TrineUniversityScraper:

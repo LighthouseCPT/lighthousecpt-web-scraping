@@ -1,13 +1,11 @@
-import logging
 from io import StringIO
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import boto3
+from log_config import configure_logger
 
-# Initialize the logger
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+logger = configure_logger(__name__)
 
 
 def TUITION_run(url):
