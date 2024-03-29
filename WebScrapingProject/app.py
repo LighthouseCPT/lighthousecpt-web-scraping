@@ -20,8 +20,7 @@ class SchoolScraper:
             info = {"tuition": school["tuition"]}
             scraper_function = self.school_function_map.get(school_name)
             if scraper_function:
-                result = scraper_function.scrape(info)
-                print(result)
+                scraper_function.scrape(info)
             else:
                 print({"error": f"No scraping function found for school: {school_name}"})
 
