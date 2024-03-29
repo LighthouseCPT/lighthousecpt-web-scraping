@@ -1,6 +1,11 @@
 import json
 import os
+import logging
 from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
+
+# Initialize the logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class SchoolScraper:
