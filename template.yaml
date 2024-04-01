@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Web Scarping Project for LightHouseCPT
+  School Web Scraping Project for LightHouseCPT
 
 Globals:
   Function:
