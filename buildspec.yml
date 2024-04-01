@@ -10,13 +10,11 @@ phases:
             - pip install -r requirements.txt
     build:
         commands:
-#            - echo "Running tests..."
-#            - python -m unittest discover tests
             - echo "Building SAM application..."
             - sam build
 
 artifacts:
-    files:
-        - template.yaml
-        - .aws-sam/**/*
-    discard-paths: yes
+  files:
+    - template.yaml
+    - .aws-sam/build/**/*
+  discard-paths: yes
