@@ -18,3 +18,4 @@ class TrineUniversityScraper:
             data['tuition'] = TUITION_run(tuition_url, self.HTML_BUCKET, self.CSV_BUCKET, self.SCHOOL_NAME)
 
         return data
+
