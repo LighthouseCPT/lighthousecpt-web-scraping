@@ -1,20 +1,17 @@
 version: 0.2
 
 phases:
-    install:
-        runtime-versions:
-            python: 3.11
-    pre_build:
-        commands:
-            - echo "Installing dependencies..."
-            - pip install -r requirements.txt
-    build:
-        commands:
-            - echo "Building SAM application..."
-            - sam build
+  install:
+    runtime-versions:
+      python: 3.11
+  build:
+    commands:
+      - echo "******** Running SAM Build ********"
+      - sam build
+      - echo "******** Running SAM Package ********"
+      - sam package --output-template-file packaged.yaml --s3-bucket school-scraper-build-bucket
 
 artifacts:
   files:
-    - template.yaml
-    - .aws-sam/build/**/*
+    - packaged.yaml
   discard-paths: yes
