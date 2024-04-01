@@ -8,10 +8,10 @@ Globals:
     Timeout: 30
 
 Resources:
-  SamDemoFunction:
+  SchoolScraperFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: .
+      CodeUri: WebScrapingProject/
       Handler: app.lambda_handler
       Runtime: python3.11
       Architectures:
