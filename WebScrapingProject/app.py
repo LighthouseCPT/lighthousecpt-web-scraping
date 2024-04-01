@@ -20,7 +20,7 @@ class SchoolScraper:
             if scraper_function:
                 scraper_function.scrape(info)
             else:
-                print({"error": f"No scraping function found for school: {school_name}"})
+                print({"Error": f"No scraping function found for school: {school_name}"})
 
 
 def lambda_handler(event, context):
