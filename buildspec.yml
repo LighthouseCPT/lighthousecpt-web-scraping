@@ -1,15 +1,22 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.11
-  build:
-    commands:
-      - echo "******** Running SAM Build ********"
-      - sam build
+    install:
+        runtime-versions:
+            python: 3.11
+    pre_build:
+        commands:
+            - echo "Installing dependencies..."
+            - pip install -r requirements.txt
+    build:
+        commands:
+#            - echo "Running tests..."
+#            - python -m unittest discover tests
+            - echo "Building SAM application..."
+            - sam build
 
 artifacts:
-  files:
-    - template.yaml
-  discard-paths: yes
+    files:
+        - template.yaml
+        - .aws-sam/**/*
+    discard-paths: yes

@@ -1,18 +1,17 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: >
-  Web Scraping Project for LightHouseCPT
+Description: Web Scraping Project for LightHouseCPT
 
 Globals:
   Function:
     Timeout: 30
+    Runtime: python3.11
+    Handler: app.lambda_handler
 
 Resources:
   WebScrapingFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: WebScrapingProject/
-      Handler: app.lambda_handler
-      Runtime: python3.11
+      CodeUri: ./.aws-sam/build/WebScrapingFunction
       Architectures:
-      - x86_64
+        - x86_64
