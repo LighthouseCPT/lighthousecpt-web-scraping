@@ -8,11 +8,11 @@ def configure_logger(name):
     logger.setLevel(logging.INFO)
 
     if os.getenv('AWS_EXECUTION_ENV'):
-        # We are running on AWS Lambda. Log to stdout.
+        # Operating on AWS: Logs will not be stored in a file, but on AWS CloudWatch.
         handler = logging.StreamHandler()
 
     else:
-        # We are running locally. Log to a file.
+        # Operating locally (NOT on AWS): Logs will be stored in a file to /logs.
         LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d_%H-%M')}.log"
         logs_path = os.path.join(os.getcwd(), "logs")
         os.makedirs(logs_path, exist_ok=True)
