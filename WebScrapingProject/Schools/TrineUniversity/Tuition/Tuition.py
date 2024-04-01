@@ -1,49 +1,34 @@
-from io import StringIO
-import requests
 from bs4 import BeautifulSoup
-import pandas as pd
+from io import StringIO
 import boto3
+from ...utils import (make_request,
+                      save_html_to_s3,
+                      get_html_from_s3,
+                      save_csv_to_s3
+                      )
+import pandas as pd
 from log_config import configure_logger
 
 logger = configure_logger(__name__)
 
 
-def TUITION_run(url):
-    TABLE = 'Tuition'
-    BUCKET = 'lighthousecpt-schools'
-    DIRECTORY = 'TrineUniversity'
-    FILENAME = f'{DIRECTORY}_{TABLE}.html'
+def TUITION_run(url, HTML_BUCKET, CSV_BUCKET, SCHOOL_NAME):
+    TYPE = 'Tuition'
+    FILENAME = f'{SCHOOL_NAME}_{TYPE}'
+    S3_PATH = f'{SCHOOL_NAME}/{FILENAME}'
 
-    try:
-        page = requests.get(url)
-    except requests.RequestException as e:
-        logger.error(f'Request error: {e}')
-        raise
+    page = make_request(url)
 
     # Save HTML content to S3
-    s3 = boto3.client('s3')
-    s3_path = f'{DIRECTORY}/{FILENAME}'
-
-    try:
-        s3.put_object(Bucket=BUCKET, Key=s3_path, Body=page.text.encode('utf-8'))
-        logger.info(f'Successfully saved HTML content to: {s3_path}')
-    except Exception as e:
-        logger.error(f'S3 put object error: {e}')
-        raise
+    save_html_to_s3(page, HTML_BUCKET, S3_PATH)
 
     # Get HTML content from S3
-    try:
-        obj = s3.get_object(Bucket=BUCKET, Key=s3_path)
-        html_content = obj['Body'].read().decode()
-        logger.info(f'Successfully read HTML content from: {s3_path}')
-    except Exception as e:
-        logger.error(f'S3 get object error: {e}')
-        raise
+    html = get_html_from_s3(HTML_BUCKET, S3_PATH)
 
-    soup = BeautifulSoup(html_content, 'html.parser')
-
+    # Start extracting logic
+    soup = BeautifulSoup(html, 'html.parser')
     tbl = soup.table
     df = pd.read_html(StringIO(str(tbl)))[0]
-    logger.info(f'scrape_tuition {df}')
 
-    return df
+    # Save to S3 as CSV file
+    save_csv_to_s3(df, CSV_BUCKET, S3_PATH)

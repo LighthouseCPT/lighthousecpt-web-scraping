@@ -8,8 +8,10 @@ logger = configure_logger(__name__)
 
 class SchoolScraper:
     def __init__(self):
+        self.HTML_BUCKET = 'lighthousecpt-schools-html'
+        self.CSV_BUCKET = 'lighthousecpt-schools-csv'
         self.school_function_map = {
-            'TrineUniversity': TrineUniversityScraper(),
+            'TrineUniversity': TrineUniversityScraper(self.HTML_BUCKET, self.CSV_BUCKET),
         }
 
     def scrape_and_save(self, event):
