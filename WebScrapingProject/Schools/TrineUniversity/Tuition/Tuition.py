@@ -10,7 +10,7 @@ logger = configure_logger(__name__)
 
 def TUITION_run(url):
     TABLE = 'Tuition'
-    BUCKET = 'imbilalx'
+    BUCKET = 'lighthousecpt-schools'
     DIRECTORY = 'TrineUniversity'
     FILENAME = f'{DIRECTORY}_{TABLE}.html'
 
@@ -35,6 +35,7 @@ def TUITION_run(url):
     try:
         obj = s3.get_object(Bucket=BUCKET, Key=s3_path)
         html_content = obj['Body'].read().decode()
+        logger.info(f'Successfully read HTML content from: {s3_path}')
     except Exception as e:
         logger.error(f'S3 get object error: {e}')
         raise
