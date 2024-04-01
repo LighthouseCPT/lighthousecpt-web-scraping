@@ -8,10 +8,8 @@ phases:
     commands:
       - echo "******** Running SAM Build ********"
       - sam build
-      - echo "******** Running SAM Package ********"
-      - sam package --output-template-file packaged.yaml --s3-bucket school-scraper-build-bucket
 
 artifacts:
   files:
-    - packaged.yaml
+    - template.yaml
   discard-paths: yes
