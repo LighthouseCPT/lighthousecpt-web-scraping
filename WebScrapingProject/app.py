@@ -3,26 +3,27 @@ import os
 from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
 from log_config import configure_logger
 
-logger = configure_logger(__name__)
+logging = configure_logger(__name__)
 
 
 class SchoolScraper:
-    def __init__(self):
-        self.HTML_BUCKET = 'lighthousecpt-schools-html'
-        self.CSV_BUCKET = 'lighthousecpt-schools-csv'
-        self.school_function_map = {
-            'TrineUniversity': TrineUniversityScraper(self.HTML_BUCKET, self.CSV_BUCKET),
-        }
+    HTML_BUCKET = 'lighthousecpt-schools-html'
+    CSV_BUCKET = 'lighthousecpt-schools-csv'
+    SCHOOL_FUNCTION_MAP = {
+        'TrineUniversity': TrineUniversityScraper
+    }
 
     def scrape_and_save(self, event):
         for school in event['schools']:
             school_name = school['name']
-            info = {"tuition": school["tuition"]}
-            scraper_function = self.school_function_map.get(school_name)
-            if scraper_function:
-                scraper_function.scrape(info)
+            info = school
+            scraper_class = self.SCHOOL_FUNCTION_MAP.get(school_name)
+            if scraper_class:
+                scraper_instance = scraper_class(self.HTML_BUCKET, self.CSV_BUCKET)
+                scraper_instance.scrape(info)
             else:
-                print({"Error": f"No scraping function found for school: {school_name}"})
+                logging.error(f"No scraping function found for school: {school_name}")
+                raise
 
 
 def lambda_handler(event, context):
