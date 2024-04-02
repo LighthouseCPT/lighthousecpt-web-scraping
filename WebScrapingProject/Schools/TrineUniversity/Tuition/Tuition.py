@@ -20,16 +20,16 @@ class TuitionScraper(BaseScraper):
 
         page = make_request(url)
 
-        # Save HTML content to S3
+        # Save HTML Content to S3
         save_html_to_s3(page, self.HTML_BUCKET, S3_PATH)
 
         # Get HTML content from S3
         html = get_html_from_s3(self.HTML_BUCKET, S3_PATH)
 
-        # Start extracting logic
+        # Start Extracting Logic
         soup = BeautifulSoup(html, 'html.parser')
         tbl = soup.table
         df = pd.read_html(StringIO(str(tbl)))[0]
 
-        # Save to S3 as CSV file
+        # Save to S3 as CSV File
         save_csv_to_s3(df, self.CSV_BUCKET, S3_PATH)
