@@ -18,6 +18,7 @@ class TuitionScraper(BaseScraper):
         FILENAME = f'{self.SCHOOL_NAME}_{TYPE}'
         S3_PATH = f'{self.SCHOOL_NAME}/{FILENAME}'
 
+        # Make URL Request
         page = make_request(url)
 
         # Save HTML Content to S3
