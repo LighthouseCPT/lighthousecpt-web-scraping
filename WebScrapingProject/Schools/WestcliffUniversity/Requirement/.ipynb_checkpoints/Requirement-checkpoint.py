@@ -29,12 +29,12 @@ class RequirementScraper(BaseScraper):
         EdD_PAGE = make_request(EdD_URL)
 
         # Save HTML Content to S3
-        save_html_to_s3(DBA_PAGE, self.HTML_BUCKET, DBA_S3_PATH)
-        save_html_to_s3(EdD_PAGE, self.HTML_BUCKET, EdD_S3_PATH)
+        save_html_to_s3(DBA_PAGE, self.SOURCE_BUCKET, DBA_S3_PATH)
+        save_html_to_s3(EdD_PAGE, self.SOURCE_BUCKET, EdD_S3_PATH)
 
         # Get HTML content from S3
-        DBA_HTML = get_html_from_s3(self.HTML_BUCKET, DBA_S3_PATH)
-        EdD_HTML = get_html_from_s3(self.HTML_BUCKET, EdD_S3_PATH)
+        DBA_HTML = get_html_from_s3(self.SOURCE_BUCKET, DBA_S3_PATH)
+        EdD_HTML = get_html_from_s3(self.SOURCE_BUCKET, EdD_S3_PATH)
 
         DBA_soup = BeautifulSoup(DBA_HTML.text, 'html.parser')
         EdD_soup = BeautifulSoup(EdD_HTML.text.replace("\n", ""), 'html.parser')

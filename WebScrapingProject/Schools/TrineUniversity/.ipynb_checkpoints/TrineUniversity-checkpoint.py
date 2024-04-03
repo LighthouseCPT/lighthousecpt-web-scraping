@@ -7,10 +7,10 @@ logging = configure_logger(__name__)
 
 
 class TrineUniversityScraper:
-    def __init__(self, HTML_BUCKET, CSV_BUCKET, school_name='TrineUniversity'):
-        self.tuition_scraper = TuitionScraper(HTML_BUCKET, CSV_BUCKET, school_name)
-        self.requirement_scraper = RequirementScraper(HTML_BUCKET, CSV_BUCKET, school_name)
-        self.deadline_scraper = DeadlineScraper(HTML_BUCKET, CSV_BUCKET, school_name)
+    def __init__(self, SOURCE_BUCKET, CSV_BUCKET, school_name='TrineUniversity'):
+        self.tuition_scraper = TuitionScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)
+        self.requirement_scraper = RequirementScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)
+        self.deadline_scraper = DeadlineScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)
 
     def scrape(self, info):
         print(info)

@@ -20,11 +20,11 @@ def make_request(url):
 
 
 # Save HTML content to S3
-def save_html_to_s3(page, HTML_BUCKET, S3_PATH):
+def save_html_to_s3(page, SOURCE_BUCKET, S3_PATH):
     try:
         S3_PATH = S3_PATH + '.html'
         s3 = boto3.client('s3')
-        s3.put_object(Bucket=HTML_BUCKET, Key=S3_PATH, Body=page.text.encode('utf-8'))
+        s3.put_object(Bucket=SOURCE_BUCKET, Key=S3_PATH, Body=page.text.encode('utf-8'))
         logger.info(f'Successfully saved to: {S3_PATH}')
     except Exception as e:
         logger.error(f'S3 put object error: {e}')
@@ -32,11 +32,11 @@ def save_html_to_s3(page, HTML_BUCKET, S3_PATH):
 
 
 # Get HTML content from S3
-def get_html_from_s3(HTML_BUCKET, S3_PATH):
+def get_html_from_s3(SOURCE_BUCKET, S3_PATH):
     try:
         S3_PATH = S3_PATH + '.html'
         s3 = boto3.client('s3')
-        obj = s3.get_object(Bucket=HTML_BUCKET, Key=S3_PATH)
+        obj = s3.get_object(Bucket=SOURCE_BUCKET, Key=S3_PATH)
         html_content = obj['Body'].read().decode()
         logger.info(f'Successfully read from: {S3_PATH}')
         return html_content

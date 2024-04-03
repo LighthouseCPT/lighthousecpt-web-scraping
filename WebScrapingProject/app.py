@@ -3,6 +3,7 @@ import os
 from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
 from Schools.NewEnglandCollege.NewEnglandCollege import NewEnglandCollegeScraper
 from Schools.MonroeCollege.MonroeCollege import MonroeCollegeScraper
+from Schools.WestcliffUniversity.WestcliffUniversity import WestcliffUniversityScraper
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -19,7 +20,8 @@ class SchoolScraper:
     SCHOOL_FUNCTION_MAP = {
         'TrineUniversity': TrineUniversityScraper,
         'NewEnglandCollege': NewEnglandCollegeScraper,
-        'MonroeCollege': MonroeCollegeScraper
+        'MonroeCollege': MonroeCollegeScraper,
+        'WestcliffUniversity': WestcliffUniversityScraper
     }
 
     def scrape_and_save(self, event):

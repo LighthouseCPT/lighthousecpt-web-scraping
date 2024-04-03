@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added MonroeCollege" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added MonroeCollege">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/base_scraper-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/base_scraper-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/utils-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/utils-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/.ipynb_checkpoints/WestcliffUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/.ipynb_checkpoints/WestcliffUniversity-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/.ipynb_checkpoints/Deadline-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/.ipynb_checkpoints/Deadline-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/Deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/Deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/Requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/Requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/Tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/WestcliffUniversity.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/WestcliffUniversity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +33,13 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="FF_ONLY" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -132,7 +157,7 @@
       <workItem from="1712070002647" duration="568000" />
       <workItem from="1712070572980" duration="481000" />
       <workItem from="1712071056986" duration="15275000" />
-      <workItem from="1712151108633" duration="5049000" />
+      <workItem from="1712151108633" duration="7423000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -302,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712156503569</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added MonroeCollege">
+      <option name="closed" value="true" />
+      <created>1712156894862</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712156894862</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
