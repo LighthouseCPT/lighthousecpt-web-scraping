@@ -6,8 +6,8 @@ from log_config import configure_logger
 logging = configure_logger(__name__)
 
 
-class MonroeCollegeScraper:
-    def __init__(self, SOURCE_BUCKET, CSV_BUCKET, school_name='MonroeCollege'):
+class McDanielCollegeScraper:
+    def __init__(self, SOURCE_BUCKET, CSV_BUCKET, school_name='McDanielCollege'):
         self.tuition_scraper = TuitionScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)
         self.requirement_scraper = RequirementScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)
         self.deadline_scraper = DeadlineScraper(SOURCE_BUCKET, CSV_BUCKET, school_name)

@@ -16,9 +16,18 @@
     },
     {
       "name": "MonroeCollege",
-      "tuition": "",
-      "requirement": "",
-      "deadline":""
+      "tuition": "PDF",
+      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
+      "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
+    },
+    {
+      "name": "WestcliffUniversity",
+      "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
+      "requirement": {
+        "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
+        "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
+      },
+      "deadline": "https://www.westcliff.edu/admissions/apply/#description1"
     }
   ]
 }

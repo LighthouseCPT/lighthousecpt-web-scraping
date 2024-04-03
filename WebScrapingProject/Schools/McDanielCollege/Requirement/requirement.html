@@ -1,0 +1,1249 @@
+            <!DOCTYPE html>
+    <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+      <head>
+        <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-41710544237831d0803",applicationID:"217488914"};;/*! For license information please see nr-loader-rum-1.253.0.min.js.LICENSE.txt */
+(()=>{var e,t,n={234:(e,t,n)=>{"use strict";n.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>N,Yu:()=>w,Dg:()=>m,CX:()=>c,GE:()=>x,sU:()=>R});var r=n(8632),i=n(9567);const o={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const n=(0,r.ek)(e);n&&(n.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=n(7056),l=n(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const n=(0,r.ek)(e);n&&(n.init=p[e])}function b(e,t){if(!e)throw new Error(h);var n=v(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function x(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const n=(0,r.ek)(e);n&&(n.loader_config=A[e])}const w=(0,r.mF)().o;var _=n(385),E=n(6818);const D={buildEnv:E.Re,customTransaction:void 0,disabled:!1,distMethod:E.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(_._A?.performance?.timeOrigin||_._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+_._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof _._A.XMLHttpRequest?.prototype?.addEventListener,version:E.q4,denyList:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]=(0,i.D)(t,D);const n=(0,r.ek)(e);n&&(n.runtime=S[e])}function N(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,n)=>{"use strict";n.d(t,{D:()=>i});var r=n(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,r.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,r.Z)("Setting a Configurable requires a model to set its initial properties");const n=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(n).length?e:n;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?n[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?n[a]=i(e[a],t[a]):n[a]=e[a]}catch(e){(0,r.Z)("An error occurred while setting a property of a Configurable",e)}return n}catch(e){(0,r.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,n)=>{"use strict";n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.253.0",i="PROD",o="CDN"},385:(e,t,n)=>{"use strict";n.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>r,ux:()=>c,v6:()=>i,w1:()=>u});const r="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=r?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(r&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},9907:(e,t,n)=>{"use strict";n.d(t,{A:()=>r});class r{constructor(e){this.contextId=e}}},8929:(e,t,n)=>{"use strict";n.d(t,{v:()=>a});var r=n(8632);const i=(0,n(4402).Rl)();var o=n(9907);class a{static contextId="nr@context:".concat(i);static contextOriginalId="nr@original:".concat(i);static contextWrappedId="nr@wrapped:".concat(a.contextId);static getObservationContextByAgentIdentifier(e){const t=(0,r.fP)();return Object.keys(t?.initializedAgents||{}).indexOf(e)>-1?t.initializedAgents[e].observationContext:void 0}#e=new WeakMap;getCreateContext(e){return this.#e.has(e)||this.#e.set(e,new o.A),this.#e.get(e)}setContext(e,t){return this.#e.set(e,t),this.#e.get(e)}}},1117:(e,t,n)=>{"use strict";n.d(t,{w:()=>o});var r=n(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,n)=>{"use strict";n.d(t,{L:()=>d,R:()=>c});var r=n(2177),i=n(1284),o=n(4322),a=n(3325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(u(e),!e||!s[e].get(t)||n)return c(t);s[e].get(t).staged=!0;const a=[...s[e]];function c(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}a.every((e=>{let[t,n]=e;return n.staged}))&&(a.sort(((e,t)=>e[1].priority-t[1].priority)),a.forEach((t=>{let[n]=t;s[e].delete(n),c(n)})))}function l(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},2177:(e,t,n)=>{"use strict";n.d(t,{ee:()=>c});var r=n(8632),i=n(2210),o=n(234),a=n(9907),s=n(8929);const c=function e(t,n){var r={},u={},l={},f=!1;try{f=16===n.length&&(0,o.OP)(n).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var n=r[e];if(!n)return;for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)},emit:function(e,n,r,i,o){!1!==o&&(o=!0);if(c.aborted&&!i)return;t&&o&&t.emit(e,n,r);for(var a=p(r),s=v(e),d=s.length,l=0;l<d;l++)s[l].apply(a,n);var f=b()[u[e]];f&&f.push([g,e,n,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const n=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[r,i]=e;u[i]=t,t in n||(n[t]=[])}))},abort:d,aborted:!1,isBuffering:function(e){return!!b()[u[e]]},debugId:n,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{},observationContextManager:null};return g;function p(e){return e&&e instanceof a.A?e:e?(0,i.X)(e,s.v.contextId,(()=>g.observationContextManager?g.observationContextManager.getCreateContext(e):new a.A(s.v.contextId))):g.observationContextManager?g.observationContextManager.getCreateContext({}):new a.A(s.v.contextId)}function h(e,t){r[e]=v(e).concat(t)}function v(e){return r[e]||[]}function m(t){const n=l[t]=l[t]||e(g,t);return!n.observationContextManager&&g.observationContextManager&&(n.observationContextManager=g.observationContextManager),n}function b(){return g.backlog}}(void 0,"globalEE"),u=(0,r.fP)();function d(){c.aborted=!0,Object.keys(c.backlog).forEach((e=>{delete c.backlog[e]}))}u.ee||(u.ee=c)},5546:(e,t,n)=>{"use strict";n.d(t,{E:()=>r,p:()=>i});var r=n(2177).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4322:(e,t,n)=>{"use strict";n.d(t,{X:()=>o});var r=n(5546);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},3239:(e,t,n)=>{"use strict";n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(n,r))}},4402:(e,t,n)=>{"use strict";n.d(t,{Rl:()=>a,ky:()=>s});var r=n(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,n++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(n,i++).toString(16));return a.join("")}},7056:(e,t,n)=>{"use strict";n.d(t,{Bq:()=>r,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const r="NRBA",i="SESSION",o=144e5,a=18e5,s={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,n)=>{"use strict";function r(){return Math.floor(performance.now())}n.d(t,{z:()=>r})},50:(e,t,n)=>{"use strict";function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},2825:(e,t,n)=>{"use strict";n.d(t,{N:()=>d,T:()=>l});var r=n(2177),i=n(5546),o=n(3325),a=n(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa,o.D.softNav],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const n=r.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,r]=e;c[t]?c[t].forEach((e=>{r?(0,i.p)("feat-"+t,[],void 0,e,n):(0,i.p)("block-"+t,[],void 0,e,n),(0,i.p)("rumresp-"+t,[Boolean(r)],void 0,e,n)})):r&&(0,i.p)("feat-"+t,[],void 0,void 0,n),l[t]=Boolean(r)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,n))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,n)=>{"use strict";n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,n)=>{"use strict";n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},4351:(e,t,n)=>{"use strict";n.d(t,{P:()=>o});var r=n(2177);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,n)=>{"use strict";n.d(t,{KB:()=>a,b2:()=>o});var r=n(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},8632:(e,t,n)=>{"use strict";n.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var r=n(7894),i=n(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let n=a();n.initializedAgents??={},t.initializedAt={ms:(0,r.z)(),date:new Date},n.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,n)=>{"use strict";n.d(t,{N:()=>i});var r=n(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),n,i)}},3081:(e,t,n)=>{"use strict";n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewEvent},9251:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewTiming},7144:(e,t,n)=>{"use strict";n.d(t,{Ef:()=>i});var r=n(7056);n(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay"};r.IK.ERROR,r.IK.FULL,r.IK.OFF},5938:(e,t,n)=>{"use strict";n.d(t,{W:()=>i});var r=n(2177);class i{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=r.ee.get(e),this.featureName=n,this.blocked=!1}}},8862:(e,t,n)=>{"use strict";n.d(t,{j:()=>x});var r=n(3325),i=n(234),o=n(5546),a=n(2177),s=n(7894),c=n(8e3),u=n(3960),d=n(385),l=n(50),f=n(3081),g=n(8632),p=n(7144);const h=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",p.Ef.RECORD,p.Ef.PAUSE],v=["setErrorHandler","finished","addToTrace","addRelease"];function m(){const e=(0,g.gG)();h.forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var b=n(2825);const y=e=>{const t=e.startsWith("http");e+="/",n.p=t?e:"https://"+e};let A=!1;function x(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},h=arguments.length>2?arguments[2]:void 0,x=arguments.length>3?arguments[3]:void 0,{init:w,info:_,loader_config:E,runtime:D={loaderType:h},exposed:S=!0}=t;const k=(0,g.gG)();_||(w=k.init,_=k.info,E=k.loader_config),(0,i.Dg)(e.agentIdentifier,w||{}),(0,i.GE)(e.agentIdentifier,E||{}),_.jsAttributes??={},d.v6&&(_.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,_);const R=(0,i.P_)(e.agentIdentifier),N=[_.beacon,_.errorBeacon];A||(R.proxy.assets&&(y(R.proxy.assets),N.push(R.proxy.assets)),R.proxy.beacon&&N.push(R.proxy.beacon),m(),(0,g.EZ)("activatedFeatures",b.T),e.runSoftNavOverSpa&&=!0===R.soft_navigations.enabled&&R.feature_flags.includes("soft_nav")),D.denyList=[...R.ajax.deny_list||[],...R.ajax.block_internal?N:[]],(0,i.sU)(e.agentIdentifier,D),void 0===e.api&&(e.api=function(e,t){let g=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,c.R)(e,"api");const h={};var m=a.ee.get(e),b=m.get("tracer"),y="api-",A=y+"ixn-";function x(t,n,r,o){const a=(0,i.C5)(e);return null===n?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),E(y,r,!0,o||null===n?"session":void 0)(t,n)}function w(){}v.forEach((e=>{h[e]=E(y,e,!0,"api")})),h.addPageAction=E(y,"addPageAction",!0,r.D.pageAction),h.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,E(y,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return x(e,t,"setCustomAttribute",n);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setUserId=function(e){if("string"==typeof e||null===e)return x("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return x("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},h.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,r.D.metrics,m);const n=Object.values(r.D);if(void 0===e)e=n;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!n.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(n));e.includes(r.D.pageViewEvent)||e.push(r.D.pageViewEvent)}e.forEach((e=>{m.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},h[p.Ef.RECORD]=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.RECORD,[],void 0,r.D.sessionReplay,m)},h[p.Ef.PAUSE]=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.PAUSE,[],void 0,r.D.sessionReplay,m)},h.interaction=function(e){return(new w).get("object"==typeof e?e:{})};const _=w.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,r.D.metrics,m),g||(0,o.p)(A+"tracer",[(0,s.z)(),e,n],i,r.D.spa,m),function(){if(b.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw b.emit("fn-err",[arguments,this,e],n),e}finally{b.emit("fn-end",[(0,s.z)()],n)}}}};function E(e,t,n,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,r.D.metrics,m),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,m),n?void 0:this}}function D(){n.e(75).then(n.bind(n,7438)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>{(0,l.Z)("Downloading runtime APIs failed..."),(0,c.L)(e,"api",!0)}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{_[e]=E(A,e,void 0,g?r.D.softNav:r.D.spa)})),h.setCurrentRouteName=g?E(A,"routeName",void 0,r.D.softNav):E(y,"routeName",!0,r.D.spa),h.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,r.D.metrics,m),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,m)},d.il?(0,u.b2)((()=>D()),!0):D(),h}(e.agentIdentifier,x,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=S),A=!0}},1926:(e,t,n)=>{n.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,n)=>{"use strict";n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8,[r.softNav]:9,[r.sessionReplay]:10}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>"nr-rum-1.253.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.253.0.PROD:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-9bAiHIPyDQsfH3twE5thQ79NZloqHEfmncprWhfUn+VZFlQhRa05+ziJ9iJfmPRs6DoQA5H7S/VrlzQnvif2nQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[n]=[r];var g=(t,r)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=self["webpackChunk:NRBA-1.253.0.PROD"]=self["webpackChunk:NRBA-1.253.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";i(1926);var e=i(50),t=i(7144),n=i(8929),r=i(4402),o=i(2177);class a{agentIdentifier;observationContext=new n.v;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e;o.ee.get(e).observationContext=this.observationContext}#t(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#t("addPageAction",e,t)}setPageViewName(e,t){return this.#t("setPageViewName",e,t)}setCustomAttribute(e,t,n){return this.#t("setCustomAttribute",e,t,n)}noticeError(e,t){return this.#t("noticeError",e,t)}setUserId(e){return this.#t("setUserId",e)}setApplicationVersion(e){return this.#t("setApplicationVersion",e)}setErrorHandler(e){return this.#t("setErrorHandler",e)}finished(e){return this.#t("finished",e)}addRelease(e,t){return this.#t("addRelease",e,t)}start(e){return this.#t("start",e)}recordReplay(){return this.#t(t.Ef.RECORD)}pauseReplay(){return this.#t(t.Ef.PAUSE)}addToTrace(e){return this.#t("addToTrace",e)}setCurrentRouteName(e){return this.#t("setCurrentRouteName",e)}interaction(){return this.#t("interaction")}}var s=i(3325),c=i(234);const u=Object.values(s.D);function d(e){const t={};return u.forEach((n=>{t[n]=function(e,t){return!0===(0,c.Mt)(t,"".concat(e,".enabled"))}(n,e)})),t}var l=i(8862);var f=i(8e3),g=i(5938),p=i(3960),h=i(385);const v=e=>h.il&&!0===(0,c.Mt)(e,"privacy.cookies_enabled");function m(e){return c.Yu.MO&&v&&!0===(0,c.Mt)(e,"session_trace.enabled")}class b extends g.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,c.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,f.R)(e,n)}importAggregator(){let t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,f.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));this.onAggregateImported=new Promise((e=>{t=e}));const r=async()=>{let r;try{if(v(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3108));r=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===s.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#n(this.featureName,r))return(0,f.L)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,n),t(!0)}catch(n){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),n),this.abortHandler?.(),(0,f.L)(this.agentIdentifier,this.featureName,!0),t(!1)}};h.il?(0,p.b2)((()=>r()),!0):r()}#n(e,t){return e!==s.D.sessionReplay||(n=this.agentIdentifier,r=t,!(!m(n)||!r?.isNew&&!r?.state.sessionReplayMode));var n,r}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,n),this.importAggregator()}}var x=i(1117),w=i(1284);class _ extends x.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,n){t[e]=E(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,w.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=E(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=E(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=Object.values(this.aggregatedData[n]||{}),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),k=i(4351);var R=i(5546),N=i(7956),C=i(3239),j=i(7894),I=i(9251);class O extends b{static featureName=I.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t,n),h.il&&((0,N.N)((()=>(0,R.p)("docHidden",[(0,j.z)()],void 0,I.t,this.ee)),!0),(0,C.bP)("pagehide",(()=>(0,R.p)("winPagehide",[(0,j.z)()],void 0,I.t,this.ee))),this.importAggregator())}}var T=i(3081);class P extends b{static featureName=T.t9;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,T.t9,n),this.importAggregator()}}new class extends a{constructor(t,n){super(n),h._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===s.D.softNav)),(0,l.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=d(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>s.p[e.featureName]-s.p[t.featureName])),n.forEach((n=>{if(!t[n.featureName]&&n.featureName!==s.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&n.featureName===s.D.spa)return;if(!this.runSoftNavOverSpa&&n.featureName===s.D.softNav)return;const r=function(e){switch(e){case s.D.ajax:return[s.D.jserrors];case s.D.sessionTrace:return[s.D.ajax,s.D.pageViewEvent];case s.D.sessionReplay:return[s.D.sessionTrace];case s.D.pageViewTiming:return[s.D.pageViewEvent];default:return[]}}(n.featureName);r.every((e=>e in this.features))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,k.P)(r),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,S.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[A,O,P],loaderType:"lite"})})()})();</script>
+<meta name="description" content="A master’s degree in data analytics is designed to prepare students for careers in business, government, education, healthcare, and other industries where they can apply their skills." />
+<link rel="canonical" href="https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="Generator" content="Spam Master 2.42 - Real-time Protection With Firewall Security at spammaster.org." />
+<link rel="icon" href="/themes/custom/newcity/favicon.ico" type="image/vnd.microsoft.icon" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T9L6QN');</script>
+
+        <title>Data Analytics, M.S. (100% Online or Hybrid Low Residency) | McDaniel College</title>
+        <link rel="stylesheet" media="all" href="/sites/default/files/css/css_siM2SFxQkQCLN68fyCmLk-qFrw61liAtV1Z30dt9MFY.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ftJLChh67I_P25sfckvE0J8vYgfuecAUl1_3xkm7SPs.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Rubik:400,500,700|Source+Code+Pro&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_PN7wt6zSy1fSqDL6O47Vz-BiJTP5RhujgQMIxn9N_Pk.css" />
+
+        <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+<script src="/core/misc/modernizr-additional-tests.js?v=3.11.7"></script>
+
+      </head>
+      <body class="path-node page-node-type-degree">
+              <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9L6QN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                      <a href="#main-content"  class="skip-nav link">
+            Skip to main
+    </a>
+        
+          <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="page-wrapper">
+
+      <div class="header">
+  <div class="header__prefix">
+                  <div class="region--header_prefix">
+        <div id="block-sitewidealert" class="block-sitewide-alert-block">
+  
+    
+      <div data-sitewide-alert></div>
+  </div>
+      </div>
+    
+  </div>
+  <div class="header__inner slab">
+    <div class="header__container">
+      <div class="header__logo">
+                                <div class="region--branding">
+        <div id="block-newcity-branding" class="block-system block-system-branding-block">
+  
+    
+        <a href="/" rel="home">
+      <img src="/themes/custom/newcity/logo.svg" alt="Home" />
+    </a>
+      
+</div>
+      </div>
+    
+              </div>
+      <div class="header__nav">
+                                <div class="region--main_nav">
+                        <nav role="navigation" aria-labelledby="block-newcity-main-menu-menu" id="block-newcity-main-menu" class="block block-menu navigation menu--main">
+                                
+      <span class="visually-hidden" id="block-newcity-main-menu-menu">Main navigation</span>
+      
+
+                    <div class="main-nav" id="main-nav" aria-hidden="true">
+  <ul class="main-nav__links">
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/academics"  class=" link">
+            Academics
+    </a>
+                        <button class="interface-button main-nav__mobile-dropdown-trigger" aria-controls="academics-dropdown" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--angle-right" aria-hidden="true"></span><span class="icon__label">Toggle menu children</span></span></button>
+        <div class="dropdown" id="academics-dropdown">
+          <ul>
+                          <li>
+                <a href="/academics/programs-degrees"  class=" link">
+            Programs and Degrees
+    </a>
+              </li>
+                          <li>
+                <a href="/mcdaniel-commitment"  class=" link">
+            The McDaniel Commitment
+    </a>
+              </li>
+                          <li>
+                <a href="/academics/academic-success-support"  class=" link">
+            Academic Success &amp; Support
+    </a>
+              </li>
+                          <li>
+                <a href="/academics/special-academic-opportunities"  class=" link">
+            Special Academic Opportunities
+    </a>
+              </li>
+                          <li>
+                <a href="/academics/career-services-experiential-opportunities"  class=" link">
+            Career Services &amp; Experiential Opportunities
+    </a>
+              </li>
+                          <li>
+                <a href="/academics/graduate-professional-studies"  class=" link">
+            Graduate &amp; Professional Studies
+    </a>
+              </li>
+                      </ul>
+        </div>
+              </li>
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/admissions-cost"  class=" link">
+            Admissions &amp; Cost
+    </a>
+                        <button class="interface-button main-nav__mobile-dropdown-trigger" aria-controls="admissions-cost-dropdown" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--angle-right" aria-hidden="true"></span><span class="icon__label">Toggle menu children</span></span></button>
+        <div class="dropdown" id="admissions-cost-dropdown">
+          <ul>
+                          <li>
+                <a href="/admissions-cost/undergraduate-admissions"  class=" link">
+            Undergraduate Admissions
+    </a>
+              </li>
+                          <li>
+                <a href="/admissions-cost/graduate-admissions"  class=" link">
+            Graduate Admissions
+    </a>
+              </li>
+                          <li>
+                <a href="/admissions-cost/cost-financial-aid"  class=" link">
+            Cost &amp; Financial Aid
+    </a>
+              </li>
+                          <li>
+                    <a href="https://admission.mcdaniel.edu/portal/visit" rel="noopener" target="_blank" class=" link link--new-tab">
+            Visit McDaniel
+    </a>
+              </li>
+                          <li>
+                <a href="/admissions-cost/counselor-resources"  class=" link">
+            Counselor Resources
+    </a>
+              </li>
+                      </ul>
+        </div>
+              </li>
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/student-life"  class=" link">
+            Student Life
+    </a>
+                        <button class="interface-button main-nav__mobile-dropdown-trigger" aria-controls="student-life-dropdown" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--angle-right" aria-hidden="true"></span><span class="icon__label">Toggle menu children</span></span></button>
+        <div class="dropdown" id="student-life-dropdown">
+          <ul>
+                          <li>
+                <a href="/student-life/living-campus"  class=" link">
+            Living on Campus
+    </a>
+              </li>
+                          <li>
+                <a href="/student-life/getting-involved"  class=" link">
+            Getting Involved
+    </a>
+              </li>
+                          <li>
+                <a href="/student-life/health-wellness"  class=" link">
+            Health &amp; Wellness
+    </a>
+              </li>
+                          <li>
+                <a href="/student-life/campus-safety"  class=" link">
+            Campus Safety
+    </a>
+              </li>
+                          <li>
+                <a href="/student-life/student-resources"  class=" link">
+            Student Resources
+    </a>
+              </li>
+                          <li>
+                <a href="/student-life/parent-family-resources"  class=" link">
+            Parent &amp; Family Resources
+    </a>
+              </li>
+                      </ul>
+        </div>
+              </li>
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/athletics"  class=" link">
+            Athletics
+    </a>
+              </li>
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/about-us"  class=" link">
+            About Us
+    </a>
+                        <button class="interface-button main-nav__mobile-dropdown-trigger" aria-controls="about-us-dropdown" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--angle-right" aria-hidden="true"></span><span class="icon__label">Toggle menu children</span></span></button>
+        <div class="dropdown" id="about-us-dropdown">
+          <ul>
+                          <li>
+                <a href="/about-us/mission-and-history"  class=" link">
+            Mission and History
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/diversity-equity-and-inclusion"  class=" link">
+            Diversity, Equity, and Inclusion
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/presidents-office"  class=" link">
+            The President&#039;s Office
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/fast-facts-accolades"  class=" link">
+            Fast Facts &amp; Accolades
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/visitor-resources"  class=" link">
+            Visitor Resources
+    </a>
+              </li>
+                          <li>
+                <a href="/news"  class=" link">
+            News &amp; Media
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/event-calendars"  class=" link">
+            Event Calendars
+    </a>
+              </li>
+                          <li>
+                <a href="/about-us/meet-mcdaniel-profiles-hill"  class=" link">
+            Meet McDaniel: Profiles from the Hill
+    </a>
+              </li>
+                      </ul>
+        </div>
+              </li>
+          <li class="main-nav__link" data-dropdown-active="false">
+        <a href="/alumni"  class=" link">
+            Alumni
+    </a>
+                        <button class="interface-button main-nav__mobile-dropdown-trigger" aria-controls="alumni-dropdown" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--angle-right" aria-hidden="true"></span><span class="icon__label">Toggle menu children</span></span></button>
+        <div class="dropdown" id="alumni-dropdown">
+          <ul>
+                          <li>
+                <a href="/alumni/connect"  class=" link">
+            Connect
+    </a>
+              </li>
+                          <li>
+                <a href="/alumni/events"  class=" link">
+            Events
+    </a>
+              </li>
+                          <li>
+                <a href="/alumni/resources"  class=" link">
+            Resources
+    </a>
+              </li>
+                          <li>
+                <a href="/alumni/giving"  class=" link">
+            Giving
+    </a>
+              </li>
+                      </ul>
+        </div>
+              </li>
+      </ul>
+
+  <div class="main-nav__search">
+    <a href="/mymcdaniel" class="interface-button">MyMcDaniel</a>
+
+    <button class="interface-button" id="search-open"><span class="icon icon--no-label"><span class="icon__glyph ic ic--magnify" aria-hidden="true"></span><span class="icon__label">Toggle site search</span></span></button>
+
+  </div>
+
+  <div class="site-search--mobile">
+    <form class="site-search__form" action="/search" id="mobile-site-search">
+  <label for="mobile-site-search-keywords" class="visually-hidden">Site search keywords</label>
+  <input type="text" placeholder="Search.." name="keys" id="mobile-site-search-keywords">
+  <button type="submit">GO</button>
+</form>  </div>
+
+  <button class="interface-button" id="menu-close"><span class="icon icon--no-label"><span class="icon__glyph ic ic--menu-close" aria-hidden="true"></span><span class="icon__label">Close menu</span></span></button>
+</div>
+
+          </nav>
+
+      </div>
+    
+              </div>
+
+      <button class="interface-button" id="menu-open" aria-controls="main-nav" aria-expanded="false"><span class="icon icon--no-label"><span class="icon__glyph ic ic--menu" aria-hidden="true"></span><span class="icon__label">Open menu</span></span></button>
+    </div>
+  </div>
+  <div class="site-search">
+    <div class="site-search__inner">
+      <form class="site-search__form" action="/search" id="main-site-search">
+  <label for="main-site-search-keywords" class="visually-hidden">Site search keywords</label>
+  <input type="text" placeholder="Search.." name="keys" id="main-site-search-keywords">
+  <button type="submit">GO</button>
+</form>    </div>
+  </div>
+</div>
+  
+  <main id="main-content" class="main">
+    
+  
+
+                    <div class="region--content">
+        <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-newcity-content" class="block-system block-system-main-block">
+  
+    
+      
+<article data-history-node-id="1231" role="article" about="/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency" class="node node--type-degree node--view-mode-full">
+
+  
+  
+
+  <div class="node__content">
+    
+
+<div class="fancy-page-intro slab ">
+        <div class="background-image background-image--black">
+        <div>
+            
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-banner">
+  
+            <picture>
+                  <source srcset="/sites/default/files/styles/big_page_header/public/2019-09/Academic%20Life_006.jpg?h=2e3eca71&amp;itok=MTRsXCNy 1x" media="all and (min-width: 1025px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/medium_page_header/public/2019-09/Academic%20Life_006.jpg?h=2e3eca71&amp;itok=2v7aknLV 1x" media="all and (min-width: 560px) and (max-width: 1024px)" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/small_page_header/public/2019-09/Academic%20Life_006.jpg?h=2e3eca71&amp;itok=wvV0cEXL" alt="Student on computer in Hoover Library." typeof="foaf:Image" />
+
+  </picture>
+
+
+
+  </div>
+</div>
+              </div>
+    </div>
+  <div class="fancy-page-intro__primary-content">
+    <div class="fancy-page-intro__breadcrumbs">
+              <div id="block-newcity-breadcrumbs" class="block-system block-system-breadcrumb-block">
+  
+    
+      <nav class="breadcrumbs">
+  <ul>
+        <li>
+                    <a href="/"  class="breadcrumb link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--home" aria-hidden="true"></span></span>        </span><span class="link__content">Home</span>
+    </a>
+          </li>
+        <li>
+                    <a href="/academics"  class="breadcrumb link">
+            Academics
+    </a>
+          </li>
+        <li>
+                    <a href="/academics/graduate-professional-studies"  class="breadcrumb link">
+            Graduate &amp; Professional Studies Division
+    </a>
+          </li>
+      </ul>
+</nav>
+
+  </div>
+          </div>
+    <h1 class="heading fancy-page-intro__heading" >
+        <span class="heading__text">Data Analytics, M.S. (100% Online or Hybrid Low Residency)</span>
+  </h1>
+
+          <div class="fancy-page-intro__content">
+      
+            <div class="field field--name-field-program-overview field--type-text-long field--label-hidden field__item"><p>McDaniel's Master of Science program will position you to play an essential role in your organization. Our approach teaches more than just the skills of data analysis; you'll be trained on how to present data in impactful and persuasive ways.</p></div>
+      
+
+      </div>
+              </div>
+</div>
+<div class="slab ">
+  <div class="slab__wrapper">
+                  
+  <div class="icon-definition-list">
+	<div class="icon-definition-list__container">
+		      			<div class="icon-definition-list__item">
+				<span class="icon icon--no-label"><span class="icon__glyph ic ic--mortarboard" aria-hidden="true"></span><span class="icon__label">Mortarboard</span></span>				<div class="icon-definition-list__item__content">
+					<div class="item__title">Degree Types</div>
+					<div class="item__description">Master&#039;s</div>
+				</div>
+			</div>
+      		      			<div class="icon-definition-list__item">
+				<span class="icon icon--no-label"><span class="icon__glyph ic ic--dollarsign" aria-hidden="true"></span><span class="icon__label">Dollar sign</span></span>				<div class="icon-definition-list__item__content">
+					<div class="item__title">Program Cost</div>
+					<div class="item__description">
+            <div class="field field--name-field-program-cost field--type-text field--label-hidden field__item">$689 per credit (30 credits total)</div>
+      </div>
+				</div>
+			</div>
+      		      		      			<div class="icon-definition-list__item">
+				<span class="icon icon--no-label"><span class="icon__glyph ic ic--heart" aria-hidden="true"></span><span class="icon__label">Heart</span></span>				<div class="icon-definition-list__item__content">
+					<div class="item__title">Distinctive Requirements</div>
+					<div class="item__description">
+            <div class="field field--name-field-dist field--type-string field--label-hidden field__item">Experiential Practica in Data Analytics</div>
+      </div>
+				</div>
+			</div>
+      		      		      		      		      			<div class="icon-definition-list__item">
+				<span class="icon icon--no-label"><span class="icon__glyph ic ic--document3" aria-hidden="true"></span><span class="icon__label">Document</span></span>				<div class="icon-definition-list__item__content">
+					<div class="item__title">
+            <div class="field field--name-field-additional-overview-item-l field--type-string field--label-hidden field__item">Format</div>
+      </div>
+					<div class="item__description">
+            <div class="field field--name-field-additional-overview-item-d field--type-string field--label-hidden field__item">100% Online or Hybrid Low Residency (3-day residency per semester)</div>
+      </div>
+				</div>
+			</div>
+      			</div>
+</div>  </div>
+</div>
+
+<div class="slab slab--space-vertical-0">
+  <div class="slab__wrapper">
+                  <div class="with-sidebar">
+    <div class="with-sidebar__container">
+      <div class="with-sidebar__main">
+        
+
+<div class="slab paragraph--body">
+  <div class="slab__wrapper">
+                
+<h2 id="an-innovative-approach" class="heading"><span class="heading__text">An Innovative Approach</span></h2>
+
+  
+      
+      <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__items">
+              <div class="field__item"><h3>Communicating with Data and Creating an Analytic Narrative</h3>
+
+<p>You’ll notice right from the start that the Professional Master of Science in Data Analytics at McDaniel College is uniquely designed to prepare you for professional success. Every course in the curriculum integrates skills and knowledge that prepares the student to think more critically and through a more peripherally focused lens. This requirement highlights not only our college’s liberal arts tradition but more importantly, our understanding of industry and how to help you distinguish yourself professionally.</p>
+
+<h3>See It In Action</h3>
+
+<p>Examples of assignments that require you to think broadly include:</p>
+
+<ul><li><em>Imagine you're the Chief Analytics Officer for your organization. In this role, you have been asked to write a code of conduct that all data analysts must adhere to. Write this code of ethics for your data analytics organization.</em></li>
+	<li><em>Students will provide a reflection on when data collection enriches a solution and when it becomes a violation of personal privacy.</em></li>
+</ul><h3>An Online or  Hybrid Low Residency Format: Designed With You in Mind</h3>
+
+<p>Our program is offered in two delivery formats - 100% online or a Hybrid Low Residency format - both designed for working professionals to allow for maximum flexibility with a focus on quality. Both formats are delivered in 8-week sessions to allow for accelerated completion of 10 courses in five semesters. Students can begin the program in <em><strong>January</strong></em>, <em><strong>May</strong></em>, or <em><strong>August</strong></em>.</p>
+
+<p>Our online option can be completed without ever having to visit campus while the hybrid low residency combines an intense 3-day residency each semester (5 times during the program) to enhance online learning.  The three-day residency provides time for in-person interaction with your classmates and faculty while also having the flexibility that online learning offers. </p>
+
+<p>Both the online and hybrid low residency options offer a quality experience with work-life balance. Students have the option to choose the modality of their choice. The hybrid low residency option meets the requirements for study in the US for International students seeking F1 visa. The hybrid low residency program does not meet the requirements for in residence training for the purpose of veteran’s benefits.</p>
+
+<p>Because this degree incorporates experiential learning throughout for graduation, <strong><em>International F1 students are eligible to participate in Curricular Practical Training (“CPT”) for the entire program </em></strong>in jobs or internships related to the course of study. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="7e866fea-294a-4ee9-b3ec-54be6ec858b4" href="/admissions-cost/graduate-admissions/information-international-graduate-students/curricular" title="Curricular Practical Training Policy">International students should learn more about our CPT Policy here.</a></p></div>
+          </div>
+  
+
+  </div>
+</div>
+
+
+
+<div class="slab paragraph--accordion js-accordion">
+  <div class="slab__wrapper">
+                
+<h2 id="what-you-need-to-know-about-the-ms-in-data-analytics" class="heading"><span class="heading__text">What You Need to Know About the M.S. in Data Analytics</span></h2>
+  <div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3admissions-requirementsh3">
+        <span class="heading__text"><h3>Admissions Requirements</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><ul><li>Completed <a href="https://admission.mcdaniel.edu/apply/?sr=102b6557-3c66-4fb7-ac05-68be87b38ecb" class="link--new-tab" rel="noopener" target="_blank">application for Data Analytics</a> </li>
+	<li>Bachelor’s degree with a cumulative grade point average (GPA) of 3.0.
+	<ul><li>GPA of less than 3.0 can be considered on a case-by-case basis for provisional admission. Provisional admission requires attaining a 3.0 GPA in the first 9 to 12 credit hours of study or the first two semesters.</li>
+		<li>Submission of official transcript is required. International applicants may submit unofficial transcripts for application purposes but will be required to submit official transcripts prior to enrollment. </li>
+	</ul></li>
+	<li>Successful completion of required program pre-requisites:
+	<ul><li>Introduction to Statistics or equivalent (required)</li>
+		<li>Though not required, we find that additional work in Statistics, Calculus, and Linear Algebra coursework can be helpful.</li>
+	</ul></li>
+	<li>Resume </li>
+	<li>Letter of intent detailing professional goals relative to the program is recommended.</li>
+</ul><p><strong>Additional Requirements for Non-Immigrant Students</strong></p>
+
+<ul><li>English language proficiency (<em>IELTS: 6.0</em> | <em>TOEFL: 79</em> | <em>Duolingo: 110</em>)  
+
+	<ul><li>Waiver of this requirement can be considered for students who have received a degree in the US or who provide evidence of a primary language of instruction as English from a degree obtained outside of the US.</li>
+	</ul></li>
+</ul></div>
+      
+</div>
+	<div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3degree-requirementsh3">
+        <span class="heading__text"><h3>Degree Requirements</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><ul><li>Successful completion of 30 credits hours outlined in the curriculum</li>
+	<li>Minimum 3.0 G.P.A.</li>
+	<li>Experiential learning throughout satisfied by employment or research practicum.</li>
+</ul></div>
+      
+</div>
+	<div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3residency-attendance-policyh3">
+        <span class="heading__text"><h3>Residency Attendance Policy</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>Residency sessions are mandatory for all F-1 visa holders and are scheduled by the college for three days each semester (Fall, Spring and Summer). Residency sessions are optional for domestic students. (The hybrid low residency program does not meet the requirements for in residence training for the purpose of veteran’s benefits.)</p>
+
+<p><strong>For International Students</strong></p>
+
+<p><span><span><span><span><span>Any F-1 student who fails to attend any residency session will be counted as absent for the entire semester and will have his or her SEVIS record terminated. Additionally, each course shall have progress and attendance requirements, which will be strictly enforced to ensure maintenance of F-1 status. </span></span></span></span></span></p></div>
+      
+</div>
+	<div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3practicumh3">
+        <span class="heading__text"><h3>Practicum</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>​​​​​<span><span><span>The research practicum will be designed collaboratively between each student and a supervisory faculty member, with scope and objectives tailored to the academic and professional goals of the student. All students are required to be registered for a practicum with each semester of enrollment in the program. Students who enroll in practicums associated with CPT will be assigned to a first-year or second-year practicum course, which will align with the practicum responsibilities associated with CPT. Students who are not using CPT will be assigned to a practicum course guided by a McDaniel faculty member.</span></span></span></p></div>
+      
+</div>
+	<div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3tuition-amp-feesh3">
+        <span class="heading__text"><h3>Tuition &amp; Fees</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><ul><li>$689 per credit
+	<ul><li>30 total credits</li>
+	</ul></li>
+	<li>$105 Administrative Fee</li>
+	<li>$204 Practicum Fee (per practicum)</li>
+	<li>$204 Residency Fee (<em>for hybrid delivery model <strong>only</strong></em>)
+	<ul><li><strong><em>Required for International Students</em></strong></li>
+	</ul></li>
+</ul></div>
+      
+</div>
+	<div class="js-accordion__panel">
+  <h3 class="heading js-accordion__header" id="h3state-authorizationh3">
+        <span class="heading__text"><h3>State Authorization</h3></span>
+  </h3>
+
+  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><ul><li><a href="https://www.mcdaniel.edu/academics/graduate-professional-studies/state-authorization-requirements-complaints-resolution">State Authorization &amp; Distance Education Complaints Resolution</a></li>
+</ul></div>
+      
+</div>
+	
+
+
+  </div>
+</div>
+
+<div >
+          
+    <div class="call-to-action call-to-action--secondary">
+      <h2 class="heading " id="want-to-see-more-courses-">
+        <span class="heading__text">Want to see more courses? </span>
+  </h2>
+
+  <div class="link-collection link-collection--grid">
+	<div class="link-collection__heading"></div>
+	<div class="link-collection__links">
+					        <a href="https://catalog.mcdaniel.edu/preview_program.php?catoid=50&amp;poid=4876" rel="noopener" target="_blank" class="link--fancy link link--new-tab">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">M.S. in Data Analytics Courses</span>
+    </a>
+			</div>
+</div>
+    </div>
+    </div>
+
+      </div>
+      <div class="with-sidebar__sidebar show-for-large">
+            
+  <div class="sidebar-callouts">
+    <div class="callout slab ">
+      <div class="callout__icon">
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="find-out-more">
+        <span class="heading__text">Find Out More</span>
+  </h2>
+
+      </div>
+            <p>Discover more about this program and others at one of our monthly, virtual open houses!  </p>
+        <a href="https://admission.mcdaniel.edu/portal/visit" rel="noopener" target="_blank" class="button  link link--new-tab">
+            Register
+    </a>  </div><div class="callout slab ">
+      <div class="callout__icon">
+      
+            <div class="field field--name-field-icon field--type-entity-reference field--label-hidden field__item"><div class="icon content-icon">
+  
+  <div class="icon__glyph">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 47" version="1.1" fill="currentColor">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>applebooks</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <g transform="translate(-446.000000, -760.000000)" fill="currentColor">
+            <path d="M455.9998,799.001 L455.9998,807.001 L453.9998,807.001 C452.8958,807.001 451.9998,806.105 451.9998,805.001 L451.9998,805.001 L451.9998,801.001 C451.9998,799.897 452.8958,799.001 453.9998,799.001 L453.9998,799.001 L455.9998,799.001 Z M487.9998,799.001 C489.1038,799.001 489.9998,799.897 489.9998,801.001 L489.9998,801.001 L489.9998,805.001 C489.9998,806.105 489.1038,807.001 487.9998,807.001 L487.9998,807.001 L485.9998,807.001 L485.9998,799.001 Z M482,799 L482,807 L460,807 L460,799 L482,799 Z M475.9998,789.001 L475.9998,797.001 L453.9998,797.001 L453.9998,789.001 L475.9998,789.001 Z M449.9998,789.001 L449.9998,797.001 L447.9998,797.001 C446.8958,797.001 445.9998,796.105 445.9998,795.001 L445.9998,795.001 L445.9998,791.001 C445.9998,789.897 446.8958,789.001 447.9998,789.001 L447.9998,789.001 L449.9998,789.001 Z M481.9998,789.001 C483.1038,789.001 483.9998,789.897 483.9998,791.001 L483.9998,791.001 L483.9998,795.001 C483.9998,796.105 483.1038,797.001 481.9998,797.001 L481.9998,797.001 L479.9998,797.001 L479.9998,789.001 Z M467.9998,761.001 L466.6318,767.837 C467.7918,766.985 469.1778,766.207 470.4578,766.207 C471.0218,766.207 471.5418,766.341 472.0018,766.607 C473.8218,767.661 475.3398,769.179 476.3918,770.999 C477.4438,772.817 477.9998,774.893 477.9998,777.001 C477.9998,783.619 472.6178,789.001 465.9998,789.001 C461.0598,789.001 456.6878,786.023 454.8598,781.417 C454.6618,780.915 454.6718,780.355 454.8918,779.863 C455.1118,779.371 455.5218,778.989 456.0278,778.801 C457.2078,778.369 457.9998,777.243 457.9998,776.001 C457.9998,774.943 457.4438,773.985 456.5138,773.433 C456.0478,773.159 455.7158,772.709 455.5878,772.185 C455.4598,771.661 455.5498,771.109 455.8358,770.651 C456.8838,768.975 458.3238,767.577 459.9958,766.609 C460.4578,766.341 460.9778,766.207 461.5418,766.207 C462.8038,766.207 464.1718,766.965 465.3198,767.801 L465.3198,767.801 L463.8758,761.001 L467.9998,761.001 Z M474.1642,760.5824 C476.8422,759.6924 479.6962,761.0244 479.6962,761.0244 C479.6962,761.0244 478.2102,763.8044 475.5322,764.6944 C472.8542,765.5844 470.0002,764.2524 470.0002,764.2524 C470.0002,764.2524 471.4862,761.4744 474.1642,760.5824 Z"></path>
+        </g>
+    </g>
+</svg>
+</div>
+
+</div>
+</div>
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="now-enrolling">
+        <span class="heading__text">Now Enrolling</span>
+  </h2>
+
+      </div>
+            <p>Start your application today! We're now enrolling for Fall (August), Spring (January), and Summer (May) sessions.</p>
+        <a href="https://admission.mcdaniel.edu/apply/" rel="noopener" target="_blank" class="button  link link--new-tab">
+            Apply Here
+    </a>  </div><div class="callout slab ">
+      <div class="callout__icon">
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="program-coordinator">
+        <span class="heading__text">Program Coordinator</span>
+  </h2>
+
+      </div>
+            <p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8e7af8ea-992e-4a60-b42f-a9ff07e049c6" href="/directory/kevin-mcintyre" title="Kevin McIntyre">Kevin McIntyre</a><br /><a href="mailto: kmcintyre@mcdaniel.edu">mcintyre@mcdaniel.edu</a></p>
+        <a href="/request-info-gps"  class="button  link">
+            Request More Information
+    </a>  </div>
+  </div>
+  <div id="block-facultylink" class="block-newcity-customizations block-faculty-link">
+  
+    
+      
+  </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+      <div class="field field--name-field-more-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item"><div class="slab  slab--sidebar-width paragraph--custom_teasers">
+  <div class="slab__wrapper">
+                  <h2 id="special-opportunities" class="heading"><span class="heading__text">Special Opportunities</span></h2>
+      <div class="stacked-teasers">
+      <div class="stacked-teasers__items">
+                  <div class="stacked-teaser ">
+    <div class="stacked-teaser__image">  
+      
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-stacked-teaser">
+  
+          <img src="/sites/default/files/styles/big_teaser_4_3/public/2019-09/Grad_027.jpg?h=ec89fd61&amp;itok=U3JYsjW4" width="560" height="420" alt="Grad student on computer." loading="lazy" typeof="foaf:Image" />
+
+
+
+
+  </div>
+</div>
+        </div>
+    <div class="stacked-teaser__content">
+    <h3 class="headline-group stacked-teaser__heading" id="hands-on-experiences">
+		<span class="headline-group__head"><span class="">
+      Hands-On Experiences
+    </span></span>
+	</h3>
+        <div class="stacked-teaser__description">
+              
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p><span><span><span>Incorporated into the program is a required practicum experience through which you will apply experiential knowledge alongside your academic studies. This will directly allow for you to utilize your classroom studies into real world situations. Because we know the power of applied learning, you may have multiple practicums throughout the program.  </span></span></span></p>
+
+<p> </p></div>
+      
+          </div>
+  </div>
+</div>
+                  <div class="stacked-teaser ">
+    <div class="stacked-teaser__image">  
+      
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-stacked-teaser">
+  
+          <img src="/sites/default/files/styles/big_teaser_4_3/public/2019-09/Arabic_4.jpg?h=745fe10a&amp;itok=-heciES8" width="560" height="420" alt="Taste of Arabia presentation." loading="lazy" typeof="foaf:Image" />
+
+
+
+
+  </div>
+</div>
+        </div>
+    <div class="stacked-teaser__content">
+    <h3 class="headline-group stacked-teaser__heading" id="equipped-for-the-real-world">
+		<span class="headline-group__head"><span class="">
+      Equipped for the Real World
+    </span></span>
+	</h3>
+        <div class="stacked-teaser__description">
+              
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>The world is a complex place and data can help us understand it. But only if we are able to communicate about it in compelling and persuasive ways. It's why each course in our program integrates a liberal arts component that requires you to think more deeply and broadly about your role. </p></div>
+      
+          </div>
+  </div>
+</div>
+                  <div class="stacked-teaser ">
+    <div class="stacked-teaser__image">  
+      
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-stacked-teaser">
+  
+          <img src="/sites/default/files/styles/big_teaser_4_3/public/2022-07/Data%20Analytics%20-04.jpg?h=2992ba0a&amp;itok=HXx1PxB7" width="560" height="420" alt="Two Data Analytics students collaborate at a computer." loading="lazy" typeof="foaf:Image" />
+
+
+
+
+  </div>
+</div>
+        </div>
+    <div class="stacked-teaser__content">
+    <h3 class="headline-group stacked-teaser__heading" id="on-campus-residency">
+		<span class="headline-group__head"><span class="">
+      On-Campus Residency
+    </span></span>
+	</h3>
+        <div class="stacked-teaser__description">
+              
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>Each semester, Data Analytics students meet for a three-day intensive residency for face-to-face collaboration with professors and program peers.</p></div>
+      
+          </div>
+  </div>
+</div>
+              </div>
+    </div>
+    </div>
+</div>
+</div>
+              <div class="field__item">
+      <div class="feature slab feature--50-50 feature--standard feature--dec-green feature--reversed">
+                    <div class="decoration-lines right-side-lines">
+    <svg width="410" height="105" xmlns="http://www.w3.org/2000/svg"><path d="M35.803 78.76L14.103 105H0l65.133-78.76h8.16L94.993 0h6.237L36.095 78.76h-.292zm87.677 0L101.78 105H87.677l65.133-78.76h8.161L182.672 0h6.235L123.77 78.76h-.291zm-43.902 0L57.878 105H43.776l65.133-78.76h8.16L138.768 0h6.237L79.873 78.76h-.295zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L226.447 0h6.235l-65.136 78.76h-.29zm-109.467 0L36.088 105H21.985l65.133-78.76h8.16L116.978 0h6.237L58.08 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L204.655 0h6.234l-65.132 78.76h-.292zm-43.901 0L79.864 105H65.76l65.132-78.76h8.162L160.755 0h6.235l-65.135 78.76h-.291zm87.677 0L167.54 105h-14.103l65.132-78.76h8.163L248.433 0h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.133-78.76h8.16L270.187 0h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L357.865 0h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24H218.97l65.133-78.76h8.16L313.962 0h6.237l-65.133 78.76h-.294zm87.677 0L320.75 105h-14.103l65.133-78.76h8.161L401.641 0h6.235L342.74 78.76h-.29zm-109.467 0l-21.7 26.24H197.18l65.133-78.76h8.16L292.172 0h6.237l-65.135 78.76h-.292zm87.677 0L298.96 105h-14.103l65.133-78.76h8.16L379.849 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24h-14.103l65.132-78.76h8.162L335.949 0h6.235L277.05 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.163L423.627 0h6.234l-65.135 78.76h-.291zm21.368 0l-21.7 26.24H350l65.133-78.76h8.16L444.993 0h6.237l-65.135 78.76h-.292zm87.677 0L451.78 105h-14.103l65.133-78.76h8.161L532.672 0h6.235L473.77 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L488.768 0h6.237l-65.132 78.76h-.295zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L576.447 0h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L466.978 0h6.237L408.08 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L554.655 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H415.76l65.132-78.76h8.162L510.755 0h6.235l-65.135 78.76h-.291zm87.677 0L517.54 105h-14.103l65.132-78.76h8.163L598.433 0h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.133-78.76h8.16L620.187 0h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L707.865 0h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24H568.97l65.133-78.76h8.16L663.962 0h6.237l-65.133 78.76h-.294zm87.677 0L670.75 105h-14.103l65.133-78.76h8.161L751.641 0h6.235L692.74 78.76h-.29zm-109.467 0l-21.7 26.24H547.18l65.133-78.76h8.16L642.172 0h6.237l-65.135 78.76h-.292zm87.677 0L648.96 105h-14.103l65.133-78.76h8.16L729.849 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24h-14.103l65.132-78.76h8.162L685.949 0h6.235L627.05 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.163L773.627 0h6.234l-65.135 78.76h-.291z" fill="currentColor" fill-rule="evenodd"/></svg>
+</div>            	<div class="feature__container ">
+          <div class="feature__image">
+         
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-partial-4x3">
+  
+            <picture>
+                  <source srcset="/sites/default/files/styles/big_4x3/public/2024-01/MichaelEniolade.png?h=2ad88ae8&amp;itok=tadnWdfb 1x" media="all and (min-width: 1025px)" type="image/png"/>
+              <source srcset="/sites/default/files/styles/big_4x3/public/2024-01/MichaelEniolade.png?h=2ad88ae8&amp;itok=tadnWdfb 1x" media="all and (min-width: 560px) and (max-width: 1024px)" type="image/png"/>
+                  <img src="/sites/default/files/styles/mobile_4x3/public/2024-01/MichaelEniolade.png?h=2ad88ae8&amp;itok=HSlKdeqo" alt="Data Analytics M.S. student Michael Eniolade wears a suit and stands next to a computer screen on a desk." typeof="foaf:Image" />
+
+  </picture>
+
+
+
+  </div>
+</div>
+            </div>
+        <div class="feature__body">
+      <div class="feature__heading">
+        <h3 class="headline-group " id="spanmcdaniel-alumni-give-back-with-data-analytics-internshipspan">
+	<span class="headline-group__super"></span>	<span class="headline-group__head">        <span>McDaniel alumni give back with Data Analytics internship</span></span>
+	<span class="headline-group__sub"></span></h3>
+      </div>
+      <div class="feature__content">
+                  <p>Alums John Sobanski ’99 and Kevin Worley ’00 connected with their alma mater to invite graduate students in the M.S. in Data Analytics program to intern with their company, Pyramid Systems Inc. They knew it was the right call when Data Analytics student Michael Eniolade interned with their team.</p>
+              </div>
+      <div class="feature__links">
+                                  <a href="/news/mcdaniel-alumni-give-back-data-analytics-internship"  class="link--fancy link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Read &quot;McDaniel alumni give back with Data Analytics internship&quot;</span>
+    </a>
+                        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+              <div class="field__item">
+
+<div class="feature slab feature--50-50 feature--bg-gray">
+                    <div class="decoration-lines left-side-lines">
+    <svg width="410" height="106" xmlns="http://www.w3.org/2000/svg"><path d="M-334.058 79.26l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L-187.19.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L-143.414.5h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H-304.1l65.132-78.76h8.162l21.7-26.24h6.235l-65.135 78.76h-.291zm87.677 0l-21.7 26.24h-14.104l65.133-78.76h8.163l21.7-26.24h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.132-78.76h8.16L-99.674.5h6.238l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.162L-11.996.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L-55.9.5h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103L1.918 26.74h8.161L31.78.5h6.235L-27.12 79.26h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L-77.69.5h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L9.988.5h6.234L-48.91 79.26h-.29zm-43.901 0l-21.7 26.24h-14.104l65.133-78.76h8.162L-33.912.5h6.235l-65.135 78.76h-.291zm87.676 0l-21.7 26.24H-41.23l65.133-78.76h8.163L53.766.5H60L-5.135 79.26h-.292zm21.369 0l-21.7 26.24h-14.103l65.133-78.76h8.16L75.132.5h6.237L16.233 79.26h-.291zm87.677 0l-21.7 26.24H67.816l65.133-78.76h8.161L162.81.5h6.235L103.91 79.26h-.291zm-43.902 0l-21.7 26.24H23.914l65.133-78.76h8.16L118.907.5h6.237L60.011 79.26h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L206.586.5h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24H2.124l65.133-78.76h8.16L97.117.5h6.237L38.219 79.26h-.292zm87.677 0l-21.7 26.24H89.801l65.133-78.76h8.16L184.794.5h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H45.9l65.132-78.76h8.162L140.894.5h6.235L81.994 79.26h-.291zm87.677 0l-21.7 26.24h-14.104l65.133-78.76h8.163L228.572.5h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.132-78.76h8.16L250.326.5h6.238l-65.136 78.76h-.291zm87.677 0l-21.7 26.24H243.01l65.132-78.76h8.162L338.004.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L294.1.5h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L381.78.5h6.235L322.88 79.26h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L272.31.5h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L359.988.5h6.234L301.09 79.26h-.29zm-43.901 0l-21.7 26.24h-14.104l65.133-78.76h8.162L316.088.5h6.235l-65.135 78.76h-.291zm87.676 0l-21.7 26.24H308.77l65.133-78.76h8.163L403.766.5H410l-65.135 78.76h-.292z" fill="currentColor" fill-rule="evenodd"/></svg>
+</div>            	<div class="feature__container ">
+          <div class="feature__image">
+         <div class="media media--type-image media--view-mode-partial-4x3">
+  
+            <picture>
+                  <source srcset="/sites/default/files/styles/big_4x3/public/2022-02/Kevin%20%26%20Dominic-033.jpg?h=5e08a8b6&amp;itok=2R8-E-bD 1x" media="all and (min-width: 1025px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/big_4x3/public/2022-02/Kevin%20%26%20Dominic-033.jpg?h=5e08a8b6&amp;itok=2R8-E-bD 1x" media="all and (min-width: 560px) and (max-width: 1024px)" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/mobile_4x3/public/2022-02/Kevin%20%26%20Dominic-033.jpg?h=5e08a8b6&amp;itok=bWtaCgDz" alt="Alum Dominic Byerly posing in a green field." typeof="foaf:Image" />
+
+  </picture>
+
+
+
+  </div>
+      </div>
+        <div class="feature__body">
+      <div class="feature__heading">
+        <h2 class="headline-group " id="qampa-with-dominic-byerly-03920-ms-03922">
+		<span class="headline-group__head">Q&amp;A with Dominic Byerly &#039;20, M.S. &#039;22</span>
+	</h2>
+      </div>
+      <div class="feature__content">
+                  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>After completing his bachelor’s in Economics and Business Administration a year early, Dominic Byerly ’20, M.S. '22 chose to pursue his master’s degree in Data Analytics through McDaniel’s hybrid professional program. Able to work while attending, Byerly can actively apply his education to his career experience.</p></div>
+      
+              </div>
+      <div class="feature__links">
+                                  <a href="/about-us/profiles/dominic-byerly-20-ms-22"  class="link--fancy link--large link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Read more about a Data Analytics student</span>
+    </a>
+                                                <a href="https://www.youtube.com/watch?v=-avexd2AuUw" rel="noopener" target="_blank" class="link--fancy link--large link link--new-tab">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Watch &quot;Growing from Strong Roots with a McDaniel Master’s Degree&quot;</span>
+    </a>
+                        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+              <div class="field__item">
+
+<div class="feature slab feature--50-50 feature--standard feature--dec-green feature--reversed">
+                    <div class="decoration-lines right-side-lines">
+    <svg width="410" height="105" xmlns="http://www.w3.org/2000/svg"><path d="M35.803 78.76L14.103 105H0l65.133-78.76h8.16L94.993 0h6.237L36.095 78.76h-.292zm87.677 0L101.78 105H87.677l65.133-78.76h8.161L182.672 0h6.235L123.77 78.76h-.291zm-43.902 0L57.878 105H43.776l65.133-78.76h8.16L138.768 0h6.237L79.873 78.76h-.295zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L226.447 0h6.235l-65.136 78.76h-.29zm-109.467 0L36.088 105H21.985l65.133-78.76h8.16L116.978 0h6.237L58.08 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L204.655 0h6.234l-65.132 78.76h-.292zm-43.901 0L79.864 105H65.76l65.132-78.76h8.162L160.755 0h6.235l-65.135 78.76h-.291zm87.677 0L167.54 105h-14.103l65.132-78.76h8.163L248.433 0h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.133-78.76h8.16L270.187 0h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L357.865 0h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24H218.97l65.133-78.76h8.16L313.962 0h6.237l-65.133 78.76h-.294zm87.677 0L320.75 105h-14.103l65.133-78.76h8.161L401.641 0h6.235L342.74 78.76h-.29zm-109.467 0l-21.7 26.24H197.18l65.133-78.76h8.16L292.172 0h6.237l-65.135 78.76h-.292zm87.677 0L298.96 105h-14.103l65.133-78.76h8.16L379.849 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24h-14.103l65.132-78.76h8.162L335.949 0h6.235L277.05 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.163L423.627 0h6.234l-65.135 78.76h-.291zm21.368 0l-21.7 26.24H350l65.133-78.76h8.16L444.993 0h6.237l-65.135 78.76h-.292zm87.677 0L451.78 105h-14.103l65.133-78.76h8.161L532.672 0h6.235L473.77 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L488.768 0h6.237l-65.132 78.76h-.295zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L576.447 0h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L466.978 0h6.237L408.08 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L554.655 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H415.76l65.132-78.76h8.162L510.755 0h6.235l-65.135 78.76h-.291zm87.677 0L517.54 105h-14.103l65.132-78.76h8.163L598.433 0h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.133-78.76h8.16L620.187 0h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L707.865 0h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24H568.97l65.133-78.76h8.16L663.962 0h6.237l-65.133 78.76h-.294zm87.677 0L670.75 105h-14.103l65.133-78.76h8.161L751.641 0h6.235L692.74 78.76h-.29zm-109.467 0l-21.7 26.24H547.18l65.133-78.76h8.16L642.172 0h6.237l-65.135 78.76h-.292zm87.677 0L648.96 105h-14.103l65.133-78.76h8.16L729.849 0h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24h-14.103l65.132-78.76h8.162L685.949 0h6.235L627.05 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.163L773.627 0h6.234l-65.135 78.76h-.291z" fill="currentColor" fill-rule="evenodd"/></svg>
+</div>            	<div class="feature__container ">
+          <div class="feature__image">
+         <div class="media media--type-image media--view-mode-partial-4x3">
+  
+            <picture>
+                  <source srcset="/sites/default/files/styles/big_4x3/public/2022-12/Xuejing%20Duan%20Copy.jpg?h=06ab62f7&amp;itok=by5_CYlU 1x" media="all and (min-width: 1025px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/big_4x3/public/2022-12/Xuejing%20Duan%20Copy.jpg?h=06ab62f7&amp;itok=by5_CYlU 1x" media="all and (min-width: 560px) and (max-width: 1024px)" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/mobile_4x3/public/2022-12/Xuejing%20Duan%20Copy.jpg?h=06ab62f7&amp;itok=QcT4POdc" alt="Photo of professor Xuejing Duan standing outdoors on campus." typeof="foaf:Image" />
+
+  </picture>
+
+
+
+  </div>
+      </div>
+        <div class="feature__body">
+      <div class="feature__heading">
+        <h2 class="headline-group " id="xuejing-duan-phd">
+	<span class="headline-group__super">Faculty Spotlight</span>	<span class="headline-group__head">Xuejing Duan, Ph.D.</span>
+	</h2>
+      </div>
+      <div class="feature__content">
+                  
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-field-body field--type-text-long field--label-hidden field__item"><p>An interdisciplinary researcher and educator, Xuejing Duan wants every student to know that they can accomplish many things with data analytics. Before joining the faculty of the graduate program in Data Analytics at McDaniel, Duan was a biostatistician at George Washington University. She now teaches courses in machine learning, Python programming, and the fundamentals of data science. </p></div>
+      
+              </div>
+      <div class="feature__links">
+                                  <a href="/about-us/profiles/xuejing-duan-phd"  class="link--fancy link--large link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Read a Q&amp;A with Xuejing Duan, Ph.D.</span>
+    </a>
+                        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+              <div class="field__item">
+      <div class="feature slab feature--50-50 feature--bg-purple feature--dec-gold">
+                    <div class="decoration-lines left-side-lines">
+    <svg width="410" height="106" xmlns="http://www.w3.org/2000/svg"><path d="M-334.058 79.26l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L-187.19.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L-143.414.5h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16l21.7-26.24h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H-304.1l65.132-78.76h8.162l21.7-26.24h6.235l-65.135 78.76h-.291zm87.677 0l-21.7 26.24h-14.104l65.133-78.76h8.163l21.7-26.24h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.132-78.76h8.16L-99.674.5h6.238l-65.136 78.76h-.291zm87.677 0l-21.7 26.24h-14.103l65.132-78.76h8.162L-11.996.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L-55.9.5h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103L1.918 26.74h8.161L31.78.5h6.235L-27.12 79.26h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L-77.69.5h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L9.988.5h6.234L-48.91 79.26h-.29zm-43.901 0l-21.7 26.24h-14.104l65.133-78.76h8.162L-33.912.5h6.235l-65.135 78.76h-.291zm87.676 0l-21.7 26.24H-41.23l65.133-78.76h8.163L53.766.5H60L-5.135 79.26h-.292zm21.369 0l-21.7 26.24h-14.103l65.133-78.76h8.16L75.132.5h6.237L16.233 79.26h-.291zm87.677 0l-21.7 26.24H67.816l65.133-78.76h8.161L162.81.5h6.235L103.91 79.26h-.291zm-43.902 0l-21.7 26.24H23.914l65.133-78.76h8.16L118.907.5h6.237L60.011 79.26h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L206.586.5h6.235l-65.136 78.76h-.29zm-109.467 0l-21.7 26.24H2.124l65.133-78.76h8.16L97.117.5h6.237L38.219 79.26h-.292zm87.677 0l-21.7 26.24H89.801l65.133-78.76h8.16L184.794.5h6.234l-65.132 78.76h-.292zm-43.901 0l-21.7 26.24H45.9l65.132-78.76h8.162L140.894.5h6.235L81.994 79.26h-.291zm87.677 0l-21.7 26.24h-14.104l65.133-78.76h8.163L228.572.5h6.234l-65.135 78.76h-.291zm21.756 0l-21.7 26.24h-14.103l65.132-78.76h8.16L250.326.5h6.238l-65.136 78.76h-.291zm87.677 0l-21.7 26.24H243.01l65.132-78.76h8.162L338.004.5h6.235l-65.135 78.76h-.291zm-43.902 0l-21.7 26.24h-14.103l65.133-78.76h8.16L294.1.5h6.237l-65.133 78.76h-.294zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.161L381.78.5h6.235L322.88 79.26h-.29zm-109.467 0l-21.7 26.24h-14.103l65.133-78.76h8.16L272.31.5h6.237l-65.135 78.76h-.292zm87.677 0l-21.7 26.24h-14.103l65.133-78.76h8.16L359.988.5h6.234L301.09 79.26h-.29zm-43.901 0l-21.7 26.24h-14.104l65.133-78.76h8.162L316.088.5h6.235l-65.135 78.76h-.291zm87.676 0l-21.7 26.24H308.77l65.133-78.76h8.163L403.766.5H410l-65.135 78.76h-.292z" fill="currentColor" fill-rule="evenodd"/></svg>
+</div>            	<div class="feature__container ">
+          <div class="feature__image">
+         
+            <div class="image field field--name-field-media field--type-entity-reference field--label-hidden field__item"><div class="media media--type-image media--view-mode-partial-4x3">
+  
+            <picture>
+                  <source srcset="/sites/default/files/styles/big_4x3/public/2022-07/Kevin%20M-2.jpg?h=e3b7cc88&amp;itok=iD7qSWzT 1x" media="all and (min-width: 1025px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/big_4x3/public/2022-07/Kevin%20M-2.jpg?h=e3b7cc88&amp;itok=iD7qSWzT 1x" media="all and (min-width: 560px) and (max-width: 1024px)" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/mobile_4x3/public/2022-07/Kevin%20M-2.jpg?h=e3b7cc88&amp;itok=NFDbtRpY" alt="Portrait of Professor Kevin McIntyre." typeof="foaf:Image" />
+
+  </picture>
+
+
+
+  </div>
+</div>
+            </div>
+        <div class="feature__body">
+      <div class="feature__heading">
+        <h3 class="headline-group " id="spanprogram-spotlight-ms-in-data-analyticsspan">
+	<span class="headline-group__super"></span>	<span class="headline-group__head">        <span>Program Spotlight: M.S. in Data Analytics</span></span>
+	<span class="headline-group__sub"></span></h3>
+      </div>
+      <div class="feature__content">
+                  <p>In his two decades as professor of Economics at McDaniel, Kevin McIntyre has developed courses, conducted research, advised students, run search committees and served on a variety of academic committees. McIntyre brings all that experience coupled with his expertise teaching and mentoring students to his role as coordinator of the college’s new master’s in Data Analytics program.   </p>
+              </div>
+      <div class="feature__links">
+                                  <a href="/news/program-spotlight-ms-data-analytics"  class="link--fancy link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Read &quot;Program Spotlight: M.S. in Data Analytics&quot;</span>
+    </a>
+                        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+          </div>
+  
+<div class="slab ">
+  <div class="slab__wrapper">
+                  
+  <div class="call-to-action ">
+  <div class="call-to-action__container">
+    <h2 class="heading heading heading--tertiary" id="related-programs">
+        <span class="heading__text">Related Programs</span>
+  </h2>
+
+    <div class="call-to-action__links">
+      <div class="link-collection ">
+	<div class="link-collection__heading"></div>
+	<div class="link-collection__links">
+					    <a href="/academics/physics/physics-engineering"  class="link--fancy link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Physics - Engineering</span>
+    </a>
+					    <a href="/academics/departments/economics-business-administration/economics"  class="link--fancy link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Economics</span>
+    </a>
+					    <a href="/academics/departments/mathematics-computer-science/computer-science"  class="link--fancy link">
+            <span class="link__icon">
+            <span class="icon "><span class="icon__glyph ic ic--fat-arrow-right" aria-hidden="true"></span></span>        </span><span class="link__content">Computer Science</span>
+    </a>
+			</div>
+</div>    </div>
+  </div>
+</div>  </div>
+</div>
+
+
+<div class="mobile-sidebar hide-for-large">
+  <div class="slab ">
+  <div class="slab__wrapper">
+                        
+  <div class="sidebar-callouts">
+    <div class="callout slab ">
+      <div class="callout__icon">
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="find-out-more-660d8c7c25d52">
+        <span class="heading__text">Find Out More</span>
+  </h2>
+
+      </div>
+            <p>Discover more about this program and others at one of our monthly, virtual open houses!  </p>
+        <a href="https://admission.mcdaniel.edu/portal/visit" rel="noopener" target="_blank" class="button  link link--new-tab">
+            Register
+    </a>  </div><div class="callout slab ">
+      <div class="callout__icon">
+      
+            <div class="field field--name-field-icon field--type-entity-reference field--label-hidden field__item"><div class="icon content-icon">
+  
+  <div class="icon__glyph">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 47" version="1.1" fill="currentColor">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>applebooks</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <g transform="translate(-446.000000, -760.000000)" fill="currentColor">
+            <path d="M455.9998,799.001 L455.9998,807.001 L453.9998,807.001 C452.8958,807.001 451.9998,806.105 451.9998,805.001 L451.9998,805.001 L451.9998,801.001 C451.9998,799.897 452.8958,799.001 453.9998,799.001 L453.9998,799.001 L455.9998,799.001 Z M487.9998,799.001 C489.1038,799.001 489.9998,799.897 489.9998,801.001 L489.9998,801.001 L489.9998,805.001 C489.9998,806.105 489.1038,807.001 487.9998,807.001 L487.9998,807.001 L485.9998,807.001 L485.9998,799.001 Z M482,799 L482,807 L460,807 L460,799 L482,799 Z M475.9998,789.001 L475.9998,797.001 L453.9998,797.001 L453.9998,789.001 L475.9998,789.001 Z M449.9998,789.001 L449.9998,797.001 L447.9998,797.001 C446.8958,797.001 445.9998,796.105 445.9998,795.001 L445.9998,795.001 L445.9998,791.001 C445.9998,789.897 446.8958,789.001 447.9998,789.001 L447.9998,789.001 L449.9998,789.001 Z M481.9998,789.001 C483.1038,789.001 483.9998,789.897 483.9998,791.001 L483.9998,791.001 L483.9998,795.001 C483.9998,796.105 483.1038,797.001 481.9998,797.001 L481.9998,797.001 L479.9998,797.001 L479.9998,789.001 Z M467.9998,761.001 L466.6318,767.837 C467.7918,766.985 469.1778,766.207 470.4578,766.207 C471.0218,766.207 471.5418,766.341 472.0018,766.607 C473.8218,767.661 475.3398,769.179 476.3918,770.999 C477.4438,772.817 477.9998,774.893 477.9998,777.001 C477.9998,783.619 472.6178,789.001 465.9998,789.001 C461.0598,789.001 456.6878,786.023 454.8598,781.417 C454.6618,780.915 454.6718,780.355 454.8918,779.863 C455.1118,779.371 455.5218,778.989 456.0278,778.801 C457.2078,778.369 457.9998,777.243 457.9998,776.001 C457.9998,774.943 457.4438,773.985 456.5138,773.433 C456.0478,773.159 455.7158,772.709 455.5878,772.185 C455.4598,771.661 455.5498,771.109 455.8358,770.651 C456.8838,768.975 458.3238,767.577 459.9958,766.609 C460.4578,766.341 460.9778,766.207 461.5418,766.207 C462.8038,766.207 464.1718,766.965 465.3198,767.801 L465.3198,767.801 L463.8758,761.001 L467.9998,761.001 Z M474.1642,760.5824 C476.8422,759.6924 479.6962,761.0244 479.6962,761.0244 C479.6962,761.0244 478.2102,763.8044 475.5322,764.6944 C472.8542,765.5844 470.0002,764.2524 470.0002,764.2524 C470.0002,764.2524 471.4862,761.4744 474.1642,760.5824 Z"></path>
+        </g>
+    </g>
+</svg>
+</div>
+
+</div>
+</div>
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="now-enrolling-660d8c7c25d52">
+        <span class="heading__text">Now Enrolling</span>
+  </h2>
+
+      </div>
+            <p>Start your application today! We're now enrolling for Fall (August), Spring (January), and Summer (May) sessions.</p>
+        <a href="https://admission.mcdaniel.edu/apply/" rel="noopener" target="_blank" class="button  link link--new-tab">
+            Apply Here
+    </a>  </div><div class="callout slab ">
+      <div class="callout__icon">
+          </div>
+    <div class="callout__heading">
+        <h2 class="heading " id="program-coordinator-660d8c7c25d52">
+        <span class="heading__text">Program Coordinator</span>
+  </h2>
+
+      </div>
+            <p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8e7af8ea-992e-4a60-b42f-a9ff07e049c6-660d8c7c25d52" href="/directory/kevin-mcintyre" title="Kevin McIntyre">Kevin McIntyre</a><br /><a href="mailto: kmcintyre@mcdaniel.edu">mcintyre@mcdaniel.edu</a></p>
+        <a href="/request-info-gps"  class="button  link">
+            Request More Information
+    </a>  </div>
+  </div>
+  <div id="block-facultylink-660d8c7c25d52" class="block-newcity-customizations block-faculty-link">
+  
+    
+      
+  </div>
+  
+    </div>
+</div>
+</div>
+
+  </div>
+
+</article>
+  </div>
+      </div>
+    
+  
+  </main>
+
+      <div class="footer">
+	<div class="main-footer slab">
+		<div class="main-footer__container">
+                            <div class="region--footer_contact">
+        <div id="block-mcdanieladdress" class="block-block-content block-block-contentf7cb80b1-40bb-46fc-ae21-1455f5fba0de">
+  
+    
+      
+      
+            <div class="wysiwyg-text table-wrapper table-wrapper--striped table-wrapper--columnize inner-lists embedded-media field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="vcard">
+                <a href="http://www.mcdaniel.edu" class="link ">
+            McDaniel College
+    </a>
+                <div class="adr">
+                    <div class="street-address">2 College Hill</div>
+                    <span class="locality">Westminster, MD</span>,
+                    <span class="region"></span>
+                    <span class="postal-code">21157</span>
+                    <div class="country-name"></div>
+                </div>
+            </div></div>
+      
+  </div>
+      </div>
+    
+            <div class="main-footer__links">
+                                <div class="region--footer_nav">
+                        <nav role="navigation" aria-labelledby="block-newcity-footer-menu" id="block-newcity-footer" class="block block-menu navigation menu--footer">
+                                
+      <span class="visually-hidden" id="block-newcity-footer-menu">Footer menu</span>
+      
+
+                    <ul class="inline">
+      <li>
+      <a href="/about-us/visitor-resources"  class=" link">
+            Map &amp; Directions
+    </a>
+    </li>
+      <li>
+      <a href="/directory/contact-us"  class=" link">
+            Contact Us
+    </a>
+    </li>
+      <li>
+      <a href="/offices-directory"  class=" link">
+            Directory
+    </a>
+    </li>
+      <li>
+          <a href="https://mcdaniel.interviewexchange.com/static/clients/561MCM1/index.jsp" rel="noopener" target="_blank" class=" link link--new-tab">
+            Employment
+    </a>
+    </li>
+  </ul>
+
+          </nav>
+
+      </div>
+    
+        			</div>
+      <div class="main-footer__buttons">
+                                <div class="region--footer_buttons">
+                        <nav role="navigation" aria-labelledby="block-footerbuttons-menu" id="block-footerbuttons" class="block block-menu navigation menu--footer-buttons">
+                                
+      <span class="visually-hidden" id="block-footerbuttons-menu">Footer buttons</span>
+      
+
+                    <ul class="inline">
+      <li>
+      <a href="/request-info"  class="button button--small link">
+            Request Info
+    </a>    </li>
+      <li>
+      <a href="/admissions-cost"  class="button button--small link">
+            Apply Now
+    </a>    </li>
+      <li>
+      <a href="/makeagift"  class="button button--small link">
+            Donate
+    </a>    </li>
+      <li>
+      <a href="https://admission.mcdaniel.edu/portal/visit" rel="noopener" target="_blank" class="button button--small link link--new-tab">
+            Visit McDaniel
+    </a>    </li>
+  </ul>
+
+          </nav>
+
+      </div>
+    
+              </div>
+    </div>
+  </div>
+	<div class="sub-footer slab">
+		<div class="sub-footer__container">
+			<span class="copyright">©  McDaniel College All Rights Reserved</span>
+      <div class="sub-footer__links">
+                                <div class="region--footer_subnav">
+                        <nav role="navigation" aria-labelledby="block-footersubmenu-menu" id="block-footersubmenu" class="block block-menu navigation menu--footer-submenu">
+                                
+      <span class="visually-hidden" id="block-footersubmenu-menu">Footer submenu</span>
+      
+
+                    <ul class="inline">
+      <li>
+      <a href="/accessibility"  class=" link">
+            Accessibility
+    </a>
+    </li>
+      <li>
+      <a href="/consumer-information"  class=" link">
+            Consumer Information
+    </a>
+    </li>
+      <li>
+      <a href="/copyright"  class=" link">
+            Copyright
+    </a>
+    </li>
+      <li>
+      <a href="/about-us/legal"  class=" link">
+            Legal
+    </a>
+    </li>
+      <li>
+      <a href="/student-life/campus-safety/gender-based-violence-including-title-ix-resources-and-information"  class=" link">
+            Title IX Information
+    </a>
+    </li>
+      <li>
+          <a href="https://mcdaniel.az1.qualtrics.com/jfe/form/SV_dm4JE1tLz4E1cmV" rel="noopener" target="_blank" class=" link link--new-tab">
+            Bias Incident Report Form
+    </a>
+    </li>
+      <li>
+      <a href="/middle-states-accreditation-2023"  class=" link">
+            Middle States Accreditation 2023
+    </a>
+    </li>
+  </ul>
+
+          </nav>
+
+      </div>
+    
+              </div>
+			<div class="sub-footer__social-links">
+                                <div class="region--footer_social">
+                        <nav role="navigation" aria-labelledby="block-socialmedialinks-menu" id="block-socialmedialinks" class="block block-menu navigation menu--social-media-links">
+                                
+      <span class="visually-hidden" id="block-socialmedialinks-menu">Social media links</span>
+      
+
+                    
+        <div class="social-media-links icon-link--hidden-label">
+  <ul class="inline">
+      
+      <li>
+                                            <a class=" icon-link " href="https://www.facebook.com/McDanielCollege/" ><span class="icon "><span class="icon__glyph ic ic--facebook" aria-hidden="true"></span><span class="icon__label">Facebook</span></span></a>
+        </li>
+      
+      <li>
+                                            <a class=" icon-link " href="https://www.instagram.com/mcdanielcollege/" ><span class="icon "><span class="icon__glyph ic ic--instagram" aria-hidden="true"></span><span class="icon__label">Instagram</span></span></a>
+        </li>
+      
+      <li>
+                                            <a class=" icon-link " href="https://twitter.com/McDanielCollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" ><span class="icon "><span class="icon__glyph ic ic--twitter" aria-hidden="true"></span><span class="icon__label">Twitter</span></span></a>
+        </li>
+      
+      <li>
+                                            <a class=" icon-link " href="https://www.youtube.com/@McDanielCollege1867/featured" ><span class="icon "><span class="icon__glyph ic ic--youtube" aria-hidden="true"></span><span class="icon__label">YouTube</span></span></a>
+        </li>
+      </ul>
+</div>
+
+          </nav>
+
+      </div>
+    
+        			</div>
+		</div>
+	</div>
+</div>  
+</div>
+  </div>
+
+        
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1231","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"field_group":{"html_element":{"mode":"default","context":"view","settings":{"classes":"","id":"","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast"}}},"sitewideAlert":{"refreshInterval":15000,"automaticRefresh":true},"user":{"uid":0,"permissionsHash":"dc71ea15dddce2a55745e3b04c780ef965885e5949b2fdee3289f39558eddb91"}}</script>
+<script src="/sites/default/files/js/js_ScVaZQ78R7cQGFRqURwqoOJXD6w_aWUhkE2GnC1UHnc.js"></script>
+
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-41710544237831d0803","applicationID":"217488914","transactionName":"ZVwBY0pUVhEHARULV1wWIlRMXFcMSSYTF0hTVT9ZV1FdPiUNDxZKXVUPUkppdg0CBzcLXUV6DFlMR1cOCgcTTwZEUAZA","queueTime":0,"applicationTime":331,"atts":"SRsCFQJORR8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    </html>

@@ -4,6 +4,7 @@ from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
 from Schools.NewEnglandCollege.NewEnglandCollege import NewEnglandCollegeScraper
 from Schools.MonroeCollege.MonroeCollege import MonroeCollegeScraper
 from Schools.WestcliffUniversity.WestcliffUniversity import WestcliffUniversityScraper
+from Schools.McDanielCollege.McDanielCollege import McDanielCollegeScraper
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -21,7 +22,8 @@ class SchoolScraper:
         'TrineUniversity': TrineUniversityScraper,
         'NewEnglandCollege': NewEnglandCollegeScraper,
         'MonroeCollege': MonroeCollegeScraper,
-        'WestcliffUniversity': WestcliffUniversityScraper
+        'WestcliffUniversity': WestcliffUniversityScraper,
+        'McDanielCollege': McDanielCollegeScraper
     }
 
     def scrape_and_save(self, event):

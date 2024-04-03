@@ -4,24 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added MonroeCollege">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="merged Nick's code with mine">
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/deadline-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/requirement-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/tuition-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/McDanielCollege.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/Deadline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Requirement/Requirement.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/base_scraper-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/base_scraper-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/utils-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/utils-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/.ipynb_checkpoints/WestcliffUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/.ipynb_checkpoints/WestcliffUniversity-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/.ipynb_checkpoints/Deadline-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/.ipynb_checkpoints/Deadline-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/Deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Deadline/Deadline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/Requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Requirement/Requirement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/Tuition/Tuition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/WestcliffUniversity.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/WestcliffUniversity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Deadline/deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/MonroeCollege.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/MonroeCollege.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Requirement/requirement.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Requirement/requirement.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event2.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -79,7 +78,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/events",
+    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/WebScrapingProject/Schools/McDanielCollege",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege" />
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/events" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Tuition" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege" />
-      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
-      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Deadline" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition" />
@@ -157,7 +156,7 @@
       <workItem from="1712070002647" duration="568000" />
       <workItem from="1712070572980" duration="481000" />
       <workItem from="1712071056986" duration="15275000" />
-      <workItem from="1712151108633" duration="7423000" />
+      <workItem from="1712151108633" duration="11297000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -335,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712156894862</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="merged Nick's code with mine">
+      <option name="closed" value="true" />
+      <created>1712159045914</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712159045914</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +390,8 @@
     <MESSAGE value="added headers to request to avoid 403" />
     <MESSAGE value="Added &quot;Requirement&quot; and &quot;Deadline&quot; parts for New England College (no &quot;Tuition&quot; part)" />
     <MESSAGE value="added MonroeCollege" />
-    <option name="LAST_COMMIT_MESSAGE" value="added MonroeCollege" />
+    <MESSAGE value="merged Nick's code with mine" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged Nick's code with mine" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1712019279074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
