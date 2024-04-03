@@ -1,0 +1,18 @@
+[ 2024-04-03 10:53:45,314 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/international/graduate/international-tuition.aspx
+[ 2024-04-03 10:53:46,103 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Tuition.html
+[ 2024-04-03 10:53:46,388 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Tuition.html
+[ 2024-04-03 10:53:46,684 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Tuition.csv
+[ 2024-04-03 10:53:47,010 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/international/graduate/international-apply.aspx
+[ 2024-04-03 10:53:47,358 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx
+[ 2024-04-03 10:53:47,776 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement_GRADUATE.html
+[ 2024-04-03 10:53:48,343 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement_DOCTOR.html
+[ 2024-04-03 10:53:48,582 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Requirement_GRADUATE.html
+[ 2024-04-03 10:53:48,871 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Requirement_DOCTOR.html
+[ 2024-04-03 10:53:49,161 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement.csv
+[ 2024-04-03 10:53:49,473 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/online/about/academic-calendar.aspx
+[ 2024-04-03 10:53:50,007 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Deadline.html
+[ 2024-04-03 10:53:50,299 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Deadline.html
+[ 2024-04-03 10:53:50,606 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Deadline.csv
+[ 2024-04-03 10:53:51,946 ] 15 Schools.utils - INFO - Successfully made request to: https://www.westcliff.edu/financial-aid/tuition-fees/
+[ 2024-04-03 10:53:52,842 ] 28 Schools.utils - INFO - Successfully saved to: WestcliffUniversity/WestcliffUniversity_Tuition.html
+[ 2024-04-03 10:53:53,183 ] 41 Schools.utils - INFO - Successfully read from: WestcliffUniversity/WestcliffUniversity_Tuition.html

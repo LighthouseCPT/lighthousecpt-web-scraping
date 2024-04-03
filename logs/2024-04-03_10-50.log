@@ -1,0 +1,16 @@
+[ 2024-04-03 10:50:37,299 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/international/graduate/international-tuition.aspx
+[ 2024-04-03 10:50:38,011 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Tuition.html
+[ 2024-04-03 10:50:38,258 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Tuition.html
+[ 2024-04-03 10:50:38,519 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Tuition.csv
+[ 2024-04-03 10:50:38,833 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/international/graduate/international-apply.aspx
+[ 2024-04-03 10:50:39,124 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx
+[ 2024-04-03 10:50:39,567 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement_GRADUATE.html
+[ 2024-04-03 10:50:40,062 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement_DOCTOR.html
+[ 2024-04-03 10:50:40,312 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Requirement_GRADUATE.html
+[ 2024-04-03 10:50:40,566 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Requirement_DOCTOR.html
+[ 2024-04-03 10:50:40,836 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Requirement.csv
+[ 2024-04-03 10:50:41,156 ] 15 Schools.utils - INFO - Successfully made request to: https://www.trine.edu/online/about/academic-calendar.aspx
+[ 2024-04-03 10:50:41,543 ] 28 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Deadline.html
+[ 2024-04-03 10:50:41,832 ] 41 Schools.utils - INFO - Successfully read from: TrineUniversity/TrineUniversity_Deadline.html
+[ 2024-04-03 10:50:42,208 ] 57 Schools.utils - INFO - Successfully saved to: TrineUniversity/TrineUniversity_Deadline.csv
+[ 2024-04-03 10:50:42,212 ] 27 __main__ - ERROR - No scraping function found for school: WestcliffUniversity
