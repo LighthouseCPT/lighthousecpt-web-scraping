@@ -17,6 +17,7 @@ TABLE = 'Requirement'
 
 class RequirementScraper(BaseScraper):
     def scrape(self, url):
+
         TYPE = 'Requirement'
         FILENAME = f'{self.SCHOOL_NAME}_{TYPE}'
         S3_PATH = f'{self.SCHOOL_NAME}/{FILENAME}'
@@ -33,12 +34,12 @@ class RequirementScraper(BaseScraper):
         DOCTOR_PAGE = make_request(DOCTOR_URL)
 
         # Save HTML Content to S3
-        save_html_to_s3(GRADUATE_PAGE, self.HTML_BUCKET, GRADUATE_S3_PATH)
-        save_html_to_s3(DOCTOR_PAGE, self.HTML_BUCKET, DOCTOR_S3_PATH)
+        save_html_to_s3(GRADUATE_PAGE, self.SOURCE_BUCKET, GRADUATE_S3_PATH)
+        save_html_to_s3(DOCTOR_PAGE, self.SOURCE_BUCKET, DOCTOR_S3_PATH)
 
         # Get HTML content from S3
-        GRADUATE_HTML = get_html_from_s3(self.HTML_BUCKET, GRADUATE_S3_PATH)
-        DOCTOR_HTML = get_html_from_s3(self.HTML_BUCKET, DOCTOR_S3_PATH)
+        GRADUATE_HTML = get_html_from_s3(self.SOURCE_BUCKET, GRADUATE_S3_PATH)
+        DOCTOR_HTML = get_html_from_s3(self.SOURCE_BUCKET, DOCTOR_S3_PATH)
 
         # Start Extracting Logic
         graduate_soup = BeautifulSoup(GRADUATE_HTML, 'html.parser')

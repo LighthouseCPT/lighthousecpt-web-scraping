@@ -1,13 +1,10 @@
 {
   "schools": [
     {
-      "name": "TrineUniversity",
-      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
-      "requirement": {
-        "graduate": "https://www.trine.edu/international/graduate/international-apply.aspx",
-        "doctor": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
-      },
-      "deadline": "https://www.trine.edu/online/about/academic-calendar.aspx"
+      "name": "MonroeCollege",
+      "tuition": "PDF",
+      "requirement": "",
+      "deadline":""
     }
   ]
 }

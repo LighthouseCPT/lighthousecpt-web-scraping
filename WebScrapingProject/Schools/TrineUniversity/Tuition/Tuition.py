@@ -22,10 +22,10 @@ class TuitionScraper(BaseScraper):
         page = make_request(url)
 
         # Save HTML Content to S3
-        save_html_to_s3(page, self.HTML_BUCKET, S3_PATH)
+        save_html_to_s3(page, self.SOURCE_BUCKET, S3_PATH)
 
         # Get HTML content from S3
-        html = get_html_from_s3(self.HTML_BUCKET, S3_PATH)
+        html = get_html_from_s3(self.SOURCE_BUCKET, S3_PATH)
 
         # Start Extracting Logic
         soup = BeautifulSoup(html, 'html.parser')

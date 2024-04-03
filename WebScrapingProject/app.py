@@ -2,17 +2,24 @@ import json
 import os
 from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
 from Schools.NewEnglandCollege.NewEnglandCollege import NewEnglandCollegeScraper
+from Schools.MonroeCollege.MonroeCollege import MonroeCollegeScraper
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
 
 
 class SchoolScraper:
-    HTML_BUCKET = 'lighthousecpt-schools-html'
+
+    # This bucket includes HTMLs and PDFs
+    SOURCE_BUCKET = 'lighthousecpt-schools-source'
+
+    # This bucket contains the somewhat unrefined, extracted Information in CSVs
     CSV_BUCKET = 'lighthousecpt-schools-csv'
+
     SCHOOL_FUNCTION_MAP = {
         'TrineUniversity': TrineUniversityScraper,
-        'NewEnglandCollege': NewEnglandCollegeScraper
+        'NewEnglandCollege': NewEnglandCollegeScraper,
+        'MonroeCollege': MonroeCollegeScraper
     }
 
     def scrape_and_save(self, event):
@@ -21,7 +28,7 @@ class SchoolScraper:
             info = school
             scraper_class = self.SCHOOL_FUNCTION_MAP.get(school_name)
             if scraper_class:
-                scraper_instance = scraper_class(self.HTML_BUCKET, self.CSV_BUCKET)
+                scraper_instance = scraper_class(self.SOURCE_BUCKET, self.CSV_BUCKET)
                 scraper_instance.scrape(info)
             else:
                 logging.error(f"No scraping function found for school: {school_name}")

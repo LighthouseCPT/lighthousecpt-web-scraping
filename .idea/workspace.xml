@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added MonroeCollege" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;imBilalx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="265c0d3d-7725-4992-9ee4-a77182face98" />
+        <option name="url" value="https://github.com/imBilalx/lighthousecpt-web-scraping.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2eNFTOmEWs1eziPYDvZE8pkGX8O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/events",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/events" />
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/Tuition" />
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege" />
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/Deadline" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/Tuition" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sam-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (lighthousecpt-web-scraping)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebScrapingProject/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="" />
+      <created>1711737136291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711737136291</updated>
+      <workItem from="1711737137589" duration="86000" />
+      <workItem from="1711737225229" duration="5700000" />
+      <workItem from="1711743516751" duration="174000" />
+      <workItem from="1711976753409" duration="20000" />
+      <workItem from="1711976787829" duration="19828000" />
+      <workItem from="1712003937845" duration="6797000" />
+      <workItem from="1712069462118" duration="538000" />
+      <workItem from="1712070002647" duration="568000" />
+      <workItem from="1712070572980" duration="481000" />
+      <workItem from="1712071056986" duration="15275000" />
+      <workItem from="1712151108633" duration="5049000" />
+    </task>
+    <task id="LOCAL-00001" summary="test changes">
+      <option name="closed" value="true" />
+      <created>1711737295519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711737295519</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created log config to save logs locally">
+      <option name="closed" value="true" />
+      <created>1711738961279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711738961279</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created log config to save logs locally">
+      <option name="closed" value="true" />
+      <created>1711743673263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711743673263</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test commit">
+      <option name="closed" value="true" />
+      <created>1711976925941</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711976925941</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added comments and updated template.yaml">
+      <option name="closed" value="true" />
+      <created>1711979704055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711979704055</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated bucket name from mine to lighthouse's">
+      <option name="closed" value="true" />
+      <created>1711980839618</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711980839618</updated>
+    </task>
+    <task id="LOCAL-00007" summary="removed the sam package command as codepipeline takes care of that itself">
+      <option name="closed" value="true" />
+      <created>1711982176763</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711982176763</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changes to buildspec and template">
+      <option name="closed" value="true" />
+      <created>1711982980559</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711982980559</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changes to buildspec and template">
+      <option name="closed" value="true" />
+      <created>1711983369171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711983369171</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changes to buildspec and template">
+      <option name="closed" value="true" />
+      <created>1711985470273</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711985470273</updated>
+    </task>
+    <task id="LOCAL-00011" summary="changes to template">
+      <option name="closed" value="true" />
+      <created>1711985848297</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711985848297</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed filepaths, change bucket names from mine to lighthouse's">
+      <option name="closed" value="true" />
+      <created>1711992599776</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711992599776</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated description">
+      <option name="closed" value="true" />
+      <created>1711994359840</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711994359840</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created a new file named `util.py` to house reusable functions">
+      <option name="closed" value="true" />
+      <created>1712002487508</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712002487508</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added requirement part of trine university, still needs work">
+      <option name="closed" value="true" />
+      <created>1712005235289</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712005235289</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added a BaseScraper">
+      <option name="closed" value="true" />
+      <created>1712072286769</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712072286769</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implemented the &quot;Requirement&quot; part for TrineUniversity">
+      <option name="closed" value="true" />
+      <created>1712074169086</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712074169086</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Implemented the &quot;Deadline&quot; part for TrineUniversity">
+      <option name="closed" value="true" />
+      <created>1712075855033</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712075855033</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added headers to request to avoid 403">
+      <option name="closed" value="true" />
+      <created>1712076330360</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712076330360</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added &quot;Requirement&quot; and &quot;Deadline&quot; parts for New England College (no &quot;Tuition&quot; part)">
+      <option name="closed" value="true" />
+      <created>1712078212850</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712078212850</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added MonroeCollege">
+      <option name="closed" value="true" />
+      <created>1712156503569</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712156503569</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test changes" />
+    <MESSAGE value="created log config to save logs locally" />
+    <MESSAGE value="test commit" />
+    <MESSAGE value="added comments and updated template.yaml" />
+    <MESSAGE value="updated bucket name from mine to lighthouse's" />
+    <MESSAGE value="removed the sam package command as codepipeline takes care of that itself" />
+    <MESSAGE value="changes to buildspec and template" />
+    <MESSAGE value="changes to template" />
+    <MESSAGE value="fixed filepaths, change bucket names from mine to lighthouse's" />
+    <MESSAGE value="updated description" />
+    <MESSAGE value="created a new file named `util.py` to house reusable functions" />
+    <MESSAGE value="added requirement part of trine university, still needs work" />
+    <MESSAGE value="Added a BaseScraper" />
+    <MESSAGE value="Implemented the &quot;Requirement&quot; part for TrineUniversity" />
+    <MESSAGE value="Implemented the &quot;Deadline&quot; part for TrineUniversity" />
+    <MESSAGE value="added headers to request to avoid 403" />
+    <MESSAGE value="Added &quot;Requirement&quot; and &quot;Deadline&quot; parts for New England College (no &quot;Tuition&quot; part)" />
+    <MESSAGE value="added MonroeCollege" />
+    <option name="LAST_COMMIT_MESSAGE" value="added MonroeCollege" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1712019279074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

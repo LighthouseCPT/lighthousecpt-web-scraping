@@ -1,0 +1,24 @@
+{
+  "schools": [
+    {
+      "name": "TrineUniversity",
+      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
+      "requirement": {
+        "graduate": "https://www.trine.edu/international/graduate/international-apply.aspx",
+        "doctor": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
+      },
+      "deadline": "https://www.trine.edu/online/about/academic-calendar.aspx"
+    },
+    {
+      "name": "NewEnglandCollege",
+      "requirement": "https://www.nec.edu/international",
+      "deadline": "https://newengland.viewpage.co/International-Graduate-Admission-Start-Terms_ONCAMPUS"
+    },
+    {
+      "name": "MonroeCollege",
+      "tuition": "",
+      "requirement": "",
+      "deadline":""
+    }
+  ]
+}

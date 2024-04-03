@@ -1,0 +1,4725 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"9a38df34f5",applicationID:"243307823"};;/*! For license information please see nr-loader-rum-1.253.0.min.js.LICENSE.txt */
+(()=>{var e,t,n={234:(e,t,n)=>{"use strict";n.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>N,Yu:()=>w,Dg:()=>m,CX:()=>c,GE:()=>x,sU:()=>R});var r=n(8632),i=n(9567);const o={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const n=(0,r.ek)(e);n&&(n.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=n(7056),l=n(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const n=(0,r.ek)(e);n&&(n.init=p[e])}function b(e,t){if(!e)throw new Error(h);var n=v(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function x(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const n=(0,r.ek)(e);n&&(n.loader_config=A[e])}const w=(0,r.mF)().o;var _=n(385),E=n(6818);const D={buildEnv:E.Re,customTransaction:void 0,disabled:!1,distMethod:E.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(_._A?.performance?.timeOrigin||_._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+_._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof _._A.XMLHttpRequest?.prototype?.addEventListener,version:E.q4,denyList:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]=(0,i.D)(t,D);const n=(0,r.ek)(e);n&&(n.runtime=S[e])}function N(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,n)=>{"use strict";n.d(t,{D:()=>i});var r=n(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,r.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,r.Z)("Setting a Configurable requires a model to set its initial properties");const n=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(n).length?e:n;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?n[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?n[a]=i(e[a],t[a]):n[a]=e[a]}catch(e){(0,r.Z)("An error occurred while setting a property of a Configurable",e)}return n}catch(e){(0,r.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,n)=>{"use strict";n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.253.0",i="PROD",o="CDN"},385:(e,t,n)=>{"use strict";n.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>r,ux:()=>c,v6:()=>i,w1:()=>u});const r="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=r?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(r&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},9907:(e,t,n)=>{"use strict";n.d(t,{A:()=>r});class r{constructor(e){this.contextId=e}}},8929:(e,t,n)=>{"use strict";n.d(t,{v:()=>a});var r=n(8632);const i=(0,n(4402).Rl)();var o=n(9907);class a{static contextId="nr@context:".concat(i);static contextOriginalId="nr@original:".concat(i);static contextWrappedId="nr@wrapped:".concat(a.contextId);static getObservationContextByAgentIdentifier(e){const t=(0,r.fP)();return Object.keys(t?.initializedAgents||{}).indexOf(e)>-1?t.initializedAgents[e].observationContext:void 0}#e=new WeakMap;getCreateContext(e){return this.#e.has(e)||this.#e.set(e,new o.A),this.#e.get(e)}setContext(e,t){return this.#e.set(e,t),this.#e.get(e)}}},1117:(e,t,n)=>{"use strict";n.d(t,{w:()=>o});var r=n(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,n)=>{"use strict";n.d(t,{L:()=>d,R:()=>c});var r=n(2177),i=n(1284),o=n(4322),a=n(3325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(u(e),!e||!s[e].get(t)||n)return c(t);s[e].get(t).staged=!0;const a=[...s[e]];function c(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}a.every((e=>{let[t,n]=e;return n.staged}))&&(a.sort(((e,t)=>e[1].priority-t[1].priority)),a.forEach((t=>{let[n]=t;s[e].delete(n),c(n)})))}function l(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},2177:(e,t,n)=>{"use strict";n.d(t,{ee:()=>c});var r=n(8632),i=n(2210),o=n(234),a=n(9907),s=n(8929);const c=function e(t,n){var r={},u={},l={},f=!1;try{f=16===n.length&&(0,o.OP)(n).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var n=r[e];if(!n)return;for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)},emit:function(e,n,r,i,o){!1!==o&&(o=!0);if(c.aborted&&!i)return;t&&o&&t.emit(e,n,r);for(var a=p(r),s=v(e),d=s.length,l=0;l<d;l++)s[l].apply(a,n);var f=b()[u[e]];f&&f.push([g,e,n,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const n=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[r,i]=e;u[i]=t,t in n||(n[t]=[])}))},abort:d,aborted:!1,isBuffering:function(e){return!!b()[u[e]]},debugId:n,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{},observationContextManager:null};return g;function p(e){return e&&e instanceof a.A?e:e?(0,i.X)(e,s.v.contextId,(()=>g.observationContextManager?g.observationContextManager.getCreateContext(e):new a.A(s.v.contextId))):g.observationContextManager?g.observationContextManager.getCreateContext({}):new a.A(s.v.contextId)}function h(e,t){r[e]=v(e).concat(t)}function v(e){return r[e]||[]}function m(t){const n=l[t]=l[t]||e(g,t);return!n.observationContextManager&&g.observationContextManager&&(n.observationContextManager=g.observationContextManager),n}function b(){return g.backlog}}(void 0,"globalEE"),u=(0,r.fP)();function d(){c.aborted=!0,Object.keys(c.backlog).forEach((e=>{delete c.backlog[e]}))}u.ee||(u.ee=c)},5546:(e,t,n)=>{"use strict";n.d(t,{E:()=>r,p:()=>i});var r=n(2177).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4322:(e,t,n)=>{"use strict";n.d(t,{X:()=>o});var r=n(5546);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},3239:(e,t,n)=>{"use strict";n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(n,r))}},4402:(e,t,n)=>{"use strict";n.d(t,{Rl:()=>a,ky:()=>s});var r=n(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,n++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(n,i++).toString(16));return a.join("")}},7056:(e,t,n)=>{"use strict";n.d(t,{Bq:()=>r,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const r="NRBA",i="SESSION",o=144e5,a=18e5,s={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,n)=>{"use strict";function r(){return Math.floor(performance.now())}n.d(t,{z:()=>r})},50:(e,t,n)=>{"use strict";function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},2825:(e,t,n)=>{"use strict";n.d(t,{N:()=>d,T:()=>l});var r=n(2177),i=n(5546),o=n(3325),a=n(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa,o.D.softNav],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const n=r.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,r]=e;c[t]?c[t].forEach((e=>{r?(0,i.p)("feat-"+t,[],void 0,e,n):(0,i.p)("block-"+t,[],void 0,e,n),(0,i.p)("rumresp-"+t,[Boolean(r)],void 0,e,n)})):r&&(0,i.p)("feat-"+t,[],void 0,void 0,n),l[t]=Boolean(r)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,n))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,n)=>{"use strict";n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,n)=>{"use strict";n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},4351:(e,t,n)=>{"use strict";n.d(t,{P:()=>o});var r=n(2177);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,n)=>{"use strict";n.d(t,{KB:()=>a,b2:()=>o});var r=n(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},8632:(e,t,n)=>{"use strict";n.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var r=n(7894),i=n(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let n=a();n.initializedAgents??={},t.initializedAt={ms:(0,r.z)(),date:new Date},n.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,n)=>{"use strict";n.d(t,{N:()=>i});var r=n(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),n,i)}},3081:(e,t,n)=>{"use strict";n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewEvent},9251:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewTiming},7144:(e,t,n)=>{"use strict";n.d(t,{Ef:()=>i});var r=n(7056);n(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay"};r.IK.ERROR,r.IK.FULL,r.IK.OFF},5938:(e,t,n)=>{"use strict";n.d(t,{W:()=>i});var r=n(2177);class i{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=r.ee.get(e),this.featureName=n,this.blocked=!1}}},8862:(e,t,n)=>{"use strict";n.d(t,{j:()=>x});var r=n(3325),i=n(234),o=n(5546),a=n(2177),s=n(7894),c=n(8e3),u=n(3960),d=n(385),l=n(50),f=n(3081),g=n(8632),p=n(7144);const h=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",p.Ef.RECORD,p.Ef.PAUSE],v=["setErrorHandler","finished","addToTrace","addRelease"];function m(){const e=(0,g.gG)();h.forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var b=n(2825);const y=e=>{const t=e.startsWith("http");e+="/",n.p=t?e:"https://"+e};let A=!1;function x(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},h=arguments.length>2?arguments[2]:void 0,x=arguments.length>3?arguments[3]:void 0,{init:w,info:_,loader_config:E,runtime:D={loaderType:h},exposed:S=!0}=t;const k=(0,g.gG)();_||(w=k.init,_=k.info,E=k.loader_config),(0,i.Dg)(e.agentIdentifier,w||{}),(0,i.GE)(e.agentIdentifier,E||{}),_.jsAttributes??={},d.v6&&(_.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,_);const R=(0,i.P_)(e.agentIdentifier),N=[_.beacon,_.errorBeacon];A||(R.proxy.assets&&(y(R.proxy.assets),N.push(R.proxy.assets)),R.proxy.beacon&&N.push(R.proxy.beacon),m(),(0,g.EZ)("activatedFeatures",b.T),e.runSoftNavOverSpa&&=!0===R.soft_navigations.enabled&&R.feature_flags.includes("soft_nav")),D.denyList=[...R.ajax.deny_list||[],...R.ajax.block_internal?N:[]],(0,i.sU)(e.agentIdentifier,D),void 0===e.api&&(e.api=function(e,t){let g=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,c.R)(e,"api");const h={};var m=a.ee.get(e),b=m.get("tracer"),y="api-",A=y+"ixn-";function x(t,n,r,o){const a=(0,i.C5)(e);return null===n?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),E(y,r,!0,o||null===n?"session":void 0)(t,n)}function w(){}v.forEach((e=>{h[e]=E(y,e,!0,"api")})),h.addPageAction=E(y,"addPageAction",!0,r.D.pageAction),h.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,E(y,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return x(e,t,"setCustomAttribute",n);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setUserId=function(e){if("string"==typeof e||null===e)return x("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return x("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},h.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,r.D.metrics,m);const n=Object.values(r.D);if(void 0===e)e=n;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!n.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(n));e.includes(r.D.pageViewEvent)||e.push(r.D.pageViewEvent)}e.forEach((e=>{m.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},h[p.Ef.RECORD]=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.RECORD,[],void 0,r.D.sessionReplay,m)},h[p.Ef.PAUSE]=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.PAUSE,[],void 0,r.D.sessionReplay,m)},h.interaction=function(e){return(new w).get("object"==typeof e?e:{})};const _=w.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,r.D.metrics,m),g||(0,o.p)(A+"tracer",[(0,s.z)(),e,n],i,r.D.spa,m),function(){if(b.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw b.emit("fn-err",[arguments,this,e],n),e}finally{b.emit("fn-end",[(0,s.z)()],n)}}}};function E(e,t,n,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,r.D.metrics,m),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,m),n?void 0:this}}function D(){n.e(75).then(n.bind(n,7438)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>{(0,l.Z)("Downloading runtime APIs failed..."),(0,c.L)(e,"api",!0)}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{_[e]=E(A,e,void 0,g?r.D.softNav:r.D.spa)})),h.setCurrentRouteName=g?E(A,"routeName",void 0,r.D.softNav):E(y,"routeName",!0,r.D.spa),h.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,r.D.metrics,m),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,m)},d.il?(0,u.b2)((()=>D()),!0):D(),h}(e.agentIdentifier,x,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=S),A=!0}},1926:(e,t,n)=>{n.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,n)=>{"use strict";n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8,[r.softNav]:9,[r.sessionReplay]:10}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>"nr-rum-1.253.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.253.0.PROD:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-9bAiHIPyDQsfH3twE5thQ79NZloqHEfmncprWhfUn+VZFlQhRa05+ziJ9iJfmPRs6DoQA5H7S/VrlzQnvif2nQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[n]=[r];var g=(t,r)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=self["webpackChunk:NRBA-1.253.0.PROD"]=self["webpackChunk:NRBA-1.253.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";i(1926);var e=i(50),t=i(7144),n=i(8929),r=i(4402),o=i(2177);class a{agentIdentifier;observationContext=new n.v;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e;o.ee.get(e).observationContext=this.observationContext}#t(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#t("addPageAction",e,t)}setPageViewName(e,t){return this.#t("setPageViewName",e,t)}setCustomAttribute(e,t,n){return this.#t("setCustomAttribute",e,t,n)}noticeError(e,t){return this.#t("noticeError",e,t)}setUserId(e){return this.#t("setUserId",e)}setApplicationVersion(e){return this.#t("setApplicationVersion",e)}setErrorHandler(e){return this.#t("setErrorHandler",e)}finished(e){return this.#t("finished",e)}addRelease(e,t){return this.#t("addRelease",e,t)}start(e){return this.#t("start",e)}recordReplay(){return this.#t(t.Ef.RECORD)}pauseReplay(){return this.#t(t.Ef.PAUSE)}addToTrace(e){return this.#t("addToTrace",e)}setCurrentRouteName(e){return this.#t("setCurrentRouteName",e)}interaction(){return this.#t("interaction")}}var s=i(3325),c=i(234);const u=Object.values(s.D);function d(e){const t={};return u.forEach((n=>{t[n]=function(e,t){return!0===(0,c.Mt)(t,"".concat(e,".enabled"))}(n,e)})),t}var l=i(8862);var f=i(8e3),g=i(5938),p=i(3960),h=i(385);const v=e=>h.il&&!0===(0,c.Mt)(e,"privacy.cookies_enabled");function m(e){return c.Yu.MO&&v&&!0===(0,c.Mt)(e,"session_trace.enabled")}class b extends g.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,c.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,f.R)(e,n)}importAggregator(){let t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,f.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));this.onAggregateImported=new Promise((e=>{t=e}));const r=async()=>{let r;try{if(v(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3108));r=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===s.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#n(this.featureName,r))return(0,f.L)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,n),t(!0)}catch(n){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),n),this.abortHandler?.(),(0,f.L)(this.agentIdentifier,this.featureName,!0),t(!1)}};h.il?(0,p.b2)((()=>r()),!0):r()}#n(e,t){return e!==s.D.sessionReplay||(n=this.agentIdentifier,r=t,!(!m(n)||!r?.isNew&&!r?.state.sessionReplayMode));var n,r}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,n),this.importAggregator()}}var x=i(1117),w=i(1284);class _ extends x.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,n){t[e]=E(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,w.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=E(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=E(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=Object.values(this.aggregatedData[n]||{}),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),k=i(4351);var R=i(5546),N=i(7956),C=i(3239),j=i(7894),I=i(9251);class O extends b{static featureName=I.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t,n),h.il&&((0,N.N)((()=>(0,R.p)("docHidden",[(0,j.z)()],void 0,I.t,this.ee)),!0),(0,C.bP)("pagehide",(()=>(0,R.p)("winPagehide",[(0,j.z)()],void 0,I.t,this.ee))),this.importAggregator())}}var T=i(3081);class P extends b{static featureName=T.t9;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,T.t9,n),this.importAggregator()}}new class extends a{constructor(t,n){super(n),h._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===s.D.softNav)),(0,l.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=d(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>s.p[e.featureName]-s.p[t.featureName])),n.forEach((n=>{if(!t[n.featureName]&&n.featureName!==s.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&n.featureName===s.D.spa)return;if(!this.runSoftNavOverSpa&&n.featureName===s.D.softNav)return;const r=function(e){switch(e){case s.D.ajax:return[s.D.jserrors];case s.D.sessionTrace:return[s.D.ajax,s.D.pageViewEvent];case s.D.sessionReplay:return[s.D.sessionTrace];case s.D.pageViewTiming:return[s.D.pageViewEvent];default:return[]}}(n.featureName);r.every((e=>e in this.features))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,k.P)(r),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,S.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[A,O,P],loaderType:"lite"})})()})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }</style>
+<meta name="description" content="Monroe College provides a range of tutoring and academic services. Click here to learn about our Academic Centers and tutoring opportunities." />
+<link rel="canonical" href="https://www.monroecollege.edu/academics/academic-calendar-and-resources" />
+<meta property="og:site_name" content="Monroe College" />
+<meta property="og:url" content="https://www.monroecollege.edu/academics/academic-calendar-and-resources" />
+<meta property="og:title" content="Academic Calendar and Resources" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Academic Calendar and Resources" />
+<meta name="twitter:url" content="https://www.monroecollege.edu/academics/academic-calendar-and-resources" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "CollegeOrUniversity",
+            "name": "Monroe College",
+            "description": "Monroe College",
+            "url": "https://www.monroecollege.edu"
+        }
+    ]
+}</script>
+<link rel="icon" href="/themes/custom/monroe/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/monroe_gtm/google_tag.script.js?saaw02" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script src="/sites/default/files/google_tag/monroe_marketing_gtm/google_tag.script.js?saaw02" defer></script>
+
+    <title>Academic Resources and Support at Monroe College</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700|Lato:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_M3yASaFRVeq0xKrDD38RoVXeGExyzBKUoXbtwRxkSak.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v6.1.0/css/v4-shims.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_v52pnKvzGMwJsCsbQob1gLXKl-3n3S7iFQHISwvruAA.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_RhRlolmwY5VMJ8TPWjyLwGdPoAF0FPqwQFirTcqntRc.css" />
+
+    
+<script src="https://n384.monroecollege.edu/script.js"></script>
+<!-- Start VWO Async SmartCode -->
+<script type='text/javascript'>
+window._vwo_code = window._vwo_code || (function(){
+var account_id=600022,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=1,
+hide_element='body',
+
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+</script>
+<!-- End VWO Async SmartCode -->
+  </head>
+
+  <body class="page-node-1406 page-node-type-chaptered_page path-node page-node-type-chaptered-page chaptered-page">
+        <a class="skip-link" href="#main-content">
+      Skip to main content
+    </a>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLTPP5D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCFPC8C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container lc--layout-container lc--two-column">
+
+  <div class="l--layout l--two-column">
+
+    <header id="l--main-header">
+      
+  
+
+  <div class="region region-header r--region r--header">
+    
+      <div class="main-nav-container">
+        <div class="branding-mainmenu-container">
+          <div class="branding-mainmenu-container-inner">
+
+              
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--main-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--main-menu"
+        >
+
+        
+  <nav class="mc--menu mc--left-quick-menu" aria-label="Left Quick Menu">
+  <ul class="m--menu m--left-quick-menu">
+    
+      
+        
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/academics">
+        Academics
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Academics">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/find-your-program" class="not-external">
+      Find Your Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/undergraduate-programs" class="not-external">
+      Undergraduate Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/king-graduate-school" class="not-external">
+      King Graduate School
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <a href="/academics/academic-calendar-and-resources" class="not-external">
+      Academic Calendar and Resources
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="https://catalog.monroecollege.edu" class="not-external">
+      Course Catalog
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/adult-learner-degree-options" class="not-external">
+      Adult Learner Degree Options
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/monroe-online" class="not-external">
+      Monroe Online
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/esl-program" class="not-external">
+      ESL Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/continuing-professional-education" class="not-external">
+      Continuing &amp; Professional Education 
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply/international-programs" class="not-external">
+      International Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/honors-program" class="not-external">
+      Honors Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/accreditation-assessment-research-and-planning" class="not-external">
+      Accreditation, Assessment, Research, and Planning
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/fall-2023-presidents-and-deans-list-awardees" class="not-external">
+      Fall 2023 President’s and Deans’ List
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/admissions-and-financial-aid">
+        Admissions &amp; Aid
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Admissions &amp; Aid">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/contact-us#request-information" class="not-external">
+      Request Information
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply" class="not-external">
+      How to Apply
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/request-tour" class="not-external">
+      Visit Us
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/financial-aid" class="not-external">
+      Financial Aid
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/tuition-and-fees" class="not-external">
+      Tuition and Fees
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/online-payment" class="not-external">
+      Online Payment
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/student-life">
+        Student Life
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Student Life">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/bronx-ny-campus" class="not-external">
+      The Bronx Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus" class="not-external">
+      The New Rochelle Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/st-lucia-campus" class="not-external">
+      The St. Lucia Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/online-experience" class="not-external">
+      The Online Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/academics/adult-learner-degree-options/adult-plan" class="not-external">
+      Our Adult Learner Plan
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/living-and-studying-new-york" class="not-external">
+      Studying in New York
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus/residence-life" class="not-external">
+      Living on Campus
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/monroe-athletics" class="not-external">
+      Athletics
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/current-student-events" class="not-external">
+      Current Student Events
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--main-menu -->
+
+</div><!-- cc--component-container cc--main-menu -->
+
+
+
+
+
+              
+    
+
+<div
+  class="cc--component-container cc--branding-header  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--branding-header"
+        >
+
+        
+  <a href="/"><svg role="img" aria-label="Monroe College Logo" class="icon-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 299.3 26.8" xml:space="preserve">
+  <path fill="#FFC423" clip-rule="evenodd" fill-rule="evenodd" d="M173.9,16.6c-1.2,2.3-3.5,3.8-6.2,3.8c-3.9,0-7.1-3.2-7.1-7.5c0-3.5,3.2-6.6,7.1-6.6
+        c2.7,0,5,1.5,6.2,3.5V1.4c-1.9-0.9-4-1.4-6.2-1.4c-7.2,0-13.9,5.3-13.9,12.9c0,8.1,5.8,13.8,13.9,13.8c2.3,0,4.4-0.5,6.2-1.3V16.6z
+          M211.3,20.3h9.6V26h-16.1V0.2h6.5V20.3z M229.6,20.3h9.6V26h-16.1V0.2h6.5V20.3z M247.4,5.4v4.7h8.8v5.3h-8.8v5.3h10.2V26h-16.3
+        V0.1h16.3v5.3H247.4z M289.1,5.4v4.7h9.8v5.3h-9.8v5.3h10.2V26H283V0.1h16.3v5.3H289.1z M281.1,25.2c-4,1.1-6.9,1.2-9.1,1.2
+        c-6.3,0-13.5-3.4-13.5-12.9c0-9.5,6.2-13.1,14.8-13.1c1.5,0,4.8,0.2,7.1,1.1L279.9,7c-1.9-1.2-4.2-1.6-5.7-1.6
+        c-5.1,0-9.2,2.3-9.2,8.1c0,4.9,3.3,7.9,7.8,7.9c0.8,0,1.6-0.1,2.2-0.4v-5h-3.7v-4.8h9.7V25.2z M182.7,12.9c0,4.3,3.2,7.4,7,7.4
+        c3.9,0,7-3.1,7-7.4c0-3.4-3.2-6.6-7-6.6C185.8,6.3,182.7,9.4,182.7,12.9L182.7,12.9z M203.4,12.8c0,8-5.8,13.7-13.8,13.7
+        c-8,0-13.8-5.7-13.8-13.7c0-7.5,6.6-12.8,13.8-12.8C196.8,0,203.4,5.3,203.4,12.8L203.4,12.8z"/>
+  <path fill="#19388A" clip-rule="evenodd" fill-rule="evenodd" d="M138,6.6v4.1h9.5v5.5H138v4.3h9.9v5.5h-16.3V1.1h16.3v5.5H138z M90.1,12.1h0.6
+    c2.1,0,4.5-0.4,4.5-3.1S92.8,6,90.7,6h-0.6V12.1z M103.8,25.8h-7.6l-6.1-9.5h-0.1v9.5h-6.4V1.1h9.6c4.9,0,8.6,2.3,8.6,7.6
+    c0,3.4-1.9,6.4-5.4,7L103.8,25.8z M58.1,25.8h6.1V10.6h0.1l11.2,15.2h6.1V1h-6.1v15.1h-0.1L64.2,1h-6.1V25.8z M36.1,13
+    c0,4.3,3.2,7.4,7,7.4c3.8,0,7-3.1,7-7.4c0-3.4-3.1-6.5-7-6.5C39.2,6.5,36.1,9.6,36.1,13L36.1,13z M56.7,13c0,8-5.7,13.7-13.7,13.7
+    c-7.9,0-13.7-5.6-13.7-13.7c0-7.5,6.6-12.7,13.7-12.7C50.2,0.2,56.7,5.5,56.7,13L56.7,13z M0,25.8h6.1l2-14.2h0.1l5.4,14.2h2.4
+    l5.6-14.2h0.1l1.7,14.2h6.1L25.9,1h-6.1l-5.1,13.2L10,1H4L0,25.8z M109.1,13.2c0,4.3,3.2,7.4,7,7.4c3.8,0,7-3.1,7-7.4
+    c0-3.4-3.2-6.5-7-6.5C112.2,6.6,109.1,9.7,109.1,13.2L109.1,13.2z M129.8,13.1c0,8-5.7,13.7-13.7,13.7c-7.9,0-13.7-5.6-13.7-13.7
+    c0-7.5,6.6-12.7,13.7-12.7C123.2,0.4,129.8,5.6,129.8,13.1L129.8,13.1z"/>
+</svg>
+
+</a>
+
+
+    </div><!-- c--component c--branding-header -->
+
+</div><!-- cc--component-container cc--branding-header -->
+
+              
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--main-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--main-menu"
+        >
+
+        
+  <nav class="mc--menu mc--right-quick-menu" aria-label="Right Quick Menu">
+  <ul class="m--menu m--right-quick-menu">
+    
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/meet-monroe">
+        Meet Monroe
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Meet Monroe">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-culture" class="not-external">
+      Our Culture
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-people" class="not-external">
+      Our People
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/presidents-office" class="not-external">
+      President’s Office
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/new-york-our-dna" class="not-external">
+      NYC Is In Our DNA
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-history" class="not-external">
+      The Monroe Story
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/monroe-facts-and-statistics" class="not-external">
+      Fast Facts
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/mission-and-core-values" class="not-external">
+      Our Mission and Core Values
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/college-rankings" class="not-external">
+      College Rankings
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/blog" class="not-external">
+      Campus News and Blog
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/newsroom" class="not-external">
+      Newsroom
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/our-formula-success">
+        Our Formula For Success
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Our Formula For Success">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-path-guidance" class="not-external">
+      We Help You Find Your Path
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/real-world-education" class="not-external">
+      We Educate You for the Real World
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/flexible-learning-opportunities" class="not-external">
+      We Work Around Your Commitments
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/360-degree-support" class="not-external">
+      We Support You 360°
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-advancement" class="not-external">
+      We Advance Your Career 
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/alumni-success-stories" class="not-external">
+      Success Stories
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="https://admissions.monroecollege.edu/portal/start-app" class="not-external">
+      Apply Now
+    </a>
+
+  
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--main-menu -->
+
+</div><!-- cc--component-container cc--main-menu -->
+
+
+
+
+
+              
+    
+
+<div
+  class="cc--component-container cc--search-widget  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--search-widget"
+        >
+
+        
+  <button type="button" class="icon-search">
+  <svg role="img" aria-label="Open Search Icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+    <path class="search" d="M7.9,0C3.6,0,0,3.6,0,7.9s3.6,7.9,7.9,7.9c1.7,0,3.2-0.5,4.5-1.4l5.2,5.2c0.5,0.5,1.4,0.5,2,0
+    c0.5-0.5,0.5-1.4,0-2l-5.2-5.2c0.9-1.3,1.4-2.8,1.4-4.5C15.8,3.6,12.3,0,7.9,0z M7.9,2.8c2.8,0,5.1,2.3,5.1,5.1
+    c0,2.8-2.3,5.1-5.1,5.1c-2.8,0-5.1-2.3-5.1-5.1C2.8,5.1,5.1,2.8,7.9,2.8z"/>
+  </svg>
+</button>
+  <button type="button" class="icon-close">
+  <svg role="img" aria-label="Close Icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+    <path class="close_1_" d="M8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6z"/>
+  </svg>
+</button>
+
+
+    </div><!-- c--component c--search-widget -->
+
+</div><!-- cc--component-container cc--search-widget -->
+
+            <div class="branding-hamburger-container">
+              <button aria-label="Open Menu" class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+
+            <div class="branding-sidenav-container">
+              <button class="menu-close"></button>
+              <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+  
+
+        
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--main-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--main-menu"
+        >
+
+        
+  <nav class="mc--menu mc--main" aria-label="Main">
+  <ul class="m--menu m--main">
+    
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="https://admissions.monroecollege.edu/portal/start-app" class="not-external">
+      Apply Now
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/academics">
+        Academics
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Academics">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/find-your-program" class="not-external">
+      Find your Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/undergraduate-programs" class="not-external">
+      Undergraduate Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/king-graduate-school" class="not-external">
+      King Graduate School
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <a href="/academics/academic-calendar-and-resources" class="not-external">
+      Academic Calendar and Resources
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="https://catalog.monroecollege.edu" class="not-external">
+      Course Catalog
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/adult-learner-degree-options" class="not-external">
+      Adult Learner Degree Options
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/monroe-online" class="not-external">
+      Monroe Online
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/esl-program" class="not-external">
+      ESL Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/continuing-professional-education" class="not-external">
+      Continuing &amp; Professional Education 
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply/international-programs" class="not-external">
+      International Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/honors-program" class="not-external">
+      Honors Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/accreditation-assessment-research-and-planning" class="not-external">
+      Accreditation, Assessment, Research, and Planning
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/fall-2023-presidents-and-deans-list-awardees" class="not-external">
+      Fall 2023 President’s and Deans’ List
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/admissions-and-financial-aid">
+        Admissions &amp; Aid
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Admissions &amp; Aid">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/contact-us#request-information" class="not-external">
+      Request Information
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply" class="not-external">
+      How to Apply
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/financial-aid" class="not-external">
+      Financial Aid
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/request-tour" class="not-external">
+      Visit Us
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/tuition-and-fees" class="not-external">
+      Tuition and Fees
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/online-payment" class="not-external">
+      Online Payment
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/student-life">
+        Student Life
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Student Life">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/bronx-ny-campus" class="not-external">
+      The Bronx Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus" class="not-external">
+      The New Rochelle, NY Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/st-lucia-campus" class="not-external">
+      The St. Lucia Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/online-experience" class="not-external">
+      The Online Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/academics/adult-learner-degree-options/adult-plan" class="not-external">
+      Our Adult Learner Plan
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/living-and-studying-new-york" class="not-external">
+      Studying in New York
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus/residence-life" class="not-external">
+      Living on Campus
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/current-student-events" class="not-external">
+      Current Student Events
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/student-life/monroe-athletics">
+        Athletics
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Athletics">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/bronx-ny-campus/monroe-express-athletics" class="not-external">
+      Bronx Athletics
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus/monroe-mustangs" class="not-external">
+      New Rochelle Athletics
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/our-formula-success">
+        Our Formula for Success
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Our Formula for Success">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-path-guidance" class="not-external">
+      We Help You Find Your Path
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/real-world-education" class="not-external">
+      We Educate You for the Real World
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/flexible-learning-opportunities" class="not-external">
+      We Work Around Your Commitments
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/360-degree-support" class="not-external">
+      Supporting You 360°
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-advancement" class="not-external">
+      We Advance Your Career
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/alumni-success-stories" class="not-external">
+      Success Stories
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/meet-monroe">
+        Meet Monroe
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Meet Monroe">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-culture" class="not-external">
+      Our Culture
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-people" class="not-external">
+      Our People
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/presidents-office" class="not-external">
+      President’s Office
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/new-york-our-dna" class="not-external">
+      NYC Is In Our DNA
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-history" class="not-external">
+      The Monroe Story
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/monroe-facts-and-statistics" class="not-external">
+      Fast Facts
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/mission-and-core-values" class="not-external">
+      Mission and Core Values
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/newsroom" class="not-external">
+      Newsroom
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/college-rankings" class="not-external">
+      College Rankings
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/blog" class="not-external">
+      Campus News and Blog
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--main-menu -->
+
+</div><!-- cc--component-container cc--main-menu -->
+
+
+  </nav>
+
+              <nav role="navigation" aria-labelledby="block-submainnavigation-menu" id="block-submainnavigation">
+            
+  <h2 class="visually-hidden" id="block-submainnavigation-menu">Sub main navigation</h2>
+  
+
+        
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--utility-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--utility-menu"
+        >
+
+        
+    <nav class="mc--menu mc--main" aria-label="Main">
+  <ul class="m--menu m--main">
+    
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/current-students" class="not-external">
+      Current Students
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/faculty-staff" class="not-external">
+      Faculty and Staff
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/accepted-students" class="not-external">
+      Accepted Students
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/parents" class="not-external">
+      Parents 
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/alumni" class="not-external">
+      Alumni
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/corporate-partnership-program" class="not-external">
+      Employers
+    </a>
+
+  
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--utility-menu -->
+
+</div><!-- cc--component-container cc--utility-menu -->
+
+
+  </nav>
+
+            </div>
+          </div>
+        </div>
+
+          
+    
+
+<div
+  class="cc--component-container cc--search-form  "
+
+  
+  
+   role="dialog"
+  
+  
+  
+>
+
+    <div class="c--component c--search-form"
+        >
+
+        
+  <h2 class="visually-hidden" id="dialog-title-1">Enter a Search Term</h2>
+
+  <form autocomplete="on" action="/search" name="search-form">
+    
+      <div class="fi--form-item fi--q">
+    
+  <label for="q" class="visually-hidden">
+    Search Monroe  </label>
+
+  <input
+    type="text"
+    name="q"
+    id="q"
+            maxlength="63"    placeholder="Search Monroe"    size="63"
+  >
+
+</div>
+
+      <button type="submit" value="submit" class="button-search">
+        Search
+      </button>
+
+    </form>
+
+
+    </div><!-- c--component c--search-form -->
+
+</div><!-- cc--component-container cc--search-form -->
+
+      </div>
+
+      <div class="mobile-nav">
+
+        <div class="mobile-nav-topbar-container">
+            
+    
+
+<div
+  class="cc--component-container cc--search-widget  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--search-widget"
+        >
+
+        
+  <button type="button" class="icon-search">
+  <svg role="img" aria-label="Open Search Icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+    <path class="search" d="M7.9,0C3.6,0,0,3.6,0,7.9s3.6,7.9,7.9,7.9c1.7,0,3.2-0.5,4.5-1.4l5.2,5.2c0.5,0.5,1.4,0.5,2,0
+    c0.5-0.5,0.5-1.4,0-2l-5.2-5.2c0.9-1.3,1.4-2.8,1.4-4.5C15.8,3.6,12.3,0,7.9,0z M7.9,2.8c2.8,0,5.1,2.3,5.1,5.1
+    c0,2.8-2.3,5.1-5.1,5.1c-2.8,0-5.1-2.3-5.1-5.1C2.8,5.1,5.1,2.8,7.9,2.8z"/>
+  </svg>
+</button>
+  <button type="button" class="icon-close">
+  <svg role="img" aria-label="Close Icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+    <path class="close_1_" d="M8,6.6L14.6,0L16,1.4L9.4,8l6.6,6.6L14.6,16L8,9.4L1.4,16L0,14.6L6.6,8L0,1.4L1.4,0L8,6.6z"/>
+  </svg>
+</button>
+
+
+    </div><!-- c--component c--search-widget -->
+
+</div><!-- cc--component-container cc--search-widget -->
+
+            
+    
+
+<div
+  class="cc--component-container cc--branding-header  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--branding-header"
+        >
+
+        
+  <a href="/"><svg role="img" aria-label="Monroe College Logo" class="icon-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 299.3 26.8" xml:space="preserve">
+  <path fill="#FFC423" clip-rule="evenodd" fill-rule="evenodd" d="M173.9,16.6c-1.2,2.3-3.5,3.8-6.2,3.8c-3.9,0-7.1-3.2-7.1-7.5c0-3.5,3.2-6.6,7.1-6.6
+        c2.7,0,5,1.5,6.2,3.5V1.4c-1.9-0.9-4-1.4-6.2-1.4c-7.2,0-13.9,5.3-13.9,12.9c0,8.1,5.8,13.8,13.9,13.8c2.3,0,4.4-0.5,6.2-1.3V16.6z
+          M211.3,20.3h9.6V26h-16.1V0.2h6.5V20.3z M229.6,20.3h9.6V26h-16.1V0.2h6.5V20.3z M247.4,5.4v4.7h8.8v5.3h-8.8v5.3h10.2V26h-16.3
+        V0.1h16.3v5.3H247.4z M289.1,5.4v4.7h9.8v5.3h-9.8v5.3h10.2V26H283V0.1h16.3v5.3H289.1z M281.1,25.2c-4,1.1-6.9,1.2-9.1,1.2
+        c-6.3,0-13.5-3.4-13.5-12.9c0-9.5,6.2-13.1,14.8-13.1c1.5,0,4.8,0.2,7.1,1.1L279.9,7c-1.9-1.2-4.2-1.6-5.7-1.6
+        c-5.1,0-9.2,2.3-9.2,8.1c0,4.9,3.3,7.9,7.8,7.9c0.8,0,1.6-0.1,2.2-0.4v-5h-3.7v-4.8h9.7V25.2z M182.7,12.9c0,4.3,3.2,7.4,7,7.4
+        c3.9,0,7-3.1,7-7.4c0-3.4-3.2-6.6-7-6.6C185.8,6.3,182.7,9.4,182.7,12.9L182.7,12.9z M203.4,12.8c0,8-5.8,13.7-13.8,13.7
+        c-8,0-13.8-5.7-13.8-13.7c0-7.5,6.6-12.8,13.8-12.8C196.8,0,203.4,5.3,203.4,12.8L203.4,12.8z"/>
+  <path fill="#19388A" clip-rule="evenodd" fill-rule="evenodd" d="M138,6.6v4.1h9.5v5.5H138v4.3h9.9v5.5h-16.3V1.1h16.3v5.5H138z M90.1,12.1h0.6
+    c2.1,0,4.5-0.4,4.5-3.1S92.8,6,90.7,6h-0.6V12.1z M103.8,25.8h-7.6l-6.1-9.5h-0.1v9.5h-6.4V1.1h9.6c4.9,0,8.6,2.3,8.6,7.6
+    c0,3.4-1.9,6.4-5.4,7L103.8,25.8z M58.1,25.8h6.1V10.6h0.1l11.2,15.2h6.1V1h-6.1v15.1h-0.1L64.2,1h-6.1V25.8z M36.1,13
+    c0,4.3,3.2,7.4,7,7.4c3.8,0,7-3.1,7-7.4c0-3.4-3.1-6.5-7-6.5C39.2,6.5,36.1,9.6,36.1,13L36.1,13z M56.7,13c0,8-5.7,13.7-13.7,13.7
+    c-7.9,0-13.7-5.6-13.7-13.7c0-7.5,6.6-12.7,13.7-12.7C50.2,0.2,56.7,5.5,56.7,13L56.7,13z M0,25.8h6.1l2-14.2h0.1l5.4,14.2h2.4
+    l5.6-14.2h0.1l1.7,14.2h6.1L25.9,1h-6.1l-5.1,13.2L10,1H4L0,25.8z M109.1,13.2c0,4.3,3.2,7.4,7,7.4c3.8,0,7-3.1,7-7.4
+    c0-3.4-3.2-6.5-7-6.5C112.2,6.6,109.1,9.7,109.1,13.2L109.1,13.2z M129.8,13.1c0,8-5.7,13.7-13.7,13.7c-7.9,0-13.7-5.6-13.7-13.7
+    c0-7.5,6.6-12.7,13.7-12.7C123.2,0.4,129.8,5.6,129.8,13.1L129.8,13.1z"/>
+</svg>
+
+</a>
+
+
+    </div><!-- c--component c--branding-header -->
+
+</div><!-- cc--component-container cc--branding-header -->
+ 
+          <div class="branding-hamburger-container">
+            <button aria-label="Open Menu" class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-nav-menu-container">
+          <nav role="navigation" aria-labelledby="block-mobile-menu-menu" id="block-mobile-menu">
+            
+  <h2 class="visually-hidden" id="block-mobile-menu-menu">Mobile Main navigation</h2>
+  
+
+        
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--main-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--main-menu"
+        >
+
+        
+  <nav class="mc--menu mc--main" aria-label="Main">
+  <ul class="m--menu m--main">
+    
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="https://admissions.monroecollege.edu/portal/start-app" class="not-external">
+      Apply Now
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/academics">
+        Academics
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Academics">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/find-your-program" class="not-external">
+      Find your Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/undergraduate-programs" class="not-external">
+      Undergraduate Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/king-graduate-school" class="not-external">
+      King Graduate School
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li class="menu-item menu-item--active-trail" >
+
+  
+    <a href="/academics/academic-calendar-and-resources" class="not-external">
+      Academic Calendar and Resources
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="https://catalog.monroecollege.edu" class="not-external">
+      Course Catalog
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/adult-learner-degree-options" class="not-external">
+      Adult Learner Degree Options
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/monroe-online" class="not-external">
+      Monroe Online
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/esl-program" class="not-external">
+      ESL Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/continuing-professional-education" class="not-external">
+      Continuing &amp; Professional Education 
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply/international-programs" class="not-external">
+      International Programs
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/honors-program" class="not-external">
+      Honors Program
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/accreditation-assessment-research-and-planning" class="not-external">
+      Accreditation, Assessment, Research, and Planning
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/fall-2023-presidents-and-deans-list-awardees" class="not-external">
+      Fall 2023 President’s and Deans’ List
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/admissions-and-financial-aid">
+        Admissions &amp; Aid
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Admissions &amp; Aid">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/contact-us#request-information" class="not-external">
+      Request Information
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/how-apply" class="not-external">
+      How to Apply
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/financial-aid" class="not-external">
+      Financial Aid
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/request-tour" class="not-external">
+      Visit Us
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/admissions-and-aid/tuition-and-fees" class="not-external">
+      Tuition and Fees
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/online-payment" class="not-external">
+      Online Payment
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/student-life">
+        Student Life
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Student Life">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/bronx-ny-campus" class="not-external">
+      The Bronx Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus" class="not-external">
+      The New Rochelle, NY Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/st-lucia-campus" class="not-external">
+      The St. Lucia Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/online-experience" class="not-external">
+      The Online Experience
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/academics/academics/adult-learner-degree-options/adult-plan" class="not-external">
+      Our Adult Learner Plan
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/living-and-studying-new-york" class="not-external">
+      Studying in New York
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus/residence-life" class="not-external">
+      Living on Campus
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/current-student-events" class="not-external">
+      Current Student Events
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/student-life/monroe-athletics">
+        Athletics
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Athletics">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/bronx-ny-campus/monroe-express-athletics" class="not-external">
+      Bronx Athletics
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/student-life/new-rochelle-ny-campus/monroe-mustangs" class="not-external">
+      New Rochelle Athletics
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/our-formula-success">
+        Our Formula for Success
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Our Formula for Success">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-path-guidance" class="not-external">
+      We Help You Find Your Path
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/real-world-education" class="not-external">
+      We Educate You for the Real World
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/flexible-learning-opportunities" class="not-external">
+      We Work Around Your Commitments
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/360-degree-support" class="not-external">
+      Supporting You 360°
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/career-advancement" class="not-external">
+      We Advance Your Career
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/our-formula-success/alumni-success-stories" class="not-external">
+      Success Stories
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <div class="link-arrow-wrapper">
+      <a href="/meet-monroe">
+        Meet Monroe
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for Meet Monroe">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 20 11.7" enable-background="new 0 0 20 11.7" xml:space="preserve">
+          <path d="M10,8.3L18.3,0L20,1.7l-10,10L0,1.7L1.7,0L10,8.3z"/>
+        </svg>
+      </button>
+    </div>
+
+  
+      <div class="submenus-wrapper">
+          <div class="submenus-wrapper-inner">
+        <ul class="submenu" aria-hidden="true">
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-culture" class="not-external">
+      Our Culture
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-people" class="not-external">
+      Our People
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/presidents-office" class="not-external">
+      President’s Office
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/new-york-our-dna" class="not-external">
+      NYC Is In Our DNA
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/our-history" class="not-external">
+      The Monroe Story
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/monroe-facts-and-statistics" class="not-external">
+      Fast Facts
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/mission-and-core-values" class="not-external">
+      Mission and Core Values
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/info/newsroom" class="not-external">
+      Newsroom
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/meet-monroe/college-rankings" class="not-external">
+      College Rankings
+    </a>
+
+  
+  
+</li>
+
+            
+              
+<li  class="menu-item">
+
+  
+    <a href="/blog" class="not-external">
+      Campus News and Blog
+    </a>
+
+  
+  
+</li>
+
+                    </ul>
+      </div>
+        </div>
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--main-menu -->
+
+</div><!-- cc--component-container cc--main-menu -->
+
+
+  </nav>
+
+          <nav role="navigation" aria-labelledby="block-mobile-sub-menu-menu" id="block-mobile-sub-menu">
+            
+  <h2 class="visually-hidden" id="block-mobile-sub-menu-menu">Mobile Sub main navigation</h2>
+  
+
+        
+
+  
+    
+    
+
+<div
+  class="cc--component-container cc--utility-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--utility-menu"
+        >
+
+        
+    <nav class="mc--menu mc--main" aria-label="Main">
+  <ul class="m--menu m--main">
+    
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/current-students" class="not-external">
+      Current Students
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/faculty-staff" class="not-external">
+      Faculty and Staff
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/accepted-students" class="not-external">
+      Accepted Students
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/parents" class="not-external">
+      Parents 
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/alumni" class="not-external">
+      Alumni
+    </a>
+
+  
+  
+</li>
+
+      
+        
+<li  class="menu-item">
+
+  
+    <a href="/info/corporate-partnership-program" class="not-external">
+      Employers
+    </a>
+
+  
+  
+</li>
+
+      
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--utility-menu -->
+
+</div><!-- cc--component-container cc--utility-menu -->
+
+
+  </nav>
+
+        </div>
+
+          
+    
+
+<div
+  class="cc--component-container cc--search-form  "
+
+  
+  
+   role="dialog"
+  
+  
+  
+>
+
+    <div class="c--component c--search-form"
+        >
+
+        
+  <h2 class="visually-hidden" id="dialog-title-2">Enter a Search Term</h2>
+
+  <form autocomplete="on" action="/search" name="search-form">
+    
+      <div class="fi--form-item fi--query-mobile">
+    
+  <label for="query-mobile" class="visually-hidden">
+    Search Monroe  </label>
+
+  <input
+    type="text"
+    name="query-mobile"
+    id="query-mobile"
+            maxlength="63"    placeholder="Search Monroe"    size="63"
+  >
+
+</div>
+
+      <button type="submit" value="submit" class="button-search">
+        Search
+      </button>
+
+    </form>
+
+
+    </div><!-- c--component c--search-form -->
+
+</div><!-- cc--component-container cc--search-form -->
+
+      </div>
+
+      </div>
+
+
+    </header>
+
+    <main id="main-content">
+
+      <div class="l--content">
+
+        <div class="above-content">
+            
+            
+
+            
+
+              <div class="region region-highlighted r--region r--highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+            
+
+            
+        </div>
+
+        <div class="content">
+
+              <div class="region region-content r--region r--content">
+    <div id="block-monroe-content" class="block block-system block-system-main-block tc--template-container tc--chaptered-page">
+  <div class="t--template t--chaptered-page">
+        
+                
+                    
+
+  
+
+      <div class="content-top">
+      
+            <div>
+    
+    
+
+<div
+  class="cc--component-container cc--hero-program  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--hero-program"
+        >
+
+        
+  <div class="left-container">
+
+              
+<div class="f--field f--eyebrow">
+
+    
+  
+    <a href="/academics">Academics</a>
+
+  
+
+</div><!-- f--field f--eyebrow -->
+    
+        
+<div class="f--field f--page-title">
+
+    
+  <h1>Academic Calendar and Resources</h1>
+
+
+</div><!-- f--field f--page-title -->
+
+  </div>
+
+  <div class="right-container">
+    <div class="bar-line-container">
+  <div class="horizontal-bar"></div>
+</div>
+  </div>
+
+
+    </div><!-- c--component c--hero-program -->
+
+</div><!-- cc--component-container cc--hero-program -->
+
+
+  </div>
+      
+    </div>
+  
+  <div class="content-sidebar-main-wrapper">
+    <div class="content-sidebar-main-wrapper-inner">
+      <aside class="content-sidebar">
+          
+    
+
+<div
+  class="cc--component-container cc--program-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--program-menu"
+        >
+
+            <button type="button" class="dropdown-trigger collapsed" aria-expanded="false" aria-haspopup="true" aria-label="Display Menu for Program Page">
+      <p>Jump to...</p>
+      <span></span>
+    </button>
+
+    <div class="dropdown-menu-container">
+                            
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#winter-2024-academic-calendar"
+        >Winter 2024 Academic Calendar  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#spring-2024-academic-calendar"
+        >Spring 2024 Academic Calendar  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#august-bridge---fall-2024-academic-calendar"
+        >August Bridge / Fall 2024 Academic Calendar  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#course-catalog"
+        >Course Catalog  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#transcript-requests"
+        >Transcript Requests  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#academic-tutoring"
+        >Academic Tutoring  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#academic-centers"
+        >Academic Centers  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                                    
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button--alt "
+    href="#library-services"
+        >Library Services  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+              
+            <div class="link-list-items">
+                  
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/contact-us#request-information"
+    aria-label="Request More Info"    >Request More Info  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                  
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="https://admissions.monroecollege.edu/portal/start-app"
+    aria-label="Apply Now"    >Apply Now  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+            </div>
+          </div>
+
+
+    </div><!-- c--component c--program-menu -->
+
+</div><!-- cc--component-container cc--program-menu -->
+      </aside>
+      <div class="content-main">
+        <div class="clc--component-list-container clc--chaptered-page-component-list">
+          <div class="cl--component-list cl--chaptered-page-component-list">
+            
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="winter-2024-academic-calendar" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Winter 2024 Academic Calendar</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="white-space:nowrap; width:25%">
+			<p>January 3</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Wednesday</p>
+			</td>
+			<td style="width:50%">Start of Semester Meetings for Faculty and Staff</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>January 5</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">First Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>January 15</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">
+			<p>Martin Luther King Day –<br />
+			College Closed</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>January 16</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Tuesday</p>
+			</td>
+			<td style="width:50%">Last Day for: Late Registration<br />
+			Program and Schedule Adjustments<br />
+			Fall 2023 Grade Changes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>January 29 –<br />
+			February 4</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Early Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>February 19</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">
+			<p>Presidents’ Day Holiday / College Closed</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>February 26 –<br />
+			March 3</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Midterm Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">March 25</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">Last Day for Course Withdrawal</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>March 29</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Friday</p>
+			</td>
+			<td style="width:50%">Good Friday / College Closed</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>April 5</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">Last Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>April 6 – 12</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Saturday – Friday</td>
+			<td style="width:50%">Finals Week</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>April 13</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Saturday</p>
+			</td>
+			<td style="width:50%">Semester Ends / Grades Due</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>April 14 – 23</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Sunday – Tuesday</p>
+			</td>
+			<td style="width:50%">
+			<p>Semester Break</p>
+			</td>
+		</tr></tbody></table>
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/sites/default/files/documents/2023/08/31/Winter2024Calendar_052323.pdf"
+        target="_blank">Winter 2024 Calendar     <span class="external-link visually-hidden">(Opens in a new window)</span>
+    
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="spring-2024-academic-calendar" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Spring 2024 Academic Calendar</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="white-space:nowrap; width:25%">
+			<p>April 24</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Wednesday</p>
+			</td>
+			<td style="width:50%">Start of Semester Meetings for Faculty and Staff</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>April 26</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">First Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>May 6</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Monday</p>
+			</td>
+			<td style="width:50%">Last Day for: Late Registration<br />
+			Program and Schedule Adjustments<br />
+			Winter 2024 Grade Changes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>May 10</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">
+			<p>Last Day to Submit Graduation Requirements for Commencement Program</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>May 20 – 26</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Early Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>May 27</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">
+			<p>Memorial Day / College Closed</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">June 13</td>
+			<td style="white-space:nowrap; width:25%">Thursday</td>
+			<td style="width:50%">Monroe College Commencement / Classes Cancelled</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>June 17 – 23</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Midterm Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>June 19</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Wednesday</p>
+			</td>
+			<td style="width:50%">Juneteenth / College Closed</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">July 4</td>
+			<td style="white-space:nowrap; width:25%">Thursday</td>
+			<td style="width:50%">
+			<p>Independence Day <span style="font-size: 1rem;">/ College Closed</span></p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">July 15</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">
+			<p>Last Day for Course Withdrawal</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>July 26</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">Last Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>July 27 – August 2</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Saturday – Friday</td>
+			<td style="width:50%">Finals Week</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>August 3</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Saturday</p>
+			</td>
+			<td style="width:50%">Semester Ends / Grades Due</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>August 4 –<br />
+			September 3</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Sunday – Tuesday</p>
+			</td>
+			<td style="width:50%">
+			<p>Semester Break</p>
+			</td>
+		</tr></tbody></table>
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/sites/default/files/documents/2023/08/31/Spring2024Calendar_052323.pdf"
+        target="_blank">Spring 2024 Calendar     <span class="external-link visually-hidden">(Opens in a new window)</span>
+    
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="august-bridge---fall-2024-academic-calendar" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>August Bridge / Fall 2024 Academic Calendar</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p><strong>August Bridge Calendar</strong></p>
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="white-space:nowrap; width:25%">August 12</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">First Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 14</td>
+			<td style="white-space:nowrap; width:25%">Wednesday</td>
+			<td style="width:50%">Last Day for Schedule Adjustment</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 19</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">Early Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 21</td>
+			<td style="white-space:nowrap; width:25%">Wednesday</td>
+			<td style="width:50%">Midterm Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 23</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">Last Day for Course Withdrawal </td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 30</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">Last Day of Classes / Finals / Module End</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">August 31</td>
+			<td style="white-space:nowrap; width:25%">Saturday</td>
+			<td style="width:50%">Grades Due</td>
+		</tr></tbody></table><p><br /><br /><br />
+ </p>
+
+<p><strong>Fall 2024 Calendar</strong></p>
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="white-space:nowrap; width:25%">
+			<p>September 4</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Wednesday</p>
+			</td>
+			<td style="width:50%">Start of Semester Meetings for Faculty and Staff</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>September 6</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">First Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>September 16</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Monday</p>
+			</td>
+			<td style="width:50%">Last Day for: Late Registration<br />
+			Program and Schedule Adjustments<br />
+			Spring 2024 Grade Changes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>September 30 –<br />
+			October 6</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Early Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>October 14</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday</td>
+			<td style="width:50%">
+			<p>Columbus Day / College Closed</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>October 28 –<br />
+			November 3</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Monday – Sunday</td>
+			<td style="width:50%">Midterm Progress Reports</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>November 11</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Monday</p>
+			</td>
+			<td style="width:50%">Veterans’ Day / College Closed</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">November 26</td>
+			<td style="white-space:nowrap; width:25%">Tuesday</td>
+			<td style="width:50%">
+			<p>Last Day for Course Withdrawal</p>
+			</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">November 28 – 29</td>
+			<td style="white-space:nowrap; width:25%">Thursday &amp; Friday</td>
+			<td style="width:50%">Thanksgiving / College Closed</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>December 6</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Friday</td>
+			<td style="width:50%">Last Day of Classes</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>December 7 – 13</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">Saturday – Friday</td>
+			<td style="width:50%">Finals Week</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>December 14</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Saturday</p>
+			</td>
+			<td style="width:50%">Semester Ends / Grades Due</td>
+		</tr><tr><td style="white-space:nowrap; width:25%">
+			<p>December 15 –<br />
+			January 1</p>
+			</td>
+			<td style="white-space:nowrap; width:25%">
+			<p>Sunday – Wednesday</p>
+			</td>
+			<td style="width:50%">
+			<p>Semester Break</p>
+			</td>
+		</tr></tbody></table><p> </p>
+
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/sites/default/files/documents/2024/02/26/Fall2024_AcademicCalendar_022624.pdf"
+        target="_blank">August Bridge/ Fall 2024 Calendar     <span class="external-link visually-hidden">(Opens in a new window)</span>
+    
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="course-catalog" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Course Catalog</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p>This is the official catalog of Monroe College for undergraduate and graduate courses containing approved curricula, programs, and course descriptions.</p>
+
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="https://catalog.monroecollege.edu"
+        target="_blank">Course Catalog    <span class="external-link visually-hidden">(Opens in a new window)</span>
+    
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="transcript-requests" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Transcript Requests</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p><strong>How do I order my official transcript?  </strong><br />
+Official transcripts may be requested through the <strong><a href="https://tsorder.studentclearinghouse.org/school/ficecode/00479900" target="_blank">National Student Clearinghouse</a></strong> online by <a href="https://tsorder.studentclearinghouse.org/school/ficecode/00479900" target="_blank"><strong>visiting this link</strong></a>. There is a fee. Type Monroe College on the landing page, and click CONTINUE. Please read the instructions posted on the Welcome page for important information. Follow the steps on the website to complete the request. Transcripts will not be released if the student has outstanding financial obligations to the College. Transcript requests are generally processed within 3-5 business days.</p>
+
+<p><strong>How do I access my unofficial transcript?</strong><br />
+Unofficial transcripts are available free of charge for students who attended Monroe College after 2008. To access an unofficial transcript, please log in to <strong><a href="https://myservices.monroecollege.edu/Student/Student/Transcripts">MyServices</a></strong>. If you do not remember your username and/or password, you may email Monroe’s Help Desk at <strong><a href="mailto:helpdesk@monroecollege.edu" target="_blank">helpdesk@monroecollege.edu</a></strong> for assistance.</p>
+
+<p><strong>I have a hold on my transcript request. Why was my credit card charged?</strong><br />
+While it may appear that your card was charged, it was actually just a pre-authorization. Your card will not be charged until your transcript is processed.</p>
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/info/office-registrar"
+        >More about Office of the Registrar  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="academic-tutoring" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Academic Tutoring</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p>At Monroe, you're never alone. Our faculty and staff are dedicated to supporting you every step of the way as you work to reach your academic goals. </p>
+
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/academics/tutoring"
+        >Academic Tutoring  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+  
+      <span id="academic-centers" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Academic Centers</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p>For students living in the New York metropolitan area, Monroe College's Learning Resource Centers provide students with in-person academic support. Students receive one-on-one help with their writing and homework assignments, internet research, and other academic support from professional and peer tutors. Monroe's Learning Resource Centers provide one-on-one help from professional and peer tutors. </p>
+
+<p> </p>
+
+<p><strong>Free Tutoring Services</strong></p>
+
+<p>Free tutoring is available in the Learning Resource Centers on both the Bronx and New Rochelle campuses. Students in need of additional help can work with expert tutors in the subject labs for the following subjects:</p>
+
+<table><tbody><tr><td style="width:260px">
+			<p>Accounting and Finance</p>
+			</td>
+			<td style="width:311px">
+			<p>Business Management</p>
+			</td>
+		</tr><tr><td style="width:260px">
+			<p>Computer Information Systems</p>
+			</td>
+			<td style="width:311px">
+			<p>Criminal Justice</p>
+			</td>
+		</tr><tr><td style="width:260px">
+			<p>English and the Social Sciences</p>
+			</td>
+			<td style="width:311px">
+			<p>Medical Administration and Medical Assisting</p>
+			</td>
+		</tr><tr><td style="width:260px">
+			<p>Hospitality Management</p>
+			</td>
+			<td style="width:311px">
+			<p>Business Technologies</p>
+			</td>
+		</tr><tr><td style="width:260px">
+			<p>Math</p>
+			</td>
+			<td style="width:311px"> </td>
+		</tr></tbody></table><p> </p>
+
+<p><strong>New Rochelle Campus Academic Center</strong></p>
+
+<p>The New Rochelle Campus Academic Center is located in Main Hall and features:</p>
+
+<table><tbody><tr><td>Computer Workstations</td>
+			<td>Internet Access</td>
+		</tr><tr><td>Software Applications</td>
+			<td>Photocopier</td>
+		</tr></tbody></table><p> </p>
+
+<p><strong>Available Software Applications </strong></p>
+
+<table><tbody><tr><td style="width:397px">Microsoft Office Professional Suite</td>
+			<td style="width:194px">Java</td>
+		</tr><tr><td style="width:397px">C++</td>
+			<td style="width:194px">QuickBooks</td>
+		</tr><tr><td style="width:397px">Oracle Developer Suite</td>
+			<td style="width:194px"> </td>
+		</tr></tbody></table>
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+
+    </div><!-- c--component c--wysiwyg -->
+
+</div><!-- cc--component-container cc--wysiwyg -->
+  
+
+
+  
+    </div>
+  </div>
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+      
+  
+        
+      <span id="library-services" class="chaptered-nav-anchor"></span>
+        
+<div class="f--field f--section-title">
+
+    
+          	<h2>Library Services</h2>
+      
+
+</div><!-- f--field f--section-title -->
+  
+        
+    
+
+<div
+  class="cc--component-container cc--wysiwyg-plus-cta align-left "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--wysiwyg-plus-cta"
+        >
+
+        
+      
+<div class="f--field f--wysiwyg">
+
+    
+  
+  <p>Our libraries – one in the Bronx and one in New Rochelle – are great places to study, do research, or collaborate on a project with fellow students.</p>
+
+
+
+
+</div><!-- f--field f--wysiwyg -->
+
+        
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="https://monroecollege.libguides.com/c.php?g=852547&amp;p=6102149"
+        >Explore Library Services  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+  
+
+    </div><!-- c--component c--wysiwyg-plus-cta -->
+
+</div><!-- cc--component-container cc--wysiwyg-plus-cta -->
+  
+
+
+  
+    </div>
+  </div>
+
+          </div>
+          <div class="table-content-outer">
+            
+	 </div>
+        </div>
+                  </div>
+    </div>
+  </div>
+      <div class="content-bottom">
+      
+      <div>
+              <div>
+    
+    
+
+<section
+  class="cc--component-container cc--cta-bar text-left "
+
+  
+   aria-label="CTA&#039;s Bar"
+  
+  
+  
+  
+>
+
+    <div class="c--component c--cta-bar"
+        >
+
+        
+  <div class="header-container">
+              
+<div class="f--field f--section-title">
+
+    
+          	<h2>Questions?</h2>
+      
+
+</div><!-- f--field f--section-title -->
+    
+    <div class="image-video-container">
+                  
+<div class="f--field f--ambient-video">
+
+      <video
+    data-poster="https://www.monroecollege.edu/sites/default/files/2020-01/GetHelp.png" poster="/themes/custom/monroe/placeholder.gif" loading="lazy"    role="presentation"
+    tabindex="-1"
+        autoplay    playsinline
+    muted
+      class="lazy yall">
+    <source src="https://player.vimeo.com/external/373950592.hd.mp4?s=e7d9f48b18010ebcacea5786798c559da711a4a3&amp;profile_id=174" type="video/mp4">
+  </video>
+
+
+</div><!-- f--field f--ambient-video -->
+          </div>
+
+    <div class="bar-line-container">
+  <div class="horizontal-bar"></div>
+</div>
+  </div>
+
+      
+<div class="f--field f--link-list">
+
+    
+                  
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/contact-us?t=talk"
+    aria-label="Talk to us"    >Talk to us  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                  
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="/admissions-aid/request-tour-monroe-college"
+    aria-label="Visit us"    >Visit us  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+                  
+<div class="f--field f--link">
+
+    
+  <a
+    class=" button "
+    href="https://admissions.monroecollege.edu/portal/start-app"
+    aria-label="Apply"    >Apply  
+
+</a>
+
+
+</div><!-- f--field f--link -->
+      
+    
+</div><!-- f--field f--link-list -->
+
+
+    </div><!-- c--component c--cta-bar -->
+
+</section><!-- cc--component-container cc--cta-bar -->
+
+
+  </div>
+          </div>
+  
+    </div>
+  
+
+          </div>
+</div>
+
+  </div>
+
+
+        </div>
+
+      </div>
+    </main>
+
+    
+      
+  <footer id="l--main-footer" class="site-footer">
+    <h2 class="visually-hidden">Site Footer</h2>
+    <div class="r--region r--footer">
+      <div
+        class="cc-component-container cc--footer"
+        aria-label="Site Footer">
+        <div class="c--component c--footer">
+            
+    
+    
+
+<div
+  class="cc--component-container cc--footer  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer"
+        >
+
+        
+  <div class="footer-top">
+    <div class="left-container">
+        
+    
+
+<div
+  class="cc--component-container cc--branding-footer  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--branding-footer"
+        >
+
+        
+  <a href="/"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="175px" height="70px" viewBox="0 0 175 70" version="1.1">
+  <title>Monroe College</title>
+  <path transform="translate(-5.255255E-05 36.88762)" id="College" fill="#FFC423" fill-rule="evenodd" stroke="none"
+        d="M16.553 24.7886C19.7356 24.7886 22.5256 22.9849 23.9682 20.1636L23.9682 30.8603C21.7678 31.8816 19.2736 32.4577 16.553 32.4577C6.94744
+          32.4577 0 25.5165 0 15.6664C0 6.45915 7.93858 0 16.553 0C19.1538 0 21.6911 0.598565 23.9682 1.67598L23.9682 11.9563C22.5256 9.47228 19.7356
+          7.66911 16.553 7.66911C11.9084 7.66911 8.09677 11.5058 8.09677 15.7048C8.09677 20.9524 11.9084 24.7886 16.553 24.7886ZM41.8187 32.2177C51.3423
+          32.2177 58.234 25.3326 58.234 15.5654C58.234 6.43938 50.3559 0.0347381 41.8187 0.0347381C33.2736 0.0347381 25.4018 6.43938 25.4018 15.5654C25.4018
+          25.3326 32.2925 32.2177 41.8187 32.2177ZM111.504 12.3133L111.504 6.58581L123.723 6.58581L123.723 0.178501L104.26 0.178501L104.26 31.5069L123.723
+          31.5069L123.723 25.1034L111.504 25.1034L111.504 18.7217L122.066 18.7217L122.066 12.3133L111.504 12.3133ZM162.322 6.58581L162.322 12.3133L174.007
+          12.3133L174.007 18.7217L162.322 18.7217L162.322 25.1034L174.541 25.1034L174.541 31.5069L155.076 31.5069L155.076 0.178501L174.541 0.178501L174.541
+          6.58581L162.322 6.58581ZM79.8941 24.6208L68.435 24.6208L68.435 0.191327L60.6935 0.191327L60.6935 31.515L79.8941 31.515L79.8941 24.6208ZM90.2033
+          24.6208L101.665 24.6208L101.665 31.515L82.4639 31.515L82.4639 0.191327L90.2033 0.191327L90.2033 24.6208ZM140.852 32.0339C143.423 32.0339 146.952
+          31.9478 151.687 30.6358L151.687 13.6793L140.087 13.6793L140.087 19.4507L144.466 19.4507L144.466 25.4785C143.781 25.8275 142.818 26.0028 141.815
+          26.0028C136.36 26.0028 132.463 22.374 132.463 16.3905C132.463 9.26599 137.44 6.5126 143.504 6.5126C145.265 6.5126 147.997 6.99359 150.325
+          8.48465L150.926 1.83738C148.198 0.702779 144.306 0.484196 142.458 0.484196C132.178 0.484196 124.752 4.89754 124.752 16.3905C124.752 27.9273
+          133.385 32.0339 140.852 32.0339ZM33.4339 15.6054C33.4339 20.8135 37.2114 24.6096 41.8187 24.6096C46.4244 24.6096 50.2008 20.8135 50.2008
+          15.6054C50.2008 11.4411 46.4244 7.63865 41.8187 7.63865C37.2114 7.63865 33.4339 11.4411 33.4339 15.6054Z"></path>
+  <path transform="translate(0.09186186 5.344328E-05)" id="Monroe" fill="#19388A" fill-rule="evenodd" stroke="none"
+        d="M137.708 0C129.202 0 121.361 6.37846 121.361 15.467C121.361 25.191 128.222 32.0467 137.708 32.0467C147.19 32.0467 154.054 25.191 154.054
+           15.467C154.054 6.37846 146.212 0 137.708 0ZM50.7936 0.276302C42.2864 0.276302 34.4466 6.65422 34.4466 15.7433C34.4466 25.4668 41.3079 32.3225
+           50.7936 32.3225C60.2762 32.3225 67.1396 25.4668 67.1396 15.7433C67.1396 6.65422 59.2971 0.276302 50.7936 0.276302ZM11.9547 1.27088L4.76809
+           1.27088L0 31.3274L7.26224 31.3274L9.61081 14.0289L9.68333 14.0289L16.1279 31.3274L19.0324 31.3274L25.7712 14.0289L25.8464 14.0289L27.8949
+           31.3274L35.1944 31.3274L30.9498 1.27088L23.686 1.27088L17.6535 17.3327L11.9547 1.27088ZM68.5427 31.3274L75.8491 31.3274L75.8491
+           12.9119L75.9248 12.9119L89.3115 31.3274L96.6215 31.3274L96.6215 1.27088L89.3115 1.27088L89.3115 19.6495L89.2379 19.6495L75.8491 1.27088L68.5427
+           1.27088L68.5427 31.3274ZM174.404 1.27088L174.404 7.88983L162.607 7.88983L162.607 12.9151L173.933 12.9151L173.933 19.5362L162.607 19.5362L162.607
+           24.7202L174.404 24.7202L174.404 31.3397L154.921 31.3397L154.921 1.27088L174.404 1.27088ZM121.068 10.5112C121.068 14.652 118.797 18.2343 114.608
+           18.9916L123.408 31.2937L114.334 31.2937L107.092 19.7478L107.014 19.7478L107.014 31.2937L99.3406 31.2937L99.3406 1.27623L110.811 1.27623C116.644
+           1.27623 121.068 4.10231 121.068 10.5112ZM107.014 7.24691L107.757 7.24691C110.263 7.24691 113.083 7.72469 113.083 10.989C113.083 14.2544 110.263
+           14.7322 107.757 14.7322L107.014 14.7322L107.014 7.24691ZM137.708 7.57077C142.294 7.57077 146.055 11.3615 146.055 15.505C146.055 20.6906 142.294
+           24.4722 137.708 24.4722C133.119 24.4722 129.357 20.6906 129.357 15.505C129.357 11.3615 133.119 7.57077 137.708 7.57077ZM59.1411 15.7807C59.1411
+           11.6373 55.3799 7.84654 50.7936 7.84654C46.2042 7.84654 42.443 11.6373 42.443 15.7807C42.443 20.9663 46.2042 24.7485 50.7936
+           24.7485C55.3799 24.7485 59.1411 20.9663 59.1411 15.7807Z"></path>
+</svg>
+</a>
+
+
+    </div><!-- c--component c--branding-footer -->
+
+</div><!-- cc--component-container cc--branding-footer -->
+        
+    
+
+<div
+  class="cc--component-container cc--footer-line  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer-line"
+        >
+
+        
+  <span class="oval"></span>
+  <span class="line"></span>
+
+
+    </div><!-- c--component c--footer-line -->
+
+</div><!-- cc--component-container cc--footer-line -->
+    </div>
+    <div class="right-container">
+        
+    
+
+<div
+  class="cc--component-container cc--footer-line  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer-line"
+        >
+
+        
+  <span class="oval"></span>
+  <span class="line"></span>
+
+
+    </div><!-- c--component c--footer-line -->
+
+</div><!-- cc--component-container cc--footer-line -->
+        
+    
+
+<div
+  class="cc--component-container cc--footer-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer-menu"
+        >
+
+        
+  <nav class="mc--menu mc--" aria-label="">
+  <ul class="m--menu m--">
+          <li  class="menu-item"  >
+
+  <a href="/contact-us">
+
+    Contact Us
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/info/right-know">
+
+    Right To Know
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/info/public-safety-department">
+
+    Campus Safety
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/info/disability-services-and-ada-compliance">
+
+    Disability Services
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/info/corporate-partnership-program">
+
+    Corporate Partners
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/info/title-ix-and-sexual-misconduct-policies">
+
+    Title IX
+
+  </a>
+
+  
+</li>
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--footer-menu -->
+
+</div><!-- cc--component-container cc--footer-menu -->
+        
+    
+
+<div
+  class="cc--component-container cc--social-icons  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--social-icons"
+        >
+
+        
+  <div class="social-icons-container">
+    <ul class="social-media-links--platforms platforms">
+
+              <li>
+          <a href="https://facebook.com/monroecollege" class="ext">
+            <span class="fa fa-facebook fa-2x"></span>
+            <span class="ext" aria-label="(link is external)"></span>FB</a>
+        </li>
+              <li>
+          <a href="https://twitter.com/monroe_college" class="ext">
+            <span class="fa fa-twitter fa-2x"></span>
+            <span class="ext" aria-label="(link is external)"></span>Twitter</a>
+        </li>
+              <li>
+          <a href="https://www.instagram.com/monroecollege" class="ext">
+            <span class="fa fa-instagram fa-2x"></span>
+            <span class="ext" aria-label="(link is external)"></span>Instagram</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </div><!-- c--component c--social-icons -->
+
+</div><!-- cc--component-container cc--social-icons -->
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+      
+    
+
+<div
+  class="cc--component-container cc--footer-menu  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer-menu"
+        >
+
+        
+  <nav class="mc--menu mc--" aria-label="">
+  <ul class="m--menu m--">
+          <li  class="menu-item"  >
+
+  <a href="/right-know/it-department-privacy-policy">
+
+    Privacy Policy
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/right-know/it-department-terms-and-conditions">
+
+    Terms of Use
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/sites/default/files/documents/2020/02/13/tipsandresources_092216.pdf">
+
+    Web Accessibility
+
+  </a>
+
+  
+</li>
+          <li  class="menu-item"  >
+
+  <a href="/information-technology-department">
+
+    IT Policies
+
+  </a>
+
+  
+</li>
+      </ul><!-- m--menu -->
+</nav>
+
+
+    </div><!-- c--component c--footer-menu -->
+
+</div><!-- cc--component-container cc--footer-menu -->
+      
+    
+
+<div
+  class="cc--component-container cc--footer-contact  "
+
+  
+  
+  
+  
+  
+  
+>
+
+    <div class="c--component c--footer-contact"
+        >
+
+        
+  <p>Copyright © 2024 Monroe College. All rights reserved.</p>
+
+
+    </div><!-- c--component c--footer-contact -->
+
+</div><!-- cc--component-container cc--footer-contact -->
+  </div>
+
+
+    </div><!-- c--component c--footer -->
+
+</div><!-- cc--component-container cc--footer -->
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+    
+  </div>
+
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1406","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.80000000000000004,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"image\/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==","preferNative":false,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"ajaxTrustedUrl":{"\/search":true},"antibot":{"forms":{"webform-submission-search-field-node-1406-add-form":{"id":"webform-submission-search-field-node-1406-add-form","key":"R81fjVfua3KkqX2raJywRtcqD6n7UsTPpwH0HuRfPKI"}}},"user":{"uid":0,"permissionsHash":"93db25e0109a2efd414a939740193e15e1b03eb68f543c7896c4c56ed5d96d0d"}}</script>
+<script src="/sites/default/files/js/js_y57geBL-K47QfSLZFcl_jtxJKKl-i8yIkHt048E1tQc.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_vQfmr_n_RSIsBp48xLGvg1b5LHKDAW1KtFzUUMovSHY.js"></script>
+
+    <script async="async" src="https://admissions.monroecollege.edu/ping">/**/</script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9a38df34f5","applicationID":"243307823","transactionName":"MwdXN0FXDEtXVEFdCgpNYBFaGU1OV0UaQxITTV0XXlpNXFlUR1sKEE1cDVdTGhZGX0U=","queueTime":18,"applicationTime":95,"atts":"H0BAQQlNHxQUVhcOHhkf","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
