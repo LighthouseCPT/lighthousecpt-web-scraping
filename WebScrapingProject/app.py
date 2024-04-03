@@ -2,6 +2,7 @@ import json
 import os
 from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
 from Schools.NewEnglandCollege.NewEnglandCollege import NewEnglandCollegeScraper
+from Schools.WestcliffUniversity.WestcliffUniversity import WestcliffUniversityScraper
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -12,7 +13,8 @@ class SchoolScraper:
     CSV_BUCKET = 'lighthousecpt-schools-csv'
     SCHOOL_FUNCTION_MAP = {
         'TrineUniversity': TrineUniversityScraper,
-        'NewEnglandCollege': NewEnglandCollegeScraper
+        'NewEnglandCollege': NewEnglandCollegeScraper,
+        'WestcliffUniversity': WestcliffUniversityScraper
     }
 
     def scrape_and_save(self, event):

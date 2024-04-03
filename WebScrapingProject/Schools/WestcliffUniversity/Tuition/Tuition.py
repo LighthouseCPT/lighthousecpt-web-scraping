@@ -31,6 +31,7 @@ class TuitionScraper(BaseScraper):
 
         # Start Extracting Logic
         soup = BeautifulSoup(html, 'html.parser')
+        tbl = soup.table
         df = pd.read_html(StringIO(str(tbl)))[0]
         
         # Due to certain rows being merged across the table they appear in every row.  
