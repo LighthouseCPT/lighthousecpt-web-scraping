@@ -1,12 +1,6 @@
 from bs4 import BeautifulSoup
-from io import StringIO
 from ...base_scraper import BaseScraper
-from ...utils import (make_request,
-                      save_html_to_s3,
-                      get_html_from_s3,
-                      save_csv_to_s3
-                      )
-import pandas as pd
+from ...utils import *
 from log_config import configure_logger
 
 logging = configure_logger(__name__)

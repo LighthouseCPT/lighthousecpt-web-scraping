@@ -59,3 +59,5 @@ class DeadlineScraper(BaseScraper):
 
         # Save to S3 as CSV File
         save_csv_to_s3(df, self.CSV_BUCKET, S3_PATH)
+
+        upload_df_to_dynamodb(df, FILENAME)

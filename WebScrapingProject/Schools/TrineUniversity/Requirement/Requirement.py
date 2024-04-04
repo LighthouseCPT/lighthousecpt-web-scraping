@@ -1,12 +1,6 @@
-import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 from ...base_scraper import BaseScraper
-from ...utils import (make_request,
-                      save_html_to_s3,
-                      get_html_from_s3,
-                      save_csv_to_s3
-                      )
+from ...utils import *
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_colwidth', None)
@@ -53,3 +47,5 @@ class RequirementScraper(BaseScraper):
 
         # Save to S3 as CSV File
         save_csv_to_s3(df, self.CSV_BUCKET, S3_PATH)
+
+        upload_df_to_dynamodb(df, FILENAME)

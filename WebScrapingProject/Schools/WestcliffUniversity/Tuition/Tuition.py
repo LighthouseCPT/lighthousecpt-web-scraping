@@ -1,14 +1,8 @@
 from bs4 import BeautifulSoup
-from io import StringIO
 from ...base_scraper import BaseScraper
-from ...utils import (make_request,
-                      save_html_to_s3,
-                      get_html_from_s3,
-                      save_csv_to_s3
-                      )
+from ...utils import *
 import pandas as pd
 from log_config import configure_logger
-import re
 from babel.numbers import format_currency
 
 logging = configure_logger(__name__)
@@ -55,3 +49,5 @@ class TuitionScraper(BaseScraper):
 
         # Save to S3 as CSV File
         save_csv_to_s3(df, self.CSV_BUCKET, S3_PATH)
+
+        upload_df_to_dynamodb(df, FILENAME)

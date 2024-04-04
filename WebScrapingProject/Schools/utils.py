@@ -3,6 +3,8 @@ import boto3
 import pandas as pd
 import io
 from io import StringIO
+from decimal import Decimal
+import numpy as np
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -114,3 +116,59 @@ def get_pdf_from_s3(FILENAME, SCHOOL_NAME, SOURCE_BUCKET):
                      f"ensure it's correctly placed.")
         logging.error(f'{str(e)} Additional Info: {error_msg}')
         raise
+
+
+def float_to_decimal(value):
+    if isinstance(value, float):
+        if np.isnan(value):  # Handle NaNs
+            return None
+        elif np.isinf(value):  # Handle Infinity
+            return None
+        return Decimal(str(value))
+    return value
+
+
+def upload_df_to_dynamodb(df, table_name):
+    dynamodb = boto3.resource('dynamodb')
+
+    # Add an 'id' column as the primary key
+    df.reset_index(inplace=True)
+    df.rename(columns={'index': 'id'}, inplace=True)
+
+    try:
+        table = dynamodb.Table(table_name)
+        table.load()
+    except dynamodb.meta.client.exceptions.ResourceNotFoundException:
+        # create table.
+        table = dynamodb.create_table(
+            TableName=table_name,
+            KeySchema=[
+                {
+                    'AttributeName': 'id',
+                    'KeyType': 'HASH'  # Partition key
+                },
+            ],
+            AttributeDefinitions=[
+                {
+                    'AttributeName': 'id',
+                    'AttributeType': 'N'
+                },
+            ],
+            ProvisionedThroughput={
+                'ReadCapacityUnits': 10,
+                'WriteCapacityUnits': 10
+            }
+        )
+
+        # Wait until the table exists.
+        table.meta.client.get_waiter('table_exists').wait(TableName=table_name)
+
+    # Convert any NaN or Infinity values to None, and floats to decimals
+    df = df.applymap(float_to_decimal)
+
+    # Convert DataFrame into list of dictionaries (JSON). Ensure that keys are strings.
+    items = [{str(key): value for key, value in item.items()} for item in df.to_dict('records')]
+
+    with table.batch_writer() as batch:
+        for item in items:
+            batch.put_item(Item=item)

@@ -3,3 +3,4 @@ class BaseScraper:
         self.SOURCE_BUCKET = SOURCE_BUCKET
         self.CSV_BUCKET = CSV_BUCKET
         self.SCHOOL_NAME = school_name
+

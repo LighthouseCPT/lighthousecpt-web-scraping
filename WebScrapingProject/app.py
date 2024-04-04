@@ -1,49 +1,48 @@
 import json
 import os
-from Schools.TrineUniversity.TrineUniversity import TrineUniversityScraper
-from Schools.NewEnglandCollege.NewEnglandCollege import NewEnglandCollegeScraper
-from Schools.MonroeCollege.MonroeCollege import MonroeCollegeScraper
-from Schools.WestcliffUniversity.WestcliffUniversity import WestcliffUniversityScraper
-from Schools.McDanielCollege.McDanielCollege import McDanielCollegeScraper
-from Schools.CaliforniaInstituteofAdvancedManagement.CaliforniaInstituteofAdvancedManagement import CaliforniaInstituteofAdvancedManagementScraper
-# from Schools.SofiaUniversity.SofiaUniversity import SofiaUniversityScraper
+from importlib import import_module
 from log_config import configure_logger
+from Schools.SchoolScraper import SchoolScraper
 
 logging = configure_logger(__name__)
 
 
-class SchoolScraper:
-
+class MainSchoolScraper:
     # This bucket includes HTMLs and PDFs
     SOURCE_BUCKET = 'lighthousecpt-schools-source'
 
     # This bucket contains the somewhat unrefined, extracted Information in CSVs
     CSV_BUCKET = 'lighthousecpt-schools-csv'
 
-    SCHOOL_FUNCTION_MAP = {
-        'TrineUniversity': TrineUniversityScraper,
-        'NewEnglandCollege': NewEnglandCollegeScraper,
-        'MonroeCollege': MonroeCollegeScraper,
-        'WestcliffUniversity': WestcliffUniversityScraper,
-        'McDanielCollege': McDanielCollegeScraper,
-        'CaliforniaInstituteofAdvancedManagement': CaliforniaInstituteofAdvancedManagementScraper
-    }
+    SCHOOLS = [
+        'TrineUniversity',
+        'NewEnglandCollege',
+        'MonroeCollege',
+        'WestcliffUniversity',
+        'McDanielCollege',
+        'CaliforniaInstituteofAdvancedManagement'
+    ]
+
+    def dynamic_import(self, school_name):
+        module_path = f"Schools.{school_name}.{school_name}"
+        module = import_module(module_path)
+        klass = getattr(module, f"{school_name}Scraper")
+        return klass(self.SOURCE_BUCKET, self.CSV_BUCKET)
 
     def scrape_and_save(self, event):
         for school in event['schools']:
             school_name = school['name']
             info = school
-            scraper_class = self.SCHOOL_FUNCTION_MAP.get(school_name)
-            if scraper_class:
-                scraper_instance = scraper_class(self.SOURCE_BUCKET, self.CSV_BUCKET)
-                scraper_instance.scrape(info)
-            else:
+            if school_name not in self.SCHOOLS:
                 logging.error(f"No scraping function found for school: {school_name}")
                 raise
+            else:
+                scraper_instance = SchoolScraper(self.SOURCE_BUCKET, self.CSV_BUCKET, school_name, info)
+                scraper_instance.scrape(info)
 
 
 def lambda_handler(event, context):
-    scraper = SchoolScraper()
+    scraper = MainSchoolScraper()
     scraper.scrape_and_save(event)
 
 
@@ -54,5 +53,5 @@ if __name__ == "__main__":
     event_path = os.path.join('events', 'event.json')
     with open(event_path, 'r') as file:
         event_data = json.load(file)
-    scraper_ = SchoolScraper()
+    scraper_ = MainSchoolScraper()
     scraper_.scrape_and_save(event_data)
