@@ -21,6 +21,7 @@ class MainSchoolScraper:
         'WestcliffUniversity',
         'McDanielCollege',
         'CaliforniaInstituteofAdvancedManagement'
+        'SofiaUniversity'
     ]
 
     def scrape_and_save(self, event):
