@@ -14,5 +14,6 @@ Resources:
       CodeUri: WebScrapingProject/
       Handler: app.lambda_handler
       Runtime: python3.11
+      Role: arn:aws:iam::654654270857:role/School-Scraper-Role
       Architectures:
       - x86_64
