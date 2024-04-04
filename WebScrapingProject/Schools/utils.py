@@ -85,13 +85,32 @@ def get_csv_from_s3(SOURCE_BUCKET: str, S3_PATH: str) -> pd.DataFrame:
         error_msg = f'Failed to retrieve. Key: {S3_PATH}, Bucket: {SOURCE_BUCKET}. {str(e)}'
         raise ValueError(error_msg) from None
 
-# def get_pdf_from_s3(SOURCE_BUCKET, S3_PATH):
-#     try:
-#         S3_PATH = S3_PATH + '.pdf'
-#         s3 = boto3.client('s3')
-#         obj = s3.get_object(Bucket=SOURCE_BUCKET, Key=S3_PATH)
-#         pdf_content = obj['Body'].read()
-#         return io.BytesIO(pdf_content)
-#     except Exception as e:
-#         logging.error(f'S3 get object error: {e}')
-#         raise
+
+def get_raw_csv_from_s3(FILENAME, SCHOOL_NAME, SOURCE_BUCKET):
+    _FILENAME = FILENAME + '_RAW'
+    _S3_PATH = f'{SCHOOL_NAME}/{_FILENAME}'
+    try:
+        df = get_csv_from_s3(SOURCE_BUCKET, _S3_PATH)
+        return df
+    except ValueError as e:
+        error_msg = (f"A CSV file named '{_FILENAME}' should be present at location "
+                     f"'{SOURCE_BUCKET}/{SCHOOL_NAME}'. However, this file was not found. Please "
+                     f"ensure it's correctly placed.")
+        logging.error(f'{str(e)} Additional Info: {error_msg}')
+        raise
+
+
+def get_pdf_from_s3(FILENAME, SCHOOL_NAME, SOURCE_BUCKET):
+    _FILENAME = FILENAME + '.pdf'
+    S3_PATH = f'{SCHOOL_NAME}/{_FILENAME}'
+    try:
+        s3 = boto3.client('s3')
+        obj = s3.get_object(Bucket=SOURCE_BUCKET, Key=S3_PATH)
+        pdf_content = obj['Body'].read()
+        return io.BytesIO(pdf_content)
+    except Exception as e:
+        error_msg = (f"A PDF file named '{_FILENAME}' should be present at location "
+                     f"'{SOURCE_BUCKET}/{SCHOOL_NAME}'. However, this file was not found. Please "
+                     f"ensure it's correctly placed.")
+        logging.error(f'{str(e)} Additional Info: {error_msg}')
+        raise

@@ -1,0 +1,10 @@
+{
+  "schools": [
+    {
+      "name": "MonroeCollege",
+      "tuition": "RAW_CSV",
+      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
+      "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "schools": [
     {
-      "name": "McDanielCollege",
-      "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
-      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
-      "deadline":"https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
+      "name": "CaliforniaInstituteofAdvancedManagement",
+      "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
+      "requirement": "PDF",
+      "deadline":"https://www.ciam.edu/apply-today"
     }
   ]
 }
