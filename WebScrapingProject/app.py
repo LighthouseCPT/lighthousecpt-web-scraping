@@ -23,12 +23,6 @@ class MainSchoolScraper:
         'CaliforniaInstituteofAdvancedManagement'
     ]
 
-    def dynamic_import(self, school_name):
-        module_path = f"Schools.{school_name}.{school_name}"
-        module = import_module(module_path)
-        klass = getattr(module, f"{school_name}Scraper")
-        return klass(self.SOURCE_BUCKET, self.CSV_BUCKET)
-
     def scrape_and_save(self, event):
         for school in event['schools']:
             school_name = school['name']
