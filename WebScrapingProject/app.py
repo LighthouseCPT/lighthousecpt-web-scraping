@@ -23,6 +23,7 @@ class MainSchoolScraper:
         'WestcliffUniversity',
         'McDanielCollege',
         'CaliforniaInstituteofAdvancedManagement'
+        'SofiaUniversity'
     ]
 
     KEYWORDS = ['tuition', 'requirement', 'deadline']
