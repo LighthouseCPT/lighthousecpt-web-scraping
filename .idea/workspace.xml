@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Modified template.yaml to include custom IAM role,">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Added validate_event so all the school names are present along with its keys/values">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Tuition/Tuition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/Tuition/Tuition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/Tuition/Tuition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-44.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-47.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-48.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-52.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-53.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-54.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +151,7 @@
       <workItem from="1712177555678" duration="698000" />
       <workItem from="1712178316799" duration="12024000" />
       <workItem from="1712257247399" duration="7306000" />
-      <workItem from="1712279997298" duration="3668000" />
+      <workItem from="1712279997298" duration="4327000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -393,13 +385,41 @@
       <option name="project" value="LOCAL" />
       <updated>1712263741282</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added validate_event so all the school names are present along with its keys/values">
+      <option name="closed" value="true" />
+      <created>1712328675989</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712328675989</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -423,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test changes" />
     <MESSAGE value="created log config to save logs locally" />
     <MESSAGE value="test commit" />
     <MESSAGE value="added comments and updated template.yaml" />
@@ -448,7 +467,8 @@
     <MESSAGE value="INcrease AWS Lambda timeout from 30s to 180s" />
     <MESSAGE value="Removed redundant function (dynamic_import)" />
     <MESSAGE value="Modified template.yaml to include custom IAM role," />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified template.yaml to include custom IAM role," />
+    <MESSAGE value="Added validate_event so all the school names are present along with its keys/values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validate_event so all the school names are present along with its keys/values" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1712019279074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

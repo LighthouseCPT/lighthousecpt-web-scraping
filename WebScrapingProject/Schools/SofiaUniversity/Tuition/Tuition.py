@@ -7,7 +7,7 @@ from ...utils import (make_request,
                       save_html_to_s3,
                       get_html_from_s3,
                       save_csv_to_s3,
-                      get_csv_from_s3)
+                      get_csv_from_s3, upload_df_to_dynamodb)
 import pandas as pd
 from log_config import configure_logger
 
@@ -41,7 +41,6 @@ class TuitionScraper(BaseScraper):
         df = df.dropna(thresh=3)
         df = df.drop(0)
         df = df.reset_index(drop=True)
-        s
         # Save to S3 as CSV File
         save_csv_to_s3(df, self.CSV_BUCKET, S3_PATH)
 

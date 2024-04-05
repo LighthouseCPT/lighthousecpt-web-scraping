@@ -41,6 +41,12 @@
       "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
       "requirement": "PDF",
       "deadline":"https://www.ciam.edu/apply-today"
+    },
+    {
+      "name": "SofiaUniversity",
+      "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
+      "requirement": "PDF",
+      "deadline":"https://www.ciam.edu/apply-today"
     }
   ]
 }

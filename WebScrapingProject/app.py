@@ -1,8 +1,6 @@
 import json
 import os
-from importlib import import_module
 from urllib.parse import urlparse
-
 from log_config import configure_logger
 from Schools.SchoolScraper import SchoolScraper
 
@@ -22,7 +20,7 @@ class MainSchoolScraper:
         'MonroeCollege',
         'WestcliffUniversity',
         'McDanielCollege',
-        'CaliforniaInstituteofAdvancedManagement'
+        'CaliforniaInstituteofAdvancedManagement',
         'SofiaUniversity'
     ]
 
