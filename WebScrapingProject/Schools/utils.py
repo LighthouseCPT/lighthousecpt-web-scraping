@@ -163,8 +163,8 @@ def upload_df_to_dynamodb(df, table_name):
         # Wait until the table exists.
         table.meta.client.get_waiter('table_exists').wait(TableName=table_name)
 
-    # Convert any NaN or Infinity values to None, and floats to decimals
-    df = df.applymap(float_to_decimal)
+        # Convert any NaN or Infinity values to None, and floats to decimals
+    df = df.apply(lambda s: s.map(float_to_decimal))
 
     # Convert DataFrame into list of dictionaries (JSON). Ensure that keys are strings.
     items = [{str(key): value for key, value in item.items()} for item in df.to_dict('records')]

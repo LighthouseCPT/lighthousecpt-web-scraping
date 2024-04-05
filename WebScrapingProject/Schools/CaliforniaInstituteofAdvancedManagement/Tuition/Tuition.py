@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from ...base_scraper import BaseScraper
 from ...utils import *
+from io import StringIO
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -24,9 +25,9 @@ class TuitionScraper(BaseScraper):
         # Start Extracting Logic
         soup = BeautifulSoup(html, 'html.parser')
         tbl1 = soup.find(string='Estimated Tuition Rates 2022-2023').find_next('table')
-        df1 = pd.read_html(str(tbl1))[0]
+        df1 = pd.read_html(StringIO(str(tbl1)))[0]
         tbl2 = soup.find(string='Student Fees 2022-2023').find_next('table')
-        df2 = pd.read_html(str(tbl2))[0]
+        df2 = pd.read_html(StringIO(str(tbl2)))[0]
         head_str = 'Cost of Attendance'
         _ = soup.find(string=head_str).find_next('ul').get_text(strip=True, separator='\n')
         df3 = pd.DataFrame([_], columns=[head_str])

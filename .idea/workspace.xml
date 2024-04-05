@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Instead of having a py file for each school, I created 1 main SchoolScraper file that imports and instantiates all the classes.">
-      <change beforePath="$PROJECT_DIR$/.idea/sam-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sam-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Modified template.yaml to include custom IAM role,">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Tuition/Tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/Tuition/Tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/Tuition/Tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-44.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-47.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-48.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-52.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-53.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2024-04-03_10-54.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +68,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/events",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/events&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/events" />
@@ -148,7 +158,8 @@
       <workItem from="1712175123119" duration="16000" />
       <workItem from="1712177555678" duration="698000" />
       <workItem from="1712178316799" duration="12024000" />
-      <workItem from="1712257247399" duration="5724000" />
+      <workItem from="1712257247399" duration="7306000" />
+      <workItem from="1712279997298" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -358,7 +369,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712262647067</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="INcrease AWS Lambda timeout from 30s to 180s">
+      <option name="closed" value="true" />
+      <created>1712263100936</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712263100936</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Removed redundant function (dynamic_import)">
+      <option name="closed" value="true" />
+      <created>1712263257779</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712263257779</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Modified template.yaml to include custom IAM role,">
+      <option name="closed" value="true" />
+      <created>1712263741282</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712263741282</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +445,10 @@
     <MESSAGE value="Added McDanielCollege and MonroeCollege parts!" />
     <MESSAGE value="Added CaliforniaInstituteofAdvancedManagement_Requiremen parts!" />
     <MESSAGE value="Instead of having a py file for each school, I created 1 main SchoolScraper file that imports and instantiates all the classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Instead of having a py file for each school, I created 1 main SchoolScraper file that imports and instantiates all the classes." />
+    <MESSAGE value="INcrease AWS Lambda timeout from 30s to 180s" />
+    <MESSAGE value="Removed redundant function (dynamic_import)" />
+    <MESSAGE value="Modified template.yaml to include custom IAM role," />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified template.yaml to include custom IAM role," />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1712019279074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

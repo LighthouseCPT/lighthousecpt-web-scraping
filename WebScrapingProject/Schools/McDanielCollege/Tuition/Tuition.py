@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import pandas as pd
+from io import StringIO
 from ...base_scraper import BaseScraper
 from ...utils import (make_request,
                       save_html_to_s3,
@@ -58,7 +59,7 @@ class TuitionScraper(BaseScraper):
 
         tbl = soup.table
 
-        df3 = pd.read_html(str(tbl))[0]
+        df3 = pd.read_html(StringIO(str(tbl)))[0]
 
         merged_df = pd.concat([df1, df2, df3], axis=0, ignore_index=True)
 
