@@ -5,7 +5,7 @@ from .utils import make_request, get_latest_item
 from datetime import datetime
 import pandas as pd
 import boto3
-from WebScrapingProject.log_config import configure_logger
+from log_config import configure_logger
 
 logging = configure_logger(__name__)
 

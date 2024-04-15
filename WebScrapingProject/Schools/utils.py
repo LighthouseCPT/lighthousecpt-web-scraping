@@ -7,7 +7,7 @@ from io import StringIO
 from decimal import Decimal
 import numpy as np
 from datetime import datetime
-from WebScrapingProject.log_config import configure_logger
+from log_config import configure_logger
 
 logging = configure_logger(__name__)
 

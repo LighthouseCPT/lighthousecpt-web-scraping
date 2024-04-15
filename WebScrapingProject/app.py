@@ -1,7 +1,7 @@
 import json
 import os
 from urllib.parse import urlparse
-from utils import get_school_names
+from Schools.utils import get_school_names
 from log_config import configure_logger
 from Schools.SchoolScraper import SchoolScraper
 
@@ -19,8 +19,8 @@ class MainSchoolScraper:
     # This bucket contains the somewhat unrefined, extracted Information in CSVs
     CSV_BUCKET = 'lighthousecpt-schools-csv'
 
-    SCHOOLS = get_school_names('WebScrapingProject/Schools')
-    # # TODO: Uncomment the above and comment the one below when in production
+    SCHOOLS = get_school_names('Schools')
+
     # SCHOOLS = [
     #     'StFrancisCollege'
     # ]

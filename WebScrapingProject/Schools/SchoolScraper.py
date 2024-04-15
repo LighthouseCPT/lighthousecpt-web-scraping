@@ -1,6 +1,6 @@
 import importlib
-from WebScrapingProject.Schools.base_scraper import BaseScraper
-from WebScrapingProject.log_config import configure_logger
+from Schools.base_scraper import BaseScraper
+from log_config import configure_logger
 
 logging = configure_logger(__name__)
 

@@ -1,5 +1,5 @@
 from openai import OpenAI
-from WebScrapingProject.log_config import configure_logger
+from log_config import configure_logger
 
 logging = configure_logger(__name__)
 
