@@ -1,43 +1,28 @@
 import importlib
+from WebScrapingProject.Schools.base_scraper import BaseScraper
+from WebScrapingProject.log_config import configure_logger
+
+logging = configure_logger(__name__)
 
 
 class SchoolScraper:
-    def __init__(self, SOURCE_BUCKET, CSV_BUCKET, school_name, info):
-        moduleBasePath = f"Schools.{school_name}"
 
-        self.school_name = school_name
+    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME_AND_INFO, TYPES):
 
-        if info.get("tuition") != "NOT_REQUIRED":
-            TuitionScraperModule = importlib.import_module(f"{moduleBasePath}.Tuition.Tuition")
-            self.tuition_scraper = getattr(TuitionScraperModule, "TuitionScraper")(SOURCE_BUCKET, CSV_BUCKET,
-                                                                                   school_name)
-        else:
-            self.tuition_scraper = None
+        self.TYPES = TYPES
+        SCHOOL_NAME = SCHOOL_NAME_AND_INFO['name']
+        self.base_path = f"Schools.{SCHOOL_NAME}"
 
-        if info.get("requirement") != "NOT_REQUIRED":
-            RequirementScraperModule = importlib.import_module(f"{moduleBasePath}.Requirement.Requirement")
-            self.requirement_scraper = getattr(RequirementScraperModule, "RequirementScraper")(SOURCE_BUCKET,
-                                                                                               CSV_BUCKET,
-                                                                                               school_name)
-        else:
-            self.requirement_scraper = None
+        for TYPE in self.TYPES:
+            if SCHOOL_NAME_AND_INFO.get(TYPE) != "NOT_REQUIRED":
+                logging.info(f"**Started scraping for {SCHOOL_NAME} and type {TYPE}**")
+                scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE)
+                extraction_logic = self._get_extraction_logic(SCHOOL_NAME, TYPE)
+                info = SCHOOL_NAME_AND_INFO.get(TYPE)
+                scraper.scrape(info, extraction_logic)
+                logging.info(f"**Completed scraping for {SCHOOL_NAME} and type {TYPE}**")
 
-        if info.get("deadline") != "NOT_REQUIRED":
-            DeadlineScraperModule = importlib.import_module(f"{moduleBasePath}.Deadline.Deadline")
-            self.deadline_scraper = getattr(DeadlineScraperModule, "DeadlineScraper")(SOURCE_BUCKET, CSV_BUCKET,
-                                                                                      school_name)
-        else:
-            self.deadline_scraper = None
-
-    def scrape(self, info):
-        print(info)
-        tuition_url = info.get("tuition")
-        requirement_url = info.get("requirement")
-        deadline_url = info.get("deadline")
-
-        if tuition_url and tuition_url != "NOT_REQUIRED":
-            self.tuition_scraper.scrape(tuition_url)
-        if requirement_url and requirement_url != "NOT_REQUIRED":
-            self.requirement_scraper.scrape(requirement_url)
-        if deadline_url and deadline_url != "NOT_REQUIRED":
-            self.deadline_scraper.scrape(deadline_url)
+    def _get_extraction_logic(self, SCHOOL_NAME, TYPE):
+        module_path = f"{self.base_path}.{TYPE}.{TYPE}"
+        func_name = f"{SCHOOL_NAME}_{TYPE}"
+        return getattr(importlib.import_module(module_path), func_name)

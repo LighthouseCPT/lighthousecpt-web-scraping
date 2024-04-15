@@ -22,6 +22,18 @@
       "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
     },
     {
+      "name": "McDanielCollege",
+      "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
+      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
+      "deadline":"https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
+    },
+    {
+      "name": "CaliforniaInstituteOfAdvancedManagement",
+      "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
+      "requirement": "PDF",
+      "deadline":"https://www.ciam.edu/apply-today"
+    },
+    {
       "name": "WestcliffUniversity",
       "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
       "requirement": {
@@ -31,16 +43,16 @@
       "deadline": "https://www.westcliff.edu/admissions/apply/#description1"
     },
     {
-      "name": "McDanielCollege",
-      "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
-      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
-      "deadline":"https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
+      "name": "SofiaUniversity",
+      "tuition": "RAW_CSV",
+      "requirement": "RAW_CSV",
+      "deadline": "https://www.sofia.edu/admissions/"
     },
     {
-      "name": "CaliforniaInstituteofAdvancedManagement",
-      "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
-      "requirement": "PDF",
-      "deadline":"https://www.ciam.edu/apply-today"
+      "name": "StFrancisCollege",
+      "tuition": "NOT_REQUIRED",
+      "requirement": "NOT_REQUIRED",
+      "deadline": "PDF"
     }
   ]
 }

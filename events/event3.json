@@ -1,10 +1,13 @@
 {
   "schools": [
     {
-      "name": "MonroeCollege",
-      "tuition": "RAW_CSV",
-      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
-      "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
+      "name": "WestcliffUniversity",
+      "tuition": "NOT_REQUIRED",
+      "requirement": {
+        "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
+        "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
+      },
+      "deadline": "NOT_REQUIRED"
     }
   ]
 }
