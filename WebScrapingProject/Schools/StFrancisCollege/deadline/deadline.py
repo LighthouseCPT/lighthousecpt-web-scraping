@@ -2,7 +2,7 @@ import re
 from io import StringIO
 
 from pypdf import PdfReader
-from WebScrapingProject.ai_utils import *
+from WebScrapingProject.Schools.ai_utils import *
 import pandas as pd
 
 pd.set_option('display.max_columns', None)

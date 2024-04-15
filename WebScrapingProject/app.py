@@ -1,7 +1,7 @@
 import json
 import os
 from urllib.parse import urlparse
-from WebScrapingProject.Schools.utils import get_school_names
+from utils import get_school_names
 from log_config import configure_logger
 from Schools.SchoolScraper import SchoolScraper
 

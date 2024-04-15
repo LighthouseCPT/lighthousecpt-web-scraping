@@ -1,0 +1,21 @@
+Degree,Unnamed: 0,Unnamed: 1,Estimated Tuition,Unnamed: 2
+,Degree Program,Total Units,,Estimated Fees
+Level,,,Cost,
+Bachelor's,,,,
+,BA/BS Completion,90*,"$36,000","$1,400"
+Master’s,,,,
+,MACP,90,"$58,500","$4,025"
+,MATP,42,"$29,600","$2,200"
+,MATPO (CN),42,"$16,000",$200
+,MBA,36,"$24,000","$1,100"
+,MBAO (CN),36,"$24,000",$420
+,MSCS,42,"$24,000","$1,250"
+,MBA/MSCS Pathway,72,"$44,000",TBD
+,,,,
+Doctoral,,,,
+,DBA,54,"$51,300","$1,533"
+,DBAC,54,"$51,300",$425
+,PhD,75,"$71,450","$3,575"
+,PHDC (CN),75,"$60,000",$350
+,PsyD,75**,"$71,250",-
+,PsyD with BA,120***,"$114,000",-
