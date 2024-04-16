@@ -1,5 +1,5 @@
 from openai import OpenAI
-from log_config import configure_logger
+from WebScrapingProject.log_config import configure_logger
 
 logging = configure_logger(__name__)
 
@@ -53,3 +53,21 @@ def extract_dates_to_csv(text):
     logging.debug(f"Returning prompt: {prompt}")
 
     return prompt
+
+
+def extract_tuition_to_csv(text):
+    prompt = (f"I have extracted tuition fee details from a webpage. The information can include "
+              f"program name, "
+              f"tuition per credit or per term, additional applicable fees, and the estimated overall cost of "
+              f"attendance. "
+              f"Prepare a CSV-like output that represents these categories of information, using an appropriate format "
+              f"based on the structure of the provided data. "
+              f"Each entry should be listed on a new line with elements separated by commas. "
+              f"Avoid any additional bibliographical "
+              f"conversation or content in the response. "
+              f"Here is the obtained text: \n'{text}'")
+    logging.debug(f"Returning prompt: {prompt}")
+
+    return prompt
+
+

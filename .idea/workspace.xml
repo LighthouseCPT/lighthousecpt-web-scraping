@@ -4,28 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="removed TODO">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools.">
+      <change afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition_old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/.ipynb_checkpoints/Deadline-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/.ipynb_checkpoints/Requirement-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/.ipynb_checkpoints/Tuition-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Deadline/Deadline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Deadline/Deadline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Deadline/Deadline.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Requirement/MBA-Admissions-Requirements-1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Requirement/Requirement.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Requirement/Requirement.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Requirement/S.DBA_.Admission-Requirement-Noc.23V-1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/SofiaUniversity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Tuition/2023-2024-Winter-Tuition.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Tuition/SofiaUniversity_Tuition_RAW.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Tuition/Tuition.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Tuition/Tuition.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SofiaUniversity/Tuition/Tuition.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/base_scraper-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/.ipynb_checkpoints/utils-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/Schools/ai_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/event2.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,30 +74,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/WebScrapingProject/Schools",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/events" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Deadline" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Requirement" />
-      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteofAdvancedManagement/Tuition" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
@@ -186,7 +176,7 @@
       <workItem from="1712688249096" duration="7318000" />
       <workItem from="1712852019306" duration="15980000" />
       <workItem from="1713188992280" duration="14833000" />
-      <workItem from="1713205729497" duration="20409000" />
+      <workItem from="1713205729497" duration="27908000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -468,7 +458,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713214077295</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools.">
+      <option name="closed" value="true" />
+      <created>1713292216267</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713292216267</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes to template" />
     <MESSAGE value="fixed filepaths, change bucket names from mine to lighthouse's" />
     <MESSAGE value="updated description" />
     <MESSAGE value="created a new file named `util.py` to house reusable functions" />
@@ -543,9 +540,10 @@
     <MESSAGE value="git added a few files" />
     <MESSAGE value="updated dir paths for sam build" />
     <MESSAGE value="removed TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed TODO" />
+    <MESSAGE value="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1713292041463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1713300212288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

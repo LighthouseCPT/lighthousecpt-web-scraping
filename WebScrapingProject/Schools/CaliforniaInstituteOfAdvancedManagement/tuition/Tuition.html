@@ -1,7 +1,7 @@
 <!doctype html >
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" class>
 <head>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window._currentDevice = 'desktop';
     window.Parameters = window.Parameters || {
         HomeUrl: 'https://www.ciam.edu/',
@@ -9,7 +9,7 @@
         SystemID: 'US_DIRECT_PRODUCTION',
         SiteAlias: 'b334f17c',
         SiteType: atob('RFVEQU9ORQ=='),
-        PublicationDate: 'Wed Mar 20 01:45:02 UTC 2024',
+        PublicationDate: 'Wed Apr 10 17:32:57 UTC 2024',
         ExternalUid: null,
         IsSiteMultilingual: false,
         InitialPostAlias: '',
@@ -29,7 +29,7 @@
         HomeLinkText: 'Back To Home',
         UseGalleryModule: false,
         CurrentThemeName: 'Layout Theme',
-        ThemeVersion: '42830',
+        ThemeVersion: '43460',
         DefaultPageAlias: '',
         RemoveDID: true,
         WidgetStyleID: null,
@@ -48,6 +48,7 @@
         IsStoreSuspended: false,
         NotificationSubDomain: 'ciama8be0fe4',
         HasCustomDomain: true,
+        SimpleSite: false,
         showCookieNotification: true,
         cookiesNotificationMarkup: ' <div> <p class=\"rteBlock\">This website uses cookies to ensure site visitors get the best experience on our website. By continuing to use this site, you accept our use of cookies and Privacy Statement. To learn more, please visit our <span style=\"text-decoration:underline\"> <a value=\"priv<\/span>acy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Policy.<\/a> \n<\/span> \n<\/p> \n<\/div> \n',
         translatedPageUrl: '',
@@ -90,7 +91,7 @@
 
 
 
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     function toHash(str) {
         var hash = 5381, i = str.length;
         while (i) {
@@ -99,7 +100,7 @@
         return hash >>> 0
     }
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     (function (global) {
     //const cacheKey = global.cacheKey;
     const isOffline = 'onLine' in navigator && navigator.onLine === false;
@@ -185,14 +186,14 @@
 
 <link rel="preconnect" href="https://lirp.cdn-website.com/" />
 
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.SystemID = 'US_DIRECT_PRODUCTION';
 
-    if(!window.dmAPI) {
+    if (!window.dmAPI) {
         window.dmAPI = {
-            registerExternalRuntimeComponent: function() {
+            registerExternalRuntimeComponent: function () {
             },
-            getCurrentDeviceType: function() {
+            getCurrentDeviceType: function () {
                 return window._currentDevice;
             }
         };
@@ -205,7 +206,7 @@
     }
 </script>
 
-<script id="d-js-load-css" type="4b9c76c31564dfd137641163-text/javascript">
+<script id="d-js-load-css" type="4433e9dd5fcf497cf47f5b6d-text/javascript">
 /**
  * There are a few <link> tags with CSS resource in them that are preloaded in the page
  * in each of those there is a "onload" handler which invokes the loadCSS callback
@@ -309,20 +310,27 @@
   window.loadCSS = window.loadCSS || loadCSS;
 })();
 </script>
-<script data-role="deferred-init" type="4b9c76c31564dfd137641163-text/javascript">
+<script data-role="deferred-init" type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
-    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
-    const defs={};
-    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
     window.waitForDeferred = function (b, a, c) {
-      let d = window?.getDeferred?.(b);
-      d
-        ? d.promise.then(a)
-        : c && ["complete", "interactive"].includes(document.readyState)
-        ? setTimeout(a, 1)
-        : c
-        ? document.addEventListener("DOMContentLoaded", a)
-        : console.error(`Deferred  does not exist`);
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
     };
 </script>
 <style id="forceCssIncludes">
@@ -380,9 +388,9 @@
 }
 </style>
 
-<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/4283/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/4346/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
 
-<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/25a186c9d95c18ba1cd7b2e5104f4129.css" id="widgetCSS" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/da7b12402df04443f448bdfdd0bba74f.css" id="widgetCSS" />
 
 <style>img[width][height] {
   height: auto;
@@ -397,7 +405,7 @@
 <style id="pageAdditionalWidgetsCss" type="text/css">
 </style>
 
-<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/b334f17c/files/b334f17c_1.min.css?v=1394" id="siteGlobalCss" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/b334f17c/files/b334f17c_1.min.css?v=1430" id="siteGlobalCss" />
 <style id="customWidgetStyle" type="text/css">
 
 </style>
@@ -792,12 +800,13 @@ width:200px !important}
 <style id="pageFontSizeStyle" type="text/css">
 </style>
 <style id="hideAnimFix">
-  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
-    visibility: hidden;
-  }
-  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
-    visibility: hidden !important;
-  }
+    .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+        visibility: hidden;
+    }
+
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+        visibility: hidden !important;
+    }
 </style>
 
 <link type="application/rss+xml" rel="alternate" href="https://www.ciam.edu//feed/rss2" />
@@ -826,7 +835,7 @@ width:200px !important}
 <div class="u_1003521800 dmRespRow middleDrawerRow" style="text-align: center;" id="1003521800"> <div class="dmRespColsWrapper" id="1404430688"> <div class="dmRespCol small-12 u_1568791260 medium-12 large-12" id="1568791260"> <nav class="u_1496891820 unifiednav_vertical effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub data-show-vertical-sub-items="HIDE" id="1496891820" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_horizontal-long-1920w.png" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item    unifiednav__item_has-sub-nav" target data-target-page-alias> <span class="nav-item-text " data-link-text="Quick links" data-auto="page-text-style">Quick links<span class="icon icon-angle-down"></span>
 </span>
 </a>
-<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/student-logins" class="unifiednav__item    " target popup_target="student-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Student Logins" data-auto="page-text-style">Student Logins<span class="icon icon-angle-right"></span>
+<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/student-logins" class="unifiednav__item    " target popup_target="student-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Student Logins" data-auto="page-text-style">Student Logins<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -835,19 +844,19 @@ width:200px !important}
 </a>
 <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/request-information" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Request Information
-          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/apply-today" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Apply Today
-          " data-auto="page-text-style">Apply Today<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Apply Today<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/why-ciam" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
          Why CIAM?
-        " data-auto="page-text-style">Why CIAM?<span class="icon icon-angle-right"></span>
+        " data-auto="page-text-style">Why CIAM?<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -856,25 +865,25 @@ width:200px !important}
 <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a class="unifiednav__item    unifiednav__item_has-sub-nav" target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Resources" data-auto="page-text-style">Alumni Resources<span class="icon icon-angle-right"></span>
 </span>
 </a>
-<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="https://portal.office.com" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Email Login" data-auto="page-text-style">Alumni Email Login<span class="icon icon-angle-right"></span>
+<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="https://portal.office.com" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Email Login" data-auto="page-text-style">Alumni Email Login<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 </ul>
 </li>
-<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/faculty-staff-logins" class="unifiednav__item    " target="_blank" popup_target="faculty-staff-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Faculty Staff Logins" data-auto="page-text-style">Faculty Staff Logins<span class="icon icon-angle-right"></span>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/faculty-staff-logins" class="unifiednav__item    " target="_blank" popup_target="faculty-staff-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Faculty Staff Logins" data-auto="page-text-style">Faculty Staff Logins<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/catalog" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Catalog
-          " data-auto="page-text-style">Catalog<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Catalog<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/calendars" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              Calendars
-            " data-auto="page-text-style">Calendars<span class="icon icon-angle-right"></span>
+            " data-auto="page-text-style">Calendars<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -951,6 +960,12 @@ width:200px !important}
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/master-of-science-in-data-analytics" class="unifiednav__item  dmUDNavigationItem_010101155574  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              Master of Science in Data Analytics (New)
             " data-auto="page-text-style">Master of Science in Data Analytics (New)<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Masters-of-Arts-in-Organizational-Leadership" class="unifiednav__item  dmUDNavigationItem_010101721285  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Master of Arts in Organizational Leadership (New)
+            " data-auto="page-text-style">Master of Arts in Organizational Leadership (New)<span class="icon icon-angle-right"></span>
 </span>
 </a>
 </li>
@@ -1103,7 +1118,7 @@ width:200px !important}
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/request-information" class="unifiednav__item  dmUDNavigationItem_010101648840  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Request Information
-          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1196,7 +1211,7 @@ width:200px !important}
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/library" class="unifiednav__item  dmUDNavigationItem_010101632188  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Library
-          " data-auto="page-text-style">Library<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Library<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1302,6 +1317,18 @@ width:200px !important}
 <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/mlari#MLARIArticles" class="unifiednav__item  dmUDNavigationItem_010101196715  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              MLARI Articles
             " data-auto="page-text-style">MLARI Articles<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/careers-with-an-mba-in-business-analytics" class="unifiednav__item  dmUDNavigationItem_010101905421  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Business Analytics
+            " data-auto="page-text-style">Business Analytics<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/careers-with-an-mba-in-executive-management" class="unifiednav__item  dmUDNavigationItem_010101119645  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Executive Management
+            " data-auto="page-text-style">Executive Management<span class="icon icon-angle-right"></span>
 </span>
 </a>
 </li>
@@ -1443,7 +1470,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="dmRespRow u_1536639490" style="text-align: center;" id="1536639490"> <div class="dmRespColsWrapper" id="1473280756"> <div class="u_1128525736 dmRespCol small-12 medium-12 large-12" id="1128525736"> <div class="u_1175703140 dmNewParagraph" id="1175703140" style="transition: none;"><div style="text-align: left;"><span style><span style><font style="color: rgb(255, 255, 255);"><span style class="font-size-22 lh-1"><b style><span style="font-weight: 700;">Get in touch</span></b></span></font></span></span></div></div> <div class="u_1155105282 dmNewParagraph" id="1155105282"><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div><div><span style="font-weight: 400;" class="font-size-18 lh-1"><font style="color: rgb(103, 103, 103);"><div style="text-align: left;"><span style="font-weight: inherit;"><font style>(626) 350-1500</font></span></div><div style="text-align: left;"><span style="font-weight: inherit;"><font style><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85ecebe3eac5e6ece4e8abe0e1f0">[email&#160;protected]</a></font></span></div></font></span></div><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div></div> <div class="u_1711220381 align-center text-align-center dmSocialHub" id="1711220381" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks icon="true" surround="true" adwords> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="/cdn-cgi/l/email-protection#f39e8a9e929a9fb39e929a9f809681859a9096dd909c9e" dm_dont_rewrite_url="true" aria-label="email" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<div class="dmRespRow u_1536639490" style="text-align: center;" id="1536639490"> <div class="dmRespColsWrapper" id="1473280756"> <div class="u_1128525736 dmRespCol small-12 medium-12 large-12" id="1128525736"> <div class="u_1175703140 dmNewParagraph" id="1175703140" style="transition: none;"><div style="text-align: left;"><span style><span style><font style="color: rgb(255, 255, 255);"><span style class="font-size-22 lh-1"><b style><span style="font-weight: 700;">Get in touch</span></b></span></font></span></span></div></div> <div class="u_1155105282 dmNewParagraph" id="1155105282"><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div><div><span style="font-weight: 400;" class="font-size-18 lh-1"><font style="color: rgb(103, 103, 103);"><div style="text-align: left;"><span style="font-weight: inherit;"><font style>(626) 350-1500</font></span></div><div style="text-align: left;"><span style="font-weight: inherit;"><font style><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cda4a3aba28daea4aca0e3a8a9b8">[email&#160;protected]</a></font></span></div></font></span></div><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div></div> <div class="u_1711220381 align-center text-align-center dmSocialHub" id="1711220381" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks icon="true" surround="true" adwords> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="/cdn-cgi/l/email-protection#34594d59555d587459555d58475146425d57511a575b59" dm_dont_rewrite_url="true" aria-label="email" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
 </div>
 </div>
@@ -1457,7 +1484,7 @@ width:200px !important}
 <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header"> <div class="u_1571686805 dmRespRow fullBleedChanged fullBleedMode" id="1571686805"> <div class="dmRespColsWrapper" id="1954373233"> <div class="dmRespCol empty-column large-12 medium-12 small-12" id="1640534435"></div>
 </div>
 </div>
-<div class="u_1873060955 dmRespRow" style="text-align: center;" id="1873060955"> <div class="dmRespColsWrapper" id="1563765648"> <div class="u_1437151987 dmRespCol small-12 large-8 medium-8" id="1437151987"> <div class="u_1076117640 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1076117640"> <a href="/" id="1773583611" file="false"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4b9c76c31564dfd137641163-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_decennial-anniversary-1920w.png" id="1527195312" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_decennial-anniversary.png" alt="California Institute of Advanced Management" title="Management That Matters." onerror="handleImageLoadError(this)" /></a>
+<div class="u_1873060955 dmRespRow" style="text-align: center;" id="1873060955"> <div class="dmRespColsWrapper" id="1563765648"> <div class="u_1437151987 dmRespCol small-12 large-8 medium-8" id="1437151987"> <div class="u_1076117640 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1076117640"> <a href="/" id="1773583611" file="false"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4433e9dd5fcf497cf47f5b6d-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_decennial-anniversary-1920w.png" id="1527195312" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_decennial-anniversary.png" alt="California Institute of Advanced Management" title="Management That Matters." onerror="handleImageLoadError(this)" /></a>
 </div>
 </div>
 <div class="u_1302488763 dmRespCol small-12 large-4 medium-4" id="1302488763"> <a data-display-type="block" class="u_1455086454 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/admissions" data-element-type="dButtonLinkId" id="1455086454"> <span class="iconBg" id="1950480842"> <span class="icon hasFontIcon icon-star" id="1590342158"></span>
@@ -1474,11 +1501,11 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="u_1277457128 dmRespRow hide-for-small" id="1277457128"> <div class="dmRespColsWrapper" id="1242637647"> <div class="u_1362010195 dmRespCol small-12 medium-12 large-12" id="1362010195"> <nav class="u_1033988240 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1033988240" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://bppe.ca.gov/webapplications/annualReports/2022/details/93197858" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="BPPE 2022" data-auto="page-text-style">BPPE 2022<span class="icon icon-angle-down"></span>
+<div class="u_1277457128 dmRespRow hide-for-small" id="1277457128"> <div class="dmRespColsWrapper" id="1242637647"> <div class="u_1362010195 dmRespCol small-12 medium-12 large-12" id="1362010195"> <nav class="u_1033988240 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1033988240" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://bppe.ca.gov/webapplications/annualReports/2022/details/93197858" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="BPPE 2022" data-auto="page-text-style">BPPE 2022<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
-<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/student-logins" class="unifiednav__item    " target popup_target="student-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Student Logins" data-auto="page-text-style">Student Logins<span class="icon icon-angle-down"></span>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/student-logins" class="unifiednav__item    " target popup_target="student-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Student Logins" data-auto="page-text-style">Student Logins<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1487,19 +1514,19 @@ width:200px !important}
 </a>
 <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/request-information" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Request Information
-          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/apply-today" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Apply Today
-          " data-auto="page-text-style">Apply Today<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Apply Today<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/why-ciam" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
          Why CIAM?
-        " data-auto="page-text-style">Why CIAM?<span class="icon icon-angle-right"></span>
+        " data-auto="page-text-style">Why CIAM?<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1508,13 +1535,13 @@ width:200px !important}
 <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a class="unifiednav__item    unifiednav__item_has-sub-nav" target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Resources" data-auto="page-text-style">Alumni Resources<span class="icon icon-angle-down"></span>
 </span>
 </a>
-<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://portal.office.com" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Email Login" data-auto="page-text-style">Alumni Email Login<span class="icon icon-angle-right"></span>
+<ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://portal.office.com" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="Alumni Email Login" data-auto="page-text-style">Alumni Email Login<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 </ul>
 </li>
-<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/faculty-staff-logins" class="unifiednav__item    " target="_blank" popup_target="faculty-staff-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Faculty Staff Logins" data-auto="page-text-style">Faculty Staff Logins<span class="icon icon-angle-down"></span>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/faculty-staff-logins" class="unifiednav__item    " target="_blank" popup_target="faculty-staff-logins" link_type="popup" data-target-page-alias> <span class="nav-item-text " data-link-text="Faculty Staff Logins" data-auto="page-text-style">Faculty Staff Logins<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1523,13 +1550,13 @@ width:200px !important}
 </a>
 <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/catalog" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Catalog
-          " data-auto="page-text-style">Catalog<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Catalog<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/calendars" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              Calendars
-            " data-auto="page-text-style">Calendars<span class="icon icon-angle-right"></span>
+            " data-auto="page-text-style">Calendars<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1540,7 +1567,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="u_1677204495 dmRespRow dmDefaultListContentRow" style="text-align:center" id="1677204495"> <div class="dmRespColsWrapper" id="1667580217"> <div class="u_1801401778 dmRespCol small-12 medium-12 large-12" id="1801401778"> <div class="u_1808448166 dmRespRow" id="1808448166"> <div class="dmRespColsWrapper" id="1292662292"> <div class="u_1679323833 dmRespCol small-12 large-8 medium-8" id="1679323833"> <div class="u_1819238946 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1819238946"> <a id="1944399024" href="/" file="false"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4b9c76c31564dfd137641163-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_horizontal-long-1920w.png" alt="California Institute of Advanced Management" id="1391179481" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_horizontal-long.png" title="Management That Matters." onerror="handleImageLoadError(this)" /></a>
+<div class="u_1677204495 dmRespRow dmDefaultListContentRow" style="text-align:center" id="1677204495"> <div class="dmRespColsWrapper" id="1667580217"> <div class="u_1801401778 dmRespCol small-12 medium-12 large-12" id="1801401778"> <div class="u_1808448166 dmRespRow" id="1808448166"> <div class="dmRespColsWrapper" id="1292662292"> <div class="u_1679323833 dmRespCol small-12 large-8 medium-8" id="1679323833"> <div class="u_1819238946 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1819238946"> <a id="1944399024" href="/" file="false"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4433e9dd5fcf497cf47f5b6d-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_horizontal-long-1920w.png" alt="California Institute of Advanced Management" id="1391179481" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_horizontal-long.png" title="Management That Matters." onerror="handleImageLoadError(this)" /></a>
 </div>
 </div>
 <div class="u_1173774583 dmRespCol small-12 large-4 medium-4" id="1173774583"> <div class="u_1355498124 widget-a02b93 dmCustomWidget" data-lazy-load="false" data-title id="1355498124" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="a02b9364d9b64f52bd90c7d9082bcf51" data-widget-version="110" data-widget-config="eyJzaG93UmVzdWx0U25pcHBldHMiOnRydWUsImdhR3JvdXAiOm51bGwsInN1Z2dlc3Rpb25Hcm91cCI6bnVsbCwiZGVza3RvcFNob3dHcmlkIjpudWxsLCJ1cmxTZWFyY2hQYXJhbSI6InNzMzYwUXVlcnkiLCJub1Jlc3VsdHNUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPlNvcnJ5LCB3ZSBjb3VsZG4mI3gyNzt0IGZpbmQgYW55IHJlbGV2YW50IHJlc3VsdHMgZm9yIHlvdXIgc2VhcmNoIHF1ZXJ5LjwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPlBsZWFzZSByZWFjaCBvdXQgdG8gdXMgYXQ6PC9wPjx1bCBjbGFzcz1cInJ0ZUJsb2NrIGRlZmF1bHRMaXN0XCI+PGxpPjxlbT4rMSAyMzQgNTY3IDg5IDEwPC9lbT48L2xpPjxsaT48ZW0+aGVscEBjb21wYW55LmNvbTwvZW0+PC9saT48L3VsPiIsImxhbmd1YWdlIjoiZW4iLCJzZWFyY2hCb3hTdHlsZXMiOm51bGwsInNob3dSZXN1bHREYXRhUG9pbnRzIjp0cnVlLCJzaG93UmVzdWx0VXJscyI6ZmFsc2UsInZvaWNlU2VhcmNoQ29sb3IiOiIjMzMzMzMzIiwibnVtYmVyT2ZTdWdnZXN0aW9ucyI6IjYiLCJnYSI6bnVsbCwicGxhY2Vob2xkZXIiOiJTZWFyY2guLi4iLCJpY29uU2VhcmNoQm94IjpmYWxzZSwibGFuZ3VhZ2VHcm91cCI6bnVsbCwic2hvd1Jlc3VsdEltYWdlcyI6dHJ1ZSwidGV4dExlbmd0aFNob3dTdWdnZXN0aW9ucyI6IjMiLCJidXR0b25UZXh0IjoiU2VhcmNoIiwidm9pY2VTZWFyY2hMYW5ndWFnZSI6ImVuLVVTIiwiYWNjZW50Q29sb3IiOiJyZ2JhKDIzNCwyMzksMjM3LDEpIiwidm9pY2VTZWFyY2giOmZhbHNlLCJzZWFyY2hCdG5TdHlsZXMiOm51bGwsInNlYXJjaFN1Z2dlc3Rpb25zTW9iaWxlIjp0cnVlLCJzZWFyY2hTdWdnZXN0aW9uc0ltYWdlcyI6dHJ1ZSwiaWNvbkZvckJ1dHRvbiI6dHJ1ZSwiYnV0dG9uSWNvbkNvbG9yIjoicmdiYSg0Niw0OSw0OSwxKSIsIm1vYmlsZVNjcm9sbE9uRm9jdXMiOnRydWUsInJlc3VsdHNHcm91cCI6bnVsbCwicGxhY2Vob2xkZXJHcm91cCI6bnVsbCwidmlld0FsbFRvZ2dsZSI6dHJ1ZSwiaWNvbkNvbG9yIjoiIzY2NjY2NiIsInNlYXJjaFRleHRTdHlsZXMiOm51bGwsInNlYXJjaFN1Z2dlc3Rpb25zIjp0cnVlfQ=="> <section role="search" data-ss360="true" class="ss360-custom-search ss360-custom-search--no-margin"><input type="search" class="ss360-search-box ss360-custom-search__searchbox" placeholder="Search..." data-ss360-keep-placeholder="true" data-placeholder-original="Search..." /> <button class="ss360-search-button ss360-custom-search__searchbutton"></button>
@@ -1618,6 +1645,12 @@ width:200px !important}
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/master-of-science-in-data-analytics" class="unifiednav__item  dmUDNavigationItem_010101155574  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              Master of Science in Data Analytics (New)
             " data-auto="page-text-style">Master of Science in Data Analytics (New)<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Masters-of-Arts-in-Organizational-Leadership" class="unifiednav__item  dmUDNavigationItem_010101721285  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Master of Arts in Organizational Leadership (New)
+            " data-auto="page-text-style">Master of Arts in Organizational Leadership (New)<span class="icon icon-angle-right"></span>
 </span>
 </a>
 </li>
@@ -1770,7 +1803,7 @@ width:200px !important}
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/request-information" class="unifiednav__item  dmUDNavigationItem_010101648840  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Request Information
-          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Request Information<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1863,7 +1896,7 @@ width:200px !important}
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/library" class="unifiednav__item  dmUDNavigationItem_010101632188  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Library
-          " data-auto="page-text-style">Library<span class="icon icon-angle-right"></span>
+          " data-auto="page-text-style">Library<span class="icon icon-angle-right" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -1969,6 +2002,18 @@ width:200px !important}
 <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/mlari#MLARIArticles" class="unifiednav__item  dmUDNavigationItem_010101196715  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              MLARI Articles
             " data-auto="page-text-style">MLARI Articles<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/careers-with-an-mba-in-business-analytics" class="unifiednav__item  dmUDNavigationItem_010101905421  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Business Analytics
+            " data-auto="page-text-style">Business Analytics<span class="icon icon-angle-right"></span>
+</span>
+</a>
+</li>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/careers-with-an-mba-in-executive-management" class="unifiednav__item  dmUDNavigationItem_010101119645  " target data-target-page-alias> <span class="nav-item-text " data-link-text="
+             Executive Management
+            " data-auto="page-text-style">Executive Management<span class="icon icon-angle-right"></span>
 </span>
 </a>
 </li>
@@ -2130,7 +2175,7 @@ width:200px !important}
 <div class="dmRespRow u_1114616220" id="1114616220"> <div class="dmRespColsWrapper" id="1034316484"> <div class="dmRespCol large-12 medium-12 small-12" id="1328148633"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1564491290" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-justify m-size-18 size-22"><span style="font-weight:400;display:unset;font-family:Lora, 'Lora Fallback';font-style:normal;" class="m-font-size-18 font-size-22">Our programs blend knowledge and practice to prepare you for success in any career environment and are a long-term investment in your future.</span></p></div>
 <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1393888621" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-justify" style="direction: ltr;"><span class style="display: initial;"><span style="display: initial;">We understand that graduate school is an investment. Our team is available to answer your questions and help you determine ways to finance your education. Please contact the Financial Aid Office at</span>
 </span><a href="tel:(626) 350-1500" runtime_url="tel:(626) 350-1500" type="call" style="display: initial;">(626) 350-1500</a><span class style="display: initial;"> <span style="display: initial;">or</span>
-</span><a href="/cdn-cgi/l/email-protection#8ee8e7e0efe0ede7efe2a0efe7eaceede7efe3a0ebeafb" runtime_url="mailto:financial.aid@ciam.edu" type="email" style="display: initial;"><span class="__cf_email__" data-cfemail="65030c0b040b060c04094b040c0125060c04084b000110">[email&#160;protected]</span></a><span class style="display: initial;"> <span style="display: initial;">for assistance.</span></span></p></div>
+</span><a href="/cdn-cgi/l/email-protection#54323d3a353a373d35387a353d3014373d35397a313021" runtime_url="mailto:financial.aid@ciam.edu" type="email" style="display: initial;"><span class="__cf_email__" data-cfemail="5d3b34333c333e343c31733c34391d3e343c3073383928">[email&#160;protected]</span></a><span class style="display: initial;"> <span style="display: initial;">for assistance.</span></span></p></div>
 </div>
 </div>
 </div>
@@ -2195,9 +2240,9 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="dmRespRow u_1631058997 dmSectionParallaxNew hasBackgroundOverlay" id="1631058997"> <div class="dmRespColsWrapper" id="1277931554"> <div class="u_1069714899 dmRespCol small-12 medium-12 large-12" id="1069714899"> <div class="u_1777881556 default dmShape" id="1777881556" dmle_extension="shape" data-element-type="shape" text-position="center_center" wr="true" icon="true" surround="true" adwords shape-text shape-description shape-image alt-text tooltip shape-type="ribbon_edge" show-text-on-shape="true" show-description-on-shape="false" shape-color="rgba(255, 255, 255, 1)" shape-show-shadow="false" border-color-shape show-background-overlay="false" overlay-color="#ffffff" image-position="xMidYMid" shape-keep-proportion="true" shape-layout="layout1" border-width-shape="0" overlay-opacity="50" link-attrs="e30="> <a data-link-id="shape-link-container" id="1936548034"> <div class="container-text container-padding center_center" id="1756374817"> <h3 class="shape-text" id="1857880135"></h3>
+<div class="dmRespRow u_1631058997 dmSectionParallaxNew hasBackgroundOverlay" id="1631058997"> <div class="dmRespColsWrapper" id="1277931554"> <div class="u_1069714899 dmRespCol small-12 medium-12 large-12" id="1069714899"> <div class="u_1777881556 default dmShape" id="1777881556" dmle_extension="shape" data-element-type="shape" text-position="center_center" wr="true" icon="true" surround="true" adwords shape-text shape-description shape-image alt-text tooltip shape-type="ribbon_edge" show-text-on-shape="true" show-description-on-shape="false" shape-color="rgba(255, 255, 255, 1)" shape-show-shadow="false" border-color-shape show-background-overlay="false" overlay-color="#ffffff" image-position="xMidYMid" shape-keep-proportion="true" shape-layout="layout1" border-width-shape="0" overlay-opacity="50" link-attrs="e30="> <a data-link-id="shape-link-container" id="1867900519"> <div class="container-text container-padding center_center" id="1285346545"> <h3 class="shape-text" id="1364886732"></h3>
 </div>
-<svg width="100%" height="100%" viewbox="0.00 0.00 100 100" id="1665859880"> <g> <polygon points="0,0 100,0 100,100 50,70 0,100" style="fill:rgba(255, 255, 255, 1);"></polygon>
+<svg width="100%" height="100%" viewbox="0.00 0.00 100 100" id="1371896344"> <g> <polygon points="0,0 100,0 100,100 50,70 0,100" style="fill:rgba(255, 255, 255, 1);"></polygon>
 </g>
 </svg>
 </a>
@@ -2209,39 +2254,39 @@ width:200px !important}
 </div>
 <div class="dmDividerWrapper clearfix u_1457906532" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1457906532"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1933962808" /></div>
 <div class="dmPrettyList ed-version" data-element-type="dListId" layout="layoutB3" id="1511973891" image-element="none" saved-layout="layoutA" link-element="none" data-binding="W3siYmluZGluZ05hbWUiOiJsaXN0IiwidmFsdWUiOiJzaXRlX2NvbGxlY3Rpb24uQXBwbGljYXRpb24gRGVhZGxpbmVzIn1d" data-binding-metadata="eyJ0aXRsZSI6IlRlcm0iLCJkZXNjcmlwdGlvbiI6IkRlYWRsaW5lIn0="> <h3 class="dmwidget-title" hide="true" id="1521854017">List of Services</h3>
-<ul class="listWidgetContainer" id="1253141344"> <li class="listItem" id="1750799478"> <a class="biglink clearfix" href id="1406640808"> <div class="listImage" id="1224704607"></div>
-<div class="listText" id="1750973091"> <span class="itemName" id="1915366427">Summer 2024 Term:</span>
-<span class="itemText" id="1170561343">Admissions Application Deadline:<br id="1273821546" />Friday, April 12th, 2024, 4pm PST.<br id="1136245648" />Term Start Date: May 4th, 2024<br id="1994844610" />Term End Date: August 9th, 2024</span>
+<ul class="listWidgetContainer" id="1253141344"> <li class="listItem" id="1032293512"> <a class="biglink clearfix" href id="1024100268"> <div class="listImage" id="1553992311"></div>
+<div class="listText" id="1564433348"> <span class="itemName" id="1432687970">Summer 2024 Term:</span>
+<span class="itemText" id="1786947699">Admissions Application Deadline:<br id="1153260518" />Friday, April 12th, 2024, 4pm PST.<br id="1214776783" />Term Start Date: May 4th, 2024<br id="1875888758" />Term End Date: August 9th, 2024</span>
 </div>
-<span class="link" id="1106718371"> <span class="buttonText" id="1598384174"></span>
-<span class="itemName" id="1291933292">Summer 2024 Term:</span>
+<span class="link" id="1639124817"> <span class="buttonText" id="1185529744"></span>
+<span class="itemName" id="1076804240">Summer 2024 Term:</span>
 </span>
 </a>
 </li>
-<li class="listItem" id="1289213814"> <a class="biglink clearfix" href id="1266922140"> <div class="listImage" id="1818221111"></div>
-<div class="listText" id="1770110326"> <span class="itemName" id="1791166364">Summer II 2024 Term:</span>
-<span class="itemText" id="1835486740">Admissions Application Deadline:<br id="1537052519" />Friday, May 31st, 2024, 4pm PST.<br id="1985568798" />Term Start Date: June 22nd, 2024<br id="1901594972" />Term End Date: August 9th, 2024</span>
+<li class="listItem" id="1518385234"> <a class="biglink clearfix" href id="1514162337"> <div class="listImage" id="1691245953"></div>
+<div class="listText" id="1665455904"> <span class="itemName" id="1197436394">Summer II 2024 Term:</span>
+<span class="itemText" id="1576333456">Admissions Application Deadline:<br id="1291558363" />Friday, May 31st, 2024, 4pm PST.<br id="1575198258" />Term Start Date: June 22nd, 2024<br id="1941791232" />Term End Date: August 9th, 2024</span>
 </div>
-<span class="link" id="1872005680"> <span class="buttonText" id="1246333049"></span>
-<span class="itemName" id="1597901070">Summer II 2024 Term:</span>
+<span class="link" id="1000626324"> <span class="buttonText" id="1131882281"></span>
+<span class="itemName" id="1953794930">Summer II 2024 Term:</span>
 </span>
 </a>
 </li>
-<li class="listItem" id="1876066956"> <a class="biglink clearfix" href id="1472836692"> <div class="listImage" id="1158262260"></div>
-<div class="listText" id="1814267105"> <span class="itemName" id="1179648884">Fall 2024 Term:</span>
-<span class="itemText" id="1116210626">Admissions Application Deadline:<br id="1692163966" />Friday, August 9th, 2024, 4pm PST.<br id="1392600986" />Term Start Date: August 31st, 2024<br id="1127940116" />Term End Date: December 6th, 2024</span>
+<li class="listItem" id="1169097480"> <a class="biglink clearfix" href id="1327669103"> <div class="listImage" id="1125256253"></div>
+<div class="listText" id="1631716218"> <span class="itemName" id="1160350966">Fall 2024 Term:</span>
+<span class="itemText" id="1667531834">Admissions Application Deadline:<br id="1681721275" />Friday, August 9th, 2024, 4pm PST.<br id="1802023388" />Term Start Date: August 31st, 2024<br id="1186271991" />Term End Date: December 6th, 2024</span>
 </div>
-<span class="link" id="1151336330"> <span class="buttonText" id="1018055373"></span>
-<span class="itemName" id="1922381401">Fall 2024 Term:</span>
+<span class="link" id="1665621759"> <span class="buttonText" id="1384504816"></span>
+<span class="itemName" id="1903415494">Fall 2024 Term:</span>
 </span>
 </a>
 </li>
-<li class="listItem" id="1720665794"> <a class="biglink clearfix" href id="1299657380"> <div class="listImage" id="1665432533"></div>
-<div class="listText" id="1581521945"> <span class="itemName" id="1440340281">Fall II 2024 Term:</span>
-<span class="itemText" id="1514235112">Admissions Application Deadline:<br id="1709680282" />Friday, September 20th, 2024, 4pm PST.<br id="1809919985" />Term Start Date: October 12th, 2024<br id="1215742425" />Term End Date: December 6th, 2024</span>
+<li class="listItem" id="1693169793"> <a class="biglink clearfix" href id="1129570418"> <div class="listImage" id="1481838657"></div>
+<div class="listText" id="1598045506"> <span class="itemName" id="1204976268">Fall II 2024 Term:</span>
+<span class="itemText" id="1415934192">Admissions Application Deadline:<br id="1943302460" />Friday, September 20th, 2024, 4pm PST.<br id="1021186026" />Term Start Date: October 12th, 2024<br id="1114476653" />Term End Date: December 6th, 2024</span>
 </div>
-<span class="link" id="1599374427"> <span class="buttonText" id="1587128023"></span>
-<span class="itemName" id="1874157845">Fall II 2024 Term:</span>
+<span class="link" id="1978230018"> <span class="buttonText" id="1677367704"></span>
+<span class="itemName" id="1426811181">Fall II 2024 Term:</span>
 </span>
 </a>
 </li>
@@ -2345,7 +2390,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">Yes. We regularly offer sessions and prospective student events throughout the year. In addition, you can contact the Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b4a4f46425858424445586b48424a46054e4f5e">[email&#160;protected]</a> to schedule a personal visit.</p></div>
+<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">Yes. We regularly offer sessions and prospective student events throughout the year. In addition, you can contact the Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90f1f4fdf9e3e3f9fffee3d0f3f9f1fdbef5f4e5">[email&#160;protected]</a> to schedule a personal visit.</p></div>
 </div>
 </div>
 </li>
@@ -2378,7 +2423,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">CiAM offers rolling admissions so there&rsquo;s always a future term available if you meet the application deadline. Please contact the Office of Admissions at 626.350.1500 or <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abcacfc6c2d8d8c2c4c5d8ebc8c2cac685cecfde">[email&#160;protected]</a> for detailed instructions on how to apply.</p></div>
+<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">CiAM offers rolling admissions so there&rsquo;s always a future term available if you meet the application deadline. Please contact the Office of Admissions at 626.350.1500 or <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aecfcac3c7ddddc7c1c0ddeecdc7cfc380cbcadb">[email&#160;protected]</a> for detailed instructions on how to apply.</p></div>
 </div>
 </div>
 </li>
@@ -2389,7 +2434,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">We usually respond immediately, but we will appreciate if you email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d4b5b0b9bda7a7bdbbbaa794b7bdb5b9fab1b0a1">[email&#160;protected]</a> to update us about your progress. You are always welcome to call 626.350.1500 or email us to speak with our dedicated Admissions Specialists.</p></div>
+<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">We usually respond immediately, but we will appreciate if you email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d8ddd4d0cacad0d6d7caf9dad0d8d497dcddcc">[email&#160;protected]</a> to update us about your progress. You are always welcome to call 626.350.1500 or email us to speak with our dedicated Admissions Specialists.</p></div>
 </div>
 </div>
 </li>
@@ -2400,7 +2445,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">If your work experience is less than a year, please submit an admission petition to the Dean&rsquo;s Office to request a waiver. The Academic Council may be involved for evaluation and recommendation, please contact Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c5d5851554f4f5553524f7c5f555d5112595849">[email&#160;protected]</a> or call 1(626)-350-1500 for more information.</p></div>
+<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">If your work experience is less than a year, please submit an admission petition to the Dean&rsquo;s Office to request a waiver. The Academic Council may be involved for evaluation and recommendation, please contact Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f392979e9a80809a9c9d80b3909a929edd969786">[email&#160;protected]</a> or call 1(626)-350-1500 for more information.</p></div>
 </div>
 </div>
 </li>
@@ -2411,7 +2456,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">No, candidates for admission are evaluated holistically based on their merits and potential to succeed at CiAM. For admissions decisions, we use information from academic performance, work experience, leadership positions, extracurricular interests, unique talents, and the personal interview. We consider the applicant as a whole individual, not select parts such as GPA or GRE/GMAT test scores. Efforts are made to match the candidate&rsquo;s expectation with that of the CiAM program design. Please contact Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cede8e1e5ffffe5e3e2ffccefe5ede1a2e9e8f9">[email&#160;protected]</a> or call 1-626-350-1500 for more information.</p></div>
+<div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">No, candidates for admission are evaluated holistically based on their merits and potential to succeed at CiAM. For admissions decisions, we use information from academic performance, work experience, leadership positions, extracurricular interests, unique talents, and the personal interview. We consider the applicant as a whole individual, not select parts such as GPA or GRE/GMAT test scores. Efforts are made to match the candidate&rsquo;s expectation with that of the CiAM program design. Please contact Office of Admissions at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3b3e37332929333534291a39333b37743f3e2f">[email&#160;protected]</a> or call 1-626-350-1500 for more information.</p></div>
 </div>
 </div>
 </li>
@@ -2430,7 +2475,8 @@ width:200px !important}
 <span class="text" id="1464195724">REQUEST INFO</span>
 </a>
 </div>
-<div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1559754532 hasBackgroundOverlay dmSectionParallaxNew" id="1559754532"> <div class="dmRespColsWrapper" id="1702341032"> <div class="u_1717059796 dmRespCol small-12 large-8 medium-8" id="1717059796"> <div class="u_1520006752 dmNewParagraph" data-element-type="paragraph" id="1520006752" style="transition: none 0s ease 0s; display: block;" data-version="5"> <h2 class="m-text-align-center text-align-left size-42 m-size-34"><span style="color: rgb(0, 0, 0); display: initial;" class="font-size-42 m-font-size-34">Ready to take the next step?</span></h2>
+<div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1559754532 hasBackgroundOverlay dmSectionParallaxNew" id="1559754532"> <div class="dmRespColsWrapper" id="1702341032"> <div class="u_1717059796 dmRespCol small-12 large-8 medium-8" id="1717059796"> <div class="u_1321182104 dmNewParagraph" id="1321182104" style="transition: opacity 1s ease-in-out 0s; text-align: center;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center m-text-align-left"><span style="display: initial; font-weight: 600;">What Can You Do With an MS in Organizational Leadership?</span></h2>
+</div> <div class="u_1520006752 dmNewParagraph" data-element-type="paragraph" id="1520006752" style="transition: none 0s ease 0s; display: block;" data-version="5"> <h2 class="m-text-align-center text-align-left size-42 m-size-34"><span style="color: rgb(0, 0, 0); display: initial;" class="font-size-42 m-font-size-34">Ready to take the next step?</span></h2>
 </div></div>
 <div class="u_1656401533 dmRespCol small-12 large-4 medium-4" id="1656401533"> <a data-display-type="block" class="u_1098985606 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/contact" data-element-type="dButtonLinkId" id="1098985606"> <span class="iconBg" id="1213864930"> <span class="icon hasFontIcon icon-star" id="1440634265"></span>
 </span>
@@ -2440,35 +2486,35 @@ width:200px !important}
 </div>
 </div>
 <div class="dmRespRow u_1650086929" id="1650086929"> <div class="dmRespColsWrapper" id="1060620406"> <div class="u_1284143877 dmRespCol small-12 large-8 medium-8" id="1284143877"> <div class="dmRespRow u_1758812627" id="1758812627"> <div class="dmRespColsWrapper" id="1666998599"> <div class="dmRespCol small-12 large-4 medium-4" id="1594957106"> <div class="u_1338058134 dmNewParagraph" data-element-type="paragraph" id="1338058134" style="transition: opacity 1s ease-in-out 0s;" data-version="5"> <h5 class="text-align-left"><span style="color: rgb(255, 255, 255); display: initial;">CONTACT US</span></h5>
-</div> <div class="u_1869827869 dmNewParagraph" data-element-type="paragraph" id="1869827869" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"><p class="text-align-left size-14" style="line-height: 2;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">+1 (626) 350-1500</span></p><p class="text-align-left size-14" style="line-height: 2;"><a href="/cdn-cgi/l/email-protection#31585f575e715258505c1f545544" type="email" style="color: rgb(255, 201, 5); font-weight: 400; display: initial;" class="font-size-14"><span class="__cf_email__" data-cfemail="acc5c2cac3eccfc5cdc182c9c8d9">[email&#160;protected]</span></a></p><p class="size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">1000 S. Fremont Ave - Mailbox #45</span></p><p class="size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">Building A10, 4th Floor, Suite 10402</span></p><p class="text-align-left size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">Alhambra, CA 91803</span></p></div></div>
+</div> <div class="u_1869827869 dmNewParagraph" data-element-type="paragraph" id="1869827869" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"><p class="text-align-left size-14" style="line-height: 2;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">+1 (626) 350-1500</span></p><p class="text-align-left size-14" style="line-height: 2;"><a href="/cdn-cgi/l/email-protection#bfd6d1d9d0ffdcd6ded291dadbca" type="email" style="color: rgb(255, 201, 5); font-weight: 400; display: initial;" class="font-size-14"><span class="__cf_email__" data-cfemail="86efe8e0e9c6e5efe7eba8e3e2f3">[email&#160;protected]</span></a></p><p class="size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">1000 S. Fremont Ave - Mailbox #45</span></p><p class="size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">Building A10, 4th Floor, Suite 10402</span></p><p class="text-align-left size-14" style="line-height: 1.5;"><span style="font-weight: 400; color: rgb(255, 255, 255); display: initial;" class="font-size-14">Alhambra, CA 91803</span></p></div></div>
 <div class="dmRespCol small-12 large-4 medium-4" id="1469169532"> <div class="u_1074111458 dmNewParagraph" data-element-type="paragraph" id="1074111458" style="transition: opacity 1s ease-in-out 0s;" data-version="5"> <h5 class="m-text-align-left"><span style="color: rgb(255, 255, 255); display: initial;">ABOUT</span></h5>
 </div> <nav class="u_1350377411 unifiednav_vertical effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub data-show-vertical-sub-items="HOVER" id="1350377411" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp.cdn-website.com/md/dmtmpl/b6f2930c-3d6b-47b4-a73a-28c8dcbd4ed5/dms3rep/multi/desktop/univ-blueArtboard+3.svg" alt data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            About the University
-          " data-auto="page-text-style">About the University<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">About the University<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/admissions" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Admissions
-          " data-auto="page-text-style">Admissions<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Admissions<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/current-students" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Current Students
-          " data-auto="page-text-style">Current Students<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Current Students<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/campus-info" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
          Campus Info
-        " data-auto="page-text-style">Campus Info<span class="icon icon-angle-down"></span>
+        " data-auto="page-text-style">Campus Info<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Contact
-          " data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Contact<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -2478,29 +2524,29 @@ width:200px !important}
 <div class="dmRespCol large-4 medium-4 small-12 u_1777126530" id="1777126530"> <div class="u_1426728473 dmNewParagraph" data-element-type="paragraph" id="1426728473" style="transition: opacity 1s ease-in-out 0s;" data-version="5"> <h5 class="m-text-align-left"><span style="color: rgb(255, 255, 255); display: initial;">IMPORTANT LINKS</span></h5>
 </div> <nav class="u_1357380006 unifiednav_vertical effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub data-show-vertical-sub-items="HOVER" id="1357380006" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp.cdn-website.com/md/dmtmpl/b6f2930c-3d6b-47b4-a73a-28c8dcbd4ed5/dms3rep/multi/desktop/univ-blueArtboard+3.svg" alt data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/student-consumer-information" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Student Consumer Information
-          " data-auto="page-text-style">Student Consumer Information<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Student Consumer Information<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/employment-opportunities" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
              Employment Opportunities
-            " data-auto="page-text-style">Employment Opportunities<span class="icon icon-angle-down"></span>
+            " data-auto="page-text-style">Employment Opportunities<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/terms-of-use" class="unifiednav__item    " target="_blank" data-target-page-alias> <span class="nav-item-text " data-link-text="
            Terms of Use
-          " data-auto="page-text-style">Terms of Use<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Terms of Use<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
-<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://www.ciam.edu/privacy" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="Privacy Policy" data-auto="page-text-style">Privacy Policy<span class="icon icon-angle-down"></span>
+<li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://www.ciam.edu/privacy" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="Privacy Policy" data-auto="page-text-style">Privacy Policy<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
 <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/website-feedback-and-bug-reporting" class="unifiednav__item    " target data-target-page-alias> <span class="nav-item-text " data-link-text="
            Website Feedback and Bug Reporting
-          " data-auto="page-text-style">Website Feedback and Bug Reporting<span class="icon icon-angle-down"></span>
+          " data-auto="page-text-style">Website Feedback and Bug Reporting<span class="icon icon-angle-down" data-hidden-on-mobile data-hidden-on-desktop data-hidden-on-tablet></span>
 </span>
 </a>
 </li>
@@ -2528,7 +2574,7 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="dmRespRow u_1656237447" id="1656237447"> <div class="dmRespColsWrapper" id="1949907636"> <div class="u_1695958245 dmRespCol small-12 large-2 medium-2" id="1695958245"> <div class="u_1697241427 imageWidget align-center" data-widget-type="image" id="1697241427" data-element-type="image"> <a href="/" id="1317798839"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4b9c76c31564dfd137641163-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_icon_black+copy-1920w.png" id="1102783763" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_icon_black+copy.png" onerror="handleImageLoadError(this)" /></a>
+<div class="dmRespRow u_1656237447" id="1656237447"> <div class="dmRespColsWrapper" id="1949907636"> <div class="u_1695958245 dmRespCol small-12 large-2 medium-2" id="1695958245"> <div class="u_1697241427 imageWidget align-center" data-widget-type="image" id="1697241427" data-element-type="image"> <a href="/" id="1317798839"><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4433e9dd5fcf497cf47f5b6d-|49"></script><img src="https://lirp.cdn-website.com/b334f17c/dms3rep/multi/opt/CIAM_icon_black+copy-1920w.png" id="1102783763" class data-dm-image-path="https://irp.cdn-website.com/b334f17c/dms3rep/multi/CIAM_icon_black+copy.png" onerror="handleImageLoadError(this)" /></a>
 </div>
 </div>
 <div class="u_1480391678 dmRespCol small-12 large-6 medium-6" id="1480391678"> <div class="u_1644468536 widget-1f5975 dmCustomWidget" data-lazy-load data-title id="1644468536" dmle_extension="custom_extension" data-element-type="custom_extension" wr="false" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBDYWxpZm9ybmlhIEluc3RpdHV0ZSBvZiBBZHZhbmNlZCBNYW5hZ2VtZW50PC9wPiJ9"> <div class="copyright"> <div>&copy; 2024&nbsp;</div>
@@ -2536,17 +2582,17 @@ width:200px !important}
 </div>
 </div>
 </div>
-<div class="u_1660724721 dmRespCol small-12 large-4 medium-4" id="1660724721"> <div class="u_1299246227 align-center text-align-center dmSocialHub" id="1299246227" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks icon="true" surround="true" adwords> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://twitter.com/ciam_edu" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Twitter&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<div class="u_1660724721 dmRespCol small-12 large-4 medium-4" id="1660724721"> <div class="u_1299246227 align-center text-align-center dmSocialHub" id="1299246227" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks icon="true" surround="true" adwords> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://twitter.com/ciam_edu" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Twitter&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
-<a href="https://facebook.com/CiAM.edu/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<a href="https://facebook.com/CiAM.edu/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
-<a href="https://instagram.com/ciam_edu/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<a href="https://instagram.com/ciam_edu/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
-<a href="https://www.linkedin.com/school/california-institute-of-advanced-management-ciam-" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<a href="https://www.linkedin.com/school/california-institute-of-advanced-management-ciam-" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
-<a href="/cdn-cgi/l/email-protection#84edeae2ebc4e7ede5e9aae1e0f1" dm_dont_rewrite_url="true" aria-label="email" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<a href="/cdn-cgi/l/email-protection#fd94939b92bd9e949c90d3989988" dm_dont_rewrite_url="true" aria-label="email" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
-<a href="https://www.google.com/maps/place/California+Institute+of+Advanced+Management+(CiAM)/@34.082451,-118.1505196,15z/data=!4m2!3m1!1s0x0:0x76f8daeddff950b0?sa=X&amp;ved=2ahUKEwjslcqlsLTzAhXEoFsKHcHJBdEQ_BJ6BAhqEAU" target="_blank" dm_dont_rewrite_url="true" aria-label="google_my_business" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)" data-cf-modified-4b9c76c31564dfd137641163-> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
+<a href="https://www.google.com/maps/place/California+Institute+of+Advanced+Management+(CiAM)/@34.082451,-118.1505196,15z/data=!4m2!3m1!1s0x0:0x76f8daeddff950b0?sa=X&amp;ved=2ahUKEwjslcqlsLTzAhXEoFsKHcHJBdEQ_BJ6BAhqEAU" target="_blank" dm_dont_rewrite_url="true" aria-label="google_my_business" onclick="if (!window.__cfRLUnblockHandlers) return false; dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)" data-cf-modified-4433e9dd5fcf497cf47f5b6d-> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect></span>
 </a>
 </div>
 </div>
@@ -2573,7 +2619,7 @@ width:200px !important}
 </div>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="4b9c76c31564dfd137641163-text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     var isWLR = true;
 
     window.customWidgetsFunctions = {};
@@ -2582,12 +2628,12 @@ width:200px !important}
     window.currentLanguage = "ENGLISH"
     window.isSitePreview = false;
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.customWidgetsFunctions["1f5975986930429f819d4cd2154b5c4a~22"] = function (element, data, api) {
         null
     };
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.customWidgetsFunctions["832a29738c2b44fdb4e63369b1bf458a~72"] = function (element, data, api) {
         
 
@@ -2604,7 +2650,7 @@ $(element).off('click.toggle').on('click.toggle', '.accordion-title', function()
 
     };
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.customWidgetsFunctions["a02b9364d9b64f52bd90c7d9082bcf51~110"] = function (element, data, api) {
         // this function is called at every change in the editor, we have to find out whether we already added our script
 var locale = data.locale || 'en';
@@ -2789,17 +2835,17 @@ if(data.editor.searchSchema) {
 }
     };
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
 
-    var d_version = "production_4283";
-    var build = "2024-03-19T18_12_43";
+    var d_version = "production_4346";
+    var build = "2024-04-10T15_27_05";
     window['v' + 'ersion'] = d_version;
 
     function buildEditorParent() {
         window.isMultiScreen = true;
         window.editorParent = {};
         window.previewParent = {};
-        window.assetsCacheQueryParam = "?version=2024-03-19T18_12_43";
+        window.assetsCacheQueryParam = "?version=2024-04-10T15_27_05";
         try {
             var _p = window.parent;
             if (_p && _p.document && _p.$ && _p.$.dmfw) {
@@ -2815,11 +2861,11 @@ if(data.editor.searchSchema) {
     buildEditorParent();
 </script>
 
-<script type="4b9c76c31564dfd137641163-text/javascript" id="d-js-jquery" src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript" id="d-js-jquery" src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
 
 
 
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     var _jquery = window.$;
 
     var jqueryAliases = ['$', 'jquery', 'jQuery'];
@@ -2836,14 +2882,14 @@ if(data.editor.searchSchema) {
     });
     window.jQuery.migrateMute = true;
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.popups =
     [{"title":"Student Logins","url":"/student-logins","options":{"backgroundColor":"#FFFFFF","borderRadius":"5","width":"628","overlayColor":"rgba(0, 0, 0, 0.5)","height":"434","animation":"fadeIn"},"name":"student-logins"},{"title":"Faculty Staff Logins","url":"/faculty-staff-logins","options":{"backgroundColor":"#FFFFFF","borderRadius":"5","width":"852","overlayColor":"rgba(0, 0, 0, 0.5)","height":"549","animation":"fadeIn"},"name":"faculty-staff-logins"}]</script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.cookiesNotificationMarkupPreview = ' <div> <p class=\"rteBlock\">This website uses cookies to ensure site visitors get the best experience on our website. By continuing to use this site, you accept our use of cookies and Privacy Statement. To learn more, please visit our <span style=\"text-decoration:underline\"> <a value=\"priv<\/span>acy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Policy.<\/a> \n<\/span> \n<\/p> \n<\/div> \n';
 </script>
 
-<script id="d-js-params" type="4b9c76c31564dfd137641163-text/javascript">
+<script id="d-js-params" type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     window.INSITE = window.INSITE || {};
     window.INSITE.device = "desktop";
 
@@ -2863,9 +2909,9 @@ if(data.editor.searchSchema) {
     rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
     rtCommonProps["feature.flag.mappy.kml"] =false;
     rtCommonProps["common.resources.dist.cdn"] =true;
-    rtCommonProps["common.build.dist.folder"] = 'production/4283';
+    rtCommonProps["common.build.dist.folder"] = 'production/4346';
     rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
-    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4283';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4346';
     rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
     rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
     rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
@@ -2873,8 +2919,7 @@ if(data.editor.searchSchema) {
     rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
     rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
     rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
-    rtCommonProps["isAutomation.test"]=false;
-
+    rtCommonProps["isAutomation.test"] =false;
 
     
     rtCommonProps['common.mapsProvider'] = 'mapbox';
@@ -2914,7 +2959,6 @@ if(data.editor.searchSchema) {
     rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
     rtFlags["keyboard.navigation.enabled"] =true;
     rtFlags["scripts.widgetCount.enabled"] =true;
-    rtFlags["maps.cookiebot.enabled"] =true;
     rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
     rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
     rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
@@ -2930,24 +2974,25 @@ if(data.editor.searchSchema) {
     rtFlags["site.contact.form.fix.for.attribute"] =true;
     rtFlags["contact.form.date.format.enabled"] = true;
     rtFlags["twitter.heightLimit.enabled"] = true;
-    rtFlags["ecom.ecwid.fixTranslations.enabled"] = false;
-    rtFlags["runtime.load.script.native"]=true;
-    rtFlags["editor.classicHybrid.photogallery.fix"]=true;
+    rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+    rtFlags["runtime.load.script.native"] =true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.backgroundSlider.borderRadius"] =true;
 </script>
-<script src="https://static.cdn-website.com/mnlt/production/4283/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" id="d-js-core" type="4b9c76c31564dfd137641163-text/javascript"></script>
+<script src="https://static.cdn-website.com/mnlt/production/4346/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" id="d-js-core" type="4433e9dd5fcf497cf47f5b6d-text/javascript"></script>
 
-<script src="https://static.cdn-website.com/mnlt/production/4283/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" type="4b9c76c31564dfd137641163-text/javascript"></script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
-
-$(window).bind("orientationchange", function (e) {
-    $.layoutManager.initLayout();
+<script src="https://static.cdn-website.com/mnlt/production/4346/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" type="4433e9dd5fcf497cf47f5b6d-text/javascript"></script>
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     
-});
-$(document).resize(function () {
-    
-});
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript" id="d_track_campaign">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript" id="d_track_campaign">
 (function() {
  	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
 
@@ -2957,13 +3002,13 @@ $(document).resize(function () {
  	}
 }());
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
   var _dm_gaq = {};
   var _gaq = _gaq || [];
   var _dm_insite = [];
 </script>
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript" id="d_track_sp">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript" id="d_track_sp">
 ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
 p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
 };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
@@ -3039,10 +3084,10 @@ requestAnimationFrame(() => {
 
 <div class="dmPopupMask" id="dmPopupMask"></div>
 <div id="dmPopup" class="dmPopup">
-<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="if (!window.__cfRLUnblockHandlers) return false; dmHidePopup(event);" data-cf-modified-4b9c76c31564dfd137641163-></div> </div>
+<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="if (!window.__cfRLUnblockHandlers) return false; dmHidePopup(event);" data-cf-modified-4433e9dd5fcf497cf47f5b6d-></div> </div>
 <div class="dmPopupTitle"> <span></span> Share by:</div>
 <div class="data"></div>
-</div><script id="d_track_personalization" type="4b9c76c31564dfd137641163-text/javascript">
+</div><script id="d_track_personalization" type="4433e9dd5fcf497cf47f5b6d-text/javascript">
 	window?.waitForDeferred?.('dmAjax', () => {
 		// Collects client data and updates cookies used by smart sites
 		window.expireDays = 365;
@@ -3051,7 +3096,7 @@ requestAnimationFrame(() => {
 			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
 	});
 </script>
-<script type="4b9c76c31564dfd137641163-text/javascript">
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">
     
     Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
     
@@ -3061,7 +3106,7 @@ requestAnimationFrame(() => {
 
 
 
-<script type="4b9c76c31564dfd137641163-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script type="4433e9dd5fcf497cf47f5b6d-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -3074,5 +3119,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4b9c76c31564dfd137641163-|49" defer></script></body>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4433e9dd5fcf497cf47f5b6d-|49" defer></script></body>
 </html>
