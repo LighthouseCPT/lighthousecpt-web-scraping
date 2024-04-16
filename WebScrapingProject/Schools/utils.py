@@ -224,6 +224,3 @@ def get_school_names(directory_name):
             school_names.append(entry)
 
     return school_names
-
-
-

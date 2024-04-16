@@ -1,4 +1,10 @@
 {
+  "config": {
+    "region": "us-east-2",
+    "source_bucket": "lighthousecpt-schools-source",
+    "csv_bucket": "lighthousecpt-schools-csv",
+    "mode": "TrineUniversity, SofiaUniversity"
+  },
   "schools": [
     {
       "name": "TrineUniversity",

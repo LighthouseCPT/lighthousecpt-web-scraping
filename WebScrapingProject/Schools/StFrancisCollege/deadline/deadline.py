@@ -1,6 +1,5 @@
 import re
 from io import StringIO
-
 from pypdf import PdfReader
 from Schools.ai_utils import *
 import pandas as pd
