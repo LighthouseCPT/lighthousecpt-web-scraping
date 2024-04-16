@@ -10,7 +10,7 @@ The application consists of AWS Lambda functions, developed in Python, responsib
 
 ## Project Structure
 
-The application follows a modular structure, with each college having its own scraper module within a broader school directory. The project directory structure is:
+The application follows a modular structure, with each college having its own scraper module within a broader school directory. Each data point of interest (requirement, tuition, and deadline) for individual colleges also has separate Python script under specified directories. The project directory structure is:
 
 ```
 .
@@ -19,16 +19,17 @@ The application follows a modular structure, with each college having its own sc
 ├── requirements.txt
 ├── Schools
 │   └── CollegeName
-|       ├── Requirement
-|       ├── Tuition
-|       ├── Deadline
-|       └── CollegeName.py
-└── __init__.py
+|       ├── requirement
+|       |   └── requirement.py
+|       ├── tuition
+|       |   └── tuition.py
+|       └── deadline
+|           └── deadline.py
+└── init.py
 ```
-
--  `app.py`: The main AWS Lambda handler. Maps given colleges to their respective scraping functions.
+-  `app.py`: The main AWS Lambda handler. Maps given colleges to their respective scraping functions. Includes the functionality to specify which schools to scrape data from.
 -  `Schools`: This directory contains individual directories for each college.
--  `CollegeName`: Represents individual college directory, containing scraper script (`CollegeName.py`) along with directories for each specific data point to be scraped (`Requirement`, `Tuition`, `Deadline`).
+-  `CollegeName`: Represents individual college directory and sub-directories for each specific data point to be scraped (`requirement`, `tuition`, `deadline`). Each of these data point directories has its own Python script for data scraping (`requirement.py`, `tuition.py`, `deadline.py`)
 -  `requirements.txt`: Contains necessary Python dependencies needed for the project.
 
 ## How to Run Locally
