@@ -6,4 +6,3 @@ requests==2.31.0
 pypdf==4.1.0
 babel==2.14.0
 openai==1.16.2
-git+https://github.com/pdftables/python-pdftables-api.git

@@ -1,7 +1,7 @@
 from pypdf import PdfReader
 from .ai_utils import extract_dates_to_csv, extract_tuition_to_csv, extract_requirement_to_csv, gen_and_get_best_csv
 from .base_scraper2 import BaseScraper2
-import pdftables_api
+from pdftables import PDFTables
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -52,7 +52,7 @@ class BaseScraper(BaseScraper2):
         elif self.INFO == 'PDF_CSV':
             try:
                 pdf = self.get_pdf_from_s3()
-                csv = pdftables_api.Client('6sn8m1tjswal').csv(pdf)
+                csv = PDFTables('6sn8m1tjswal').csv(pdf)
                 self.save_raw_csv_to_s3(csv)
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(csv)
@@ -64,7 +64,7 @@ class BaseScraper(BaseScraper2):
         elif self.INFO == 'PDF_CSV':
 
             pdf = self.get_pdf_from_s3()
-            csv = pdftables_api.Client('6sn8m1tjswal').csv(pdf)
+            csv = PDFTables('6sn8m1tjswal').csv(pdf)
             self.save_raw_csv_to_s3(csv)
             self.delete_pdf_from_s3()
             raw_csv_string = self.get_latest_raw_csv_from_s3()
