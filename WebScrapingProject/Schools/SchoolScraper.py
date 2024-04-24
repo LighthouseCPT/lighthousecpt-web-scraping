@@ -14,13 +14,13 @@ class SchoolScraper:
         self.base_path = f"Schools.{SCHOOL_NAME}"
 
         for TYPE in self.TYPES:
-            if SCHOOL_NAME_AND_INFO.get(TYPE) != "NOT_REQUIRED":
-                logging.info(f"**Started scraping for {SCHOOL_NAME} and type {TYPE}**")
-                scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE)
-                extraction_logic = self._get_extraction_logic(SCHOOL_NAME, TYPE)
-                info = SCHOOL_NAME_AND_INFO.get(TYPE)
-                scraper.scrape(info, extraction_logic)
-                logging.info(f"**Completed scraping for {SCHOOL_NAME} and type {TYPE}**")
+            if SCHOOL_NAME_AND_INFO.get(TYPE) != "SKIP":
+                logging.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
+                EXTRACTING_LOGIC = self._get_extraction_logic(SCHOOL_NAME, TYPE)
+                INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
+                scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, EXTRACTING_LOGIC)
+                scraper.scrape()
+                logging.info(f"COMPLETED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
 
     def _get_extraction_logic(self, SCHOOL_NAME, TYPE):
         module_path = f"{self.base_path}.{TYPE}.{TYPE}"

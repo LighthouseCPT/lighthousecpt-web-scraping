@@ -3,14 +3,62 @@
     "region": "us-east-2",
     "source_bucket": "lighthousecpt-schools-source",
     "csv_bucket": "lighthousecpt-schools-csv",
-    "mode": "CaliforniaInstituteOfAdvancedManagement"
+    "mode": "all"
   },
   "schools": [
     {
+      "name": "TrineUniversity",
+      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
+      "requirement": {
+        "graduate": "https://www.trine.edu/international/graduate/international-apply.aspx",
+        "doctor": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
+      },
+      "deadline": "https://www.trine.edu/online/about/academic-calendar.aspx"
+    },
+    {
+      "name": "NewEnglandCollege",
+      "tuition": "SKIP",
+      "requirement": "https://www.nec.edu/international",
+      "deadline": "https://newengland.viewpage.co/International-Graduate-Admission-Start-Terms_ONCAMPUS"
+    },
+    {
+      "name": "MonroeCollege",
+      "tuition": "PDF_CSV",
+      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
+      "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
+    },
+    {
+      "name": "McDanielCollege",
+      "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
+      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
+      "deadline":"https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
+    },
+    {
       "name": "CaliforniaInstituteOfAdvancedManagement",
       "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
-      "requirement": "NOT_REQUIRED",
-      "deadline":"NOT_REQUIRED"
+      "requirement": "PDF_TXT",
+      "deadline":"https://www.ciam.edu/apply-today"
+    },
+    {
+      "name": "WestcliffUniversity",
+      "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
+      "requirement": {
+        "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
+        "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
+      },
+      "deadline": "https://www.westcliff.edu/admissions/apply/"
+    },
+    {
+      "name": "SofiaUniversity",
+      "tuition": "PDF_CSV",
+      "requirement": "PDF_CSV",
+      "deadline": "https://www.sofia.edu/admissions/"
+    },
+    {
+      "name": "StFrancisCollege",
+      "tuition": "SKIP",
+      "requirement": "SKIP",
+      "deadline": "PDF_TXT"
     }
   ]
 }

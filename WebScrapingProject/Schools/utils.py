@@ -1,12 +1,11 @@
-import hashlib
 import os
+import re
 import requests
 import boto3
-import pandas as pd
-from io import StringIO
 from decimal import Decimal
 import numpy as np
 from datetime import datetime
+from bs4 import NavigableString
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
@@ -22,103 +21,6 @@ def make_request(url):
     except requests.RequestException as e:
         logging.error(f'Request error: {e}')
         raise
-
-
-# Save HTML content to S3
-def save_html_to_s3(page, SOURCE_BUCKET, S3_PATH):
-    try:
-        timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        S3_PATH = f"{S3_PATH}_{timestamp}.html"
-        s3 = boto3.client('s3')
-        s3.put_object(Bucket=SOURCE_BUCKET, Key=S3_PATH, Body=page.text.encode('utf-8'))
-        logging.info(f'Successfully saved to: {S3_PATH}')
-    except Exception as e:
-        logging.error(f'S3 put object error: {e}')
-        raise
-
-
-# Get HTML content from S3
-def get_html_from_s3(SOURCE_BUCKET, S3_PATH):
-    try:
-        S3_PATH = S3_PATH + '.html'
-        s3 = boto3.client('s3')
-        obj = s3.get_object(Bucket=SOURCE_BUCKET, Key=S3_PATH)
-        html_content = obj['Body'].read().decode()
-        logging.info(f'Successfully read from: {S3_PATH}')
-        return html_content
-    except Exception as e:
-        logging.error(f'S3 get object error: {e}')
-        raise
-
-
-# Save to S3 as CSV file
-def save_csv_to_s3(df, CSV_BUCKET, S3_PATH):
-    S3_PATH = S3_PATH + '.csv'
-    csv_buffer = StringIO()
-    df.to_csv(csv_buffer)
-    csv_buffer.seek(0)
-    try:
-        s3 = boto3.client('s3')
-        s3.put_object(Bucket=CSV_BUCKET, Key=S3_PATH, Body=csv_buffer.getvalue())
-        logging.info(f'Successfully saved to: {S3_PATH}')
-    except Exception as e:
-        logging.error(f'S3 put object error: {e}')
-        raise
-
-
-def get_csv_from_s3(BUCKET: str, S3_PATH: str) -> pd.DataFrame:
-    """
-    Function to read a CSV file from an S3 bucket and convert it into a Pandas DataFrame
-
-    Parameters:
-    BUCKET (str): The name of the S3 bucket
-    S3_PATH (str): The path to the CSV file in the S3 bucket
-
-    Returns:
-    pd.DataFrame: A pandas dataframe containing the data of the CSV file
-    """
-    try:
-        S3_PATH = S3_PATH + '.csv'
-        s3 = boto3.client('s3')
-        csv_obj = s3.get_object(Bucket=BUCKET, Key=S3_PATH)
-        body = csv_obj['Body']
-        csv_string = body.read().decode('utf-8')
-        df = pd.read_csv(StringIO(csv_string))
-        logging.info(f'Successfully retrieved. Key: {S3_PATH}, Bucket: {BUCKET}.')
-        return df
-    except Exception as e:
-        error_msg = f'Failed to retrieve. Key: {S3_PATH}, Bucket: {BUCKET}. {str(e)}'
-        raise ValueError(error_msg) from None
-
-
-def get_raw_csv_from_s3(FILENAME, SCHOOL_NAME, SOURCE_BUCKET):
-    _FILENAME = FILENAME + '_RAW'
-    _S3_PATH = f'{SCHOOL_NAME}/{_FILENAME}'
-    try:
-        df = get_csv_from_s3(SOURCE_BUCKET, _S3_PATH)
-        return df
-    except ValueError as e:
-        error_msg = (f"A CSV file named '{_FILENAME}' should be present at location "
-                     f"'{SOURCE_BUCKET}/{SCHOOL_NAME}'. However, this file was not found. Please "
-                     f"ensure it's correctly placed.")
-        logging.error(f'{str(e)} (Additional Info: {error_msg})')
-        raise
-
-
-# def get_pdf_from_s3(FILENAME, SCHOOL_NAME, SOURCE_BUCKET):
-#     _FILENAME = FILENAME + '.pdf'
-#     S3_PATH = f'{SCHOOL_NAME}/{_FILENAME}'
-#     try:
-#         s3 = boto3.client('s3')
-#         obj = s3.get_object(Bucket=SOURCE_BUCKET, Key=S3_PATH)
-#         pdf_content = obj['Body'].read()
-#         return io.BytesIO(pdf_content)
-#     except Exception as e:
-#         error_msg = (f"A PDF file named '{_FILENAME}' should be present at location "
-#                      f"'{SOURCE_BUCKET}/{SCHOOL_NAME}'. However, this file was not found. Please "
-#                      f"ensure it's correctly placed.")
-#         logging.error(f'{str(e)} (Additional Info: {error_msg})')
-#         raise
 
 
 def float_to_decimal(value):
@@ -177,38 +79,6 @@ def upload_df_to_dynamodb(df, table_name):
             batch.put_item(Item=item)
 
 
-def check_html_diff(page, SOURCE_BUCKET, S3_PATH):
-    try:
-        old_html = get_html_from_s3(SOURCE_BUCKET, S3_PATH)
-        old_hash = hashlib.md5(old_html.encode('utf-8')).hexdigest()
-    except Exception as e:
-        logging.info(f"No pre-saved HTML was found. Initiating scraping from the beginning..."
-                     f"(Additional info: {str(e)})")
-        return True
-
-    new_hash = hashlib.md5(page.text.encode('utf-8')).hexdigest()
-
-    # Compare old hash and new hash
-    if old_hash != new_hash:
-        logging.info("HTML has changed! Continuing with the scraping process...")
-        return True
-    else:
-        logging.info("No changes found! Skipping this part...")
-        return False
-
-
-def check_csv_df_diff(df, CSV_BUCKET, S3_PATH):
-    old_csv_df = get_csv_from_s3(CSV_BUCKET, S3_PATH)
-    if not old_csv_df.equals(df):
-        logging.info("CSV/DF has changed! Continuing with the updating...")
-        # old_csv_df.to_csv('old_dataframe.csv', index=False)
-        # df.to_csv('new_dataframe.csv', index=False)
-        return True
-    else:
-        logging.info("No changes found! Skipping this part...")
-        return False
-
-
 def get_latest_item(items):
     items_with_dates = [(item, datetime.strptime('_'.join(item.split('_')[-2:])[:-5], '%Y-%m-%d_%H-%M-%S'))
                         for item in items]
@@ -224,3 +94,52 @@ def get_school_names(directory_name):
             school_names.append(entry)
 
     return school_names
+
+
+def remove_duplicate_terms(text):
+    lines = text.split("\n")
+    seen_terms = set()
+    clean_lines = []
+
+    for line in lines:
+        if "Term:" in line and line in seen_terms:
+            continue
+        clean_lines.append(line)
+        if "Term:" in line:
+            seen_terms.add(line)
+
+    return "\n".join(clean_lines)
+
+
+def extract_content(soup, start_string, end_string, include_end=False):
+    content = ''
+    start = soup.find(string=start_string)
+    end = soup.find(string=end_string)
+    if start and end:  # ensuring both start and end points are found
+        for element in start.parent.find_all_next(string=True):  # iterate over next elements in tree
+            if element == end:
+                if include_end:
+                    content += element.strip() + '\n'
+                break  # stop iteration when reaching 'end' string
+            if isinstance(element, NavigableString):
+                content += element.strip() + '\n'  # add a newline character after each element
+
+    content = re.sub('\n+', '\n', content)
+    content = content.replace(",", "")
+
+    return content
+
+
+def extract_inner_string(content, start_marker, end_marker, include_end=False):
+    if start_marker not in content and end_marker not in content:
+        raise ValueError('Both start and end markers are not found in content.')
+    elif start_marker not in content:
+        raise ValueError('Start marker not found in content.')
+    elif end_marker not in content:
+        raise ValueError('End marker not found in content.')
+    _, _, after_start = content.partition(start_marker)
+    inner_content, _, after_end = after_start.partition(end_marker)
+    result_content = start_marker + inner_content
+    if include_end:
+        result_content += end_marker
+    return result_content

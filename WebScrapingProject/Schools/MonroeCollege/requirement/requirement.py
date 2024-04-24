@@ -1,14 +1,15 @@
-import re
 from bs4 import BeautifulSoup
-import pandas as pd
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_colwidth', None)
+from Schools.utils import extract_content, extract_inner_string
 
 
 def MonroeCollege_requirement(source):
     soup = BeautifulSoup(source, 'html.parser')
-    pattern = re.compile(r'Graduate Admissions for Master’s Degrees')
-    data = soup.find(string=pattern).find_next('ul').get_text(separator='\n', strip=True)
-    df = pd.DataFrame([data])
-    return df
+    x = extract_content(soup, 'Apply as an International Student',
+                        'Foreign Transcript Evaluation Companies')
+    y1 = extract_inner_string(x, '1. Application',
+                              'Early Childhood Education',
+                              include_end=True)
+    y2 = extract_inner_string(x, 'Graduate Admissions for Master’s Degrees:',
+                              'English transcripts.', include_end=True)
+    final_text = y1 + '\n\n' + y2
+    return final_text

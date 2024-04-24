@@ -1,34 +1,20 @@
-from io import StringIO
-
 from bs4 import BeautifulSoup
-from babel.numbers import format_currency
-import pandas as pd
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_colwidth', None)
+from Schools.utils import extract_content, extract_inner_string
 
 
 def WestcliffUniversity_tuition(source):
     soup = BeautifulSoup(source, 'html.parser')
-    tbl = soup.table
-    df = pd.read_html(StringIO(str(tbl)))[0]
 
-    # Due to certain rows being merged across the table they appear in every row.
-    # We need only the first of these sections called 'Degree Program Tuition'
-    same_values_mask = df.apply(lambda row: row.nunique() == 1, axis=1)
-    split_indices = same_values_mask[same_values_mask].index.tolist()
+    x1 = extract_content(soup, 'The 2023-2024 Tuition & Fees', 'F-1 Students')
+    x2 = extract_content(soup, 'The 2023-2024 Tuition & Fees', 'The 2024-2025 Tuition & Fees')
+    x3 = extract_inner_string(x2, 'International (F-1) Students', '$0.00 per $1000', include_end=True)
+    x_final = x1 + x3
 
-    df = df[1:split_indices[1]]
-    df.columns = ['Program', 'RequiredCredits', 'Cost']
-    # Extracting numeric part from 'Cost' column
-    df['Cost_Numeric'] = df['Cost'].str.extract(r'(\d+)').astype(int)
+    y1 = extract_content(soup, 'The 2024-2025 Tuition & Fees', 'F-1 Students')
+    y2 = extract_content(soup, 'The 2024-2025 Tuition & Fees', '$0.00 per $1,000', include_end=True)
+    y3 = extract_inner_string(y2, 'International (F-1) Students', '$0.00 per $1000', include_end=True)
+    y_final = y1 + y3
 
-    # Extracting numeric part from 'RequiredCredits' column
-    df['RequiredCredits_Numeric'] = df['RequiredCredits'].str.split().str[0].astype(int)
+    final_text = x_final + '\n\n' + y_final
 
-    # Calculating total cost
-    df['TotalCost'] = df['Cost_Numeric'] * df['RequiredCredits_Numeric']
-    df['TotalCost'] = df['TotalCost'].apply(lambda x: format_currency(x, currency="USD", locale="en_US"))
-
-    df.drop(['RequiredCredits_Numeric', 'Cost_Numeric'], axis=1, inplace=True)
-    return df
+    return final_text

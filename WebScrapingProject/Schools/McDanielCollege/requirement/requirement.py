@@ -1,14 +1,12 @@
-import re
 from bs4 import BeautifulSoup
-import pandas as pd
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_colwidth', None)
+from Schools.utils import (extract_content,
+                                              extract_inner_string)
 
 
 def McDanielCollege_requirement(source):
     soup = BeautifulSoup(source, 'html.parser')
-    pattern = re.compile(r'Admissions Requirements')
-    match = soup.find(string=pattern).find_next('div').get_text(separator='\n', strip=True)
-    df = pd.DataFrame([match])
-    return df
+    x = extract_content(soup, 'What You Need to Know About the M.S. in Data Analytics', 'Related Programs')
+    y = extract_inner_string(x, 'What You Need to Know About the M.S. in Data Analytics',
+                             'outside of the US.',
+                             include_end=True)
+    return y

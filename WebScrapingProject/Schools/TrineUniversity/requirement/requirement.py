@@ -1,27 +1,26 @@
+import requests
 from bs4 import BeautifulSoup
-from ...utils import *
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_colwidth', None)
+from Schools.utils import extract_content, extract_inner_string
 
 
-def TrineUniversity_requirement(source):  # Source will contain a dict of 2 URLs
-    GRADUATE_URL = source['graduate']
-    DOCTOR_URL = source['doctor']
+def TrineUniversity_requirement(source_dict):  # Source will contain a dict of 2 URLs
+    url1 = source_dict['graduate']
+    page1 = requests.get(url1)
+    soup1 = BeautifulSoup(page1.text, 'html.parser')
+    url2 = source_dict['doctor']
+    page2 = requests.get(url2)
+    soup2 = BeautifulSoup(page2.text, 'html.parser')
 
-    # Make URL Request
-    GRADUATE_PAGE = make_request(GRADUATE_URL)
-    DOCTOR_PAGE = make_request(DOCTOR_URL)
+    x1 = extract_content(soup1, "International Graduate/Master's Degree application",
+                         'Take the Next Steps')
+    x2 = extract_content(soup2, 'Doctor of Information Technology',
+                         'Take the Next Steps')
 
-    columns = ['Graduate', 'Doctor']
-    df = pd.DataFrame(columns=columns)
+    y1 = extract_inner_string(x1, "International Graduate/Master's Degree application",
+                              'Seated classes')
 
-    graduate_soup = BeautifulSoup(GRADUATE_PAGE.text, 'html.parser')
-    h2_tag = graduate_soup.find('h2', string="International Graduate/Master's Degree application")
-    text = h2_tag.find_next_sibling("ul").find_next_sibling("ul").find('li').get_text(separator='\n', strip=True)
-    df.at[0, 'Graduate'] = text
+    y2 = extract_inner_string(x2, 'Learn More', 'intend to enroll.', include_end=True)
+    y2 = "Doctor of Information Technology Doctorate\n" + y2
+    final_text = y1 + '\n\n' + y2
 
-    doctor_soup = BeautifulSoup(DOCTOR_PAGE.text, 'html.parser')
-    text = doctor_soup.find(string='Admission Requirements').find_next('li').get_text(separator='\n', strip=True)
-    df.at[0, 'Doctor'] = text
-
-    return df
+    return final_text

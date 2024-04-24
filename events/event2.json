@@ -3,7 +3,7 @@
     "region": "us-east-2",
     "source_bucket": "lighthousecpt-schools-source",
     "csv_bucket": "lighthousecpt-schools-csv",
-    "mode": "TrineUniversity, SofiaUniversity"
+    "mode": "all"
   },
   "schools": [
     {
@@ -17,13 +17,13 @@
     },
     {
       "name": "NewEnglandCollege",
-      "tuition": "NOT_REQUIRED",
+      "tuition": "SKIP",
       "requirement": "https://www.nec.edu/international",
       "deadline": "https://newengland.viewpage.co/International-Graduate-Admission-Start-Terms_ONCAMPUS"
     },
     {
       "name": "MonroeCollege",
-      "tuition": "RAW_CSV",
+      "tuition": "PDF_CSV",
       "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
       "deadline":"https://www.monroecollege.edu/academics/academic-calendar-and-resources"
     },
@@ -36,7 +36,7 @@
     {
       "name": "CaliforniaInstituteOfAdvancedManagement",
       "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
-      "requirement": "PDF",
+      "requirement": "PDF_TXT",
       "deadline":"https://www.ciam.edu/apply-today"
     },
     {
@@ -46,19 +46,19 @@
         "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
         "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
       },
-      "deadline": "https://www.westcliff.edu/admissions/apply/#description1"
+      "deadline": "https://www.westcliff.edu/admissions/apply/"
     },
     {
       "name": "SofiaUniversity",
-      "tuition": "RAW_CSV",
-      "requirement": "RAW_CSV",
+      "tuition": "PDF_CSV",
+      "requirement": "PDF_CSV",
       "deadline": "https://www.sofia.edu/admissions/"
     },
     {
       "name": "StFrancisCollege",
-      "tuition": "NOT_REQUIRED",
-      "requirement": "NOT_REQUIRED",
-      "deadline": "PDF"
+      "tuition": "SKIP",
+      "requirement": "SKIP",
+      "deadline": "PDF_TXT"
     }
   ]
 }

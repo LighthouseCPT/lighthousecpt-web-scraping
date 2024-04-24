@@ -1,14 +1,12 @@
 from bs4 import BeautifulSoup
-import pandas as pd
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_colwidth', None)
+from Schools.utils import extract_content, extract_inner_string
 
 
 def NewEnglandCollege_requirement(source):
     soup = BeautifulSoup(source, 'html.parser')
-    text = soup.find('h2', string='On-Campus MS Programs').find_next('h4',
-                                                                     string='Admission Requirements').find_next(
-        'div').get_text(separator='\n', strip=True)
-    df = pd.DataFrame([text])
-    return df
+    x = extract_content(soup, 'On-Campus MS Programs',
+                        'Your Future Starts at NEC')
+    y = extract_inner_string(x, 'You have completed a bachelor’s degree',
+                             'being denied.',
+                             include_end=True)
+    return y
