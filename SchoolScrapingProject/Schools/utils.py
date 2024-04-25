@@ -1,6 +1,6 @@
 import os
 import re
-import requests
+from openai import OpenAI, AuthenticationError
 import boto3
 from decimal import Decimal
 import numpy as np
@@ -9,18 +9,6 @@ from bs4 import NavigableString
 from log_config import configure_logger
 
 logging = configure_logger(__name__)
-
-
-def make_request(url):
-    try:
-        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, '
-                                 'like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-        page = requests.get(url, headers=headers)
-        logging.debug(f'Successfully made request to: {url}')
-        return page
-    except requests.RequestException as e:
-        logging.error(f'Request error: {e}')
-        raise
 
 
 def float_to_decimal(value):
@@ -143,3 +131,32 @@ def extract_inner_string(content, start_marker, end_marker, include_end=False):
     if include_end:
         result_content += end_marker
     return result_content
+
+
+def download_s3_bucket_contents(bucket_name, local_directory=None):
+    s3 = boto3.client('s3')
+    s3_resource = boto3.resource('s3')
+
+    if not local_directory:
+        local_directory = os.getcwd() + '/s3_download'  # Set to a subfolder in the current directory
+    if not os.path.exists(local_directory):
+        os.makedirs(local_directory)  # Make sure the directory exists
+
+    for obj in s3_resource.Bucket(bucket_name).objects.all():
+        local_file_path = os.path.join(local_directory, obj.key)
+        if not os.path.exists(os.path.dirname(local_file_path)):
+            os.makedirs(os.path.dirname(local_file_path))
+        s3.download_file(bucket_name, obj.key, local_file_path)
+
+
+def check_api_key(api_key):
+    try:
+        client = OpenAI(api_key=api_key)
+        client.models.list()
+        logging.info('API Key Authentication Successful')
+        return api_key
+    except AuthenticationError:
+        error_msg = 'API Key Authentication Unsuccessful'
+        logging.critical(error_msg)
+        raise ValueError(error_msg)
+

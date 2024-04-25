@@ -1,30 +1,12 @@
 import json
 import os
 from urllib.parse import urlparse
-
 import boto3
-
-from Schools.utils import get_school_names
+from Schools.utils import get_school_names, check_api_key
 from log_config import configure_logger
 from Schools.SchoolScraper import SchoolScraper
 
 logging = configure_logger(__name__)
-
-
-def download_s3_bucket_contents(bucket_name, local_directory=None):
-    s3 = boto3.client('s3')
-    s3_resource = boto3.resource('s3')
-
-    if not local_directory:
-        local_directory = os.getcwd() + '/s3_download'  # Set to a subfolder in the current directory
-    if not os.path.exists(local_directory):
-        os.makedirs(local_directory)  # Make sure the directory exists
-
-    for obj in s3_resource.Bucket(bucket_name).objects.all():
-        local_file_path = os.path.join(local_directory, obj.key)
-        if not os.path.exists(os.path.dirname(local_file_path)):
-            os.makedirs(os.path.dirname(local_file_path))
-        s3.download_file(bucket_name, obj.key, local_file_path)
 
 
 class MainSchoolScraper:
@@ -38,6 +20,7 @@ class MainSchoolScraper:
         self.csv_bucket = event['config']['csv_bucket']
         self.mode = event['config']['mode']
         self.event_schools = [school['name'] for school in event['schools']]
+        os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api']))
         try:
             self.dir_schools = get_school_names('Schools')
         except FileNotFoundError:
@@ -137,6 +120,11 @@ class MainSchoolScraper:
             return all(self._isValidUrl(value) for value in url.values())
         return False
 
+    def get_parameter(self, parameter_name):
+        ssm_client = boto3.client('ssm', region_name=self.region)
+        param_value = ssm_client.get_parameter(Name=parameter_name, WithDecryption=True)
+        return param_value['Parameter']['Value']
+
 
 def lambda_handler(event, context):
     scraper = MainSchoolScraper(event)
@@ -152,4 +140,4 @@ if __name__ == "__main__":
     with open(event_path, 'r') as file:
         event_data = json.load(file)
     scraper_ = MainSchoolScraper(event_data)
-    scraper_.scrape_and_save()
+    # scraper_.scrape_and_save()

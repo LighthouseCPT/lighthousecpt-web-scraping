@@ -36,7 +36,7 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(all_text)
             except FileNotFoundError as e:
-                logging.error(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
+                logging.warn(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
                               f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
                               f'please choose RAW_TXT. (Additional Information: {e})')
 
@@ -46,7 +46,7 @@ class BaseScraper(BaseScraper2):
                 cleaned_text = self.EXTRACTING_LOGIC(raw_text_string)
                 self._gen_and_save_csv(cleaned_text)
             except FileNotFoundError as e:
-                logging.error(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
+                logging.warn(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
                               f' (Additional Information: {e})')
 
         elif self.INFO == 'PDF_CSV':
@@ -57,7 +57,7 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(csv)
             except FileNotFoundError as e:
-                logging.error(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
+                logging.warn(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
                               f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
                               f'please choose RAW_CSV. (Additional Information: {e})')
 
