@@ -41,7 +41,7 @@ class MainSchoolScraper:
         try:
             self.dir_schools = get_school_names('Schools')
         except FileNotFoundError:
-            self.dir_schools = get_school_names('WebScrapingProject/Schools')
+            self.dir_schools = get_school_names('SchoolScrapingProject/Schools')
 
     def scrape_and_save(self):
 

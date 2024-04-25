@@ -8,12 +8,14 @@ Globals:
     Timeout: 180
 
 Resources:
-  SchoolScraperFunction:
+  SchoolScraper:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: WebScrapingProject/
+      FunctionName: SchoolScraperFunction
+      CodeUri: SchoolScrapingProject/
       Handler: app.lambda_handler
       Runtime: python3.11
       Role: arn:aws:iam::654654270857:role/School-Scraper-Role
       Architectures:
       - x86_64
+

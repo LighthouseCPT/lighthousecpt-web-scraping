@@ -4,9 +4,136 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Major update, finally completed extracted info &gt; OpenAI &gt; CSV logic">
-      <change beforePath="$PROJECT_DIR$/WebScrapingProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrapingProject/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="copied the pdftables class and wrote it myself, no need for the library they provide now">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/.ipynb_checkpoints/Deadline-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/.ipynb_checkpoints/Deadline-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/__init__-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/__init__-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/doctor-checkpoint.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/.ipynb_checkpoints/doctor-checkpoint.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/CaliforniaInstituteOfAdvancedManagement_requirement.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/CaliforniaInstituteOfAdvancedManagement_requirement.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/Tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/deadline-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/deadline-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/requirement-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/requirement-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/tuition-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/.ipynb_checkpoints/tuition-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/deadline/deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/requirement/requirement.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/requirement/requirement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/Tuition.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/Tuition.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/Tuition.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/Tuition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/Tuition_old.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/Tuition_old.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition/tuition_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/tuition/tuition_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/deadline/deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/requirement/requirement.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/requirement/requirement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/tuition/Tuition.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/Tuition.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/tuition/Tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/Tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/tuition/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/MonroeCollege/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/.ipynb_checkpoints/Requirement-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/.ipynb_checkpoints/Requirement-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/NewEnglandCollege/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SchoolScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SchoolScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Deadline-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Deadline-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Requirement-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Requirement-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/SofiaUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/SofiaUniversity-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Tuition-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/Tuition-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/deadline/Deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/Deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/S.DBA_.Admission-Requirement-Noc.23V-1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/S.DBA_.Admission-Requirement-Noc.23V-1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/SofiaUniversity_requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/SofiaUniversity_requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/SofiaUniversity_requirement.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/SofiaUniversity_requirement.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/tuition/SofiaUniversity_tuition.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/tuition/SofiaUniversity_tuition.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/tuition/Tuition.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/tuition/Tuition.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/tuition/Tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/tuition/Tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/SofiaUniversity/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/RAW_TEXT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/RAW_TEXT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/StFrancisCollege_deadline.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/StFrancisCollege_deadline.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline/output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/output.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/.ipynb_checkpoints/Deadline-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/.ipynb_checkpoints/Deadline-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/Deadline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/Deadline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/Deadline.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/Deadline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/Deadline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/Deadline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/Requirement-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/__init__-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/__init__-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/doctor-checkpoint.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/.ipynb_checkpoints/doctor-checkpoint.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/Requirement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/Requirement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/Requirement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/Requirement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/graduate.html" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/graduate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/tuition/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/tuition/tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/TrineUniversity/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/deadline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/requriement.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/requriement.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/tuition/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/tuition/tuition.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/tuition.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/WestcliffUniversity/tuition/tuition_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/tuition_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/base_scraper2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/log_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/pdftables.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/pdftables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScrapingProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +143,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -174,7 +301,7 @@
       <workItem from="1713451757900" duration="5884000" />
       <workItem from="1713552240202" duration="14313000" />
       <workItem from="1713799376018" duration="33532000" />
-      <workItem from="1713926703734" duration="20329000" />
+      <workItem from="1713926703734" duration="24224000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -480,7 +607,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713990361709</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1713990875597</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713990875597</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1713991013571</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713991013571</updated>
+    </task>
+    <task id="LOCAL-00041" summary="copied the pdftables class and wrote it myself, no need for the library they provide now">
+      <option name="closed" value="true" />
+      <created>1713991489482</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713991489482</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,8 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a new file named `util.py` to house reusable functions" />
-    <MESSAGE value="added requirement part of trine university, still needs work" />
     <MESSAGE value="Added a BaseScraper" />
     <MESSAGE value="Implemented the &quot;Requirement&quot; part for TrineUniversity" />
     <MESSAGE value="Implemented the &quot;Deadline&quot; part for TrineUniversity" />
@@ -555,7 +704,9 @@
     <MESSAGE value="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools." />
     <MESSAGE value="Updated CaliforniaInstituteOfAdvancedManagement tuition part to now use OpenAI to generate a clean CSV" />
     <MESSAGE value="Major update, finally completed extracted info &gt; OpenAI &gt; CSV logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major update, finally completed extracted info &gt; OpenAI &gt; CSV logic" />
+    <MESSAGE value="Updated requirements.txt" />
+    <MESSAGE value="copied the pdftables class and wrote it myself, no need for the library they provide now" />
+    <option name="LAST_COMMIT_MESSAGE" value="copied the pdftables class and wrote it myself, no need for the library they provide now" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="app Coverage Results" MODIFIED="1713989964391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
