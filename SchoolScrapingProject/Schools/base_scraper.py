@@ -1,6 +1,7 @@
 from pypdf import PdfReader
-from .ai_utils import extract_dates_to_csv, extract_tuition_to_csv, extract_requirement_to_csv, gen_and_get_best_csv
-from .base_scraper2 import BaseScraper2
+from Schools.ai_utils import (extract_dates_to_csv, extract_tuition_to_csv, extract_requirement_to_csv,
+                              gen_and_get_best_csv)
+from Schools.base_scraper2 import BaseScraper2
 from pdftables import PDFTables
 from log_config import configure_logger
 
@@ -8,8 +9,8 @@ logging = configure_logger(__name__)
 
 
 class BaseScraper(BaseScraper2):
-    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, EXTRACTING_LOGIC):
-        super().__init__(REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE)
+    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, EXTRACTING_LOGIC):
+        super().__init__(REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE)
 
         self.TYPE = TYPE
         self.INFO = INFO
@@ -37,8 +38,8 @@ class BaseScraper(BaseScraper2):
                 self._gen_and_save_csv(all_text)
             except FileNotFoundError as e:
                 logging.warn(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
-                              f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
-                              f'please choose RAW_TXT. (Additional Information: {e})')
+                             f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
+                             f'please choose RAW_TXT. (Additional Information: {e})')
 
         elif self.INFO == 'RAW_TXT':
             try:
@@ -47,7 +48,7 @@ class BaseScraper(BaseScraper2):
                 self._gen_and_save_csv(cleaned_text)
             except FileNotFoundError as e:
                 logging.warn(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
-                              f' (Additional Information: {e})')
+                             f' (Additional Information: {e})')
 
         elif self.INFO == 'PDF_CSV':
             try:
@@ -58,8 +59,8 @@ class BaseScraper(BaseScraper2):
                 self._gen_and_save_csv(csv)
             except FileNotFoundError as e:
                 logging.warn(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
-                              f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
-                              f'please choose RAW_CSV. (Additional Information: {e})')
+                             f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
+                             f'please choose RAW_CSV. (Additional Information: {e})')
 
         elif self.INFO == 'PDF_CSV':
 
@@ -103,11 +104,17 @@ class BaseScraper(BaseScraper2):
         return self.EXTRACTING_LOGIC(source.text)
 
     def _gen_and_save_csv(self, text):
-        df = gen_and_get_best_csv(self.prompt,
-                                  text,
-                                  model='gpt-4-0125-preview',
-                                  temperature=0.4)
-        self.save_csv_to_s3(df)
+        df1, df2, df3 = gen_and_get_best_csv(self.prompt,
+                                             text,
+                                             model='gpt-4-0125-preview',
+                                             temperature=0.4)
+        # print(df1)
+        # print('\n')
+        # print(df2)
+        # print('\n')
+        # print(df3)
+        self.save_csv_to_s3(df1)
+        self.save_extra_csv_to_s3(df2, df3)
 
     def _extract_scraped_text(self):
         if isinstance(self.INFO, dict):

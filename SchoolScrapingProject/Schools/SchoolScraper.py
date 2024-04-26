@@ -7,7 +7,7 @@ logging = configure_logger(__name__)
 
 class SchoolScraper:
 
-    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME_AND_INFO, TYPES):
+    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME_AND_INFO, TYPES):
 
         self.TYPES = TYPES
         SCHOOL_NAME = SCHOOL_NAME_AND_INFO['name']
@@ -18,7 +18,8 @@ class SchoolScraper:
                 logging.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
                 EXTRACTING_LOGIC = self._get_extraction_logic(SCHOOL_NAME, TYPE)
                 INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
-                scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, EXTRACTING_LOGIC)
+                scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE, INFO,
+                                      EXTRACTING_LOGIC)
                 scraper.scrape()
                 logging.info(f"COMPLETED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
 

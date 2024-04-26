@@ -3,7 +3,7 @@ import csv
 import os
 from typing import Literal
 import requests
-from .utils import get_latest_item
+from Schools.utils import get_latest_item
 from datetime import datetime
 import pandas as pd
 import boto3
@@ -13,18 +13,21 @@ logging = configure_logger(__name__)
 
 
 class BaseScraper2:
-    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, SCHOOL_NAME, TYPE):
+    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE):
         self.REGION = REGION
         self.TYPE = TYPE
         self.SOURCE_BUCKET = SOURCE_BUCKET
         self.CSV_BUCKET = CSV_BUCKET
+        self.EXTRA_CSV_BUCKET = EXTRA_CSV_BUCKET
         self.SCHOOL_NAME = SCHOOL_NAME
-        self.SCHOOL_NAME_AND_TYPE = f'{self.SCHOOL_NAME}_{self.TYPE}'
-        self.BASE_PATH = f'{self.SCHOOL_NAME}/{self.SCHOOL_NAME_AND_TYPE}/'
-        self.HTML_FILENAME = f"{self.SCHOOL_NAME_AND_TYPE}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.html"
-        self.CSV_FILENAME = f"{self.SCHOOL_NAME_AND_TYPE}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
-        self.TXT_FILENAME = f"{self.SCHOOL_NAME_AND_TYPE}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
-        self.PDF_FILENAME = f"{self.SCHOOL_NAME_AND_TYPE}.pdf"
+        self.SCHOOL_NAME_TYPE = f'{self.SCHOOL_NAME}_{self.TYPE}'
+        self.SCHOOL_NAME_TYPE_DATE = f"{self.SCHOOL_NAME_TYPE}_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
+        self.BASE_PATH = f'{self.SCHOOL_NAME}/{self.SCHOOL_NAME_TYPE}/'
+        self.EXTRA_BASE_PATH = f'{self.SCHOOL_NAME}/{self.SCHOOL_NAME_TYPE}/{self.SCHOOL_NAME_TYPE_DATE}/'
+        self.HTML_FILENAME = self.SCHOOL_NAME_TYPE_DATE + '.html'
+        self.CSV_FILENAME = self.SCHOOL_NAME_TYPE_DATE + '.csv'
+        self.TXT_FILENAME = self.SCHOOL_NAME_TYPE_DATE + '.txt'
+        self.PDF_FILENAME = f"{self.SCHOOL_NAME_TYPE}.pdf"
         self.S3 = boto3.client('s3')
 
     def save_html_to_s3(self, page):
@@ -46,6 +49,21 @@ class BaseScraper2:
             s3_console_url = (f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/{self.CSV_BUCKET}?"
                               f"region={self.REGION}&bucketType=general&prefix={S3_PATH}")
             logging.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
+        except Exception as e:
+            logging.error(f'S3 put object error: {e}')
+            raise
+
+    def save_extra_csv_to_s3(self, *dfs):
+        try:
+            for i, df in enumerate(dfs, 1):
+                S3_PATH = f"{self.EXTRA_BASE_PATH}{self.CSV_FILENAME.split('.csv')[0]}_{i}.csv"  # append the suffix
+                csv_buffer = io.StringIO()
+                df.to_csv(csv_buffer, index=False)
+                csv_buffer.seek(0)
+                self.S3.put_object(Bucket=self.EXTRA_CSV_BUCKET, Key=S3_PATH, Body=csv_buffer.getvalue())
+                s3_console_url = (f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/{self.EXTRA_CSV_BUCKET}?"
+                                  f"region={self.REGION}&bucketType=general&prefix={S3_PATH}")
+                logging.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
         except Exception as e:
             logging.error(f'S3 put object error: {e}')
             raise

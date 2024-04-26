@@ -18,6 +18,7 @@ class MainSchoolScraper:
         self.region = event['config']['region']
         self.source_bucket = event['config']['source_bucket']
         self.csv_bucket = event['config']['csv_bucket']
+        self.extra_csv_bucket = event['config']['extra_csv_bucket']
         self.mode = event['config']['mode']
         self.event_schools = [school['name'] for school in event['schools']]
         os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api']))
@@ -95,6 +96,7 @@ class MainSchoolScraper:
                         self.region,
                         self.source_bucket,
                         self.csv_bucket,
+                        self.extra_csv_bucket,
                         SCHOOL_NAME_AND_INFO,
                         self.TYPES
                     )
@@ -105,6 +107,7 @@ class MainSchoolScraper:
                     self.region,
                     self.source_bucket,
                     self.csv_bucket,
+                    self.extra_csv_bucket,
                     SCHOOL_NAME_AND_INFO,
                     self.TYPES
                 )
@@ -132,12 +135,11 @@ def lambda_handler(event, context):
 
 
 # The following is solely for local testing; AWS Lambda will NOT execute it.
-# AWS Lambda will execute the "lambda_handler" function above.
+# AWS Lambda will only execute the "lambda_handler" function above.
 if __name__ == "__main__":
     # download_s3_bucket_contents('lighthousecpt-schools-csv')
-    parent_directory = os.path.dirname(os.getcwd())
-    event_path = os.path.join('events', 'event.json')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    event_path = os.path.join(script_dir, 'events/event.json')
     with open(event_path, 'r') as file:
         event_data = json.load(file)
-    scraper_ = MainSchoolScraper(event_data)
-    # scraper_.scrape_and_save()
+    lambda_handler(event_data, None)

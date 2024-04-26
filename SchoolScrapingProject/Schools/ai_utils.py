@@ -6,6 +6,7 @@ from log_config import configure_logger
 
 logging = configure_logger(__name__)
 
+
 def openai_prompter(prompt, model=None, temperature=None):
     try:
         client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
@@ -177,21 +178,28 @@ def gen_and_get_best_csv(prompt, text, model=None, temperature=None):
                     result = item
                     break
 
-        result = result.strip()  # Remove leading/trailing white spaces
+        result = result.strip()
 
-        if result == '1':
-            csv_to_return = csv1
-        elif result == '2':
-            csv_to_return = csv2
-        elif result == '3':
-            csv_to_return = csv3
-        else:
+        csv_dict = {'1': csv1, '2': csv2, '3': csv3}
+
+        if result not in csv_dict:
             raise ValueError(f'Unexpected result: {result}')
 
-        data = StringIO(csv_to_return)
-        df = pd.read_csv(data, sep=',')
-        df = df.dropna(how='all', axis=1)
-        return df
+        df1 = convert_csv_to_df(csv_dict[result])
+
+        remaining_csvs = [csv for key, csv in csv_dict.items() if key != result]
+
+        df2 = convert_csv_to_df(remaining_csvs[0])
+        df3 = convert_csv_to_df(remaining_csvs[1])
+
+        return df1, df2, df3
+
+
+def convert_csv_to_df(csv_string):
+    data = StringIO(csv_string)
+    df = pd.read_csv(data, sep=',')
+    df = df.dropna(how='all', axis=1)
+    return df
 
 # def prompt_pdf_to_csv(pdf_content):
 #     prompt = (

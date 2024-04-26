@@ -3,8 +3,8 @@
     "region": "us-east-2",
     "source_bucket": "lighthousecpt-schools-source",
     "csv_bucket": "lighthousecpt-schools-csv",
-    "mode": "all",
-    "openai_api": "LIGHTHOUSECPT_OPENAI_API_KEY"
+    "openai_api": "LIGHTHOUSECPT_OPENAI_API_KEY",
+    "mode": "WestcliffUniversity"
   },
   "schools": [
     {
@@ -43,11 +43,8 @@
     {
       "name": "WestcliffUniversity",
       "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
-      "requirement": {
-        "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
-        "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
-      },
-      "deadline": "https://www.westcliff.edu/admissions/apply/"
+      "requirement": "PDF_CSV",
+      "deadline": "CSV_RAW"
     },
     {
       "name": "SofiaUniversity",
