@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="moved the hardcoded API key to AWS Parameter store. Added code to read from there and set it as an environment variable">
-      <change afterPath="$PROJECT_DIR$/TranslatorProject/events/event.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TranslatorProject/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation">
+      <change afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sam-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sam-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TranslatorProject/app2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SchoolScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SchoolScraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/event3.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event3.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event3.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,32 +75,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.SchoolScrapingProject.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TranslatorProject.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/TranslatorProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.SchoolScrapingProject.executor": "Run",
+    "Python.TranslatorProject.executor": "Run",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/Schools",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SchoolScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/TranslatorProject" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition" />
-      <recent name="$PROJECT_DIR$/events" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SchoolScrapingProject" />
@@ -220,7 +214,11 @@
       <workItem from="1713552240202" duration="14313000" />
       <workItem from="1713799376018" duration="33532000" />
       <workItem from="1713926703734" duration="38236000" />
-      <workItem from="1714143230918" duration="13667000" />
+      <workItem from="1714143230918" duration="20485000" />
+      <workItem from="1714256178368" duration="3000" />
+      <workItem from="1714407527517" duration="14000" />
+      <workItem from="1714408318888" duration="792000" />
+      <workItem from="1714417134576" duration="8152000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -566,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714065211291</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation">
+      <option name="closed" value="true" />
+      <created>1714159743460</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1714159743460</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -621,7 +627,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented the &quot;Deadline&quot; part for TrineUniversity" />
     <MESSAGE value="added headers to request to avoid 403" />
     <MESSAGE value="Added &quot;Requirement&quot; and &quot;Deadline&quot; parts for New England College (no &quot;Tuition&quot; part)" />
     <MESSAGE value="added MonroeCollege" />
@@ -646,10 +651,11 @@
     <MESSAGE value="copied the pdftables class and wrote it myself, no need for the library they provide now" />
     <MESSAGE value="updated function name and directory name" />
     <MESSAGE value="moved the hardcoded API key to AWS Parameter store. Added code to read from there and set it as an environment variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved the hardcoded API key to AWS Parameter store. Added code to read from there and set it as an environment variable" />
+    <MESSAGE value="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714159513001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714424701230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
   </component>

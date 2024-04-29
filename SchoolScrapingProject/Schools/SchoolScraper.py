@@ -11,6 +11,7 @@ class SchoolScraper:
 
         self.TYPES = TYPES
         SCHOOL_NAME = SCHOOL_NAME_AND_INFO['name']
+        PROGRAMS = SCHOOL_NAME_AND_INFO['programs']
         self.base_path = f"Schools.{SCHOOL_NAME}"
 
         for TYPE in self.TYPES:
@@ -19,7 +20,7 @@ class SchoolScraper:
                 EXTRACTING_LOGIC = self._get_extraction_logic(SCHOOL_NAME, TYPE)
                 INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
                 scraper = BaseScraper(REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE, INFO,
-                                      EXTRACTING_LOGIC)
+                                      PROGRAMS, EXTRACTING_LOGIC)
                 scraper.scrape()
                 logging.info(f"COMPLETED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
 

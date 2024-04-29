@@ -21,7 +21,8 @@ class MainSchoolScraper:
         self.extra_csv_bucket = event['config']['extra_csv_bucket']
         self.mode = event['config']['mode']
         self.event_schools = [school['name'] for school in event['schools']]
-        os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api']))
+        os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api_key']))
+        os.environ['PDFTABLES_API_KEY'] = self.get_parameter(event['config']['pdftables_api_key'])
         try:
             self.dir_schools = get_school_names('Schools')
         except FileNotFoundError:

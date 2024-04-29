@@ -1,6 +1,7 @@
+import os
+from Schools.ai_prompts import extract_dates_to_csv, extract_tuition_to_csv, extract_requirement_to_csv
 from pypdf import PdfReader
-from Schools.ai_utils import (extract_dates_to_csv, extract_tuition_to_csv, extract_requirement_to_csv,
-                              gen_and_get_best_csv)
+from Schools.ai_utils import gen_and_get_best_csv
 from Schools.base_scraper2 import BaseScraper2
 from pdftables import PDFTables
 from log_config import configure_logger
@@ -9,11 +10,13 @@ logging = configure_logger(__name__)
 
 
 class BaseScraper(BaseScraper2):
-    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, EXTRACTING_LOGIC):
+    def __init__(self, REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE, INFO, PROGRAMS,
+                 EXTRACTING_LOGIC):
         super().__init__(REGION, SOURCE_BUCKET, CSV_BUCKET, EXTRA_CSV_BUCKET, SCHOOL_NAME, TYPE)
 
         self.TYPE = TYPE
         self.INFO = INFO
+        self.PROGRAMS = ', '.join(PROGRAMS)
         self.EXTRACTING_LOGIC = EXTRACTING_LOGIC
         self.prompt_mapping = {
             'deadline': extract_dates_to_csv,
@@ -53,7 +56,7 @@ class BaseScraper(BaseScraper2):
         elif self.INFO == 'PDF_CSV':
             try:
                 pdf = self.get_pdf_from_s3()
-                csv = PDFTables('6sn8m1tjswal').csv(pdf)
+                csv = PDFTables(os.getenv('PDFTABLES_API_KEY')).csv(pdf)
                 self.save_raw_csv_to_s3(csv)
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(csv)
@@ -65,7 +68,7 @@ class BaseScraper(BaseScraper2):
         elif self.INFO == 'PDF_CSV':
 
             pdf = self.get_pdf_from_s3()
-            csv = PDFTables('6sn8m1tjswal').csv(pdf)
+            csv = PDFTables(os.getenv('PDFTABLES_API_KEY')).csv(pdf)
             self.save_raw_csv_to_s3(csv)
             self.delete_pdf_from_s3()
             raw_csv_string = self.get_latest_raw_csv_from_s3()
@@ -105,16 +108,13 @@ class BaseScraper(BaseScraper2):
 
     def _gen_and_save_csv(self, text):
         df1, df2, df3 = gen_and_get_best_csv(self.prompt,
-                                             text,
-                                             model='gpt-4-0125-preview',
+                                             text, self.PROGRAMS,
+                                             model='gpt-4',
                                              temperature=0.4)
-        # print(df1)
-        # print('\n')
-        # print(df2)
-        # print('\n')
-        # print(df3)
         self.save_csv_to_s3(df1)
-        self.save_extra_csv_to_s3(df2, df3)
+
+        if df2 is not None and df3 is not None:
+            self.save_extra_csv_to_s3(df2, df3)
 
     def _extract_scraped_text(self):
         if isinstance(self.INFO, dict):

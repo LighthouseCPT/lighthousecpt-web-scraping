@@ -44,73 +44,7 @@ def openai_prompter(prompt, model=None, temperature=None):
 #     return current_response
 
 
-def extract_dates_to_csv(text):
-    prompt = (f"I have a set of academic dates and schedules that I extracted from the internet or a PDF. "
-              f"I need to identify only the "
-              f"program start and end dates, along with application deadlines (if any). This information is intended "
-              f"for display on a study abroad agency website to assist prospective students. "
-              f"Depending on the content of the extracted text, "
-              f"feel free to use one or more of these columns: 'Term', 'Date', 'Session', 'Type', 'Program', "
-              f"or 'Description'"
-              f". Each unique entry should be on a new line with elements separated by commas. "
-              f"Each date should be in 'YYYY-MM-DD' format. For terms, use the full "
-              f"format like 'Fall 2023', 'Spring 2024' etc. Avoid any additional bibliographical conversation or "
-              f"content"
-              f"in the response. Here is the text: \n'{text}'")
-    logging.debug(f"Returning prompt: {prompt}")
-
-    return prompt
-
-
-# def extract_dates_to_csv_old(text):
-#     prompt = (
-#         f"I have a set of academic dates and schedules that I extracted from the internet or a PDF. "
-#         f"I need to identify and structure this information uniquely, avoiding duplicates. "
-#         f"The data includes program start/end dates and application deadlines. "
-#         f"Depending on the content of the extracted text, "
-#         f"feel free to use one or more of these columns: 'Term', 'Date', 'Session', 'Type', 'Program', or 'Description'"
-#         f". Each unique entry should be on a new line with elements separated by commas. "
-#         f"Dates should be in 'YYYY-MM-DD' format and terms like 'Fall 2023', 'Spring 2024'. "
-#         f"The information should be presented in a clean, organized, and unique CSV-like format. "
-#         f"Here is the text to process:\n'{text}'")
-#     logging.debug(f"Returning prompt: {prompt}")
-#     return prompt
-
-
-def extract_tuition_to_csv(text):
-    prompt = (
-        f"I have extracted the following tuition details from the internet or a PDF. "
-        f"These details are intended to be displayed on a study abroad agency website. The goal is to give students a "
-        f"clear "
-        f"understanding of the costs associated with various programs at a specific college. Your task is to convert "
-        f"this information into a well-structured CSV format that clearly presents the cost for each program. "
-        f"Please remember that some data fields may contain commas. Handle these cases appropriately, "
-        f"consider text enclosed in quotes as a single item, even when it contains commas. "
-        f"Do not preface the CSV with any additional text—only the CSV content should be returned. The tuition costs should be "
-        f"prefixed with a dollar sign. Here is the obtained data: "
-        f"\n'{text}'")
-
-    logging.debug(f"Returning prompt: {prompt}")
-    return prompt
-
-
-def extract_requirement_to_csv(text):
-    prompt = (
-        f"I have extracted the following admission requirement details from the internet or a PDF. "
-        f"These details are intended to be displayed on a study abroad agency website. The goal is to provide students "
-        f"with a clear "
-        f"understanding of the various admission requirements for different programs at specific colleges. "
-        f"Your task is to convert this extracted data into a well-structured, properly formatted CSV. "
-        f"Please remember that some data fields may contain commas. Handle these cases appropriately, "
-        f"consider text enclosed in quotes as a single item, even when it contains commas. "
-        f"Do not add or preface any additional text to the CSV — only the structured content should be returned. "
-        f"Here is the obtained data:\n'{text}'")
-
-    logging.debug(f"Returning prompt: {prompt}")
-    return prompt
-
-
-def choose_best_csv(csv1, csv2, csv3):
+def choose_best_csv_old(csv1, csv2, csv3):
     prompt = (
         f"Below are three CSVs containing tuition details of various programs in a specific college."
         " The task is to return ONLY the number (nothing else) - 1, 2, or 3 - of the CSV that is most readable, "
@@ -129,20 +63,38 @@ def choose_best_csv(csv1, csv2, csv3):
     return prompt
 
 
-def gen_and_get_best_csv(prompt, text, model=None, temperature=None):
+def choose_best_csv(used_prompt, csv1, csv2, csv3):
+    prompt = (
+        f"Here is the prompt I used:\n\n'{used_prompt}'\n\nUsing it, I obtained three CSVs. "
+        "The task is to return ONLY the number (nothing else) - 1, 2, or 3 - of the CSV that adhered most closely to "
+        "the prompt. Evaluate each CSV and return only the number of the one that best follows this prompt. "
+        "Here are the CSVs:\n\n"
+        "CSV 1:\n"
+        f"'{csv1}'\n\n"
+        "CSV 2:\n"
+        f"'{csv2}'\n\n"
+        "CSV 3:\n"
+        f"'{csv3}'"
+    )
+
+    logging.debug(f"Returning prompt: {prompt}")
+    return prompt
+
+
+def gen_and_get_best_csv(prompt, text, programs, model=None, temperature=None):
     output_texts = []
     for _ in range(3):
         while True:
             try:
                 x_ = openai_prompter(
-                    prompt(text),
+                    prompt(text, programs),
                     model=model,
                     temperature=temperature
                 )
                 x = x_.lstrip("```").rstrip("```")
                 x = x.replace('csv', '')
-                x = x.lstrip('"').rstrip('"')
-                logging.debug(f'Cleaned Response: {x}')
+                # x = x.lstrip('"').rstrip('"')
+                logging.info(f'Cleaned Response: {x}')
                 x_data = StringIO(x)
                 pd.read_csv(x_data, sep=',')
                 logging.info(f'Good Response! Breaking...')
@@ -155,10 +107,9 @@ def gen_and_get_best_csv(prompt, text, model=None, temperature=None):
     csv1, csv2, csv3 = [x for x in output_texts]
 
     if csv1 == csv2 == csv3:
-        csv_to_return = csv1
-        data = StringIO(csv_to_return)
-        df = pd.read_csv(data, sep=',')
-        return df
+        _ = None
+        df = convert_csv_to_df(csv1)
+        return df, _, _
 
     else:
 
@@ -170,7 +121,8 @@ def gen_and_get_best_csv(prompt, text, model=None, temperature=None):
 
         # Run the function until we find a repeated entry or reach maximum trials
         while result is None:
-            best_csv = openai_prompter(choose_best_csv(csv1, csv2, csv3), model='gpt-4', temperature=0.2)
+            best_csv = openai_prompter(choose_best_csv(prompt(text, programs), csv1, csv2, csv3), model='gpt-4',
+                                       temperature=0.2)
             best_csv_list.append(best_csv)
 
             for item in best_csv_list:
@@ -200,16 +152,3 @@ def convert_csv_to_df(csv_string):
     df = pd.read_csv(data, sep=',')
     df = df.dropna(how='all', axis=1)
     return df
-
-# def prompt_pdf_to_csv(pdf_content):
-#     prompt = (
-#         f"I have used a PDF to CSV API to extract the following CSV data. Since this data is extracted from a PDF, "
-#         f"it might not be in a clear or proper format. Your task is to return this information in a well-structured, "
-#         f"properly formatted CSV form. Feel free to modify the structure if needed, including combining or separating "
-#         f"columns, as long as the intended information remains clear and accessible. This information will be displayed "
-#         f"on a study abroad agency website, aiming to provide students with a clear understanding of the costs "
-#         f"associated"
-#         f"with various programs in a specific college. Do not preface the CSV with any additional text — only the CSV "
-#         f"content should be returned. Here is the obtained data: \n'{pdf_content}'")
-#     logging.debug(f"Returning prompt: {prompt}")
-#     return prompt

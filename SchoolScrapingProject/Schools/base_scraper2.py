@@ -133,7 +133,8 @@ class BaseScraper2:
                 Prefix=self.BASE_PATH) if obj.key.endswith(f".{extension}")
         ]
         if items:
-            logging.debug(f'Bucket: "{bucket}" Path: "{self.BASE_PATH}" - Contains the following items: {items}')
+            logging.debug(f'Bucket: "{bucket}" Path: "{self.BASE_PATH}" - Contains the following items: {items}'
+                          f'{self._gen_bucket_url(bucket)}')
             latest_file = get_latest_item(items)
             logging.debug(f'Latest File is: {latest_file}')
             try:
@@ -174,14 +175,16 @@ class BaseScraper2:
         try:
             self.S3.head_object(Bucket=self.SOURCE_BUCKET, Key=dummy_path)
         except Exception as e:
-            # If the 'do_not_remove.txt' file does not exist create it
+            # If the 'do_not_remove' file does not exist create it
             if "Not Found" in str(e):
                 self.S3.put_object(Bucket=self.SOURCE_BUCKET, Key=dummy_path, Body='')
 
         # Generate bucket URL
-        base_url = f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/"
-        bucket_url = f"{base_url}{self.SOURCE_BUCKET}?region={self.REGION}&bucketType=general&prefix={self.BASE_PATH}"
+        return self._gen_bucket_url(self.SOURCE_BUCKET)
 
+    def _gen_bucket_url(self, bucket):
+        base_url = f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/"
+        bucket_url = f"{base_url}{bucket}?region={self.REGION}&bucketType=general&prefix={self.BASE_PATH}"
         return bucket_url
 
     @staticmethod

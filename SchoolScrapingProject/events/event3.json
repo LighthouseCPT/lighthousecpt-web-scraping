@@ -1,13 +1,26 @@
 {
+  "config": {
+    "region": "us-east-2",
+    "source_bucket": "lighthousecpt-schools-source",
+    "csv_bucket": "lighthousecpt-schools-csv",
+    "extra_csv_bucket": "lighthousecpt-schools-csv-extra",
+    "openai_api_key": "LIGHTHOUSECPT_OPENAI_API_KEY",
+    "pdftables_api_key": "BILAL_PDFTABLES_API_KEY",
+    "mode": "SofiaUniversity"
+  },
   "schools": [
     {
-      "name": "WestcliffUniversity",
-      "tuition": "NOT_REQUIRED",
+      "name": "Trine University",
+      "programs": [
+          "Master of Business Administration",
+          "Master of Science in Engineering Management",
+          "Master of Science in Business Analytics",
+          "Master of Science in Information Systems",
+          "Doctor of Information Technology"
+      ],
+      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
       "requirement": {
-        "DBA": "https://www.westcliff.edu/academics/college-of-business/doctor-of-business-administration-dba/#information1",
-        "EdD": "https://www.westcliff.edu/academics/college-of-education/doctorate-of-education-edd/#information1"
+        "graduate": "https://www.trine.edu/international/graduate/international-apply.aspx",
+        "doctor": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
       },
-      "deadline": "NOT_REQUIRED"
-    }
-  ]
-}
+      "deadline": "https://www.trine.edu/online/about/academic-calendar.aspx",
