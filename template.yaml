@@ -5,7 +5,7 @@ Description: >
 
 Globals:
   Function:
-    Timeout: 180
+    Timeout: 900
 
 Resources:
   SchoolScraper:
