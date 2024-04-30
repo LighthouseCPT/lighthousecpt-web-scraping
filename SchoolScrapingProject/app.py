@@ -91,6 +91,8 @@ class App:
             raise ValueError(f"Extra schools in event not in directory: {missing_in_directory}")
 
     def _initiate_school_scraping(self, schools=None):
+        final_returned_msgs = []
+
         for SCHOOL_NAME_AND_INFO in self.event['schools']:
             if schools and SCHOOL_NAME_AND_INFO['name'] not in schools:
                 continue
@@ -112,7 +114,9 @@ class App:
                     returned_msg = scraper.scrape()
                     logger.info(f"ENDED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
                     final_returned_msg = f'[{SCHOOL_NAME}]-[{TYPE}] == {returned_msg}'
-                    return final_returned_msg
+                    final_returned_msgs.append(final_returned_msg)  # append the message to the list
+
+        return ' '.join(final_returned_msgs)
 
     def _isValidUrl(self, url):
         if isinstance(url, str):

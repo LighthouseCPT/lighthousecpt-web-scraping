@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added return logics with messages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
-    </list>
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added additional return messages" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +216,7 @@
       <workItem from="1714408318888" duration="792000" />
       <workItem from="1714417134576" duration="9648000" />
       <workItem from="1714489179813" duration="2115000" />
-      <workItem from="1714493642496" duration="15328000" />
+      <workItem from="1714493642496" duration="15737000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -605,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714508670214</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="added additional return messages">
+      <option name="closed" value="true" />
+      <created>1714509694204</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1714509694204</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -660,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added McDanielCollege and MonroeCollege parts!" />
     <MESSAGE value="Added CaliforniaInstituteofAdvancedManagement_Requiremen parts!" />
     <MESSAGE value="Instead of having a py file for each school, I created 1 main SchoolScraper file that imports and instantiates all the classes." />
     <MESSAGE value="INcrease AWS Lambda timeout from 30s to 180s" />
@@ -685,7 +689,8 @@
     <MESSAGE value="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
     <MESSAGE value="Updated how logs are returned" />
     <MESSAGE value="added return logics with messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added return logics with messages" />
+    <MESSAGE value="added additional return messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added additional return messages" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714506456736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
