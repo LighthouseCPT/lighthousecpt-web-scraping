@@ -1,15 +1,15 @@
+import importlib
 import json
 import os
 from urllib.parse import urlparse
 import boto3
-from Schools.utils import get_school_names, check_api_key
+from Schools.base_scraper import BaseScraper
+from Schools.utils import get_school_names, check_api_key, download_s3_bucket_contents
 from log_config import configure_logger
-from Schools.SchoolScraper import SchoolScraper
-
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
-class MainSchoolScraper:
+class App:
     TYPES = ['tuition', 'requirement', 'deadline']
     ALLOWED_VALUES = ['PDF_TXT', 'PDF_CSV', 'RAW_TXT', 'RAW_CSV', 'SKIP']  # OR a 'URL to a webpage'
 
@@ -51,7 +51,7 @@ class MainSchoolScraper:
         else:
             error_msg = (f"Schools specified in mode here: {specified_schools} are not valid. "
                          f"Must be 'all' or one or multiple of: {self.dir_schools}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             raise ValueError(error_msg)
 
     def _validate_event(self):
@@ -62,7 +62,7 @@ class MainSchoolScraper:
 
             if len(missing_keywords) > 0:
                 missing_keywords_error = f"Missing keywords {missing_keywords} for school: {school_name}"
-                logging.error(missing_keywords_error)
+                logger.error(missing_keywords_error)
                 raise ValueError(missing_keywords_error)
 
             for keyword in self.TYPES:
@@ -71,47 +71,45 @@ class MainSchoolScraper:
                         f"Incorrect value {school[keyword]} for keyword: {keyword} of school: {school_name}."
                         f" Must be a 'URL to a webpage' or one of {self.ALLOWED_VALUES}"
                     )
-                    logging.error(invalid_value_error)
+                    logger.error(invalid_value_error)
                     raise ValueError(invalid_value_error)
 
-        logging.debug(f"Valid event: {json.dumps(self.event, indent=4)}")
+        logger.debug(f"Valid event: {json.dumps(self.event, indent=4)}")
 
     def _missing_schools(self):
-        logging.debug(f"Directory Schools: {self.dir_schools}")
-        logging.debug(f"Event Schools: {self.event_schools}")
+        logger.debug(f"Directory Schools: {self.dir_schools}")
+        logger.debug(f"Event Schools: {self.event_schools}")
         missing_in_event = [school for school in self.dir_schools if school not in self.event_schools]
         missing_in_directory = [school for school in self.event_schools if school not in self.dir_schools]
 
         if len(missing_in_event) > 0:
-            logging.error(f"Missing schools in event: {missing_in_event}")
+            logger.error(f"Missing schools in event: {missing_in_event}")
             raise ValueError(f"Missing schools in event: {missing_in_event}")
         if len(missing_in_directory) > 0:
-            logging.error(f"Extra schools in event not in directory: {missing_in_directory}")
+            logger.error(f"Extra schools in event not in directory: {missing_in_directory}")
             raise ValueError(f"Extra schools in event not in directory: {missing_in_directory}")
 
     def _initiate_school_scraping(self, schools=None):
-        if schools:
-            for SCHOOL_NAME_AND_INFO in self.event['schools']:
-                if SCHOOL_NAME_AND_INFO['name'] in schools:
-                    SchoolScraper(
-                        self.region,
-                        self.source_bucket,
-                        self.csv_bucket,
-                        self.extra_csv_bucket,
-                        SCHOOL_NAME_AND_INFO,
-                        self.TYPES
-                    )
+        for SCHOOL_NAME_AND_INFO in self.event['schools']:
+            if schools and SCHOOL_NAME_AND_INFO['name'] not in schools:
+                continue
 
-        else:
-            for SCHOOL_NAME_AND_INFO in self.event['schools']:
-                SchoolScraper(
-                    self.region,
-                    self.source_bucket,
-                    self.csv_bucket,
-                    self.extra_csv_bucket,
-                    SCHOOL_NAME_AND_INFO,
-                    self.TYPES
-                )
+            SCHOOL_NAME = SCHOOL_NAME_AND_INFO['name']
+            PROGRAMS = SCHOOL_NAME_AND_INFO['programs']
+            base_path = f"Schools.{SCHOOL_NAME}"
+
+            for TYPE in self.TYPES:
+                if SCHOOL_NAME_AND_INFO.get(TYPE) != "SKIP":
+                    logger.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
+                    module_path = f"{base_path}.{TYPE}.{TYPE}"
+                    func_name = f"{SCHOOL_NAME}_{TYPE}"
+                    EXTRACTING_LOGIC = getattr(importlib.import_module(module_path), func_name)
+                    INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
+                    scraper = BaseScraper(self.region, self.source_bucket, self.csv_bucket, self.extra_csv_bucket,
+                                          SCHOOL_NAME,
+                                          TYPE, INFO, PROGRAMS, EXTRACTING_LOGIC)
+                    scraper.scrape()
+                    logger.info(f"COMPLETED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
 
     def _isValidUrl(self, url):
         if isinstance(url, str):
@@ -131,8 +129,9 @@ class MainSchoolScraper:
 
 
 def lambda_handler(event, context):
-    scraper = MainSchoolScraper(event)
+    scraper = App(event)
     scraper.scrape_and_save()
+    return {'logs': '\n'.join(logger.get_logs())}
 
 
 # The following is solely for local testing; AWS Lambda will NOT execute it.

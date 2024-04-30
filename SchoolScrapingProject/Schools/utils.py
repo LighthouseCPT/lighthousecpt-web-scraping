@@ -8,7 +8,7 @@ from datetime import datetime
 from bs4 import NavigableString
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 def float_to_decimal(value):
@@ -153,7 +153,7 @@ def check_api_key(api_key):
     try:
         client = OpenAI(api_key=api_key)
         client.models.list()
-        logging.info('API Key Authentication Successful')
+        logger.info('API Key Authentication Successful')
         return api_key
     except AuthenticationError:
         error_msg = 'API Key Authentication Unsuccessful'

@@ -9,7 +9,7 @@ import pandas as pd
 import boto3
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 class BaseScraper2:
@@ -34,9 +34,9 @@ class BaseScraper2:
         try:
             S3_PATH = f"{self.BASE_PATH}{self.HTML_FILENAME}"
             self.S3.put_object(Bucket=self.SOURCE_BUCKET, Key=S3_PATH, Body=page.text.encode('utf-8'))
-            logging.info(f'Successfully saved to: {S3_PATH}')
+            logger.info(f'Successfully saved to: {S3_PATH}')
         except Exception as e:
-            logging.error(f'S3 put object error: {e}')
+            logger.error(f'S3 put object error: {e}')
             raise
 
     def save_csv_to_s3(self, df):
@@ -48,9 +48,9 @@ class BaseScraper2:
             self.S3.put_object(Bucket=self.CSV_BUCKET, Key=S3_PATH, Body=csv_buffer.getvalue())
             s3_console_url = (f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/{self.CSV_BUCKET}?"
                               f"region={self.REGION}&bucketType=general&prefix={S3_PATH}")
-            logging.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
+            logger.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
         except Exception as e:
-            logging.error(f'S3 put object error: {e}')
+            logger.error(f'S3 put object error: {e}')
             raise
 
     def save_extra_csv_to_s3(self, *dfs):
@@ -63,9 +63,9 @@ class BaseScraper2:
                 self.S3.put_object(Bucket=self.EXTRA_CSV_BUCKET, Key=S3_PATH, Body=csv_buffer.getvalue())
                 s3_console_url = (f"https://{self.REGION}.console.aws.amazon.com/s3/buckets/{self.EXTRA_CSV_BUCKET}?"
                                   f"region={self.REGION}&bucketType=general&prefix={S3_PATH}")
-                logging.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
+                logger.info(f'Successfully saved to: {S3_PATH}. URL: {s3_console_url}')
         except Exception as e:
-            logging.error(f'S3 put object error: {e}')
+            logger.error(f'S3 put object error: {e}')
             raise
 
     def save_raw_txt_to_s3(self, txt):
@@ -74,18 +74,18 @@ class BaseScraper2:
             txt_buffer = io.StringIO(txt)
             txt_buffer.seek(0)
             self.S3.put_object(Bucket=self.SOURCE_BUCKET, Key=S3_PATH, Body=txt_buffer.getvalue())
-            logging.info(f'Successfully saved to: {S3_PATH}')
+            logger.info(f'Successfully saved to: {S3_PATH}')
         except Exception as e:
-            logging.error(f'S3 put object error: {e}')
+            logger.error(f'S3 put object error: {e}')
             raise
 
     def save_raw_csv_to_s3(self, csv_bytes):
         try:
             S3_PATH = f"{self.BASE_PATH}{self.CSV_FILENAME}"
             self.S3.put_object(Bucket=self.SOURCE_BUCKET, Key=S3_PATH, Body=csv_bytes)
-            logging.info(f'Successfully saved to: {S3_PATH}')
+            logger.info(f'Successfully saved to: {S3_PATH}')
         except Exception as e:
-            logging.error(f'S3 put object error: {e}')
+            logger.error(f'S3 put object error: {e}')
             raise
 
     def get_latest_csv_from_s3(self):
@@ -118,9 +118,9 @@ class BaseScraper2:
         try:
             S3_PATH = f"{self.BASE_PATH}{self.PDF_FILENAME}"
             self.S3.delete_object(Bucket=self.SOURCE_BUCKET, Key=S3_PATH)
-            logging.info(f'Successfully deleted the file: {self.PDF_FILENAME}')
+            logger.info(f'Successfully deleted the file: {self.PDF_FILENAME}')
         except Exception as e:
-            logging.error(f'Error deleting the file: {str(e)}')
+            logger.error(f'Error deleting the file: {str(e)}')
             raise
 
     def _get_latest_file_from_s3(self, bucket: str, extension: Literal['csv', 'txt']):
@@ -133,10 +133,10 @@ class BaseScraper2:
                 Prefix=self.BASE_PATH) if obj.key.endswith(f".{extension}")
         ]
         if items:
-            logging.debug(f'Bucket: "{bucket}" Path: "{self.BASE_PATH}" - Contains the following items: {items}'
+            logger.debug(f'Bucket: "{bucket}" Path: "{self.BASE_PATH}" - Contains the following items: {items}'
                           f'{self._gen_bucket_url(bucket)}')
             latest_file = get_latest_item(items)
-            logging.debug(f'Latest File is: {latest_file}')
+            logger.debug(f'Latest File is: {latest_file}')
             try:
                 S3_PATH = f"{self.BASE_PATH}{latest_file}"
                 file_content = self._get_file_from_s3(bucket, S3_PATH)  # get the content from S3
@@ -147,7 +147,7 @@ class BaseScraper2:
                 elif extension == 'txt':
                     return file_content.decode()
             except Exception as e:
-                logging.error(f'S3 get object error: {str(e)}')
+                logger.error(f'S3 get object error: {str(e)}')
                 raise
         else:
             upload_url = self._get_or_create_directory()
@@ -160,10 +160,10 @@ class BaseScraper2:
         try:
             obj = self.S3.get_object(Bucket=bucket, Key=path)
             file_content = obj['Body'].read()
-            logging.debug(f'Successfully read from: {path}')
+            logger.debug(f'Successfully read from: {path}')
             return file_content
         except Exception as e:
-            logging.error(f'S3 get object error: {str(e)}')
+            logger.error(f'S3 get object error: {str(e)}')
             raise
 
     def _get_or_create_directory(self):
@@ -193,10 +193,10 @@ class BaseScraper2:
             headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, '
                                      'like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
             page = requests.get(url, headers=headers)
-            logging.debug(f'Successfully made request to: {url}')
+            logger.debug(f'Successfully made request to: {url}')
             return page
         except requests.RequestException as e:
-            logging.error(f'Request error: {e}')
+            logger.error(f'Request error: {e}')
             raise
 
     @staticmethod

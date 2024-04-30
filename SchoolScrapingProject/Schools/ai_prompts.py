@@ -1,5 +1,5 @@
 from log_config import configure_logger
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 # def extract_dates_to_csv_old(text):
@@ -13,7 +13,7 @@ logging = configure_logger(__name__)
 #         f"Dates should be in 'YYYY-MM-DD' format and terms like 'Fall 2023', 'Spring 2024'. "
 #         f"The information should be presented in a clean, organized, and unique CSV-like format. "
 #         f"Here is the text to process:\n'{text}'")
-#     logging.debug(f"Returning prompt: {prompt}")
+#     logger.debug(f"Returning prompt: {prompt}")
 #     return prompt
 
 
@@ -30,7 +30,7 @@ def extract_tuition_to_csv_old(text):
         f"prefixed with a dollar sign. Here is the obtained data: "
         f"\n'{text}'")
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -51,7 +51,7 @@ def extract_tuition_to_csv(text, programs):
         f"No additional textual information should be included in the CSV. "
         f"Here's the data that needs to be converted:\n'{text}'")
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -73,7 +73,7 @@ def extract_tuition_to_csv_old2(text, programs):
         f"commas appropriately. If text is enclosed in quotes, consider it as a single item, even if it contains "
         f"commas. Here is the collected data:\n'{text}'")
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -92,7 +92,7 @@ def extract_dates_to_csv(text, programs):
         f"Avoid any additional bibliographical conversation or content in the response. "
         f"Here's the data that needs to be converted:\n'{text}'")
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -109,7 +109,7 @@ def extract_requirement_to_csv(text, programs):
         f"formatted correctly for ease of understanding. "
         f"Here's the data that needs to be converted:\n'{text}'")
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 # def prompt_pdf_to_csv(pdf_content):
@@ -122,5 +122,5 @@ def extract_requirement_to_csv(text, programs):
 #         f"associated"
 #         f"with various programs in a specific college. Do not preface the CSV with any additional text — only the CSV "
 #         f"content should be returned. Here is the obtained data: \n'{pdf_content}'")
-#     logging.debug(f"Returning prompt: {prompt}")
+#     logger.debug(f"Returning prompt: {prompt}")
 #     return prompt

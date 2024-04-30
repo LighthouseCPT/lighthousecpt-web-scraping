@@ -9,7 +9,7 @@ from ...utils import (make_request,
 import pandas as pd
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 class TuitionScraper(BaseScraper):

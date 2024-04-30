@@ -6,7 +6,7 @@ from Schools.base_scraper2 import BaseScraper2
 from pdftables import PDFTables
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 class BaseScraper(BaseScraper2):
@@ -40,9 +40,9 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(all_text)
             except FileNotFoundError as e:
-                logging.warn(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
-                             f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
-                             f'please choose RAW_TXT. (Additional Information: {e})')
+                logger.warn(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
+                            f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
+                            f'please choose RAW_TXT. (Additional Information: {e})')
 
         elif self.INFO == 'RAW_TXT':
             try:
@@ -50,8 +50,8 @@ class BaseScraper(BaseScraper2):
                 cleaned_text = self.EXTRACTING_LOGIC(raw_text_string)
                 self._gen_and_save_csv(cleaned_text)
             except FileNotFoundError as e:
-                logging.warn(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
-                             f' (Additional Information: {e})')
+                logger.warn(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
+                            f' (Additional Information: {e})')
 
         elif self.INFO == 'PDF_CSV':
             try:
@@ -61,9 +61,9 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(csv)
             except FileNotFoundError as e:
-                logging.warn(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
-                             f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
-                             f'please choose RAW_CSV. (Additional Information: {e})')
+                logger.warn(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
+                            f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
+                            f'please choose RAW_CSV. (Additional Information: {e})')
 
         elif self.INFO == 'PDF_CSV':
 
@@ -96,9 +96,9 @@ class BaseScraper(BaseScraper2):
 
     def _handle_existing_scrape(self, scraped_text, fresh_scraped_text):
         if scraped_text == fresh_scraped_text:
-            logging.info("Website HAS NOT changed, skipping...")
+            logger.info("Website HAS NOT changed, skipping...")
         else:
-            logging.info("Website HAS changed, continuing...")
+            logger.info("Website HAS changed, continuing...")
             self.save_raw_txt_to_s3(fresh_scraped_text)
             self._gen_and_save_csv(fresh_scraped_text)
 

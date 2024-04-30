@@ -4,7 +4,7 @@ import pandas as pd
 from openai import OpenAI
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 def openai_prompter(prompt, model=None, temperature=None):
@@ -19,10 +19,10 @@ def openai_prompter(prompt, model=None, temperature=None):
         )
         response = completion.choices[0].message.content
         msg = f"Successfully generated response: {response}"
-        logging.debug(msg)
+        logger.debug(msg)
         return completion.choices[0].message.content
     except Exception as e:
-        logging.error(f"Unable to generate response: {str(e)}")
+        logger.error(f"Unable to generate response: {str(e)}")
 
 
 # def get_confident_response(prompt, identical_responses_needed=2, max_attempts=10, model=None, temperature=None):
@@ -36,11 +36,11 @@ def openai_prompter(prompt, model=None, temperature=None):
 #             break
 #     else:
 #         error_msg = f"The script did not produce matching responses in the given {max_attempts} attempts."
-#         logging.error(error_msg)
+#         logger.error(error_msg)
 #         raise Exception(error_msg)
 #
 #     success_msg = f"The responses matched {identical_responses_needed} times: {current_response}"
-#     logging.info(success_msg)
+#     logger.info(success_msg)
 #     return current_response
 
 
@@ -59,7 +59,7 @@ def choose_best_csv_old(csv1, csv2, csv3):
         f"'{csv3}'"
     )
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -77,7 +77,7 @@ def choose_best_csv(used_prompt, csv1, csv2, csv3):
         f"'{csv3}'"
     )
 
-    logging.debug(f"Returning prompt: {prompt}")
+    logger.debug(f"Returning prompt: {prompt}")
     return prompt
 
 
@@ -94,14 +94,14 @@ def gen_and_get_best_csv(prompt, text, programs, model=None, temperature=None):
                 x = x_.lstrip("```").rstrip("```")
                 x = x.replace('csv', '')
                 # x = x.lstrip('"').rstrip('"')
-                logging.info(f'Cleaned Response: {x}')
+                logger.info(f'Cleaned Response: {x}')
                 x_data = StringIO(x)
                 pd.read_csv(x_data, sep=',')
-                logging.info(f'Good Response! Breaking...')
+                logger.info(f'Good Response! Breaking...')
                 output_texts.append(x)
                 break
             except pd.errors.ParserError as e:
-                logging.warn(f'{str(e)}, Continuing...')
+                logger.warn(f'{str(e)}, Continuing...')
                 continue
 
     csv1, csv2, csv3 = [x for x in output_texts]

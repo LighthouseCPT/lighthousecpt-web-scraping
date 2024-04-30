@@ -3,7 +3,7 @@ from .Requirement.Requirement import RequirementScraper
 from .Deadline.Deadline import DeadlineScraper
 from log_config import configure_logger
 
-logging = configure_logger(__name__)
+logger = configure_logger(__name__)
 
 
 class TrineUniversityScraper:
