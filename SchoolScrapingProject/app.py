@@ -91,7 +91,7 @@ class App:
             raise ValueError(f"Extra schools in event not in directory: {missing_in_directory}")
 
     def _initiate_school_scraping(self, schools=None):
-        final_returned_msgs = []
+        final_returned_msgs = {}
 
         for SCHOOL_NAME_AND_INFO in self.event['schools']:
             if schools and SCHOOL_NAME_AND_INFO['name'] not in schools:
@@ -107,15 +107,22 @@ class App:
                     func_name = f"{SCHOOL_NAME}_{TYPE}"
                     EXTRACTING_LOGIC = getattr(importlib.import_module(module_path), func_name)
                     INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
+
                     logger.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]-[{INFO}]")
                     scraper = BaseScraper(self.region, self.source_bucket, self.csv_bucket, self.extra_csv_bucket,
-                                          SCHOOL_NAME,
-                                          TYPE, INFO, PROGRAMS, EXTRACTING_LOGIC)
+                                          SCHOOL_NAME, TYPE, INFO, PROGRAMS, EXTRACTING_LOGIC)
                     returned_msg = scraper.scrape()
+
                     logger.info(f"ENDED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]-[{INFO}]")
-                    final_returned_msg = f'[{SCHOOL_NAME}]-[{TYPE}]-[{INFO}] == {returned_msg}'
-                    final_returned_msgs.append(final_returned_msg)  # append the message to the list
-        return '\n'.join(final_returned_msgs)
+
+                    # Create or update the record for this combination of school and type
+                    key = f'{SCHOOL_NAME}-{TYPE}'
+                    final_returned_msgs[key] = {
+                        'info': INFO,
+                        'message': returned_msg
+                    }
+
+        return final_returned_msgs
 
     def _isValidUrl(self, url):
         if isinstance(url, str):
