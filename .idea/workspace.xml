@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Updated how logs are returned">
+      <change afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/log_config.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,10 +75,11 @@
     "Python.SchoolScrapingProject.executor": "Run",
     "Python.TranslatorProject.executor": "Run",
     "Python.app.executor": "Run",
+    "Python.json_builder.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/Schools",
+    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/events",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,11 +100,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SchoolScrapingProject/events" />
       <recent name="$PROJECT_DIR$/SchoolScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/TranslatorProject" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition" />
-      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SchoolScrapingProject" />
@@ -215,7 +223,7 @@
       <workItem from="1714408318888" duration="792000" />
       <workItem from="1714417134576" duration="9648000" />
       <workItem from="1714489179813" duration="2115000" />
-      <workItem from="1714493642496" duration="7341000" />
+      <workItem from="1714493642496" duration="14307000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -585,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714500655622</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Updated how logs are returned">
+      <option name="closed" value="true" />
+      <created>1714501047223</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1714501047223</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -640,7 +656,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added MonroeCollege" />
     <MESSAGE value="merged Nick's code with mine" />
     <MESSAGE value="Added McDanielCollege and MonroeCollege parts!" />
     <MESSAGE value="Added CaliforniaInstituteofAdvancedManagement_Requiremen parts!" />
@@ -665,11 +680,13 @@
     <MESSAGE value="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation" />
     <MESSAGE value="Update AI Prompts to output better CSVs" />
     <MESSAGE value="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
+    <MESSAGE value="Updated how logs are returned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated how logs are returned" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714500125536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714506456736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$json_builder.coverage" NAME="json_builder Coverage Results" MODIFIED="1714505120354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

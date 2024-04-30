@@ -1,0 +1,105 @@
+{
+  "schools": [
+    {
+      "name": "TrineUniversity",
+      "programs": [
+        "Master of Business Administration",
+        "Master of Science in Engineering Management",
+        "Master of Science in Business Analytics",
+        "Master of Science in Information Systems",
+        "Doctor of Information Technology"
+      ],
+      "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
+      "requirement": {
+        "graduate": "https://www.trine.edu/international/graduate/international-apply.aspx",
+        "doctor": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
+      },
+      "deadline": "https://www.trine.edu/online/about/academic-calendar.aspx"
+    },
+    {
+      "name": "NewEnglandCollege",
+      "programs": [
+        "Executive M.S. in Project Management & IT",
+        "Executive M.S. in Data Analytics",
+        "Executive M.S. in Information Technology and Cybersecurity",
+        "Executive M.B.A. in Business Administration"
+      ],
+      "tuition": "SKIP",
+      "requirement": "https://www.nec.edu/international",
+      "deadline": "https://newengland.viewpage.co/International-Graduate-Admission-Start-Terms_ONCAMPUS"
+    },
+    {
+      "name": "MonroeCollege",
+      "programs": [
+        "MBA",
+        "MS in Computer Science",
+        "MS in Forensic Psychology",
+        "MS in Accounting",
+        "MS in Data Science",
+        "Data Science Certificate"
+      ],
+      "tuition": "RAW_CSV",
+      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
+      "deadline": "https://www.monroecollege.edu/academics/academic-calendar-and-resources"
+    },
+    {
+      "name": "McDanielCollege",
+      "programs": [
+        "M.S. in Data Analytics"
+      ],
+      "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
+      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
+      "deadline": "https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
+    },
+    {
+      "name": "CaliforniaInstituteOfAdvancedManagement",
+      "programs": [
+        "MBA"
+      ],
+      "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
+      "requirement": "RAW_TXT",
+      "deadline": "https://www.ciam.edu/apply-today"
+    },
+    {
+      "name": "WestcliffUniversity",
+      "programs": [
+        "MBA",
+        "Master of Computer Science",
+        "Master of Engineering Management",
+        "Master of Information Technology",
+        "MA in TESOL",
+        "Doctorate of Business Administration",
+        "Doctor of Education in Leadership, Curriculum, and Instruction"
+      ],
+      "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
+      "requirement": "RAW_CSV",
+      "deadline": "RAW_CSV"
+    },
+    {
+      "name": "SofiaUniversity",
+      "programs": [
+        "MBA",
+        "MS in Computer Science",
+        "Doctor of Business Administration (D.B.A)"
+      ],
+      "tuition": "RAW_CSV",
+      "requirement": "RAW_CSV",
+      "deadline": "https://www.sofia.edu/admissions/"
+    },
+    {
+      "name": "StFrancisCollege",
+      "programs": [
+        "M.S. in Management (Business Management)",
+        "M.S. in Management (Digital Marketing)",
+        "M.S. in Management (Health Care Management)",
+        "M.S. in Management (Hybrid Executive Professional)",
+        "M.S. in Management (Information Technology)",
+        "M.S. in Management (Project Management)",
+        "M.S. in Management (Social Innovation & Entrepreneurship)"
+      ],
+      "tuition": "SKIP",
+      "requirement": "SKIP",
+      "deadline": "RAW_TXT"
+    }
+  ]
+}

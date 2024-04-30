@@ -6,6 +6,7 @@ import boto3
 from Schools.base_scraper import BaseScraper
 from Schools.utils import get_school_names, check_api_key, download_s3_bucket_contents
 from log_config import configure_logger
+
 logger = configure_logger(__name__)
 
 
@@ -33,13 +34,13 @@ class App:
         self._validate_event()
 
         if self.mode == 'all':
-            self._all_mode()
+            return self._all_mode()
         else:
-            self._specified_mode()
+            return self._specified_mode()
 
     def _all_mode(self):
         if set(self.event_schools) == set(self.dir_schools):
-            self._initiate_school_scraping()
+            return self._initiate_school_scraping()
         else:
             self._missing_schools()
 
@@ -47,7 +48,7 @@ class App:
         specified_schools = [school.strip() for school in self.mode.split(',')]
         if (set(specified_schools).issubset(set(self.event_schools)) and
                 set(specified_schools).issubset(set(self.dir_schools))):
-            self._initiate_school_scraping(specified_schools)
+            return self._initiate_school_scraping(specified_schools)
         else:
             error_msg = (f"Schools specified in mode here: {specified_schools} are not valid. "
                          f"Must be 'all' or one or multiple of: {self.dir_schools}")
@@ -108,8 +109,10 @@ class App:
                     scraper = BaseScraper(self.region, self.source_bucket, self.csv_bucket, self.extra_csv_bucket,
                                           SCHOOL_NAME,
                                           TYPE, INFO, PROGRAMS, EXTRACTING_LOGIC)
-                    scraper.scrape()
-                    logger.info(f"COMPLETED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
+                    returned_msg = scraper.scrape()
+                    logger.info(f"ENDED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
+                    final_returned_msg = f'[{SCHOOL_NAME}]-[{TYPE}] == {returned_msg}'
+                    return final_returned_msg
 
     def _isValidUrl(self, url):
         if isinstance(url, str):
@@ -130,9 +133,7 @@ class App:
 
 def lambda_handler(event, context):
     scraper = App(event)
-    scraper.scrape_and_save()
-    logs_dict = {i+1: log for i, log in enumerate(logger.get_logs())}
-    return {'logs': logs_dict}
+    return scraper.scrape_and_save()
 
 
 # The following is solely for local testing; AWS Lambda will NOT execute it.

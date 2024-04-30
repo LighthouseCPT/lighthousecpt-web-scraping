@@ -40,9 +40,11 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(all_text)
             except FileNotFoundError as e:
-                logger.warn(f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
-                            f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
-                            f'please choose RAW_TXT. (Additional Information: {e})')
+                msg = (f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
+                       f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
+                       f'please choose RAW_TXT. (Additional Information: {e})')
+                logger.warn(msg)
+                return msg
 
         elif self.INFO == 'RAW_TXT':
             try:
@@ -50,8 +52,10 @@ class BaseScraper(BaseScraper2):
                 cleaned_text = self.EXTRACTING_LOGIC(raw_text_string)
                 self._gen_and_save_csv(cleaned_text)
             except FileNotFoundError as e:
-                logger.warn(f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
-                            f' (Additional Information: {e})')
+                msg = (f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
+                       f' (Additional Information: {e})')
+                logger.warn(msg)
+                return msg
 
         elif self.INFO == 'PDF_CSV':
             try:
@@ -59,27 +63,27 @@ class BaseScraper(BaseScraper2):
                 csv = PDFTables(os.getenv('PDFTABLES_API_KEY')).csv(pdf)
                 self.save_raw_csv_to_s3(csv)
                 self.delete_pdf_from_s3()
-                self._gen_and_save_csv(csv)
+                csv = self.EXTRACTING_LOGIC(csv)
+                readable_csv_string = self.make_csv_readable(csv)
+                self._gen_and_save_csv(readable_csv_string)
             except FileNotFoundError as e:
-                logger.warn(f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
-                            f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
-                            f'please choose RAW_CSV. (Additional Information: {e})')
-
-        elif self.INFO == 'PDF_CSV':
-
-            pdf = self.get_pdf_from_s3()
-            csv = PDFTables(os.getenv('PDFTABLES_API_KEY')).csv(pdf)
-            self.save_raw_csv_to_s3(csv)
-            self.delete_pdf_from_s3()
-            raw_csv_string = self.get_latest_raw_csv_from_s3()
-            readable_csv_string = self.make_csv_readable(raw_csv_string)
-            df = self.EXTRACTING_LOGIC(readable_csv_string)
-            self.save_csv_to_s3(df)
+                msg = (f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
+                       f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
+                       f'please choose RAW_CSV. (Additional Information: {e})')
+                logger.warn(msg)
+                return msg
 
         elif self.INFO == 'RAW_CSV':
-            raw_csv_string = self.get_latest_raw_csv_from_s3()
-            readable_csv_string = self.make_csv_readable(raw_csv_string)
-            self._gen_and_save_csv(readable_csv_string)
+            try:
+                csv_from_s3 = self.get_latest_raw_csv_from_s3()
+                csv = self.EXTRACTING_LOGIC(csv_from_s3)
+                readable_csv_string = self.make_csv_readable(csv)
+                self._gen_and_save_csv(readable_csv_string)
+            except FileNotFoundError as e:
+                msg = (f'As RAW_CSV was chosen, a CSV file was anticipated to generate and save a new CSV.'
+                       f' (Additional Information: {e})')
+                logger.warn(msg)
+                return msg
 
         else:  # URLs
             self.process_urls()
@@ -96,7 +100,7 @@ class BaseScraper(BaseScraper2):
 
     def _handle_existing_scrape(self, scraped_text, fresh_scraped_text):
         if scraped_text == fresh_scraped_text:
-            logger.info("Website HAS NOT changed, skipping...")
+            logger.info("Website has NOT changed, skipping...")
         else:
             logger.info("Website HAS changed, continuing...")
             self.save_raw_txt_to_s3(fresh_scraped_text)
@@ -109,7 +113,7 @@ class BaseScraper(BaseScraper2):
     def _gen_and_save_csv(self, text):
         df1, df2, df3 = gen_and_get_best_csv(self.prompt,
                                              text, self.PROGRAMS,
-                                             model='gpt-4',
+                                             model='gpt-4-turbo',
                                              temperature=0.4)
         self.save_csv_to_s3(df1)
 
