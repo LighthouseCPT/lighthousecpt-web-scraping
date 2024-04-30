@@ -103,20 +103,19 @@ class App:
 
             for TYPE in self.TYPES:
                 if SCHOOL_NAME_AND_INFO.get(TYPE) != "SKIP":
-                    logger.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
                     module_path = f"{base_path}.{TYPE}.{TYPE}"
                     func_name = f"{SCHOOL_NAME}_{TYPE}"
                     EXTRACTING_LOGIC = getattr(importlib.import_module(module_path), func_name)
                     INFO = SCHOOL_NAME_AND_INFO.get(TYPE)
+                    logger.info(f"STARTED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]-[{INFO}]")
                     scraper = BaseScraper(self.region, self.source_bucket, self.csv_bucket, self.extra_csv_bucket,
                                           SCHOOL_NAME,
                                           TYPE, INFO, PROGRAMS, EXTRACTING_LOGIC)
                     returned_msg = scraper.scrape()
-                    logger.info(f"ENDED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]")
-                    final_returned_msg = f'[{SCHOOL_NAME}]-[{TYPE}] == {returned_msg}'
+                    logger.info(f"ENDED SCRAPING: [{SCHOOL_NAME}]-[{TYPE}]-[{INFO}]")
+                    final_returned_msg = f'[{SCHOOL_NAME}]-[{TYPE}]-[{INFO}] == {returned_msg}'
                     final_returned_msgs.append(final_returned_msg)  # append the message to the list
-
-        return ' '.join(final_returned_msgs)
+        return '\n'.join(final_returned_msgs)
 
     def _isValidUrl(self, url):
         if isinstance(url, str):
