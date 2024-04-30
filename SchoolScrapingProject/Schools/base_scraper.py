@@ -39,6 +39,7 @@ class BaseScraper(BaseScraper2):
                 self.save_raw_txt_to_s3(all_text)
                 self.delete_pdf_from_s3()
                 self._gen_and_save_csv(all_text)
+                return "Scraped and saved raw data, then generated and saved CSV to S3"
             except FileNotFoundError as e:
                 msg = (f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
                        f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
@@ -51,6 +52,7 @@ class BaseScraper(BaseScraper2):
                 raw_text_string = self.get_latest_raw_text_from_s3()
                 cleaned_text = self.EXTRACTING_LOGIC(raw_text_string)
                 self._gen_and_save_csv(cleaned_text)
+                return "Scraped and saved raw data, then generated and saved CSV to S3"
             except FileNotFoundError as e:
                 msg = (f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV.'
                        f' (Additional Information: {e})')
@@ -66,6 +68,7 @@ class BaseScraper(BaseScraper2):
                 csv = self.EXTRACTING_LOGIC(csv)
                 readable_csv_string = self.make_csv_readable(csv)
                 self._gen_and_save_csv(readable_csv_string)
+                return "Scraped and saved raw data, then generated and saved CSV to S3"
             except FileNotFoundError as e:
                 msg = (f'As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
                        f'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
@@ -79,6 +82,7 @@ class BaseScraper(BaseScraper2):
                 csv = self.EXTRACTING_LOGIC(csv_from_s3)
                 readable_csv_string = self.make_csv_readable(csv)
                 self._gen_and_save_csv(readable_csv_string)
+                return "Scraped and saved raw data, then generated and saved CSV to S3"
             except FileNotFoundError as e:
                 msg = (f'As RAW_CSV was chosen, a CSV file was anticipated to generate and save a new CSV.'
                        f' (Additional Information: {e})')
@@ -86,25 +90,31 @@ class BaseScraper(BaseScraper2):
                 return msg
 
         else:  # URLs
-            self.process_urls()
+            return self.process_urls()
 
     def process_urls(self):
         try:
             scraped_text_from_s3 = self.get_latest_raw_text_from_s3()
             fresh_scraped_text = self._extract_scraped_text()
-            self._handle_existing_scrape(scraped_text_from_s3, fresh_scraped_text)
+            return self._handle_existing_scrape(scraped_text_from_s3, fresh_scraped_text)
         except FileNotFoundError:
             fresh_scraped_text = self._extract_scraped_text()
             self.save_raw_txt_to_s3(fresh_scraped_text)
             self._gen_and_save_csv(fresh_scraped_text)
+            return "Scraped and saved raw data, then generated and saved CSV to S3"
 
     def _handle_existing_scrape(self, scraped_text, fresh_scraped_text):
         if scraped_text == fresh_scraped_text:
-            logger.info("Website has NOT changed, skipping...")
+            msg = "Newly scraped data matches existing data in S3 bucket, no updates necessary"
+            logger.info(msg)
+            return msg
+
         else:
-            logger.info("Website HAS changed, continuing...")
             self.save_raw_txt_to_s3(fresh_scraped_text)
             self._gen_and_save_csv(fresh_scraped_text)
+            msg = "Newly scraped data DID NOT match existing data in S3 bucket, updated new CSV"
+            logger.info(msg)
+            return msg
 
     def _request_and_extract(self):
         source = self.make_request(self.INFO)
