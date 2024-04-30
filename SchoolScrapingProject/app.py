@@ -131,7 +131,8 @@ class App:
 def lambda_handler(event, context):
     scraper = App(event)
     scraper.scrape_and_save()
-    return {'logs': '\n'.join(logger.get_logs())}
+    logs_dict = {i+1: log for i, log in enumerate(logger.get_logs())}
+    return {'logs': logs_dict}
 
 
 # The following is solely for local testing; AWS Lambda will NOT execute it.

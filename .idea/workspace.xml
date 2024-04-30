@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="Update AI Prompts to output better CSVs">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sam-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sam-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/requirement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SchoolScraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/SofiaUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/.ipynb_checkpoints/SofiaUniversity-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/.ipynb_checkpoints/TrineUniversity-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/.ipynb_checkpoints/Tuition-checkpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/tuition/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/log_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +215,7 @@
       <workItem from="1714408318888" duration="792000" />
       <workItem from="1714417134576" duration="9648000" />
       <workItem from="1714489179813" duration="2115000" />
-      <workItem from="1714493642496" duration="6742000" />
+      <workItem from="1714493642496" duration="7341000" />
     </task>
     <task id="LOCAL-00001" summary="test changes">
       <option name="closed" value="true" />
@@ -606,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714425329708</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1714500655622</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1714500655622</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -661,7 +640,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added &quot;Requirement&quot; and &quot;Deadline&quot; parts for New England College (no &quot;Tuition&quot; part)" />
     <MESSAGE value="added MonroeCollege" />
     <MESSAGE value="merged Nick's code with mine" />
     <MESSAGE value="Added McDanielCollege and MonroeCollege parts!" />
@@ -686,7 +664,8 @@
     <MESSAGE value="moved the hardcoded API key to AWS Parameter store. Added code to read from there and set it as an environment variable" />
     <MESSAGE value="Added a EXTRA_CSV_BUCKET to store all generated CSVs versus disposing them after generation" />
     <MESSAGE value="Update AI Prompts to output better CSVs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update AI Prompts to output better CSVs" />
+    <MESSAGE value="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed all the __init__.py's&#10;modified the log_config to store a list of the INFO logs that we can now return at the end of lambda function execution&#10;updated requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714500125536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
