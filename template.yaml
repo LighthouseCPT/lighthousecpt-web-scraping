@@ -22,8 +22,8 @@ Resources:
   Translator:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: TranslatorFunction
-      CodeUri: TranslatorProject/
+      FunctionName: GoogleSheetsFunction
+      CodeUri: GoogleSheetsProject/
       Handler: app2.lambda_handler
       Runtime: python3.11
       Role: arn:aws:iam::654654270857:role/School-Scraper-Role

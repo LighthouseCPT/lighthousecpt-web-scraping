@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="updates">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="updated requirement to csv">
+      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TranslatorProject/app2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TranslatorProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/events/event.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TranslatorProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,15 +227,7 @@
       <workItem from="1714493642496" duration="17394000" />
       <workItem from="1714574821702" duration="19534000" />
       <workItem from="1714658050441" duration="33608000" />
-      <workItem from="1715006318032" duration="1179000" />
-    </task>
-    <task id="LOCAL-00005" summary="added comments and updated template.yaml">
-      <option name="closed" value="true" />
-      <created>1711979704055</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1711979704055</updated>
+      <workItem from="1715006318032" duration="10230000" />
     </task>
     <task id="LOCAL-00006" summary="updated bucket name from mine to lighthouse's">
       <option name="closed" value="true" />
@@ -618,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715006510483</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="updated requirement to csv">
+      <option name="closed" value="true" />
+      <created>1715007509453</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1715007509453</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -673,7 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed redundant function (dynamic_import)" />
     <MESSAGE value="Modified template.yaml to include custom IAM role," />
     <MESSAGE value="Added validate_event so all the school names are present along with its keys/values" />
     <MESSAGE value="Minor updates" />
@@ -698,10 +700,11 @@
     <MESSAGE value="added a return message list to display all returned messages at the end of execution" />
     <MESSAGE value="updates to return messages" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="updated requirement to csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated requirement to csv" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714756531554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1715018582110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$json_builder.coverage" NAME="json_builder Coverage Results" MODIFIED="1714505120354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

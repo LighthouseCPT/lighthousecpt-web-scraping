@@ -40,7 +40,8 @@ class BaseScraper(BaseScraper2):
                 self.delete_pdf_from_s3()
                 cleaned_text, add_ins = self._unpack_text(lambda: self.EXTRACTING_LOGIC(all_text))
                 self._gen_and_save_csv(cleaned_text, add_ins)
-                return "Scraped and saved raw data, then generated and saved CSV to S3"
+                return ("Scraped and saved raw data, then generated and saved CSV to S3. "
+                        f"{self._gen_bucket_url(self.CSV_BUCKET)}")
             except FileNotFoundError as e:
                 msg = (f'As PDF_TXT was chosen, a PDF file was anticipated for extraction and storage '
                        f'to a RAW TXT file. To generate and save a new CSV from a previously extracted PDF, '
@@ -52,7 +53,8 @@ class BaseScraper(BaseScraper2):
                 raw_text_string = self.get_latest_raw_text_from_s3()
                 cleaned_text, add_ins = self._unpack_text(lambda: self.EXTRACTING_LOGIC(raw_text_string))
                 self._gen_and_save_csv(cleaned_text, add_ins)
-                return "Scraped and saved raw data, then generated and saved CSV to S3"
+                return ("Scraped and saved raw data, then generated and saved CSV to S3. "
+                        f"{self._gen_bucket_url(self.CSV_BUCKET)}")
             except FileNotFoundError as e:
                 msg = f'As RAW_TXT was chosen, a TXT file was anticipated to generate and save a new CSV'
                 return self.log_warn(e, msg)
@@ -66,7 +68,8 @@ class BaseScraper(BaseScraper2):
                 csv, add_ins = self._unpack_text(lambda: self.EXTRACTING_LOGIC(csv))
                 readable_csv_string = self.make_csv_readable(csv)
                 self._gen_and_save_csv(readable_csv_string, add_ins)
-                return "Scraped and saved raw data, then generated and saved CSV to S3"
+                return ("Scraped and saved raw data, then generated and saved CSV to S3. "
+                        f"{self._gen_bucket_url(self.CSV_BUCKET)}")
             except FileNotFoundError as e:
                 msg = ('As PDF_CSV was chosen, a PDF file was anticipated for extraction and storage '
                        'to a RAW CSV file. To generate and save a new CSV from a previously extracted PDF, '
@@ -79,7 +82,8 @@ class BaseScraper(BaseScraper2):
                 csv, add_ins = self._unpack_text(lambda: self.EXTRACTING_LOGIC(csv_from_s3))
                 readable_csv_string = self.make_csv_readable(csv)
                 self._gen_and_save_csv(readable_csv_string, add_ins)
-                return "Scraped and saved raw data, then generated and saved CSV to S3"
+                return ("Scraped and saved raw data, then generated and saved CSV to S3. "
+                        f"{self._gen_bucket_url(self.CSV_BUCKET)}")
             except FileNotFoundError as e:
                 msg = 'As RAW_CSV was chosen, a CSV file was anticipated to generate and save a new CSV.'
                 return self.log_warn(e, msg)
@@ -97,20 +101,23 @@ class BaseScraper(BaseScraper2):
             self.save_raw_txt_to_s3(fresh_scraped_text)
             self._gen_and_save_csv(fresh_scraped_text, add_ins)
             return self.log_info(
-                "Scraped and saved raw data, then generated and saved CSV to S3"
+                f"Scraped and saved raw data, then generated and saved CSV to S3. "
+                f"{self._gen_bucket_url(self.CSV_BUCKET)}"
             )
 
     def _handle_existing_scrape(self, scraped_text, fresh_scraped_text, add_ins):
         if scraped_text == fresh_scraped_text:
             return self.log_info(
-                "Newly scraped data matches existing data in S3 bucket, no updates necessary"
+                f"Newly scraped data matches existing data in S3 bucket, no updates necessary. "
+                f"{self._gen_bucket_url(self.CSV_BUCKET)}"
             )
 
         else:
             self.save_raw_txt_to_s3(fresh_scraped_text)
             self._gen_and_save_csv(fresh_scraped_text, add_ins)
             return self.log_info(
-                "Newly scraped data DID NOT match existing data in S3 bucket, updated new CSV"
+                f"Newly scraped data DID NOT match existing data in S3 bucket, updated new CSV. "
+                f"{self._gen_bucket_url(self.CSV_BUCKET)}"
             )
 
     def _extract_scraped_text(self):
