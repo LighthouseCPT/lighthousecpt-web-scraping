@@ -68,18 +68,21 @@ def extract_tuition_to_csv(text, add_ins, programs):
     return prompt
 
 
-def extract_requirement_to_csv(text, programs):
+def extract_requirement_to_csv(text, add_ins, programs):
+    if add_ins is not None:
+        add_ins = ', '.join(add_ins)
     prompt = (
         f"We have extracted the following admission requirement details from a source. "
         f"Our goal is to provide clear requirement insights for prospective students interested in '{programs}'. "
         f"Please format the extracted information pertaining to these programs into a structured CSV format. "
         f"The structured content should provide prospective students with a clear understanding of the various "
         f"admission requirements for these programs. "
-        f"Handle data fields with commas appropriately and consider text enclosed in quotes as a single item, even "
-        f"when it contains commas. "
-        f"Do not add or preface any additional text to the CSV — its goal is to provide only relevant requirement data, "
-        f"formatted correctly for ease of understanding. "
-        f"Here's the data that needs to be converted:\n'{text}'")
+        f"If a data item has commas, enclose it in quotes."
+        f"Additional instructions for this specific data extraction are as follows: {add_ins}."
+        f"Avoid any additional contextual conversation or content in the response. "
+        f"CRITICAL: Return only the CSV. "
+        f"The data for conversion is:\n'{text}'."
+    )
 
     logger.debug(f"Returning prompt: {prompt}")
     return prompt

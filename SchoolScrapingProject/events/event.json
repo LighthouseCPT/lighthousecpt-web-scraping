@@ -6,7 +6,7 @@
     "extra_csv_bucket": "lighthousecpt-schools-csv-extra",
     "openai_api_key": "LIGHTHOUSECPT_OPENAI_API_KEY",
     "pdftables_api_key": "BILAL_PDFTABLES_API_KEY",
-    "mode": "StFrancisCollege"
+    "mode": "TrineUniversity"
   },
   "schools": [
     {
@@ -19,8 +19,14 @@
         "Doctor of Information Technology"
       ],
       "tuition": "https://www.trine.edu/international/graduate/international-tuition.aspx",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "requirement": {
+        "1": "https://www.trine.edu/international/graduate/international-apply.aspx",
+        "2": "https://www.trine.edu/online/degrees/engineering-technology/online-doctor-information-technology.aspx"
+      },
+      "deadline": {
+        "1": "https://www.trine.edu/online/about/academic-calendar.aspx",
+        "2":  "https://www.trine.edu/international/graduate/international-orientation.aspx"
+      }
     },
     {
       "name": "NewEnglandCollege",
@@ -44,9 +50,9 @@
         "MS in Data Science",
         "Data Science Certificate"
       ],
-      "tuition": "RAW_CSV",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "tuition": "PDF_CSV",
+      "requirement": "https://www.monroecollege.edu/admissions-and-aid/how-apply/international-student",
+      "deadline": "https://www.monroecollege.edu/academics/academic-calendar-and-resources"
     },
     {
       "name": "McDanielCollege",
@@ -54,8 +60,8 @@
         "M.S. in Data Analytics"
       ],
       "tuition": "https://www.mcdaniel.edu/admissions-cost/cost-financial-aid/graduate-tuition-fees",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "requirement": "https://www.mcdaniel.edu/academics/graduate-professional-studies/data-analytics-ms-100-online-or-hybrid-low-residency",
+      "deadline": "https://www.mcdaniel.edu/admissions-cost/graduate-admissions"
     },
     {
       "name": "CaliforniaInstituteOfAdvancedManagement",
@@ -63,8 +69,8 @@
         "MBA"
       ],
       "tuition": "https://www.ciam.edu/cost-aid#TuitionandFees",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "requirement": "PDF_TXT",
+      "deadline": "https://www.ciam.edu/apply-today"
     },
     {
       "name": "WestcliffUniversity",
@@ -78,8 +84,8 @@
         "Doctor of Education in Leadership, Curriculum, and Instruction"
       ],
       "tuition": "https://www.westcliff.edu/financial-aid/tuition-fees/",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "requirement": "PDF_CSV",
+      "deadline": "PDF_CSV"
     },
     {
       "name": "SofiaUniversity",
@@ -88,9 +94,9 @@
         "MS in Computer Science",
         "Doctor of Business Administration (D.B.A)"
       ],
-      "tuition": "RAW_CSV",
-      "requirement": "SKIP",
-      "deadline": "SKIP"
+      "tuition": "PDF_CSV",
+      "requirement": "PDF_CSV",
+      "deadline": "https://www.sofia.edu/admissions/"
     },
     {
       "name": "StFrancisCollege",
