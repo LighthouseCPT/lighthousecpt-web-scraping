@@ -171,7 +171,7 @@ class BaseScraper2:
         # Creating the full path for the 'do_not_remove' file
         dummy_path = f"{self.BASE_PATH}do_not_remove"
 
-        # Check if the 'do_not_remove.txt' file already exists
+        # Check if the 'do_not_remove' file already exists
         try:
             self.S3.head_object(Bucket=self.SOURCE_BUCKET, Key=dummy_path)
         except Exception as e:
@@ -209,3 +209,16 @@ class BaseScraper2:
 
         pipe_delimited_text = '\n'.join(temp)
         return pipe_delimited_text
+
+    @staticmethod
+    def log_warn(warning, message):
+        msg = f"{message} (Additional Information: {warning})"
+        logger.warn(msg)
+        return msg
+
+    @staticmethod
+    def log_info(message):
+        msg = f"{message}"
+        logger.info(msg)
+        return msg
+

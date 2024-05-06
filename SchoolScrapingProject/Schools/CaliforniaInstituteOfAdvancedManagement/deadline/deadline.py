@@ -8,7 +8,7 @@ def CaliforniaInstituteOfAdvancedManagement_deadline(source):
     x = extract_content(soup, "Application Deadlines",
                         'Application FAQs')
 
-    x = remove_duplicate_terms(x)
+    # x = remove_duplicate_terms(x)
 
     return x
 

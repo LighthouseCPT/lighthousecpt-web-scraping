@@ -1,5 +1,8 @@
 import os
 import re
+from io import StringIO
+
+import pandas as pd
 from openai import OpenAI, AuthenticationError
 import boto3
 from decimal import Decimal
@@ -7,6 +10,7 @@ import numpy as np
 from datetime import datetime
 from bs4 import NavigableString
 from log_config import configure_logger
+import requests
 
 logger = configure_logger(__name__)
 
@@ -99,23 +103,32 @@ def remove_duplicate_terms(text):
     return "\n".join(clean_lines)
 
 
-def extract_content(soup, start_string, end_string, include_end=False):
+def extract_content(soup, start_string, end_string, include_end=False, newline_after=None):
     content = ''
     start = soup.find(string=start_string)
     end = soup.find(string=end_string)
-    if start and end:  # ensuring both start and end points are found
-        for element in start.parent.find_all_next(string=True):  # iterate over next elements in tree
-            if element == end:
-                if include_end:
-                    content += element.strip() + '\n'
-                break  # stop iteration when reaching 'end' string
-            if isinstance(element, NavigableString):
-                content += element.strip() + '\n'  # add a newline character after each element
 
-    content = re.sub('\n+', '\n', content)
-    content = content.replace(",", "")
+    # Add the following lines to raise errors before processing the content:
+    if not start:
+        raise ValueError('Start marker not found in content.')
+    if not end:
+        raise ValueError('End marker not found in content.')
 
-    return content
+    for element in start.parent.find_all_next(string=True):
+        if element == end:
+            if include_end:
+                content += element.strip() + '\n'
+            break
+        if isinstance(element, NavigableString):
+            stripped = element.strip()
+            if stripped:
+                content += ' ' + stripped
+                # Newline after each year, if "year" was specified as newline_after.
+                if newline_after == 'year' and re.match(r".*\d{4}$", stripped):
+                    content += '\n'
+
+    # clean leading and trailing spaces
+    return content.strip()
 
 
 def extract_inner_string(content, start_marker, end_marker, include_end=False):
@@ -157,6 +170,60 @@ def check_api_key(api_key):
         return api_key
     except AuthenticationError:
         error_msg = 'API Key Authentication Unsuccessful'
-        logging.critical(error_msg)
+        logger.critical(error_msg)
         raise ValueError(error_msg)
 
+
+def make_request(url):
+    try:
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, '
+                                 'like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+        page = requests.get(url, headers=headers)
+        logger.debug(f'Successfully made request to: {url}')
+        return page
+    except requests.RequestException as e:
+        logger.error(f'Request error: {e}')
+        raise
+
+
+def filter_with_phrase(text_content, phrase):
+    return "\n".join(line for line in text_content.split('\n') if phrase in line)
+
+
+def sort_df_by_date(df):
+    # Assuming df is your DataFrame
+    df['Date'] = pd.to_datetime(df['Date'])  # Convert the 'Date' column to datetime type
+    df = df.sort_values(by='Date')
+
+    # If you want to reset the index after sorting:
+    df = df.reset_index(drop=True)
+    return df
+
+
+def drop_duplicate_columns(df):
+    duplicate_column_names = set()
+
+    # Iterate over all columns in DataFrame
+    for x in range(df.shape[1]):
+        # Select column at xth index.
+        col = df.iloc[:, x]
+
+        # Iterate over all columns from (x+1)th index till end
+        for y in range(x + 1, df.shape[1]):
+            # Select column at yth index.
+            other_col = df.iloc[:, y]
+
+            # Check if two columns at x & y index are equal
+            if col.equals(other_col):
+                duplicate_column_names.add(df.columns.values[y])
+
+    # Drop duplicate columns
+    df = df.drop(columns=duplicate_column_names)
+    return df
+
+
+def convert_csv_to_df(csv_string):
+    data = StringIO(csv_string)
+    df = pd.read_csv(data, sep=',')
+    df = df.dropna(how='all', axis=1)
+    return df

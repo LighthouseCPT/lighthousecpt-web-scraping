@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="updates to return messages" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="updates to return messages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/McDanielCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/MonroeCollege/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/NewEnglandCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/SofiaUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/requirement.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/TrineUniversity/requirement/requirement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event2.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +73,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -63,26 +83,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.SchoolScrapingProject.executor": "Run",
-    "Python.TranslatorProject.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.json_builder.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/events",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.SchoolScrapingProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TranslatorProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_builder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/events&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="sam-demo" is-module-sdk="true">
@@ -100,11 +120,11 @@
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline" />
       <recent name="$PROJECT_DIR$/SchoolScrapingProject" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/StFrancisCollege/deadline" />
       <recent name="$PROJECT_DIR$/WebScrapingProject" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.SchoolScrapingProject">
@@ -158,8 +178,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.TranslatorProject" />
       <item itemvalue="Python.SchoolScrapingProject" />
+      <item itemvalue="Python.TranslatorProject" />
     </list>
     <recent_temporary>
       <list>
@@ -216,15 +236,9 @@
       <workItem from="1714408318888" duration="792000" />
       <workItem from="1714417134576" duration="9648000" />
       <workItem from="1714489179813" duration="2115000" />
-      <workItem from="1714493642496" duration="16604000" />
-    </task>
-    <task id="LOCAL-00003" summary="created log config to save logs locally">
-      <option name="closed" value="true" />
-      <created>1711743673263</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1711743673263</updated>
+      <workItem from="1714493642496" duration="17394000" />
+      <workItem from="1714574821702" duration="19534000" />
+      <workItem from="1714658050441" duration="33608000" />
     </task>
     <task id="LOCAL-00004" summary="test commit">
       <option name="closed" value="true" />
@@ -610,7 +624,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714510352417</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="updates to return messages">
+      <option name="closed" value="true" />
+      <created>1714510765816</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1714510765816</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -693,7 +715,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="updates to return messages" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714510255562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714756531554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$json_builder.coverage" NAME="json_builder Coverage Results" MODIFIED="1714505120354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

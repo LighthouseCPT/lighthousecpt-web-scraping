@@ -6,6 +6,6 @@ def SofiaUniversity_deadline(source):
     soup = BeautifulSoup(source, 'html.parser')
 
     x = extract_content(soup, "Upcoming Start Dates:",
-                        'Speak with an Admissions Counselor today to apply.')
+                        'Speak with an Admissions Counselor today to apply.', include_end=True)
 
     return x

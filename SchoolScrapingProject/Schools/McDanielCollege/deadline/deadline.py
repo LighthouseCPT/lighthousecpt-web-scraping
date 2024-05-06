@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
-from Schools.utils import (extract_content,
-                                              extract_inner_string)
+from Schools.utils import extract_content, extract_inner_string
 
 
 def McDanielCollege_deadline(source):

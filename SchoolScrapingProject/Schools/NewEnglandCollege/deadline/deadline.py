@@ -6,6 +6,6 @@ def NewEnglandCollege_deadline(source):
     soup = BeautifulSoup(source, 'html.parser')
 
     x = extract_content(soup, "On Campus MS Programs",
-                        'APPLY NOW')
+                        'APPLY NOW', include_end=True)
 
     return x

@@ -4,10 +4,10 @@ from Schools.utils import extract_content, extract_inner_string
 
 
 def TrineUniversity_requirement(source_dict):  # Source will contain a dict of 2 URLs
-    url1 = source_dict['graduate']
+    url1 = source_dict['1']
     page1 = requests.get(url1)
     soup1 = BeautifulSoup(page1.text, 'html.parser')
-    url2 = source_dict['doctor']
+    url2 = source_dict['2']
     page2 = requests.get(url2)
     soup2 = BeautifulSoup(page2.text, 'html.parser')
 
