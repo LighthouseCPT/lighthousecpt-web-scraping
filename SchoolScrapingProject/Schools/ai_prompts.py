@@ -45,7 +45,7 @@ def extract_tuition_to_csv(text, add_ins, programs):
         f"Discard any undergraduate information. If any information applies to both undergraduate and graduate "
         f"students, include it but rename it as graduate information."
         f"We need to ONLY identify costs directly related to the program/class, such as tuition costs, "
-        f"admission costs, registration fees, application fees and administrative fees. "
+        f"admission costs, registration fees, insurance costs, application fees and administrative fees. "
         f"Do not include unrelated costs such as student ID card fee, returned check fee, CPA Becker Review fees, "
         f"Instructional Resource Fee, Foundation Classes, personal expenses, off-campus costs, or "
         f"any unspecified estimated fees. "
@@ -71,6 +71,7 @@ def extract_tuition_to_csv(text, add_ins, programs):
 def extract_requirement_to_csv(text, add_ins, programs):
     if add_ins is not None:
         add_ins = ', '.join(add_ins)
+
     prompt = (
         f"We have extracted the following admission requirement details from a source. "
         f"Our goal is to provide clear requirement insights for prospective students interested in '{programs}'. "

@@ -79,7 +79,8 @@ def gen_and_get_best_csv(prompt, text, add_ins, programs, model=None, temperatur
 
         result = None
         while result is None:
-            best_csv = openai_prompter(choose_best_csv(prompt(text, add_ins, programs), csv1, csv2, csv3), model='gpt-4',
+            best_csv = openai_prompter(choose_best_csv(prompt(text, add_ins, programs),
+                                                       csv1, csv2, csv3), model='gpt-4',
                                        temperature=0.2)
             best_csv_list.append(best_csv)
 

@@ -6,7 +6,7 @@
     "extra_csv_bucket": "lighthousecpt-schools-csv-extra",
     "openai_api_key": "LIGHTHOUSECPT_OPENAI_API_KEY",
     "pdftables_api_key": "BILAL_PDFTABLES_API_KEY",
-    "mode": "TrineUniversity"
+    "mode": "McDanielCollege"
   },
   "schools": [
     {

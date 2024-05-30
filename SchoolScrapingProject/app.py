@@ -24,10 +24,7 @@ class App:
         self.event_schools = [school['name'] for school in event['schools']]
         os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api_key']))
         os.environ['PDFTABLES_API_KEY'] = self.get_parameter(event['config']['pdftables_api_key'])
-        try:
-            self.dir_schools = get_school_names('Schools')
-        except FileNotFoundError:
-            self.dir_schools = get_school_names('SchoolScrapingProject/Schools')
+        self.dir_schools = get_school_names('Schools')
 
     def scrape_and_save(self):
 

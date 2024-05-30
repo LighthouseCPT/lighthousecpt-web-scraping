@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="updated requirement to csv">
-      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" afterDir="false" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added bucket url with returned messages">
+      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/rock-partition-345700-5396d966ca74.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/base_scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TranslatorProject/app2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TranslatorProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/events/event.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TranslatorProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.GoogleSheetsProject.executor&quot;: &quot;Run&quot;,
     &quot;Python.SchoolScrapingProject.executor&quot;: &quot;Run&quot;,
     &quot;Python.TranslatorProject.executor&quot;: &quot;Run&quot;,
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
@@ -80,7 +85,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/SchoolScrapingProject/events&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/GoogleSheetsProject&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -101,11 +106,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GoogleSheetsProject" />
       <recent name="$PROJECT_DIR$/SchoolScrapingProject/events" />
       <recent name="$PROJECT_DIR$/SchoolScrapingProject/Schools" />
       <recent name="$PROJECT_DIR$/TranslatorProject" />
       <recent name="$PROJECT_DIR$/WebScrapingProject/Schools" />
-      <recent name="$PROJECT_DIR$/WebScrapingProject/Schools/McDanielCollege/tuition" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SchoolScrapingProject/Schools/WestcliffUniversity/deadline" />
@@ -116,6 +121,31 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.SchoolScrapingProject">
+    <configuration name="GoogleSheetsProject" type="PythonConfigurationType" factoryName="Python">
+      <module name="sam-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="AWS_DEFAULT_PROFILE" value="LighthouseCPT" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (lighthousecpt-web-scraping) (2)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoogleSheetsProject" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoogleSheetsProject/app2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="SchoolScrapingProject" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sam-demo" />
       <option name="ENV_FILES" value="" />
@@ -140,33 +170,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorProject" type="PythonConfigurationType" factoryName="Python">
-      <module name="sam-demo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="AWS_DEFAULT_PROFILE" value="LighthouseCPT" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (lighthousecpt-web-scraping) (2)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TranslatorProject" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TranslatorProject/app2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.TranslatorProject" />
+      <item itemvalue="Python.GoogleSheetsProject" />
       <item itemvalue="Python.SchoolScrapingProject" />
     </list>
     <recent_temporary>
@@ -227,15 +232,14 @@
       <workItem from="1714493642496" duration="17394000" />
       <workItem from="1714574821702" duration="19534000" />
       <workItem from="1714658050441" duration="33608000" />
-      <workItem from="1715006318032" duration="10230000" />
-    </task>
-    <task id="LOCAL-00006" summary="updated bucket name from mine to lighthouse's">
-      <option name="closed" value="true" />
-      <created>1711980839618</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1711980839618</updated>
+      <workItem from="1715006318032" duration="12393000" />
+      <workItem from="1715021051738" duration="5319000" />
+      <workItem from="1715096916686" duration="10397000" />
+      <workItem from="1715121968327" duration="612000" />
+      <workItem from="1716482288345" duration="10276000" />
+      <workItem from="1716564587507" duration="15003000" />
+      <workItem from="1716844596452" duration="16000" />
+      <workItem from="1717088853586" duration="611000" />
     </task>
     <task id="LOCAL-00007" summary="removed the sam package command as codepipeline takes care of that itself">
       <option name="closed" value="true" />
@@ -621,7 +625,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715007509453</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="added bucket url with returned messages">
+      <option name="closed" value="true" />
+      <created>1715018712910</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1715018712910</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -676,7 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modified template.yaml to include custom IAM role," />
     <MESSAGE value="Added validate_event so all the school names are present along with its keys/values" />
     <MESSAGE value="Minor updates" />
     <MESSAGE value="updated event to include SofiaUniveristy (please update with PDF RAW_CSV or whatever you are extracting from)" />
@@ -701,12 +712,14 @@
     <MESSAGE value="updates to return messages" />
     <MESSAGE value="updates" />
     <MESSAGE value="updated requirement to csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated requirement to csv" />
+    <MESSAGE value="added bucket url with returned messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bucket url with returned messages" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1715018582110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1716581249852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$GoogleSheetsProject.coverage" NAME="GoogleSheetsProject Coverage Results" MODIFIED="1715106497693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogleSheetsProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$json_builder.coverage" NAME="json_builder Coverage Results" MODIFIED="1714505120354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

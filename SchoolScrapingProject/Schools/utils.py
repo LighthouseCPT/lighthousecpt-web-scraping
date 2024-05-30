@@ -108,7 +108,6 @@ def extract_content(soup, start_string, end_string, include_end=False, newline_a
     start = soup.find(string=start_string)
     end = soup.find(string=end_string)
 
-    # Add the following lines to raise errors before processing the content:
     if not start:
         raise ValueError('Start marker not found in content.')
     if not end:
