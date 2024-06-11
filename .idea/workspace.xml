@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added bucket url with returned messages">
-      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/rock-partition-345700-5396d966ca74.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoogleSheetsProject/utils.py" afterDir="false" />
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added AWS SMS for log delivery via email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/app2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSheetsProject/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/CaliforniaInstituteOfAdvancedManagement/tuition/tuition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/StFrancisCollege/deadline/deadline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_prompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/ai_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/Schools/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.GoogleSheetsProject.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SchoolScrapingProject.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TranslatorProject.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.json_builder.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/GoogleSheetsProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.GoogleSheetsProject.executor": "Run",
+    "Python.SchoolScrapingProject.executor": "Run",
+    "Python.TranslatorProject.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.json_builder.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/GoogleSheetsProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="sam-demo" is-module-sdk="true">
@@ -239,23 +230,9 @@
       <workItem from="1716482288345" duration="10276000" />
       <workItem from="1716564587507" duration="15003000" />
       <workItem from="1716844596452" duration="16000" />
-      <workItem from="1717088853586" duration="611000" />
-    </task>
-    <task id="LOCAL-00007" summary="removed the sam package command as codepipeline takes care of that itself">
-      <option name="closed" value="true" />
-      <created>1711982176763</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1711982176763</updated>
-    </task>
-    <task id="LOCAL-00008" summary="changes to buildspec and template">
-      <option name="closed" value="true" />
-      <created>1711982980559</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1711982980559</updated>
+      <workItem from="1717088853586" duration="4165000" />
+      <workItem from="1718036368127" duration="2209000" />
+      <workItem from="1718130890019" duration="5188000" />
     </task>
     <task id="LOCAL-00009" summary="changes to buildspec and template">
       <option name="closed" value="true" />
@@ -633,7 +610,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715018712910</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="updates">
+      <option name="closed" value="true" />
+      <created>1717090493104</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1717090493104</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added AWS SMS for log delivery via email">
+      <option name="closed" value="true" />
+      <created>1718137435554</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1718137435555</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -688,7 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added validate_event so all the school names are present along with its keys/values" />
     <MESSAGE value="Minor updates" />
     <MESSAGE value="updated event to include SofiaUniveristy (please update with PDF RAW_CSV or whatever you are extracting from)" />
     <MESSAGE value="Major update, changed entire code structure" />
@@ -710,13 +702,14 @@
     <MESSAGE value="added additional return messages" />
     <MESSAGE value="added a return message list to display all returned messages at the end of execution" />
     <MESSAGE value="updates to return messages" />
-    <MESSAGE value="updates" />
     <MESSAGE value="updated requirement to csv" />
     <MESSAGE value="added bucket url with returned messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added bucket url with returned messages" />
+    <MESSAGE value="updates" />
+    <MESSAGE value="added AWS SMS for log delivery via email" />
+    <option name="LAST_COMMIT_MESSAGE" value="added AWS SMS for log delivery via email" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1716581249852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1718137255230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$GoogleSheetsProject.coverage" NAME="GoogleSheetsProject Coverage Results" MODIFIED="1715106497693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogleSheetsProject" />
