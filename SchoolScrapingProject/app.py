@@ -90,6 +90,7 @@ class App:
             raise ValueError(f"Extra schools in event not in directory: {missing_in_directory}")
 
     def _initiate_school_scraping(self, schools=None):
+        global SCHOOL_NAME
         final_returned_msgs = {}
 
         for SCHOOL_NAME_AND_INFO in self.event['schools']:
@@ -122,7 +123,7 @@ class App:
                     }
 
         send_email(self.sns_topic_name,
-                   f"School Scraping Logs {datetime.today().strftime('%Y-%m-%d')}",
+                   f"School Scraping Logs - ({SCHOOL_NAME}) - {datetime.today().strftime('%Y-%m-%d')}",
                    final_returned_msgs)
 
         return final_returned_msgs
