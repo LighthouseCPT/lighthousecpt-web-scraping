@@ -1,3 +1,4 @@
+import json
 import os
 import re
 from io import StringIO
@@ -226,3 +227,22 @@ def convert_csv_to_df(csv_string):
     df = pd.read_csv(data, sep=',')
     df = df.dropna(how='all', axis=1)
     return df
+
+
+def send_email(topic_name, subject, message):
+    sns = boto3.client('sns')
+
+    # get the topic ARN
+    response = sns.create_topic(
+        Name=topic_name
+    )
+    topic_arn = response['TopicArn']
+
+    body = json.dumps(message, indent=4)
+
+    sns.publish(
+        TopicArn=topic_arn,
+        Subject=subject,
+        Message=body
+    )
+

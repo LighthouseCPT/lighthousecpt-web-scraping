@@ -4,8 +4,9 @@ import os
 from urllib.parse import urlparse
 import boto3
 from Schools.base_scraper import BaseScraper
-from Schools.utils import get_school_names, check_api_key, download_s3_bucket_contents
+from Schools.utils import get_school_names, check_api_key, download_s3_bucket_contents, send_email
 from log_config import configure_logger
+from datetime import datetime
 
 logger = configure_logger(__name__)
 
@@ -24,6 +25,7 @@ class App:
         self.event_schools = [school['name'] for school in event['schools']]
         os.environ['OPENAI_API_KEY'] = check_api_key(self.get_parameter(event['config']['openai_api_key']))
         os.environ['PDFTABLES_API_KEY'] = self.get_parameter(event['config']['pdftables_api_key'])
+        self.sns_topic_name = event['config']['sns_topic_name']
         self.dir_schools = get_school_names('Schools')
 
     def scrape_and_save(self):
@@ -118,6 +120,10 @@ class App:
                         'info': INFO,
                         'message': returned_msg
                     }
+
+        send_email(self.sns_topic_name,
+                   f"School Scraping Logs {datetime.today().strftime('%Y-%m-%d')}",
+                   final_returned_msgs)
 
         return final_returned_msgs
 
