@@ -1,6 +1,6 @@
-# Private College Web Scraping for Lighthouse CPT
+# School Web Scraping Project for Lighthouse CPT
 
-This private repository houses the code for a serverless web scraping system, developed specifically for gathering information about various colleges. This project is dedicated for use by the Lighthouse College Planning and Tracking (Lighthouse CPT) Team.
+This repository houses the code for a serverless web scraping system, developed specifically for gathering information about various schools. This project is dedicated for use by the Lighthouse CPT Team.
 
 The system is designed for scalability, enabling easy addition of more colleges and specific pieces of information.
 
@@ -18,7 +18,7 @@ The application follows a modular structure, with each college having its own sc
 ├── app.py
 ├── requirements.txt
 ├── Schools
-│   └── CollegeName
+│   └── SchoolName
 |       ├── requirement
 |       |   └── requirement.py
 |       ├── tuition
@@ -27,9 +27,9 @@ The application follows a modular structure, with each college having its own sc
 |           └── deadline.py
 └── init.py
 ```
--  `app.py`: The main AWS Lambda handler. Maps given colleges to their respective scraping functions. Includes the functionality to specify which schools to scrape data from.
--  `Schools`: This directory contains individual directories for each college.
--  `CollegeName`: Represents individual college directory and sub-directories for each specific data point to be scraped (`requirement`, `tuition`, `deadline`). Each of these data point directories has its own Python script for data scraping (`requirement.py`, `tuition.py`, `deadline.py`)
+-  `app.py`: The main AWS Lambda handler. Maps given schools to their respective scraping functions. Includes the functionality to specify which schools to scrape data from.
+-  `Schools`: This directory contains individual directories for each school.
+-  `SchoolName`: Represents individual school directory and sub-directories for each specific data point to be scraped (`requirement`, `tuition`, `deadline`). Each of these data point directories has its own Python script for data scraping (`requirement.py`, `tuition.py`, `deadline.py`)
 -  `requirements.txt`: Contains necessary Python dependencies needed for the project.
 
 ## How to Run Locally
@@ -56,7 +56,7 @@ Deployment specifics will depend on your team's practices. It is common to use s
 
 ## Contributions
 
-Since this is a private project, contributions are limited to members of the Lighthouse CPT team.
+Contributions are limited to members of the Lighthouse CPT team.
 
 ## Caution
 
