@@ -123,7 +123,7 @@ class App:
                     }
 
         send_email(self.sns_topic_name,
-                   f"School Scraping Logs - ({SCHOOL_NAME}) - {datetime.today().strftime('%Y-%m-%d')}",
+                   f"School Scraping Logs ({SCHOOL_NAME}) - {datetime.today().strftime('%Y-%m-%d')}",
                    final_returned_msgs)
 
         return final_returned_msgs
