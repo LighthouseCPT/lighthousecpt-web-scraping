@@ -7,7 +7,7 @@
     "openai_api_key": "LIGHTHOUSECPT_OPENAI_API_KEY",
     "pdftables_api_key": "BILAL_PDFTABLES_API_KEY",
     "sns_topic_name": "MyTopic",
-    "mode": "TrineUniversity"
+    "mode": "MonroeCollege"
   },
   "schools": [
     {

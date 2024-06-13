@@ -1,8 +1,8 @@
 import json
 import os
 import re
+import traceback
 from io import StringIO
-
 import pandas as pd
 from openai import OpenAI, AuthenticationError
 import boto3
@@ -105,45 +105,73 @@ def remove_duplicate_terms(text):
 
 
 def extract_content(soup, start_string, end_string, include_end=False, newline_after=None):
-    content = ''
-    start = soup.find(string=start_string)
-    end = soup.find(string=end_string)
+    try:
+        content = ''
+        start = soup.find(string=start_string)
+        end = soup.find(string=end_string)
 
-    if not start:
-        raise ValueError('Start marker not found in content.')
-    if not end:
-        raise ValueError('End marker not found in content.')
+        if not start:
+            raise ValueError('Start marker not found in content.')
+        if not end:
+            raise ValueError('End marker not found in content.')
 
-    for element in start.parent.find_all_next(string=True):
-        if element == end:
-            if include_end:
-                content += element.strip() + '\n'
-            break
-        if isinstance(element, NavigableString):
-            stripped = element.strip()
-            if stripped:
-                content += ' ' + stripped
-                # Newline after each year, if "year" was specified as newline_after.
-                if newline_after == 'year' and re.match(r".*\d{4}$", stripped):
-                    content += '\n'
+        for element in start.parent.find_all_next(string=True):
+            if element == end:
+                if include_end:
+                    content += element.strip() + '\n'
+                break
+            if isinstance(element, NavigableString):
+                stripped = element.strip()
+                if stripped:
+                    content += ' ' + stripped
+                    # Newline after each year, if "year" was specified as newline_after.
+                    if newline_after == 'year' and re.match(r".*\d{4}$", stripped):
+                        content += '\n'
 
-    # clean leading and trailing spaces
-    return content.strip()
+        # clean leading and trailing spaces
+        return content.strip()
+    except ValueError as e:
+        error_message = str(e)
+        trace = traceback.format_exc()
+
+        # Construct the message that will be sent on the SNS
+        error_log = {
+            'error_message': error_message,
+            'stack_trace': trace
+        }
+
+        # Send the error log to SNS Topic
+        send_email('ErrorTopic', f'Error Logs - {datetime.today().strftime("%Y-%m-%d")}', error_log)
+        raise  # re-throwing the exception after sending notification
 
 
 def extract_inner_string(content, start_marker, end_marker, include_end=False):
-    if start_marker not in content and end_marker not in content:
-        raise ValueError('Both start and end markers are not found in content.')
-    elif start_marker not in content:
-        raise ValueError('Start marker not found in content.')
-    elif end_marker not in content:
-        raise ValueError('End marker not found in content.')
-    _, _, after_start = content.partition(start_marker)
-    inner_content, _, after_end = after_start.partition(end_marker)
-    result_content = start_marker + inner_content
-    if include_end:
-        result_content += end_marker
-    return result_content
+    try:
+        if start_marker not in content and end_marker not in content:
+            raise ValueError('Both start and end markers are not found in content.')
+        elif start_marker not in content:
+            raise ValueError('Start marker not found in content.')
+        elif end_marker not in content:
+            raise ValueError('End marker not found in content.')
+        _, _, after_start = content.partition(start_marker)
+        inner_content, _, after_end = after_start.partition(end_marker)
+        result_content = start_marker + inner_content
+        if include_end:
+            result_content += end_marker
+        return result_content
+    except ValueError as e:
+        error_message = str(e)
+        trace = traceback.format_exc()
+
+        # Construct the message that will be sent on the SNS
+        error_log = {
+            'error_message': error_message,
+            'stack_trace': trace
+        }
+
+        # Send the error log to SNS Topic
+        send_email('ErrorTopic', f'Error Logs - {datetime.today().strftime("%Y-%m-%d")}', error_log)
+        raise  # re-throwing the exception after sending notification
 
 
 def download_s3_bucket_contents(bucket_name, local_directory=None):
@@ -238,11 +266,13 @@ def send_email(topic_name, subject, message):
     )
     topic_arn = response['TopicArn']
 
-    body = json.dumps(message, indent=4)
+    # Format each item in the message dictionary, separated by blank lines
+    formatted_message_parts = [f"{key}:\n{value}" for key, value in message.items()]
+    formatted_message = "\n\n".join(formatted_message_parts)
 
     sns.publish(
         TopicArn=topic_arn,
         Subject=subject,
-        Message=body
+        Message=formatted_message
     )
 
