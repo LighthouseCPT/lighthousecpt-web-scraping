@@ -19,7 +19,7 @@ def TrineUniversity_requirement(source_dict):  # Source will contain a dict of 2
     y1 = extract_inner_string(x1, "International Graduate/Master's Degree application",
                               'Seated classes')
 
-    y2 = extract_inner_string(x2, 'Learn More', 'intend to enroll.', include_end=True)
+    y2 = extract_inner_string(x2, 'Learn More', 'qualification', include_end=True)
     y2 = "Doctor of Information Technology Doctorate\n" + y2
     final_text = y1 + '\n\n' + y2
 
