@@ -13,7 +13,7 @@ def TrineUniversity_deadline(source_dict):
     x1 = extract_content(soup1, "TrineOnline Academic Calendar",
                          'Take the Next Steps')
 
-    x2 = extract_inner_string(x1, 'Summer Term 1', 'May 5– May 10')
+    x2 = extract_inner_string(x1, 'Summer Term 2', 'May 5– May 10')
 
     y1 = extract_content(soup2, "International Orientation",
                          'Take the Next Steps', newline_after='year')

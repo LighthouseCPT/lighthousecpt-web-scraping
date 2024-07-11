@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added AWS SMS for log delivery via email">
+    <list default="true" id="bfaa4d4f-e3d4-4f1a-b1a0-91a69e93d5fd" name="Changes" comment="added an ErrorTopic, so an email gets sent to me if there is an error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolScrapingProject/events/event.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,27 +65,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.GoogleSheetsProject.executor": "Run",
-    "Python.SchoolScrapingProject.executor": "Run",
-    "Python.TranslatorProject.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.json_builder.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/GoogleSheetsProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.GoogleSheetsProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SchoolScrapingProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TranslatorProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_builder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bilalakhtar/PycharmProjects/lighthousecpt-web-scraping/GoogleSheetsProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="sam-demo" is-module-sdk="true">
@@ -232,55 +231,8 @@
       <workItem from="1716844596452" duration="16000" />
       <workItem from="1717088853586" duration="4165000" />
       <workItem from="1718036368127" duration="2209000" />
-      <workItem from="1718130890019" duration="5188000" />
-    </task>
-    <task id="LOCAL-00009" summary="changes to buildspec and template">
-      <option name="closed" value="true" />
-      <created>1711983369171</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1711983369171</updated>
-    </task>
-    <task id="LOCAL-00010" summary="changes to buildspec and template">
-      <option name="closed" value="true" />
-      <created>1711985470273</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1711985470273</updated>
-    </task>
-    <task id="LOCAL-00011" summary="changes to template">
-      <option name="closed" value="true" />
-      <created>1711985848297</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1711985848297</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fixed filepaths, change bucket names from mine to lighthouse's">
-      <option name="closed" value="true" />
-      <created>1711992599776</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1711992599776</updated>
-    </task>
-    <task id="LOCAL-00013" summary="updated description">
-      <option name="closed" value="true" />
-      <created>1711994359840</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1711994359840</updated>
-    </task>
-    <task id="LOCAL-00014" summary="created a new file named `util.py` to house reusable functions">
-      <option name="closed" value="true" />
-      <created>1712002487508</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1712002487508</updated>
+      <workItem from="1718130890019" duration="17130000" />
+      <workItem from="1718586230852" duration="2000" />
     </task>
     <task id="LOCAL-00015" summary="added requirement part of trine university, still needs work">
       <option name="closed" value="true" />
@@ -626,7 +578,55 @@
       <option name="project" value="LOCAL" />
       <updated>1718137435555</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="removed GoogleTranslatorFunction">
+      <option name="closed" value="true" />
+      <created>1718142588948</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1718142588948</updated>
+    </task>
+    <task id="LOCAL-00059" summary="changed sns subject to include school name">
+      <option name="closed" value="true" />
+      <created>1718144772229</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1718144772229</updated>
+    </task>
+    <task id="LOCAL-00060" summary="updated TrineUniveristy">
+      <option name="closed" value="true" />
+      <created>1718147442896</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1718147442896</updated>
+    </task>
+    <task id="LOCAL-00061" summary="update">
+      <option name="closed" value="true" />
+      <created>1718147630574</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1718147630574</updated>
+    </task>
+    <task id="LOCAL-00062" summary="updated TrineUniversity-requirement">
+      <option name="closed" value="true" />
+      <created>1718296135566</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1718296135566</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added an ErrorTopic, so an email gets sent to me if there is an error">
+      <option name="closed" value="true" />
+      <created>1718302635391</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1718302635391</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -681,12 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor updates" />
-    <MESSAGE value="updated event to include SofiaUniveristy (please update with PDF RAW_CSV or whatever you are extracting from)" />
-    <MESSAGE value="Major update, changed entire code structure" />
-    <MESSAGE value="git added a few files" />
-    <MESSAGE value="updated dir paths for sam build" />
-    <MESSAGE value="removed TODO" />
     <MESSAGE value="Moved the hard coded region, csv_bucket, source bucket to events.json&#10;Added a 'mode' key to events.json. Here we can specify 'all' to scrape all school or specify one or more schools." />
     <MESSAGE value="Updated CaliforniaInstituteOfAdvancedManagement tuition part to now use OpenAI to generate a clean CSV" />
     <MESSAGE value="Major update, finally completed extracted info &gt; OpenAI &gt; CSV logic" />
@@ -706,10 +700,16 @@
     <MESSAGE value="added bucket url with returned messages" />
     <MESSAGE value="updates" />
     <MESSAGE value="added AWS SMS for log delivery via email" />
-    <option name="LAST_COMMIT_MESSAGE" value="added AWS SMS for log delivery via email" />
+    <MESSAGE value="removed GoogleTranslatorFunction" />
+    <MESSAGE value="changed sns subject to include school name" />
+    <MESSAGE value="updated TrineUniveristy" />
+    <MESSAGE value="update" />
+    <MESSAGE value="updated TrineUniversity-requirement" />
+    <MESSAGE value="added an ErrorTopic, so an email gets sent to me if there is an error" />
+    <option name="LAST_COMMIT_MESSAGE" value="added an ErrorTopic, so an email gets sent to me if there is an error" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1718137255230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
+    <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$SchoolScrapingProject.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1718302412032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$app.coverage" NAME="SchoolScrapingProject Coverage Results" MODIFIED="1714070201655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SchoolScrapingProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$TranslatorProject.coverage" NAME="TranslatorProject Coverage Results" MODIFIED="1714075726281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TranslatorProject" />
     <SUITE FILE_PATH="coverage/lighthousecpt_web_scraping$GoogleSheetsProject.coverage" NAME="GoogleSheetsProject Coverage Results" MODIFIED="1715106497693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogleSheetsProject" />
